@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Introduction — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li class="current"><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">1</span>Introduction</h2>
+
+      <figure class="fig full-width" id="fig1">
+        <img src="assets/framework_combined.png"
+             alt="Overview diagram: the harness wires a swappable model and a swappable body into an embodied agent, validated on three different robot platforms.">
+        <figcaption><strong>Figure 1.</strong> Overview of
+        <span class="sc">Thea</span>. The harness wires a model and a body, each
+        swappable, into an embodied agent. The model calls tools to control the body, and reads back the resulting
+        world state from the scene graph and the outcome from the evaluator,
+        closing the loop. The harness
+        ports across embodiments, and we validate <span class="sc">Thea</span> on
+        three different robot platforms.</figcaption>
+      </figure>
+
+      <span class="sidenote is-citation" id="ref-1"><span class="sn">[1]:</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noopener"><em>Claude Code by
+      Anthropic: An Agentic Coding System</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-2"><span class="sn">[2]:</span> OpenAI (2026),
+      <a href="https://openai.com/codex/" target="_blank" rel="noopener"><em>Codex: AI Coding Partner from
+      OpenAI</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-3"><span class="sn">[3]:</span> Jimenez et al. (2024),
+      <a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener"><em>SWE-bench: Can Language Models Resolve Real-world Github
+      Issues?</em></a></span>
+      <span class="sidenote is-citation" id="ref-4"><span class="sn">[4]:</span> Hashimoto (2026),
+      <a href="https://mitchellh.com/writing/my-ai-adoption-journey" target="_blank" rel="noopener"><em>My AI
+      Adoption Journey</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-5"><span class="sn">[5]:</span> Lopopolo (2026),
+      <a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener"><em>Harness
+      Engineering: Leveraging Codex in an Agent-First World</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-6"><span class="sn">[6]:</span> Anthropic (2026),
+      <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener"><em>How the
+      Agent Loop Works</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-7"><span class="sn">[7]:</span> Weng (2026),
+      <a href="https://lilianweng.github.io/posts/2026-07-04-harness/" target="_blank" rel="noopener"><em>Harness
+      Engineering for Self-Improvement</em></a>.</span>
+      <p>
+        The rise of <em>coding agents</em>&nbsp;[<a href="#ref-1">1</a>,&thinsp;<a href="#ref-2">2</a>,&thinsp;<a href="#ref-3">3</a>] has reshaped software
+        engineering. Rather than produce correct code in a single pass, they write,
+        test, read the error, fix, and test again, converging on correctness through a
+        closed loop. The insight is not a better model, but a better
+        <em>harness</em>&nbsp;[<a href="#ref-4">4</a>,&thinsp;<a href="#ref-5">5</a>]: the surrounding infrastructure that grounds
+        the model in its environment, mediates its actions through tools, and closes
+        the loop between intent and outcome through evaluation and recovery. Complex
+        behaviors emerge from the interaction between a simple agentic
+        loop&nbsp;<a class="cite" href="#ref-6">[6]</a> and its tools. Plug in new tools and the same architecture
+        that writes code also produces documents, queries external services, and
+        conducts open-ended tasks with the user; capabilities arrive without changing
+        the model or the loop. The harness has become a paradigm&nbsp;<a class="cite" href="#ref-7">[7]</a>.
+      </p>
+
+      <span class="sidenote is-citation" id="ref-8"><span class="sn">[8]:</span> Brohan et al. (2023),
+      <a href="https://arxiv.org/abs/2212.06817" target="_blank" rel="noopener"><em>RT-1: Robotics Transformer for Real-World Control at Scale</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-9"><span class="sn">[9]:</span> Octo Model Team et al.
+      (2024), <a href="https://arxiv.org/abs/2405.12213" target="_blank" rel="noopener"><em>Octo: An Open-Source
+      Generalist Robot Policy</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-10"><span class="sn">[10]:</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</span>
+      <p>
+        All of this, however, unfolds in digital environments. In the physical world,
+        the building blocks are in place. Embodied foundation models now perform a
+        range of tasks with growing competence, whether navigating cluttered rooms or
+        manipulating everyday objects&nbsp;[<a href="#ref-8">8</a>,&thinsp;<a href="#ref-9">9</a>,&thinsp;<a href="#ref-10">10</a>]. Yet a collection of strong
+        atomic capabilities does not constitute a useful robot. What remains open is
+        <em>orchestration</em>: weaving these capabilities into long-horizon behavior
+        in a dynamic world shared with the people it serves. This is exactly the
+        problem coding agents have proved tractable in the digital world. Their answer
+        is not to wait for an omnipotent model, but to build a carefully engineered
+        harness that amplifies what the model can achieve. Does the same paradigm,
+        then, hold in the physical world?
+      </p>
+
+      <p>
+        An agent is, in essence, a closed loop of perception and action: it perceives
+        the world, acts on it, and perceives the result. The architecture of coding
+        agents provides a natural blueprint. At each turn the language model selects a
+        tool (e.g. read a file, run a test, edit code), observes the result, and
+        decides the next action. Each robot capability (e.g. navigation, manipulation)
+        can likewise become a callable tool; a language model orchestrates them
+        through the same agentic loop. The design decouples orchestration from
+        execution. The agentic loop accesses policies and platforms only through their
+        tool interfaces, remaining agnostic to their internals. Complex, long-horizon
+        tasks need not be solved monolithically; the agentic loop addresses them step
+        by step, and new behaviors emerge from flexible composition of tools.
+      </p>
+
+      <p>
+        At first glance, transferring this blueprint to the physical world should be
+        a simple matter of redefining the tools. It is not. The physical world is far
+        more complex than software. Closing the loop demands two abilities: reading
+        the state of the world, and judging the outcome of an action. Software grants
+        both for free; the physical world grants neither.
+      </p>
+
+      <div class="callout">
+        <p class="callout-title">Gap 1: Readability of the World</p>
+        <p>
+          A software environment is a <em>designed artifact</em>, built by humans for
+          machines to read and execute. Source code is text; a language model can
+          read it, grep it, diff it, reason about it. A coding agent perceives it
+          simply by reading, because the environment <em>is already structured,
+          symbolic, and persistent</em>. At any moment, the agent can take in the
+          entire state, exact and complete.
+        </p>
+        <p>
+          The physical world is not a designed artifact. It simply exists. An
+          embodied agent perceives by sensing. Its input is a 30&thinsp;fps stream of
+          RGB-D frames, continuous, high-dimensional, and unstructured. The agent
+          sees only a local, momentary slice of the world, never the whole. It must
+          piece the whole together frame by frame and hold it in memory; the world
+          keeps no record to consult. A coding agent's &ldquo;codebase&rdquo; is
+          free; a physical agent's must be constructed.
+        </p>
+      </div>
+
+      <div class="callout callout-mauve">
+        <p class="callout-title">Gap 2: Verifiability of Outcomes</p>
+        <p>
+          Software environments possess an elegant property that is easy to take for
+          granted: every action has a natural <em>termination signal</em> and an
+          explicit <em>success/failure judgment</em>. Processes exit. Commands return
+          exit codes. Errors print to <code>stderr</code>. A coding agent runs a test
+          and instantly knows <code>PASS</code> or <code>FAIL</code>, and on failure
+          reads the stack trace to diagnose the cause. This closed loop is
+          infrastructure provided for free by the operating system and the language
+          itself.
+        </p>
+        <p>
+          The physical world offers none of this. A Vision-Language-Action (VLA)
+          policy outputs a continuous action stream with no built-in
+          &ldquo;done&rdquo; signal. There is no exit code; the world does not report
+          &ldquo;grasp succeeded.&rdquo; The robot closes its gripper. Did it grasp
+          the cup, or did the cup slip? Did the gripper close on air, or on the rim?
+          A coding agent's &ldquo;test suite&rdquo; is free; a physical agent's must
+          be constructed.
+        </p>
+      </div>
+
+      <span class="sidenote is-citation" id="ref-11"><span class="sn">[11]:</span> Sutton and Barto (2018),
+      <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener"><em>Reinforcement Learning: An Introduction</em></a>.</span>
+      <p>
+        What appears &ldquo;free&rdquo; to a coding agent is the accumulated product
+        of decades of software engineering. Formal grammars, type systems, and
+        persistent file systems make the state of software readable; exit codes,
+        stack traces, and test frameworks make the outcome of an action verifiable.
+        None of it was built for coding agents; they arrived to find the
+        infrastructure ready, and flourished. Physical environments carry no such
+        inheritance; the missing infrastructure must be built. Nor are the two gaps
+        an arbitrary pair. An agentic loop reaches its environment only through an
+        interface with two directions: actions flow out, and information flows back. The
+        outbound half is the one robotics has spent decades building, which is why
+        policies wrap readily into tools. The inbound half carries exactly two
+        signals: the state of the world, and a verdict on the last action, the same
+        pair the classic agent&ndash;environment interface returns&nbsp;<a class="cite" href="#ref-11">[11]</a>.
+        Hence exactly two gaps, one for each missing signal.
+      </p>
+
+      <span class="sidenote footnote" id="fn-1"><span class="sn">1.</span> From the Greek
+      <em>thea</em>, &ldquo;sight; view.&rdquo;</span>
+      <p>
+        We present <span class="sc">Thea</span><sup><a href="#fn-1">1</a></sup>, a harness of embodied
+        agents. <span class="sc">Thea</span> inherits the architecture of coding
+        agents: the same agentic loop, capabilities exposed as tools, context,
+        skills, and memory. On this foundation, it supplies the pieces the physical
+        world is missing. <em>Scene Graph as Context</em> restores readability: a
+        persistent, structured model of the scene that the language model can read
+        and reason about as a coding agent reads source code. <em>Evaluation as Exit
+        Codes</em> restores verifiability: it detects when an action should
+        terminate, judges whether it succeeded, and on failure diagnoses the cause,
+        closing the loop that the physical world otherwise leaves open.
+      </p>
+
+      <p>
+        Through <span class="sc">Thea</span>, we demonstrate that with carefully
+        adapted designs, the harness behind coding agents fits embodied agents well.
+        It wires diverse foundation models, policies, and embodiments into a working
+        whole. The resulting system exhibits the following properties, as shown in
+        <a href="#fig1">Figure 1</a>:
+      </p>
+      <ul>
+        <li><span class="run-in">Extensibility.</span> Capability is organized around
+        tools. Adding a tool extends the agent, a new policy enters as one more tool,
+        and complex behaviors emerge from their free composition rather than being
+        hand-crafted.</li>
+        <li><span class="run-in">Portability.</span> The model and the body are
+        plug-and-play. A different model or a different embodiment requires no
+        dedicated redesign, because nothing in the architecture is specific to
+        either.</li>
+        <li><span class="run-in">A bridge between user and world.</span> To the user,
+        the agent is a natural interface. Instructions, questions, and explanations
+        all flow through dialogue. To the world, it runs the classic
+        perception&ndash;action loop autonomously, turn after turn. The agent bridges
+        the two, translating the user's intention into fluent execution in the
+        physical world.</li>
+      </ul>
+    </section>
+
+      <nav class="chapter-refs" aria-label="References">
+        <p class="refs-title">References</p>
+        <ol class="ref-list">
+        <li id="cite-1"><span class="ref-num">[1]</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/product/claude-code" target="_blank" rel="noopener"><em>Claude Code by
+      Anthropic: An Agentic Coding System</em></a>.</li>
+        <li id="cite-2"><span class="ref-num">[2]</span> OpenAI (2026),
+      <a href="https://openai.com/codex/" target="_blank" rel="noopener"><em>Codex: AI Coding Partner from
+      OpenAI</em></a>.</li>
+        <li id="cite-3"><span class="ref-num">[3]</span> Jimenez et al. (2024),
+      <a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener"><em>SWE-bench: Can Language Models Resolve Real-world Github
+      Issues?</em></a></li>
+        <li id="cite-4"><span class="ref-num">[4]</span> Hashimoto (2026),
+      <a href="https://mitchellh.com/writing/my-ai-adoption-journey" target="_blank" rel="noopener"><em>My AI
+      Adoption Journey</em></a>.</li>
+        <li id="cite-5"><span class="ref-num">[5]</span> Lopopolo (2026),
+      <a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener"><em>Harness
+      Engineering: Leveraging Codex in an Agent-First World</em></a>.</li>
+        <li id="cite-6"><span class="ref-num">[6]</span> Anthropic (2026),
+      <a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener"><em>How the
+      Agent Loop Works</em></a>.</li>
+        <li id="cite-7"><span class="ref-num">[7]</span> Weng (2026),
+      <a href="https://lilianweng.github.io/posts/2026-07-04-harness/" target="_blank" rel="noopener"><em>Harness
+      Engineering for Self-Improvement</em></a>.</li>
+        <li id="cite-8"><span class="ref-num">[8]</span> Brohan et al. (2023),
+      <a href="https://arxiv.org/abs/2212.06817" target="_blank" rel="noopener"><em>RT-1: Robotics Transformer for Real-World Control at Scale</em></a>.</li>
+        <li id="cite-9"><span class="ref-num">[9]</span> Octo Model Team et al.
+      (2024), <a href="https://arxiv.org/abs/2405.12213" target="_blank" rel="noopener"><em>Octo: An Open-Source
+      Generalist Robot Policy</em></a>.</li>
+        <li id="cite-10"><span class="ref-num">[10]</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</li>
+        <li id="cite-11"><span class="ref-num">[11]</span> Sutton and Barto (2018),
+      <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener"><em>Reinforcement Learning: An Introduction</em></a>.</li>
+        </ol>
+      </nav>
+      <nav class="pager"><a class="prev" href="index.html">&larr; Cover</a><a class="next" href="harness.html">2&ensp;Why the Harness Works &rarr;</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>

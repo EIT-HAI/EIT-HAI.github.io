@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C Demo Execution Logs — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li class="current"><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">C</span>Demo Execution Logs</h2>
+        <p>The first three logs were collected on the Astribot S1, and the final log on the Unitree G1 with the same harness. Turn counts follow the definition in <a href="system.html#s31">&sect;3.1</a>. Final responses contain no tool calls and are therefore shown without turn numbers.</p>
+    </section>
+
+    <section id="beverage">
+      <h3><span class="sec-num">C.1</span>Beverage Retrieval</h3>
+      <div class="trace">
+        <div class="trace-box tb-user"><strong>User request.</strong> &ldquo;Bring me a bottle of water and place it on the table.&rdquo;</div>
+        <p class="trace-turn"><strong>Turn 1.</strong> <strong>Reasoning:</strong> The user requests a drink, so the pantry is the next search location. Navigate there before selecting the target bottle.</p>
+        <pre class="trace-code"><code>navigate_to(target="pantry")</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> The robot reaches the pantry.</div>
+        <p class="trace-turn"><strong>Turn 2.</strong> <strong>Reasoning:</strong> The navigation result confirms arrival and alignment at the pantry, and the refreshed clearance evidence permits a 0.80&thinsp;m forward step. Advance to improve the torso-camera view and manipulation distance.</p>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.80)</code></pre>
+        <p class="trace-turn"><strong>Turn 3.</strong> <strong>Reasoning:</strong> The fresh torso view shows no unambiguous plain water bottle but includes several alternative drinks. Query the user rather than treating the navigation anchor as the grasp target.</p>
+        <pre class="trace-code"><code>query_user(
+    question="No plain water; which drink should I bring?")</code></pre>
+        <div class="trace-box tb-user"><strong>User response.</strong> Orange juice.</div>
+      <span class="sidenote">Each <code>move_base</code> is one turn, decided after the previous completes. Folded runs show the move count and one reasoning summary, here and in the logs that follow.</span>
+        <p class="trace-turn"><strong>Turns 4&ndash;6.</strong> <strong>Reasoning summary:</strong> The user selects orange juice. Apply two leftward corrections followed by a 0.28&thinsp;m forward step to bring the selected bottle into the grasp envelope.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">3 moves</span></div>
+        <pre class="trace-code"><code>move_base(direction="left", distance_m=0.30)
+move_base(direction="left", distance_m=0.15)
+move_base(direction="forward", distance_m=0.28)</code></pre>
+        <p class="trace-turn"><strong>Turn 7.</strong> <strong>Reasoning:</strong> The user response and local alignment establish orange juice as the target, but no reliable object reference is available. Bind it by name, execute the grasp, and verify control.</p>
+        <pre class="trace-code"><code>pick_up(obj="orange juice")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Grasp verified.</strong> The evaluator marks the pick as successful.</div>
+      <span class="sidenote">The manipulation calls in these logs run self-terminating Coding-as-Policy backends, so their evaluations take the two terminal states of the contract in <a href="gaps.html#eval">&sect;4.2</a>.</span>
+        <p class="trace-turn"><strong>Turn 8.</strong> <strong>Reasoning:</strong> The grasp evaluator confirms control of the orange juice. The destination is <code>desk_24</code>; navigate there while retaining the object.</p>
+        <pre class="trace-code"><code>navigate_to(target="desk_24")</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> The robot reaches <code>desk_24</code> with the drink.</div>
+        <p class="trace-turn"><strong>Turns 9&ndash;12.</strong> <strong>Reasoning summary:</strong> The navigation result confirms arrival at <code>desk_24</code> with the drink held. Apply a 0.58&thinsp;m approach followed by 0.05&thinsp;m, 0.04&thinsp;m, and 0.03&thinsp;m corrections to reach the placement pose.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">4 moves</span></div>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.58)
+move_base(direction="forward", distance_m=0.05)
+move_base(direction="forward", distance_m=0.04)
+...</code></pre>
+        <p class="trace-turn"><strong>Turn 13.</strong> <strong>Reasoning:</strong> The orange juice remains controlled, the final base correction has completed, and the destination is <code>desk_24</code>. Place the drink there and verify the resulting object state.</p>
+        <pre class="trace-code"><code>place(target="table")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Placement verified.</strong> The evaluator marks the placement as successful.</div>
+        <div class="trace-box tb-final"><strong>Final response.</strong> The drink has been delivered.</div>
+      </div>
+    </section>
+
+    <section id="powerbank">
+      <h3><span class="sec-num">C.2</span>Power-Bank Search</h3>
+      <div class="trace">
+        <p>The user asks for a power bank. The power bank is not visible in the scene graph, and the robot searches the cabinet drawers in order. After finding the power bank in the lower drawer, the robot delivers it.</p>
+        <div class="trace-box tb-user"><strong>User request.</strong> &ldquo;The computer is out of power. Find me a power bank and place it on the desk.&rdquo;</div>
+        <p class="trace-turn"><strong>Turn 1.</strong> <strong>Reasoning:</strong> The requested power bank is absent from the visible scene graph. The drawers in <code>cabinet_87</code> may contain objects outside the current view, so navigate there and inspect them in order.</p>
+        <pre class="trace-code"><code>navigate_to(target="cabinet_87")</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> The robot reaches <code>cabinet_87</code>.</div>
+        <p class="trace-turn"><strong>Turns 2&ndash;7.</strong> <strong>Reasoning summary:</strong> The navigation result confirms arrival at <code>cabinet_87</code>. Apply a 0.55&thinsp;m approach, a 0.17&thinsp;m rightward correction, and four centimeter-scale adjustments to enter the drawer manipulation pose.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">6 moves</span></div>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.55)
+move_base(direction="right", distance_m=0.17)
+move_base(direction="forward", distance_m=0.05)
+...</code></pre>
+        <p class="trace-turn"><strong>Turn 8.</strong> <strong>Reasoning:</strong> The cabinet is now within manipulation range. Start with the upper drawer and open it to inspect its contents.</p>
+        <pre class="trace-code"><code>open_drawer(drawer_level="higher", container_ref="cabinet_87")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Upper drawer opened.</strong> The evaluator verifies that the upper drawer opens successfully.</div>
+        <p class="trace-turn"><strong>Turn 9.</strong> <strong>Reasoning:</strong> The refreshed head-camera observation shows the upper drawer open and the power bank absent. Close the searched compartment before continuing to avoid leaving an obstruction.</p>
+        <pre class="trace-code"><code>close_drawer(
+    drawer_level="higher",
+    container_ref="cabinet_87")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Upper drawer closed.</strong> The closure is verified successfully.</div>
+        <p class="trace-turn"><strong>Turn 10.</strong> <strong>Reasoning:</strong> The upper drawer closure is verified. Continue the ordered search by opening the lower drawer and exposing its contents.</p>
+        <pre class="trace-code"><code>open_drawer(drawer_level="lower", container_ref="cabinet_87")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Lower drawer opened.</strong> The evaluator verifies that the lower drawer opens successfully.</div>
+        <p class="trace-turn"><strong>Turn 11.</strong> <strong>Reasoning:</strong> The refreshed head-camera observation shows the power bank inside the open lower drawer, and the gripper is empty. The object is reachable, so pick it and verify control.</p>
+        <pre class="trace-code"><code>pick_up(obj="power bank")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Pickup verified.</strong> The wrist observation confirms that the power bank is held securely.</div>
+        <p class="trace-turn"><strong>Turn 12.</strong> <strong>Reasoning:</strong> The pickup evaluation confirms that the power bank is held, and the updated scene state removes it from the cabinet. Close the lower drawer before leaving the search location.</p>
+        <pre class="trace-code"><code>close_drawer(drawer_level="lower", container_ref="cabinet_87")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Lower drawer closed.</strong> The cabinet search concludes with both compartments closed.</div>
+        <p class="trace-turn"><strong>Turn 13.</strong> <strong>Reasoning:</strong> The power bank is held and both drawers are closed. The destination is <code>desk_96</code>; navigate there while retaining the object.</p>
+        <pre class="trace-code"><code>navigate_to(target="desk_96")</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> The robot reaches <code>desk_96</code> while holding the power bank.</div>
+        <p class="trace-turn"><strong>Turns 14&ndash;16.</strong> <strong>Reasoning summary:</strong> The navigation result confirms arrival at the destination with the power bank held. Apply a 0.80&thinsp;m approach followed by two 0.03&thinsp;m corrections to enter the surface-placement envelope.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">3 moves</span></div>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.80)
+move_base(direction="forward", distance_m=0.03)
+move_base(direction="forward", distance_m=0.03)</code></pre>
+        <p class="trace-turn"><strong>Turn 17.</strong> <strong>Reasoning:</strong> The final base correction has completed, the scene still marks the power bank as held, and the destination is <code>desk_96</code>. Place the object on its surface and verify the result.</p>
+        <pre class="trace-code"><code>place(target="table")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Placement verified.</strong> The power bank is placed successfully on <code>desk_96</code>.</div>
+        <div class="trace-box tb-final"><strong>Final response.</strong> The power bank has been delivered.</div>
+      </div>
+    </section>
+
+    <section id="desk">
+      <h3><span class="sec-num">C.3</span>Desk Cleanup</h3>
+      <div class="trace">
+        <p>This episode starts without a user instruction. A standing monitor waits until the workstation is unoccupied while objects remain on the desk.</p>
+      <span class="sidenote"><code>monitor_scene</code> is an ordinary tool, the standing counterpart of <code>query_user</code>: where <code>query_user</code> waits for the user to answer, <code>monitor_scene</code> waits for the world to change. The agent gives it a natural-language condition, and the call returns once the condition is observed to hold. The returned event then takes the place of a user instruction, giving the task its goal. Only this log uses the tool.</span>
+        <p><span class="sc">Thea</span> loads the workspace-cleaning rules, identifies an empty orange-juice bottle as trash while leaving the laptop and charging power bank untouched, and sends one non-blocking notification before acting. The robot then drops the bottle into the trash bin, and <span class="sc">Thea</span> sends a completion notification.</p>
+        <p class="trace-turn"><strong>Turn 1.</strong> <strong>Reasoning:</strong> Keep the desk unchanged while the workstation is occupied. Set up the standing monitor and wait until the workstation is unoccupied while items remain on the desk.</p>
+        <pre class="trace-code"><code>monitor_scene(
+    condition="workstation unoccupied and objects on desk")</code></pre>
+        <div class="trace-box tb-user"><strong>Monitor event.</strong> The user is absent. The desk contains an empty orange-juice bottle, a laptop connected to a power bank, and several other items.</div>
+        <p class="trace-turn"><strong>Turn 2.</strong> <strong>Reasoning:</strong> The returned monitor event identifies several desk objects, but visual presence alone does not justify discarding them. Load the workspace-cleaning rules.</p>
+        <pre class="trace-code"><code>load_skill(name="tidy-workspace")</code></pre>
+        <div class="trace-box tb-user"><strong>Classification.</strong> The confirmed empty bottle is trash. The laptop, charging power bank, and items whose state is uncertain must remain untouched.</div>
+        <p class="trace-turn"><strong>Turn 3.</strong> <strong>Reasoning:</strong> The rules and current observation identify only the empty orange-juice bottle as discardable; the remaining items must stay untouched. Notify the user, then begin the cleanup.</p>
+        <pre class="trace-code"><code>notify_user(
+    message="I found an empty orange-juice bottle on your
+             desk. I will discard it and leave the other
+             items untouched.")</code></pre>
+        <div class="trace-box tb-user"><strong>Notification.</strong> The one-way message is delivered, and execution continues without awaiting a reply.</div>
+        <p class="trace-turn"><strong>Turns 4&ndash;7.</strong> <strong>Reasoning summary:</strong> The target is fixed and the approach is clear. Advance 0.20&thinsp;m, tilt the head by 45 degrees to refresh the local evidence, then apply 0.05&thinsp;m and 0.03&thinsp;m corrections to bring the bottle into the pickup envelope.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">4 actions</span></div>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.20)
+tilt_head(pitch_deg=45)
+move_base(direction="forward", distance_m=0.05)
+...</code></pre>
+        <p class="trace-turn"><strong>Turn 8.</strong> <strong>Reasoning:</strong> The refreshed view and incremental alignment place the confirmed empty bottle within reach while the gripper remains empty. Execute the grasp and verify control.</p>
+        <pre class="trace-code"><code>pick_up(obj="empty orange-juice bottle")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Pickup verified.</strong> The wrist observations show the bottle secured between the gripper fingers.</div>
+        <p class="trace-turn"><strong>Turn 9.</strong> <strong>Reasoning:</strong> The grasp evaluator shows the empty bottle secured between the gripper fingers. The disposal destination is <code>trash_can_54</code>; navigate there while retaining the bottle.</p>
+        <pre class="trace-code"><code>navigate_to(target="trash_can_54")</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> The robot reaches <code>trash_can_54</code> with the bottle.</div>
+        <p class="trace-turn"><strong>Turns 10&ndash;12.</strong> <strong>Reasoning summary:</strong> The navigation result confirms arrival in the target area, but the bin is not yet centered for release. Apply a 0.55&thinsp;m approach, a 15-degree left turn, and a final 0.05&thinsp;m correction to reach the release pose.</p>
+        <div class="trace-fold">Base motions<span class="fold-n">3 moves</span></div>
+        <pre class="trace-code"><code>move_base(direction="forward", distance_m=0.55)
+move_base(direction="turn_left", angle_deg=15)
+move_base(direction="forward", distance_m=0.05)</code></pre>
+        <p class="trace-turn"><strong>Turn 13.</strong> <strong>Reasoning:</strong> The empty bottle remains held, <code>trash_can_54</code> is unambiguous, and the final alignment succeeds. Release the bottle into the bin and verify the resulting state.</p>
+        <pre class="trace-code"><code>trash_drop(trash_ref="trash_can_54")</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Drop verified.</strong> The bin opening is centered, both grippers are empty, and no bottle is visible outside the bin.</div>
+        <p class="trace-turn"><strong>Turn 14.</strong> <strong>Reasoning:</strong> The drop evaluator confirms that both grippers are empty and no bottle is visible outside the bin, satisfying the cleanup goal. Notify the user that the bottle has been discarded.</p>
+        <pre class="trace-code"><code>notify_user(
+    message="The empty orange-juice bottle has been
+             discarded.")</code></pre>
+        <div class="trace-box tb-user"><strong>Completion notification.</strong> The cleanup result is delivered to the user.</div>
+        <div class="trace-box tb-final"><strong>Final response.</strong> The empty orange-juice bottle has been discarded.</div>
+      </div>
+    </section>
+
+    <section id="basket">
+      <h3><span class="sec-num">C.4</span>Basket Delivery</h3>
+      <div class="trace">
+        <p>The user (Jason) asks for snacks to be brought to friends. The robot packs snacks into a basket, carries it into the living room, walks up to Jason, and hands over the basket.</p>
+      <span class="sidenote">Routine low-level calls (controller checks, camera refreshes, setup queries, and the locomotion steps inside navigation) are folded and excluded from the turn numbering.</span>
+        <div class="trace-box tb-user"><strong>User request.</strong> &ldquo;I am about to meet some friends. Bring some snacks over for them.&rdquo;</div>
+        <p class="trace-turn"><strong>Turn 1.</strong> <strong>Reasoning:</strong> The workspace is ready. Place the snack in the basket and wait for the manipulation to finish before lifting the basket.</p>
+        <pre class="trace-code"><code>pack_snacks()</code></pre>
+        <div class="trace-fold tf-manip">Packing workflow<span class="fold-n">repeated controller updates folded</span></div>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Placement verified.</strong> The snack is packed in the basket.</div>
+        <p class="trace-turn"><strong>Turn 2.</strong> <strong>Reasoning:</strong> Packing is complete. Lift the loaded basket, retract the arm for walking, and prepare it for navigation.</p>
+        <pre class="trace-code"><code>lift_basket()</code></pre>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Lift verified.</strong> The basket is ready to be carried.</div>
+        <p class="trace-turn"><strong>Turn 3.</strong> <strong>Reasoning:</strong> The basket is secured for transport. Follow the doorway route into the living room before selecting a recipient.</p>
+        <pre class="trace-code"><code>navigate_to(living_room)</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> G1 reaches the living room while holding the basket.</div>
+        <p class="trace-turn"><strong>Turn 4.</strong> <strong>Reasoning:</strong> The living-room view shows Jason seated in a white shirt and light trousers. Navigate to him while retaining the basket.</p>
+        <pre class="trace-code"><code>navigate_to(Jason)</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> G1 brings Jason into front view while retaining the basket.</div>
+        <p class="trace-turn"><strong>Turns 5&ndash;8.</strong> <strong>Reasoning summary:</strong> The recipient is now in front but not yet close enough for the handoff. Continue in short increments.</p>
+        <div class="trace-fold">Carry motions<span class="fold-n">4 moves</span></div>
+        <pre class="trace-code"><code>basket_carry_move(direction="forward", distance_m=3.0)
+basket_carry_move(direction="forward", distance_m=1.5)
+...</code></pre>
+        <div class="trace-box tb-nav"><strong>Navigation.</strong> Four short forward motions bring G1 close to the seated recipient.</div>
+        <p class="trace-turn"><strong>Turn 9.</strong> <strong>Reasoning:</strong> The recipient is close in front of G1, and the basket remains held. Extend the arm to the handoff pose and open the hand, but do not infer transfer from the controller state alone.</p>
+        <pre class="trace-code"><code>hand_over()</code></pre>
+        <div class="trace-box tb-manip"><strong>Handoff.</strong> The right arm extends, and the hand opens successfully.</div>
+        <div class="trace-box tb-eval"><span class="tb-lead"><strong>Evaluator.</strong> The harness invokes <code class="tk-eval">evaluate_run()</code> after the manipulation.</span><strong>Release verified.</strong> The basket is released and rests securely with the recipient.</div>
+      </div>
+    </section>
+      <nav class="pager"><a class="prev" href="app-context.html">&larr; B&ensp;Context Structure</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>

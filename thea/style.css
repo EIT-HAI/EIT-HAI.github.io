@@ -1,0 +1,682 @@
+/* Thea site — shared stylesheet. Rules in DESIGN.md; edit that first. */
+
+/* ============ fonts(0728 定):正文 Lato,衬线 TeX Gyre Pagella(Palatino 自由克隆,GUST 许可)
+   全部自托管、与页面同源——不经 Google Fonts 等第三方 CDN,大陆访问无阻 ============ */
+@font-face { font-family: 'Lato'; src: url('assets/fonts/Lato-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lato'; src: url('assets/fonts/Lato-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lato'; src: url('assets/fonts/Lato-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TeX Gyre Pagella'; src: url('assets/fonts/TeXGyrePagella-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TeX Gyre Pagella'; src: url('assets/fonts/TeXGyrePagella-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TeX Gyre Pagella'; src: url('assets/fonts/TeXGyrePagella-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap; }
+
+/* 行内数学变量(0803 定):散落正文的 n、α、p 等与 KaTeX 公式同用 Math Italic,
+   标记用语义元素 <var>;字体文件复用 assets/katex,未引 katex.min.css 的页面也可用 */
+@font-face { font-family: 'KaTeX_Math'; src: url('assets/katex/fonts/KaTeX_Math-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap; }
+var { font-family: 'KaTeX_Math', 'TeX Gyre Pagella', serif; font-style: italic; }
+
+/* ============ cross-document transition: 200ms cross-fade between pages ============
+   Pure CSS (View Transitions API); unsupported browsers fall back to instant navigation. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 200ms; }
+/* 0731 二改:跨文档 View Transition 在预渲染/快导航下常被跳过,章节切换仍"啪"一下。
+   改为不依赖 VT 的正文进场动画:每次页面载入,正文区 320ms 淡入+10px 上浮,
+   外壳(masthead/TOC)不动。任何导航路径下都稳定生效;reduce-motion 时关闭。 */
+.article { animation: page-in 320ms cubic-bezier(.2,.6,.2,1) both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .article { animation: none; }
+  .cover-toc summary::after { transition: border-color .15s; }
+  .cover-toc details[open] > ol.sub { animation: none; }
+  .cover-toc details::details-content { transition: none; }
+}
+
+/* ============ base — ink-wash ground, sans body, serif headings ============ */
+/* background also on html: no white flash while the next document loads */
+html { scroll-behavior: smooth; font-size: 18px; background: #F2F3F2; }
+body {
+  margin: 0;
+  background: #F2F3F2;            /* 淡墨 ground */
+  color: #1B1C1B;                  /* ink */
+  font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+h1, h2, h3 {
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  text-wrap: balance;
+}
+/* 孤字行/难看断行交给浏览器优化;不支持的浏览器忽略 */
+p, li, figcaption { text-wrap: pretty; }
+/* 0731:小型大写回衬线(与论文 \textsc 的 Palatino 形象一致)——Lato 无真小型大写,
+   合成效果生硬;Pagella 合成小型大写与纸面观感接近 */
+.sc { font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-variant-caps: small-caps; letter-spacing: 0.03em; }
+
+/* links(0801 三改:与 PDF theaLinkBlue 同步换灰靛 #4A6480——降饱和避"默认链接蓝";
+   0802 收成两条,此前 hover 有灰靛/墨黑/橙三套,两个目录还互不相同):
+
+   一、站内页面跳转 = 墨色系静止,hover 转橙 #BC6448(论文 listings codebuiltin 色)。
+       封面目录、侧栏 TOC、翻页器、masthead 标题、Thea 字标——与"当前章"同色,
+       指向某一页与身处某一页因此是同一个信号。
+   二、链接与动作 = 灰靛系。正文引用/外链/Figure、Eq 交叉引用静态灰靛、hover 加深;
+       Paper/Code/Video/BibTeX 与侧栏速链墨色静止、hover 转灰靛。
+
+   橙的另一用途是非链接强调:code card 头、BibTeX 条目类型 */
+a { color: inherit; text-decoration: none; transition: color .15s; }
+a:hover { color: #4A6480; }
+a:hover { text-decoration-color: #1B1C1B; }
+.article a { color: #4A6480; }
+.article a:hover { color: #384E66; }
+
+/* ============ page grid: toc | (article = main col + margin col) ============ */
+/* 0802 版式几何参数化:四列宽度 + 两个间距 + 页边距全部收进变量,所有派生量
+   (.page max-width、.article max-width、边注负边距、footer 宽)由 calc 算出。
+   DESIGN.md §1 那条"负边距伸出量 ≤ article 减正文栏的余量"因此自动成立——
+   响应式各档只改这 6 个变量,不必逐条重算几何。 */
+:root {
+  --toc-col:     13rem;   /* 目录栏 */
+  --toc-gap:      3rem;   /* 目录 → 正文 */
+  --text-col:    36rem;   /* 正文栏:唯一不随断点改变的量(行长是可读性底线) */
+  --margin-gap:  2.5rem;  /* 正文 → 边注 */
+  --margin-col:  16rem;   /* 边注栏 */
+  --page-pad:     2rem;   /* 页左右留白 */
+  --hang: calc(var(--margin-col) + var(--margin-gap));  /* 边注向右伸出量 */
+  --shell: calc(var(--text-col) + var(--hang));         /* article 总宽 */
+}
+.page {
+  display: grid;
+  grid-template-columns: var(--toc-col) minmax(0, 1fr);
+  gap: 0 var(--toc-gap);
+  max-width: calc(var(--toc-col) + var(--toc-gap) + var(--shell));
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+.masthead { grid-column: 1 / -1; padding: 4.5rem 0 0; margin-bottom: 3.5rem; text-align: center; }
+.masthead h1 { font-size: 2.25rem; line-height: 1.22; font-weight: 700; margin: 0 auto 1.1rem; max-width: 46rem; }
+.masthead h1 .sc { letter-spacing: 0.04em; }
+/* 大标题不再兼作返回封面的入口(0802 改):回封面由目录顶部的「← Thea」承担,
+   一个页面给同一个动作两个入口,反而让哪个可点变得不清楚 */
+
+/* action row: hand-drawn uniform line icons (1.6 stroke, currentColor) — the only icons allowed */
+.links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.7rem 1.9rem; font-size: 1.02rem; }
+.links a { display: inline-flex; align-items: center; gap: 0.45rem; color: #2E2F2A; text-decoration: none; }
+.links a:hover { color: #4A6480; }
+.links svg { width: 19px; height: 19px; flex: none; }
+
+/* ============ toc: static site navigation — current chapter bold + expanded ============ */
+.toc { position: sticky; top: 2.5rem; align-self: start; font-size: 0.9rem; line-height: 1.45; }
+.toc .toc-title {
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: #5C5D58; margin: 0 0 0.9rem; font-size: 0.75rem; font-weight: 600;
+}
+/* 回封面:Thea 字标常驻目录顶部,兼作品牌与首页入口(0802)。
+   箭头静态即可见(淡)——只在 hover 才现形的话,不动鼠标的人根本不知道能点 */
+.toc .toc-home {
+  display: block; text-decoration: none; color: #1B1C1B;
+  font-size: 1.12rem; margin: 0 0 1.1rem;
+  padding-left: 0;  /* 不吃 .toc a 的悬挂缩进,左缘与 CONTENTS、章号对齐 */
+}
+.toc .toc-home::before {
+  content: "\2190"; margin-right: 0.34em; color: #A9AAA5; transition: color .15s;
+}
+.toc .toc-home:hover { color: #BC6448; }
+.toc .toc-home:hover::before { color: #BC6448; }
+.toc { font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc ol.sub { padding-left: 1.15rem; margin-top: 0.45rem; font-size: 0.82rem; }  /* 子级降一档,层级台阶 */
+.toc li { margin: 0 0 0.55rem; }
+.toc .sub li { margin-bottom: 0.45rem; }
+/* 悬挂缩进:编号用负 margin 拉进 padding 区,换行对齐标题而非编号 */
+.toc a { color: #5C5D58; text-decoration: none; display: block; line-height: 1.35;
+  padding-left: 1.65em; }
+.toc a .toc-num { margin-left: -1.65em; }
+.toc .sub a { padding-left: 2.4em; }
+.toc .sub a .toc-num { margin-left: -2.4em; }
+.toc a:hover { color: #BC6448; }
+.toc li .sub { display: none; }                    /* only the current chapter shows its subsections */
+.toc li.current > .sub { display: block; }
+.toc li.current > a { color: #BC6448; font-weight: 600; }
+.toc .toc-num { color: #9A9B95; margin-right: 0.5em; font-variant-numeric: tabular-nums; display: inline-block; min-width: 1.15em; font-weight: 400; }
+.toc .sub .toc-num { min-width: 1.9em; }
+.toc .sub a.active { color: #BC6448; }               /* scrollspy:当前小节高亮(仅变色,避免变粗引起抖动) */
+/* 侧栏速链:随 sticky TOC 常驻,替代吸顶 masthead(0801) */
+.toc-actions { margin-top: 1.5rem; padding-top: 0.9rem; border-top: 1px solid #DDDEDA;
+  font-size: 0.78rem; }
+.toc-actions a { display: inline; padding-left: 0; color: #5C5D58; }
+.toc-actions a:hover { color: #4A6480; }
+.toc-actions span { color: #C4C5C0; margin: 0 0.4em; }
+
+/* ============ article: main col 36rem + margin col 16rem ============ */
+/* Sections ARE the text column; margin content (sidenotes, listings, .full-width)
+   extends right via negative margin into the reserved 18.5rem — never past the grid.
+   grid + margin:auto sizes items to fit-content — width:100% keeps max-width effective. */
+/* 0801:正文列 38→36rem(约 76→72 字符/行,论文纸面约 60–65,网页版仍偏宽侧但入舒适区);
+   article 总宽 = 正文 36 + 边栏悬挂 18.5,联动 56.5→54.5 */
+.article { max-width: var(--shell); width: 100%; padding-bottom: 4rem; }
+.article > section { max-width: var(--text-col); }
+.article .full-width { margin-right: calc(-1 * var(--hang)); clear: right; }
+
+h2 { font-size: 1.5rem; line-height: 1.3; font-weight: 700; margin: 3rem 0 1rem; }
+h3 { font-size: 1.2rem; font-weight: 700; margin: 2.4rem 0 0.8rem; }
+h2 .sec-num, h3 .sec-num { color: #5C5D58; font-weight: 700; margin-right: 0.6em; font-variant-numeric: tabular-nums; }
+.article > section:first-child h2 { margin-top: 0.5rem; }
+p { margin: 0 0 1rem; }
+.run-in { font-weight: 650; }
+figcaption, .caption { font-size: 0.85rem; color: #5C5D58; line-height: 1.5; }
+
+/* blank placeholder sections — real content pending */
+section.stub { min-height: 40vh; }
+section.stub-sub { min-height: 24vh; }
+
+/* ============ margin column: sidenotes & margin listings (kaobook margin) ============ */
+.sidenote, .margin-listing {
+  float: right; clear: right;
+  width: var(--margin-col); margin-right: calc(-1 * var(--hang));
+  margin-top: 0.15rem; margin-bottom: 1.2rem;
+  font-size: 0.85rem; line-height: 1.5;
+}
+.sidenote .sn { color: #5C5D58; }
+.code-card {
+  background: #FBFBFA; border: 1px solid #E1E2DF;
+  padding: 9px 11px; overflow-x: auto;
+}
+.code-card pre { margin: 0; padding: 0; background: none; border: none; }
+.code-card pre code { font-size: 0.78rem; line-height: 1.5; background: none; padding: 0; }
+.code-card .card-head { font-weight: 700; color: #BC6448; display: block; margin-bottom: 3px; }
+.margin-listing figcaption { margin-top: 0.45rem; }
+sup { line-height: 0; font-size: 0.75em; }
+
+/* ============ figures: white plate + hairline + 12px mat ============ */
+figure { margin: 2rem 0; }
+figure.fig img { width: 100%; height: auto; display: block; background: #fff; border: 1px solid #E1E2DF; padding: 12px; box-sizing: border-box; }
+figure.fig figcaption { margin-top: 0.65rem; }
+
+/* ============ tables (booktabs) / body listings / margin figures / equations ============ */
+figure.table { margin: 1.8rem 0; }
+figure.table > figcaption { margin-bottom: 0.5rem; }
+/* 宽表(单元格含不可断标识符,如工具表 min-content 689px)在自己的容器里横向滚动,
+   图注不跟着滚。窄屏下这是页面不出横向滚动条的最后一道兜底 */
+.table-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+table.tab { border-collapse: collapse; width: 100%; font-size: 0.85rem; line-height: 1.5;
+  border-top: 1.5px solid #5C5D58; border-bottom: 1.5px solid #5C5D58; }
+table.tab th, table.tab td { text-align: left; vertical-align: top; padding: 0.34rem 0.9rem 0.34rem 0; }
+table.tab th:last-child, table.tab td:last-child { padding-right: 0; }
+table.tab thead th { font-weight: 700; border-bottom: 0.8px solid #5C5D58; }
+
+figure.listing { margin: 1.6rem 0; }
+figure.listing figcaption { margin-top: 0.5rem; }
+
+figure.margin-figure, figure.fig.margin-figure { float: right; clear: right; width: var(--margin-col); margin: 0.15rem calc(-1 * var(--hang)) 1.2rem 0; }
+figure.fig.margin-figure img { padding: 8px; }
+figure.margin-figure figcaption { margin-top: 0.45rem; }
+
+.eq { text-align: center; margin: 1.3rem 0; position: relative;
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; }
+.eq em { font-style: italic; }
+.eq .eq-num { position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #5C5D58; }
+/* 窄屏公式比正文栏宽时横向滚动。滚动容器放在 .katex-display 上而不是 .eq 上:
+   .eq 是 eq-num 的定位父级,若它变成 scroll container,编号会跟着内容滚走 */
+.eq .katex-display { margin: 0.2rem 0; overflow-x: auto; overflow-y: hidden; }
+
+.subfig-row { display: flex; gap: 0.6rem; }
+/* 特异性需压过 figure.fig img 的 width:100%;min-width:0 允许 flex 缩到 1/3(高清图固有宽 720px) */
+figure.fig .subfig-row img, .subfig-row img { width: calc((100% - 1.2rem)/3); min-width: 0;
+  height: auto; display: block;
+  background: #fff; border: 1px solid #E1E2DF; padding: 6px; box-sizing: border-box; }
+figcaption.subcap { margin: 0.4rem 0 1.1rem; }
+
+/* ============ abstract card / callout (kaoboxB / kaoboxA) ============ */
+/* 0802:卡片放宽到 46rem 后,原来的 1.15/1.4rem 内边距显得内容顶到边框;
+   加到 2.4/3rem,卡间距 1→1.4rem,顺带把正文行长从 776 收回 720px(约 74 字符) */
+.abstract-card { background: #FBFBFA; border: 1px solid #D7D8D4; border-radius: 6px; padding: 2.4rem 3rem 2.2rem; margin: 0 0 1.4rem; }
+.abstract-card .card-title { font-size: 1.4rem; font-weight: 650; margin: 0 0 1.2rem; color: #1B1C1B; font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; }
+.abstract-card p { margin: 0; }
+.callout { background: #F7F8F6; border-left: 4px solid #6B8583; padding: 0.85rem 1.1rem 0.8rem; margin: 1.4rem 0; }
+/* 0731:Gap 标题衬线、略大于正文(对应纸面 kaoboxA 标题的 \large 衬线) */
+.callout .callout-title { color: #6B8583; font-weight: 700; margin: 0 0 0.4rem;
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-size: 1.2rem; }
+/* Gap 配色对齐论文 main.tex:Gap 1 gapteal #6B8583(默认),Gap 2 gapmauve #8D7B80 */
+.callout-mauve { border-left-color: #8D7B80; }
+.callout-mauve .callout-title { color: #8D7B80; }
+
+/* ============ code (listings palette, on surface) ============ */
+pre, code { font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace; }
+code { font-size: 0.85em; }  /* inline code: monospace only, no tint */
+/* 行内长标识符(pick_up_object_from_surface 这类)在窄屏可断,否则撑破正文栏 */
+:not(pre) > code { overflow-wrap: break-word; }
+pre { background: #FBFBFA; border: 1px solid #E1E2DF; padding: 12px 14px; overflow-x: auto; margin: 1.1rem 0; }
+pre code { background: none; padding: 0; font-size: 0.82rem; line-height: 1.55; }
+.kw { color: #2B679D; } .str { color: #2E8B6F; } .cmt { color: #A39E93; } .bi { color: #BC6448; }
+
+/* ============ chapter references (0802) ============
+   引文型边注的窄屏替身,由 build.py 从边注汇总生成。
+   只在边栏消失的档位出现(≤62rem)——桌面上每条引文就在正文右侧看得见,
+   章末再抄一遍是纯冗余(related 一章 29 条)。
+   代价:桌面上正文里的 [N] 指向这个隐藏列表,点了不滚动。这是可接受的——
+   引文已在同一行右侧,真跳到章末反而把读者从阅读位置拽走。 */
+.chapter-refs { display: none; max-width: var(--text-col);
+  margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid #DDDEDA; }
+.refs-title { text-transform: uppercase; letter-spacing: 0.09em; color: #5C5D58;
+  margin: 0 0 0.9rem; font-size: 0.75rem; font-weight: 600; }
+.ref-list { list-style: none; margin: 0; padding: 0;
+  font-size: 0.82rem; line-height: 1.5; color: #5C5D58; }
+/* 悬挂缩进,与侧栏 TOC 同一手法:换行对齐条目而非编号 */
+.ref-list li { margin: 0 0 0.6rem; padding-left: 2.3em; }
+.ref-list .ref-num { margin-left: -2.3em; display: inline-block; min-width: 2.3em;
+  color: #9A9B95; font-variant-numeric: tabular-nums; }
+/* 点 [12] 跳过来之后要认得出是哪一条——静态变色,非动画 */
+.ref-list li:target { color: #1B1C1B; }
+.ref-list li:target .ref-num { color: #BC6448; }
+
+/* ============ pager: previous / next chapter ============ */
+.pager { display: flex; justify-content: space-between; gap: 2rem; max-width: var(--text-col); margin-top: 4rem; font-size: 0.95rem; }
+.pager a { color: #5C5D58; text-decoration: none; }
+.pager a:hover { color: #BC6448; }
+.pager .next { margin-left: auto; text-align: right; }
+
+/* ============ footer ============ */
+footer {
+  /* 0728:衬线+斜体,极轻——几乎不被察觉的落款 */
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-style: italic; color: #BEBFBA; font-size: 0.8rem; text-align: center;
+  max-width: calc(var(--toc-col) + var(--toc-gap) + var(--shell));
+  margin: 0 auto; padding: 6.5rem var(--page-pad) 2.2rem;
+}
+
+/* ============ responsive (order fixed in DESIGN.md §1) ============
+   0802 重做。旧版只有两档(86rem / 68rem),每档都是"整块结构消失",于是
+   (a) 1344–1090px 这段——多数笔记本的真实视口——目录被整个丢到顶部,而两侧各空 190px;
+   (b) 68rem 以下再无任何一档,手机拿到的是完整桌面几何:18px 根号、2rem 页边距、
+       36rem 正文栏,加上 grid 轨道写的是 1fr(最小尺寸 = min-content),
+       KaTeX 公式 / white-space:pre 的代码块把整页撑到 590px 宽,正文本身被推出视口。
+
+   新版:先"压"后"折"。四档几何各自算得出真实像素(18px 根号下),
+   最后一档才是手机专属排版。grid 轨道一律 minmax(0, …),任何超宽内容
+   都在自己的滚动容器里解决,绝不允许把页面撑出横向滚动条。 */
+
+/* ① ≤ 1344px:三栏保留,把目录栏/边注栏/间距压窄——三栏因此活到 ~1200px */
+@media (max-width: 84rem) {
+  :root { --toc-col: 11rem; --toc-gap: 2.25rem; --margin-gap: 2rem; --margin-col: 12.5rem; --page-pad: 1.5rem; }
+}
+/* ② ≤ 1200px:目录折到顶部(横排居中),正文 + 边注两栏保留到 ~1000px */
+@media (max-width: 75rem) {
+  :root { --margin-gap: 2.5rem; --margin-col: 14rem; }
+  .page { grid-template-columns: minmax(0, 1fr); max-width: var(--shell); }
+  .toc { position: static; max-width: var(--shell); margin: 0 auto 2.25rem; text-align: center; }
+  .toc > ol { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 1.4rem; }
+  .toc li { margin: 0; padding: 0; }
+  .toc li .sub, .toc li.current > .sub { display: none; }  /* collapsed top mode: chapters only */
+  .article { margin: 0 auto; }
+}
+/* ③ ≤ 992px:边注降级为正文内的浅底小字块,回到单栏 */
+@media (max-width: 62rem) {
+  .sidenote, .margin-listing, figure.margin-figure, figure.fig.margin-figure { float: none; width: auto; margin: 1.1rem 0; margin-right: 0; }
+  /* 引文型(id="sn-N",全站 92 条):内容已汇入章末 References,正文里不再展开 */
+  .sidenote.is-citation { display: none; }
+  /* 评注型(无 [N]: 前缀,全站 7 条):留在正文,但读作旁白——发丝竖线 + 小字。
+     不再用浅底块:那个分量约等于 callout,而边注是全页最次要的一层。
+     .sidenote 是 span,必须转 block,否则底纹/边线会跟着行盒断成参差几段 */
+  .sidenote { display: block; font-size: 0.82rem; color: #5C5D58;
+    border-left: 2px solid #DDDEDA; padding: 0.15rem 0 0.15rem 0.9rem; margin: 1.2rem 0; }
+  /* 边栏没了,引文改由章末 References 承载 */
+  .chapter-refs { display: block; }
+  .article { max-width: var(--text-col); }
+  .article .full-width { margin-right: 0; }
+}
+/* ④ ≤ 640px:手机档。根号 18→16px(桌面上 18px 是舒适行长,手机上同样的
+   18px 只剩 ~34 字符/行);页边距、标题、卡片内边距同步收,三联图改竖排。 */
+@media (max-width: 40rem) {
+  html { font-size: 16px; }
+  :root { --page-pad: 1.15rem; }
+
+  .masthead { padding-top: 2.5rem; margin-bottom: 2.25rem; }
+  .masthead h1, .hero h1 { font-size: 1.62rem; line-height: 1.25; margin-bottom: 1rem; }
+  .links { gap: 0.6rem 1.35rem; font-size: 0.95rem; }
+  .hero { padding-top: 2.5rem; }
+  .authors, .affil, .date-line { font-size: 0.98rem; }
+
+  /* 目录移到章末(0802)。旧版顶部横排:masthead 146 + 目录 221 = 367px,
+     章标题落在 y=450——844px 高的手机上首屏一半以上是导航,而且它不 sticky,
+     滚过去之后到页尾之前没有任何导航。手机上的主路径是线性阅读(pager 负责),
+     跳转是次要动作,次要动作放页尾。用 flex order 换位,不改 markup;
+     回封面的入口不丢——masthead 的大标题本身就链到 index.html。 */
+  .page { display: flex; flex-direction: column; }
+  .masthead { order: 1; }
+  .article { order: 2; padding-bottom: 1.5rem; }
+  .toc { order: 3; margin: 0 auto; padding-top: 1.4rem; border-top: 1px solid #DDDEDA; }
+  .toc > ol { gap: 0.25rem 1rem; font-size: 0.95rem; }
+  .toc .toc-home { font-size: 1.05rem; margin-bottom: 0.9rem; }
+
+  h2 { font-size: 1.32rem; margin-top: 2.4rem; }
+  h3 { font-size: 1.12rem; margin-top: 1.9rem; }
+
+  /* 卡片:3rem 侧内边距在 390px 屏上要吃掉 108px,占可用宽度的三分之一 */
+  .abstract-card { padding: 1.4rem 1.25rem 1.25rem; }
+  .abstract-card .card-title { font-size: 1.22rem; margin-bottom: 0.85rem; }
+  .prose p { font-size: 1.02rem; line-height: 1.7; }
+
+  /* 三联图并排后每格只剩 ~100px,看不清;改竖排,与 (a)(b) 图注的叙述顺序一致 */
+  .subfig-row { flex-direction: column; gap: 0.5rem; }
+  figure.fig .subfig-row img, .subfig-row img { width: 100%; }
+  figure.fig img { padding: 7px; }
+  figure { margin: 1.5rem 0; }
+
+  /* 编号让出右侧 gutter,公式再宽也不会压在编号底下 */
+  .eq { padding-right: 2.4rem; margin: 1.1rem 0; }
+
+  table.tab { font-size: 0.8rem; }
+  table.tab th, table.tab td { padding-right: 0.6rem; }
+  pre { padding: 10px 11px; }
+  pre code { font-size: 0.76rem; }
+  .bib-wrap pre { font-size: 0.68rem; }
+
+  .pager { gap: 1.2rem; margin-top: 2.8rem; font-size: 0.9rem; }
+  footer { padding-top: 4rem; }
+}
+
+/* 封面 Citation 区块:占位说明行(定稿后更新条目) */
+.cite-note { font-size: 0.75rem; color: #A9AAA5; margin: 0.5rem 0 0; }
+
+
+/* ============ cover(论文主页):独立单栏 hero,无 masthead/无左侧 TOC ============ */
+.page.cover { display: block; max-width: 46rem; margin: 0 auto; padding: 0 var(--page-pad); }
+/* hero 也是 .article > section,但正文列的 36rem 左对齐是给右侧边注留白的(见 article 段);
+   封面没有边注,继承那条会让整块左偏 90px。0802:解除限宽并居中,回到 .page.cover 的 46rem */
+.page.cover .article > section { max-width: none; margin-inline: auto; }
+/* 封面所有块(标题、视频、卡片)统一 46rem;视频 16/9 因此长高约 101px,
+   Abstract 相应下移——这是与卡片同宽的代价,0802 取同宽 */
+.hero { text-align: center; padding-top: 4.5rem; }
+/* 与 .masthead h1 完全同参:跳到章节页时标题不改尺寸也不挪位,读作"同一个标题" */
+.hero h1 { font-size: 2.25rem; line-height: 1.22; font-weight: 700; margin: 0 auto 1.6rem; max-width: 46rem; }
+/* 作者块整体衬线(0728:hero 是网页版 title page,非正文行走 Palatino 与大标题一体) */
+.authors, .affil, .authors-note, .date-line {
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; }
+.authors { font-size: 1.06rem; line-height: 1.75; margin: 0 0 0.65rem; color: #2E2F2A; }
+.authors sup, .authors-note sup { color: #8a8b86; font-size: 0.7em; vertical-align: 0.38em; line-height: 0; margin-left: 0.04em; }
+/* 尺寸对齐 PDF 标题页:机构/日期与作者同为 \large,仅 †注 降一档 \normalsize */
+.affil { font-size: 1.06rem; color: #2E2F2A; margin: 0 0 0.8rem; }
+.authors-note { color: #5C5D58; font-size: 0.9rem; margin: 0 0 0.3rem; }
+.date-line { font-size: 1.06rem; color: #2E2F2A; margin: 0 0 2.2rem; }
+/* TL;DR(0803):动作行下方居中一句,衬线斜体正句 + 小型大写灰前缀。
+   居中 + 斜体与左对齐的 Instruction 行(灰标 + 正体)错开,不构成同版式重复 */
+.tldr { font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-size: 1.35rem; color: #2E2F2A; margin: 3rem 0 0; text-wrap: balance; }
+.tldr > .sc { color: #8a8b86; letter-spacing: 0.06em; font-size: 0.88em; }
+.tldr em { font-style: italic; }
+/* 正句里的 Thea:小型大写不斜排(传统排版惯例,\emph 内 \textsc 同效),保持直立 */
+.tldr em .sc { font-style: normal; }
+/* demo video:页内直接播的 <video>,与图片"装裱"同一套(白面 + 发丝描边),
+   圆角 6px 沿用 Abstract 卡。真身是 <video> 时不能用 flex 居中,否则控件布局被打乱 */
+.video-slot { aspect-ratio: 16 / 9; width: 100%; display: block; box-sizing: border-box;
+  border: 1px solid #D7D8D4; border-radius: 6px; background: #FBFBFA;
+  margin: 2.2rem 0 1rem; }
+/* contain 而不是 cover:页面里容器就是 16:9,两者看不出差别;但全屏时屏幕多是
+   16:10 / 3:2,cover 会把画面上下裁掉。PI 同样用 contain。 */
+video.video-slot { object-fit: contain; margin: 0; display: block; cursor: pointer; }
+
+/* 全屏的是 .vshell(视频 + 控件条)而不是 .vwrap——后者会把控件条甩在全屏外,
+   没有音量/退出按钮;全屏 <video> 连大播放钮也甩掉。
+   全屏下清掉圆角/描边/固定比例,黑底居中,画面按 contain 完整显示,控件条贴底。 */
+.vshell:fullscreen, .vshell:-webkit-full-screen {
+  background: #000;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.vshell:fullscreen .vwrap, .vshell:-webkit-full-screen .vwrap {
+  flex: 1 1 auto; min-height: 0; border-radius: 0;
+}
+.vshell:fullscreen video.video-slot, .vshell:-webkit-full-screen video.video-slot {
+  width: 100%; height: 100%; aspect-ratio: auto;
+  border: 0; border-radius: 0; background: #000;
+}
+.vshell:fullscreen .vbar, .vshell:-webkit-full-screen .vbar {
+  flex: none; margin: 0;
+  padding: 0.6rem 1.1rem calc(0.6rem + env(safe-area-inset-bottom));
+}
+/* 黑底上的控件反白:图标/进度转浅灰,hover 橙保持 */
+.vshell:fullscreen .vbtn, .vshell:-webkit-full-screen .vbtn { color: #C9CAC4; }
+.vshell:fullscreen .vbtn:hover, .vshell:-webkit-full-screen .vbtn:hover { color: #BC6448; }
+.vshell:fullscreen .vtrack::after, .vshell:-webkit-full-screen .vtrack::after { background: #3A3B38; }
+.vshell:fullscreen .vfill, .vshell:-webkit-full-screen .vfill { background: #C9CAC4; }
+/* 视频 + 控件条 + 图注成一组:外边距交给 figure */
+.video-figure { margin: 2.2rem 0 1rem; }
+/* 封面 hero 的图注比常规 figcaption 大一档(0.85→0.95):它承载剧情,不是标号说明 */
+.video-figure figcaption { margin-top: 0.7rem; text-align: left; font-size: 0.95rem; }
+.vwrap { position: relative; line-height: 0; border-radius: 6px; overflow: hidden; }
+
+/* 播放按钮:整块画面是点击区,中央一枚大的浅色圆盘。参数对齐 pi.website:
+   圆盘 = 视频宽的 15%、底色取站点 surface 的 82% 不透明、blur 只有 4px、无描边无阴影,
+   图标实心深色、占圆盘一半。没有全屏暗遮罩——PI 那层 bg-black/50 是 Loading 态,
+   不是播放遮罩。 */
+.vbig {
+  position: absolute; inset: 0; padding: 0; border: 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease-in-out, visibility .2s;
+}
+/* 只在暂停时出现。播放中不露、hover 也不露——PI 就是这个规则,播放中按钮整个不存在 */
+.vwrap.is-paused .vbig { opacity: 1; visibility: visible; }
+.vbig-disc {
+  width: 15%; aspect-ratio: 1; min-width: 68px; max-width: 168px;
+  border-radius: 9999px;
+  display: flex; align-items: center; justify-content: center;
+  color: #1B1C1B;                        /* 深色图标压在浅盘上,不是白压深 */
+  background: rgba(251, 251, 250, 0.82); /* 站点 surface #FBFBFA */
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  transition: background .2s ease-in-out;
+}
+/* 图标 = 盘径的一半(PI: 96/192)。三角的光学居中已做进 path,这里不再补 margin */
+.vbig-disc svg { width: 50%; height: 50%; display: block; }
+.vbig:hover .vbig-disc { background: rgba(251, 251, 250, 0.92); }
+.vbig:focus-visible { outline: none; }
+.vbig:focus-visible .vbig-disc { box-shadow: 0 0 0 3px rgba(27, 28, 27, 0.55); }
+@media (prefers-reduced-motion: reduce) { .vbig, .vbig-disc { transition: none; } }
+
+/* 用户请求:放在视频之前,先读请求再看机器人怎么处理——与纸面 trace 以 request 开篇一致。
+   请求是一句话语,走衬线;左侧标签沿用 CONTENTS / REFERENCES 那套小号大写灰标 */
+.v-request { display: flex; align-items: baseline; gap: 0.75rem; margin: 0 0 0.75rem;
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-size: 1.4rem; line-height: 1.4; color: #1B1C1B; }
+.v-request .v-label { flex: none; font-family: 'Lato', system-ui, sans-serif;
+  text-transform: uppercase; letter-spacing: 0.09em; font-size: 1.1rem; font-weight: 600;
+  color: #B3B4AE; position: relative; top: -0.02em; }
+
+/* 自绘控件条:原生控件是浏览器各自的灰塑料 UI,且 ::-webkit-media-controls-* 只有
+   Chrome 认,没法统一。条子放画面下方——不需要遮罩、不挡烧录字幕、读作图注的一部分 */
+.vbar { display: flex; align-items: center; gap: 0.7rem; margin-top: 0.55rem; }
+.vbtn { flex: none; width: 26px; height: 26px; padding: 0; border: 0; background: none;
+  cursor: pointer; color: #5C5D58; display: flex; align-items: center; justify-content: center;
+  transition: color .15s; }
+.vbtn svg { width: 22px; height: 22px; display: block; }
+.vbtn:hover { color: #BC6448; }
+.vbtn:focus-visible { outline: 1px solid #4A6480; outline-offset: 2px; }
+/* 进度:一条发丝线,不是滑块——与全站"靠描边分层、不靠控件装饰"一致 */
+.vtrack { position: relative; flex: 1 1 auto; height: 14px; display: flex; align-items: center;
+  cursor: pointer; touch-action: none; }
+.vtrack::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px;
+  transform: translateY(-50%); background: #DDDEDA; }
+.vfill { position: relative; z-index: 1; height: 2px; background: #5C5D58; width: 0;
+  transition: width .1s linear; }
+/* 拖动时关掉过渡,否则填充追不上指针,手感像有延迟 */
+.vtrack.is-dragging .vfill { transition: none; }
+.vtrack:hover .vfill { background: #BC6448; }
+.vtrack:focus-visible { outline: 1px solid #4A6480; outline-offset: 3px; }
+.vtime { flex: none; font-size: 0.82rem; color: #9A9B95; font-variant-numeric: tabular-nums; }
+
+/* masthead 动作行里 YouTube / Bilibili 共用一个播放图标,合成一组——
+   两个一模一样的图标并排比没有图标更难看 */
+.link-group { display: inline-flex; align-items: center; gap: 0.45rem; color: #2E2F2A; }
+.link-group svg { width: 19px; height: 19px; flex: none; }
+.link-group a { color: #2E2F2A; }
+.link-group a:hover { color: #4A6480; }
+.link-group .lg-sep { color: #C4C5C0; }
+/* 未上线时的占位块:居中一行灰字 */
+.video-slot.is-placeholder { display: flex; align-items: center; justify-content: center;
+  color: #A9AAA5; font-size: 0.95rem; }
+.hero .abstract-card, .hero .pager { text-align: left; }
+/* 卡片放宽到 46rem 后,摘要正文若保留 36rem 上限会在右侧留 128px 空档、整段偏左;
+   改为铺满卡片,与 Contents/Citation 两张卡的内容一致(0802) */
+/* 排除 .card-title:它也是 <p>,被这条命中会清掉标题的下边距、让标题贴住正文 */
+.hero .prose p:not(.card-title) { margin: 0; max-width: none; }
+.cover-toc { margin: 0.2rem 0 0; padding-left: 0.4rem; list-style: none;
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; font-size: 1.04rem; }
+.cover-toc li { margin: 0.35rem 0; }
+.cover-toc .toc-num { display: inline-block; min-width: 1.7rem; color: #5C5D58; }
+.cover-toc a { text-decoration: none; color: #1B1C1B; }  /* 封面目录是导航,同侧栏 TOC 保墨色 */
+.cover-toc a:hover { color: #BC6448; }  /* 0802:蓝→橙,与侧栏"当前章"同色——指向某章与身处某章是同一个信号 */
+
+
+
+/* Citation 代码块:圆角、暖灰底、横向滚动、BibTeX 轻高亮、块内 Copy(0728) */
+.bib-wrap { position: relative; margin: 0.2rem 0 0; }
+.bib-wrap pre { background: #F5F4F0; border: 1px solid #E4E3DE; border-radius: 8px;
+  padding: 0.95rem 1.05rem; margin: 0; overflow-x: auto; white-space: pre;
+  font-size: 0.75rem; line-height: 1.65; }
+.bib-copy { position: absolute; top: 0.6rem; right: 0.65rem; cursor: pointer;
+  font-size: 0.72rem; font-family: inherit; color: #5C5D58;
+  background: #FFFFFF; border: 1px solid #E1E0DC; border-radius: 5px; padding: 0.16rem 0.62rem; }
+.bib-copy:hover { color: #BC6448; border-color: #D8C9C2; }
+.bt-ent   { color: #BC6448; }   /* 条目类型 @misc:accent */
+.bt-field { color: #5E7288; }   /* 字段名:论文 steel */
+.bt-key   { color: #5C5D58; }   /* 引用键:弱化灰 */
+
+
+/* 摘要 = 纸上内容,整段衬线与 paper 一致(0728 定);限宽 36rem 保行长,左对齐;
+   Thea 继承衬线语境,由全局 .sc 出真小型大写,无需特殊规则 */
+.prose p { font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-size: 1.08rem; line-height: 1.75; text-align: left;
+  max-width: var(--text-col); margin: 0 auto; }
+
+/* ============ appendices(0802):A 工具注册表 / B context 结构 / C 执行日志 ============
+   颜色全部取自 paper 的 \definecolor,纸面与网页同色;版式沿用正文栏 + 边注栏几何。 */
+
+/* 目录里的附录分隔:与 "Contents" 同级的小标题,把字母编号与数字章节分开 */
+.toc .toc-appendix { margin-top: 1.6rem; }
+.toc ol.appendix .toc-num { min-width: 1.15em; }
+
+/* --- A. 宽表:5 列在正文栏放不下,伸到边注栏并允许横向滚动 --- */
+.tab-scroll { overflow-x: auto; }
+table.tab-registry { min-width: 44rem; }
+table.tab-registry th, table.tab-registry td { padding-right: 0.7rem; }
+table.tab-registry tr.grp th { font-weight: 700; padding-top: 0.85rem;
+  border-bottom: 0.8px solid #C9C6BF; }
+table.tab-registry tbody tr:first-child th { padding-top: 0.4rem; }
+table.tab-registry .tool-opt { font-style: italic; color: #6B6862; }
+/* 参数多行的工具:同一工具的续行不再重复上边线,靠留白分组 */
+table.tab-registry td[rowspan] { border-top: 0.8px solid #E1E2DF; }
+table.tab-registry tr.grp + tr td { border-top: none; }
+
+/* --- B. context 三个生命期面板 --- */
+.ctx-listing { margin: 1.6rem 0; }
+.ctx-panel { position: relative; padding: 0.75rem 0.9rem 0.85rem; margin-bottom: 0.45rem; }
+.ctx-resident    { background: #EFECE6; }
+.ctx-refreshed   { background: #EBF0EE; }
+.ctx-accumulated { background: #EAEAE8; }
+/* 面板标签落在边注栏,与纸面 overlay 的位置一致 */
+.ctx-label { position: absolute; left: 100%; top: 0.75rem;
+  margin-left: var(--margin-gap); width: var(--margin-col);
+  font-size: 0.8rem; line-height: 1.45; }
+.ctx-resident    .ctx-label { color: #6E675C; }
+.ctx-refreshed   .ctx-label { color: #4E6361; }
+.ctx-accumulated .ctx-label { color: #55524E; }
+.ctx-entry + .ctx-entry { margin-top: 1.05rem; }
+.ctx-entry h4 { margin: 0 0 0.18em; font-weight: 400; font-size: 1rem;
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif; }
+.ctx-resident    .ctx-entry h4 { color: #6E675C; }
+.ctx-refreshed   .ctx-entry h4 { color: #4E6361; }
+.ctx-accumulated .ctx-entry h4 { color: #55524E; }
+.ctx-body { font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+  font-size: 0.78rem; line-height: 1.6; }
+.ctx-rules { margin: 0.4em 0 0; padding-left: 1.1em; list-style: none; }
+.ctx-rules li { text-indent: -1.1em; margin-bottom: 0.12em; }
+.ctx-rules li::before { content: "- "; }
+.ctx-body .ck { color: #BC6448; }        /* contextkey */
+.ctx-body .co { color: #8C8C8C; }        /* contextoptional */
+.ctx-foot { margin: 1.05rem 0 0; font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+  font-size: 0.78rem; line-height: 1.6; }
+
+/* --- C. 执行日志 trace --- */
+.trace { margin: 1.2rem 0 2.2rem; }
+.trace-turn { margin: 0 0 0.5rem; font-size: 0.92rem; }
+.trace-code { margin: 0.45rem 0 0.55rem; }
+.trace-code code { font-size: 0.78rem; }
+.trace-box { padding: 6px 10px; margin: 0 0 0.55rem; font-size: 0.9rem; line-height: 1.55; }
+.trace-box .tb-lead { display: block; }
+.tb-user   { background: #EBE8F5; } .tb-user   strong { color: #564D78; }
+.tb-nav    { background: #E7ECF6; } .tb-nav    strong { color: #4D5C78; }
+.tb-manip  { background: #F3F0EA; } .tb-manip  strong { color: #786A4D; }
+.tb-eval   { background: #F5E8EC; } .tb-eval   strong { color: #784D59; }
+.tb-final  { background: #EBE8F5; } .tb-final  strong { color: #564D78; }
+.tb-hook   { background: #EDF1EB; } .tb-hook   strong { color: #55784D; }
+.tb-fail   { background: #F0E3E1; } .tb-fail   strong { color: #6E4340; }
+.tk-hook { color: #55784D; }
+.tk-eval { color: #784D59; }
+/* 折叠标记:多个同类调用被折成一条,右端给出条数 */
+.trace-fold { background: #E7ECF6; color: #4D5C78; font-weight: 700;
+  padding: 5px 10px; margin: 0.3rem 0 0.4rem; font-size: 0.85rem;
+  display: flex; justify-content: space-between; gap: 1rem; }
+.trace-fold .fold-n { font-weight: 400; color: #6B6862; }
+.tf-manip { background: #F3F0EA; color: #786A4D; }
+.tf-eval  { background: #F5E8EC; color: #784D59; }
+.tf-user  { background: #EBE8F5; color: #564D78; }
+
+@media (max-width: 62rem) {
+  /* 边注塌进正文时,面板标签也回到面板内部 */
+  .ctx-label { position: static; display: block; width: auto; margin: 0 0 0.5rem; }
+  .ctx-label br { display: none; }
+  .ctx-label strong::after { content: " — "; font-weight: 400; }
+  table.tab-registry { min-width: 36rem; }
+}
+/* 封面目录:附录首行与正文章节之间留一档,字母编号不至于读作第 8 章 */
+.cover-toc li.appendix-first { margin-top: 0.7rem; padding-top: 0.55rem; border-top: 1px solid #E1E2DF; }
+/* 封面目录二级条目:降一档字号 + 淡墨,扫视时先落到章名上 */
+/* 二级默认折叠:<details> 原生开合,不引脚本。summary 行内的章名链照常导航,
+   点行内其余位置(含小三角)才展开——两种意图都在同一行上,互不抢。 */
+.cover-toc summary { list-style: none; cursor: pointer; position: relative; }
+.cover-toc summary::-webkit-details-marker { display: none; }
+.cover-toc summary::after {
+  content: ""; position: absolute; left: -0.95rem; top: 0.62em;
+  width: 0.32rem; height: 0.32rem; border-right: 1.4px solid #A9AAA5;
+  border-bottom: 1.4px solid #A9AAA5; transform: rotate(-45deg);
+  /* top 也要过渡:两个状态的箭头视觉重心不同,只过渡 transform 会在收合瞬间跳一下 */
+  transition: transform .18s cubic-bezier(.2,.6,.2,1),
+              top .18s cubic-bezier(.2,.6,.2,1), border-color .15s; }
+.cover-toc details[open] > summary::after { transform: rotate(45deg); top: 0.5em; }
+.cover-toc summary:hover::after { border-color: #BC6448; }
+/* 子节开合动效,与正文 .article 进场同一条缓动曲线。
+   基线:只有展开能做(<details> 关闭时内容直接出栈,无中间态可动画)。 */
+.cover-toc details[open] > ol.sub { animation: toc-sub-in 180ms cubic-bezier(.2,.6,.2,1) both; }
+@keyframes toc-sub-in { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+
+/* 支持 ::details-content 的浏览器改走过渡:内容盒本身可动画,收合于是也有了中间态。
+   block-size 0↔auto 需要 interpolate-size;content-visibility 用 allow-discrete
+   延后到动画结束再隐藏,否则收合会在第一帧闪断。不支持的浏览器落回上面的展开动画。 */
+@supports selector(::details-content) and (interpolate-size: allow-keywords) {
+  :root { interpolate-size: allow-keywords; }
+  .cover-toc details[open] > ol.sub { animation: none; }
+  .cover-toc details::details-content {
+    block-size: 0; overflow: hidden; opacity: 0;
+    transition: block-size 180ms cubic-bezier(.2,.6,.2,1),
+                opacity 150ms cubic-bezier(.2,.6,.2,1),
+                content-visibility 180ms;
+    /* 必须是长写法:allow-discrete 塞进 transition 简写会让整条声明作废,
+       content-visibility 于是卡在 hidden,内容盒高度恒为 0,开合都看不见。 */
+    transition-behavior: allow-discrete; }
+  .cover-toc details[open]::details-content { block-size: auto; opacity: 1; }
+}
+.cover-toc ol.sub { list-style: none; margin: 0.4rem 0 0.75rem; padding-left: 1.7rem;
+  font-size: 0.87em; }
+.cover-toc ol.sub li { margin: 0.1rem 0; }
+.cover-toc ol.sub a { color: #5C5D58; display: block; }
+.cover-toc ol.sub .toc-num { min-width: 2.2rem; color: #8A8B86; }
+.cover-toc ol.sub a:hover { color: #BC6448; }

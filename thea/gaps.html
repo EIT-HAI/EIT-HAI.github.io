@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 Bridging the Gaps — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li class="current"><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">4</span>Bridging the Gaps</h2>
+      <p>
+        The previous section carries the harness across layer by layer. Every layer has
+        a digital counterpart to start from, and the work is adaptation. This section
+        builds what has no counterpart. Gaps 1 and 2 (<a href="intro.html">&sect;1</a>)
+        name the two absences that break the loop itself: the physical world is neither
+        readable nor verifiable by construction, so the infrastructure a coding agent
+        inherits for free must here be built. The scene graph restores readability,
+        giving the loop a world it can reference (<a href="#scene-graph">&sect;4.1</a>).
+        The evaluator restores verifiability, approximating the exit codes the world
+        does not issue (<a href="#eval">&sect;4.2</a>). A third absence has no named gap
+        because coding agents never meet it. They have no body. An embodied agent does,
+        and what it can sense, reach, and do depends on which body it runs on. The
+        Embodiment Profile describes the body and the boundaries of its capabilities
+        (<a href="#embodiment">&sect;4.3</a>).
+      </p>
+    </section>
+
+    <section id="scene-graph">
+      <h2><span class="sec-num">4.1</span>Scene Graph as Context</h2>
+      <p>
+        We restore world readability through two linked layers (<a href="#fig6">Figure 6</a>). An object-centric scene
+        graph maintains a persistent, symbolic world state across turns. A
+        decision-facing interface carries that state into the model's context: a compact
+        scene graph brief by default, with queries keyed by object ref when more detail
+        is needed. <a href="#world-state">&sect;4.1.1</a> defines the world-state
+        representation and its update process. <a href="#interface">&sect;4.1.2</a>
+        explains how the model reads that state, confirms an object ref, and carries the
+        ref into tool calls.
+      </p>
+    </section>
+
+    <section id="world-state">
+      <h3><span class="sec-num">4.1.1</span>Persistent World State</h3>
+      <span class="sidenote is-citation" id="ref-22"><span class="sn">[22]:</span> Gu et al. (2024),
+      <a href="https://arxiv.org/abs/2309.16650" target="_blank" rel="noopener"><em>ConceptGraphs: Open-vocabulary 3D scene graphs for perception and
+      planning</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-23"><span class="sn">[23]:</span> Rana et al. (2023),
+      <a href="https://arxiv.org/abs/2307.06135" target="_blank" rel="noopener"><em>SayPlan: Grounding large language
+      models using 3D scene graphs for scalable robot task planning</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-24"><span class="sn">[24]:</span> Yoneda et al. (2024),
+      <a href="https://arxiv.org/abs/2306.17840" target="_blank" rel="noopener"><em>Statler: State-maintaining language models for embodied
+      reasoning</em></a>.</span>
+      <p>
+        A coding agent inherits a named and searchable environment. It can search for a
+        symbol, read the path that comes back, and hand the same path to its next tool
+        call. A physical agent starts with none of this. Its visual and depth
+        observations describe one view at one moment, robot state and tool feedback
+        arrive on separate channels, and none of these signals organizes the world into
+        entities the loop can reference again. Yet to continue a task, the loop must
+        know which entity it is pursuing, where that entity was last observed, and how
+        much to trust that evidence. We therefore turn fleeting signals into persistent
+        symbols. An object-centric scene graph ties a stable ref to each object's coarse
+        position and freshness, turn after turn&nbsp;[<a href="#ref-22">22</a>,&thinsp;<a href="#ref-23">23</a>,&thinsp;<a href="#ref-24">24</a>].
+      </p>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 8" id="lst8">
+        <div class="code-card"><pre><code><span class="card-head">Recorded object node</span>{
+  <span class="kw">"id"</span>: 2,
+  <span class="kw">"label"</span>: <span class="str">"cup"</span>,
+  <span class="kw">"center"</span>: [3.91, -0.18, 1.08],
+  <span class="kw">"extent"</span>: [0.099, 0.133, 0.096],
+  <span class="kw">"confidence"</span>: 1.0,
+  <span class="kw">"last_seen_time"</span>:
+    1778162862.957,
+  <span class="kw">"image_path"</span>: <span class="str">".../2.jpg"</span>
+}
+<span class="cmt">derived ref: cup_2</span></code></pre></div>
+        <figcaption><strong>Listing 8.</strong> A recorded object node,
+        abridged.</figcaption>
+      </div>
+
+      <span class="sidenote is-citation" id="ref-25"><span class="sn">[25]:</span> Armeni et al. (2019),
+      <a href="https://arxiv.org/abs/1910.02527" target="_blank" rel="noopener"><em>3D Scene Graph: A structure for unified semantics, 3D space, and
+      camera</em></a>.</span>
+      <p>
+        <span class="run-in">Graph structure.</span> The scene graph organizes world
+        state into nodes, edges, and graph metadata, following 3D scene-graph
+        representations that bind semantic entities to spatial structure&nbsp;<a class="cite" href="#ref-25">[25]</a>.
+        An object node carries a ref such as <code>cup_2</code>, which the harness
+        derives from the node's <code>label</code> and <code>id</code>; behind the ref,
+        the node stores a coarse 3D bounding box, confidence, freshness, and a link to
+        visual evidence. A container (e.g. a cabinet or a drawer) keeps its state and
+        tracked contents on the same node, and a robot node tracks pose and holding
+        state. Edges encode <code>on</code>, <code>inside</code>, <code>holding</code>,
+        and <code>near</code> relations among object, container, and robot nodes; a
+        <code>near</code> edge, for example, carries the measured distance between its
+        endpoints. Graph metadata records provenance, coordinate frame, and update
+        time. <a href="#lst8">Listing 8</a> shows one recorded object node.
+      </p>
+
+      <span class="sidenote is-citation" id="ref-26"><span class="sn">[26]:</span> Rosinol et al. (2020),
+      <a href="https://arxiv.org/abs/2002.06289" target="_blank" rel="noopener"><em>3D dynamic scene graphs:
+      Actionable spatial perception with places, objects, and humans</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-27"><span class="sn">[27]:</span> Takmaz et al. (2023),
+      <a href="https://arxiv.org/abs/2306.13631" target="_blank" rel="noopener"><em>OpenMask3D: Open-Vocabulary 3D Instance Segmentation</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-28"><span class="sn">[28]:</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-29"><span class="sn">[29]:</span> Jiang et al. (2024),
+      <a href="https://arxiv.org/abs/2402.15487" target="_blank" rel="noopener"><em>RoboEXP: Action-Conditioned Scene Graph via Interactive Exploration for
+      Robotic Manipulation</em></a>.</span>
+      <p>
+        <span class="run-in">Graph maintenance.</span> A persistent picture must be
+        kept true, and two kinds of change reach it: what the robot sees, and what the
+        robot does. The perception backend supplies observation-derived state from
+        visual and depth evidence, refreshing object nodes, coarse positions,
+        confidence, freshness, and spatial relations, echoing dynamic scene-graph
+        construction and structured representations used in real-world ObjectNav
+        systems&nbsp;[<a href="#ref-26">26</a>,&thinsp;<a href="#ref-27">27</a>,&thinsp;<a href="#ref-28">28</a>]. Execution-derived updates record what physical actions
+        change, such as grasping an object or opening a container; action-conditioned
+        scene graphs likewise use interactions to reveal previously hidden
+        structure&nbsp;<a class="cite" href="#ref-29">[29]</a>. In our harness, this input is gated. After a tool
+        finishes, the evaluator checks its post-condition
+        (<a href="#eval">&sect;4.2</a>), and only a confirmed outcome may edit the
+        graph. A confirmed pickup, for example, marks the robot as holding the object
+        and removes it from where it lay; a confirmed cabinet opening records that
+        container as open. The harness resolves both inputs against object refs and
+        merges them into a single graph. Together they keep the scene graph an
+        up-to-date picture of the world.
+      </p>
+
+      <figure class="fig full-width" id="fig6">
+        <img src="assets/scene_graph_world_state.png"
+             alt="Diagram: observation-derived updates and evaluator-confirmed action outcomes are resolved against object refs and merged into one scene graph; the scene graph brief is pushed into the refreshed context every turn, and ref-keyed queries fetch omitted evidence on demand.">
+        <figcaption><strong>Figure 6.</strong> Maintaining and reading the world
+        state.<sup><a href="#fn-1">1</a></sup> Observation-derived updates and evaluator-confirmed action
+        outcomes are resolved against object refs and merged into one graph, carried
+        into the next turn. The scene graph brief is pushed into the refreshed context
+        every turn. Ref-keyed queries fetch omitted evidence on demand.</figcaption>
+      </figure>
+      <span class="sidenote footnote" id="fn-1"><span class="sn">1.</span> Scene layout designed with
+      Sweet Home 3D. Includes 3D models and textures distributed under free
+      licenses.</span>
+    </section>
+
+    <section id="interface">
+      <h3><span class="sec-num">4.1.2</span>Accessing the World State</h3>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 9" id="lst9">
+        <div class="code-card"><pre><code>Scene graph brief:
+  objects=10;
+  stamp=1778162862.957
+Robot: pose=[0,0,0,0],
+  gripper empty
+Observed objects:
+  - cup_2 at (3.91,-0.18,1.08);
+    conf=1
+  - laptop_5 at (5.21,1.18,1.29);
+    conf=1
+  ...</code></pre></div>
+        <figcaption><strong>Listing 9.</strong> Scene graph brief rendered before a
+        decision.</figcaption>
+      </div>
+
+      <span class="sidenote is-citation" id="ref-13"><span class="sn">[13]:</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener"><em>Effective
+      Context Engineering for AI Agents</em></a>.</span>
+      <p>
+        <span class="run-in">Scene graph brief.</span> The full graph is too much to
+        hand the model every turn. The context window is a finite, attention-limited
+        resource (<a href="system.html#s32">&sect;3.2</a>), and most graph detail is
+        irrelevant to the next decision. The harness therefore renders a scene graph
+        brief into the refreshed context, with frequently needed information present by
+        default and the rest fetched on demand. Nearly every decision must know which
+        objects the world offers, where each one lies, and how far to trust that
+        evidence, so the brief lists every object ref with its coarse position,
+        confidence, and freshness. The robot's own pose and holding state condition
+        every action choice, and tracked container contents keep known but unseen
+        objects addressable, so both enter the brief. Detail that only particular
+        decisions touch, such as an object's extent, its relation edges, and its stored
+        images, stays in the graph and is retrievable by ref. The brief is compact
+        because it selects fields rather than pruning nodes; the boundary need not be
+        exact, since anything omitted costs one extra query, not a failure. The harness
+        regenerates the brief before each call while preserving the graph across calls,
+        so the model reads a current global picture without reconstructing world state
+        from accumulated messages&nbsp;<a class="cite" href="#ref-13">[13]</a>. <a href="#lst9">Listing 9</a> shows an abridged brief.
+      </p>
+
+      <p>
+        <span class="run-in">Ref-keyed queries.</span> What the brief omits, the model
+        fetches itself. A small set of query tools reads the full graph on demand,
+        keyed by ref, so every answer attaches to an entity the graph already names
+        rather than introducing a new one. <code>get_object_relations</code> returns
+        the typed relations of a ref, and <code>get_image</code> returns the visual
+        evidence stored on its node. For example, the graph names objects at the class
+        level, so when the user asks for &#8220;the red cup&#8221; and the brief lists
+        three cups, no ref settles the instruction by name; the model calls
+        <code>get_image</code> on the candidates and reads the color from their stored
+        views, evidence it needs for this one decision and not as standing context. A
+        spatial cue such as &#8220;the cup by the desk&#8221; resolves similarly
+        through <code>get_object_relations</code>. The design ends at the tools; what
+        follows is the model's own behavior. It chooses which query to issue and when,
+        and asks through <code>query_user</code> when no gathered evidence settles what
+        the user means. It treats an empty lookup as absence of evidence, not absence
+        of the object, and obtains a fresh observation or inspects a likely container
+        before concluding that the object is not there. Composing these moves, the
+        model resolves a vague phrase into a symbolic instance and hands its ref to the
+        next action tool, <code>navigate_to(target="cup_2")</code>; the binding keeps
+        naming the same entity through evaluation and retry until new evidence breaks
+        it.
+      </p>
+      <p>
+        A confirmed ref settles which entity the robot pursues and where it
+        approaches; it does not promise that manipulation is ready from the current
+        pose. That judgment falls to later evidence. Near the object, a fresh
+        observation grounds visibility and alignment, and after each action the
+        evaluator rules on the outcome (<a href="#eval">&sect;4.2</a>). The scene graph
+        supplies identity and coarse location, nothing more. It makes the world
+        readable and addressable without becoming a readiness or success oracle.
+      </p>
+    </section>
+
+    <section id="eval">
+      <h2><span class="sec-num">4.2</span>Evaluation as Exit Codes</h2>
+      <span class="sidenote is-citation" id="ref-30"><span class="sn">[30]:</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener"><em>Demystifying
+      evals for AI agents</em></a>.</span>
+      <p>
+        In the paradigm of coding agents, the environment itself tells the agent how
+        its last action went: commands return exit codes, tests fail with stack traces,
+        and the agent debugs against these signals&nbsp;<a class="cite" href="#ref-30">[30]</a>. The physical world
+        provides no such infrastructure. A robot that has just attempted a grasp
+        receives no signal telling it whether the task is still in progress, has
+        succeeded, or has failed, let alone why: a slipped grip and a collision both go
+        unreported. Supplying this missing verdict is neither optional nor easy. The
+        reliability analysis in <a href="harness.html">&sect;2</a> shows that evaluator
+        accuracy <var>&alpha;</var> directly bounds the end-to-end task success rate: a
+        harness is only as reliable as its judge. The difficulty also inverts across
+        worlds. In coding agents a single step judges itself, and the hard questions
+        begin only at the level of whole trajectories; in the physical world, judging
+        even one action is already the open problem.
+      </p>
+
+      <p>
+        <span class="sc">Thea</span> therefore makes evaluation an explicit module of
+        the harness. An evaluator judges each action's outcome and returns the verdict
+        with a structured failure reason, the exit code and the stack trace that the
+        world never provides. Designing it comes down to three questions, answered in
+        turn below and illustrated in <a href="#fig7">Figure 7</a>: <em>when</em> to judge, since not even
+        the end of an action announces itself; <em>who</em> judges, since a self-report
+        of success cannot be the verdict; and <em>what</em> the verdict carries, since
+        a bare boolean gives replanning nothing to work with.
+      </p>
+
+      <figure class="fig" id="fig7">
+        <img src="assets/evaluation_harness.png"
+             alt="Diagram: after every manipulation the harness triggers an independent evaluator, which reads the current observation and the per-tool post-condition and returns a three-state verdict with a reason to the model.">
+        <figcaption><strong>Figure 7.</strong> The harness triggers the evaluator
+        structurally after every manipulation. The evaluator reads only the current
+        observation and the per-tool post-condition, then returns a three-state verdict
+        with a reason to the model.</figcaption>
+      </figure>
+
+      <span class="sidenote is-citation" id="ref-31"><span class="sn">[31]:</span> Black et al. (2024),
+      <a href="https://doi.org/10.48550/arXiv.2410.24164" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0</sub>: A
+      Vision-Language-Action Flow Model for General Robot Control</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-10"><span class="sn">[10]:</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-32"><span class="sn">[32]:</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</span>
+      <p>
+        <span class="run-in">Timing.</span> When to judge depends on the family of the
+        policy behind the tool. For end-to-end models&nbsp;[<a href="#ref-10">10</a>,&thinsp;<a href="#ref-31">31</a>], no signal marks
+        completion, so the evaluator judges the run online, at each action-segment
+        boundary: <code>process</code> means the run should continue,
+        <code>success</code> that the post-condition has been satisfied, and
+        <code>failure</code> that execution should stop, with a step budget as the
+        backstop. For Coding-as-Policy&nbsp;<a class="cite" href="#ref-32">[32]</a> approaches, the generated program
+        terminates on its own and reports its progress through control flow, so the
+        same contract degenerates to the two terminal states.
+      </p>
+
+      <span class="sidenote is-citation" id="ref-33"><span class="sn">[33]:</span> Meyer (2002),
+      <a href="https://doi.org/10.1109/2.161279" target="_blank" rel="noopener"><em>Applying &#8216;design by contract&#8217;</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-34"><span class="sn">[34]:</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/engineering/claude-code-auto-mode" target="_blank" rel="noopener"><em>How We
+      Built Claude Code Auto Mode: A Safer Way to Skip Permissions</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-35"><span class="sn">[35]:</span> Huang et al. (2024),
+      <a href="https://arxiv.org/abs/2310.01798" target="_blank" rel="noopener"><em>Large Language Models Cannot Self-Correct Reasoning Yet</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-36"><span class="sn">[36]:</span> Panickssery et al. (2024),
+      <a href="https://arxiv.org/abs/2404.13076" target="_blank" rel="noopener"><em>LLM Evaluators Recognize and Favor Their Own Generations</em></a>.</span>
+      <p>
+        <span class="run-in">Independence.</span> Who judges is settled structurally.
+        The harness places the evaluator as an independent component after tool
+        execution, triggered by a post-hook rather than by the model's explicit
+        invocation. Its inputs are restricted to two things: the current observation,
+        and the per-tool post-condition (what the world should look like after a
+        successful call)&nbsp;<a class="cite" href="#ref-33">[33]</a>. It reads neither the model's reasoning nor its
+        self-report, the reasoning-blind discipline Anthropic applies to its own action
+        classifier&nbsp;<a class="cite" href="#ref-34">[34]</a>. A model grading its own work is an unreliable
+        judge&nbsp;<a class="cite" href="#ref-35">[35]</a>, and a biased one&nbsp;<a class="cite" href="#ref-36">[36]</a>.
+      </p>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 10" id="lst10">
+        <div class="code-card"><pre><code>{
+  <span class="kw">"status"</span>: <span class="str">"failure"</span>,
+  <span class="kw">"evidence"</span>: [
+    <span class="str">"the bottle remains
+      on the table"</span>,
+    <span class="str">"the gripper closed
+      without lifting it"</span>
+  ],
+  <span class="kw">"failure_reason"</span>:
+    <span class="str">"the robot stopped
+      too far from the bottle
+      to grasp it"</span>
+}</code></pre></div>
+        <figcaption><strong>Listing 10.</strong> The evaluator contract for one failed
+        grasp.</figcaption>
+      </div>
+
+      <span class="sidenote is-citation" id="ref-37"><span class="sn">[37]:</span> Liu et al. (2023),
+      <a href="https://arxiv.org/abs/2306.15724" target="_blank" rel="noopener"><em>REFLECT: Summarizing Robot Experiences for Failure Explanation and
+      Correction</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-38"><span class="sn">[38]:</span> Guo et al. (2024),
+      <a href="https://arxiv.org/abs/2307.00329" target="_blank" rel="noopener"><em>DoReMi: Grounding language model by detecting and recovering from
+      plan-execution misalignment</em></a>.</span>
+      <p>
+        <span class="run-in">The verdict.</span> What the verdict carries determines
+        what recovery can follow. A bare status already closes the loop, but only
+        blindly: the agent can retry, yet cannot adapt. For example, if a grasping
+        action fails, the agent needs to know whether the failure was caused by failing
+        to reach the target, missing the object, object occlusion, or dropping the
+        object after grasping; each cause calls for a different recovery. Beyond the
+        status, the evaluator therefore returns evidence and the failure reason;
+        <a href="#lst10">Listing 10</a> shows the contract returned for one such failed grasp. The division
+        is deliberate&nbsp;[<a href="#ref-37">37</a>,&thinsp;<a href="#ref-38">38</a>]. The evaluator only judges the outcome and
+        explains the failure, and what to do next is left to the agent, which holds the
+        full context the evaluator never sees. Downstream, a <code>success</code> gates
+        the scene graph update after the action
+        (<a href="#scene-graph">&sect;4.1</a>), and the failure reasons feed the tool
+        experience consolidated at task end (<a href="system.html#s35">&sect;3.5</a>).
+      </p>
+    </section>
+
+    <section id="embodiment">
+      <h2><span class="sec-num">4.3</span>Embodiment Profile</h2>
+      <p>
+        A coding agent never needs to be told about a body. It works through the shell
+        and the file system, an interface that is the same everywhere and, when in
+        doubt, can simply be asked. A robot's body takes no such questions, and nothing
+        about it is standard. Morphology, sensing geometry, mobility, and reach vary
+        across platforms, and jointly determine what evidence is available, how spatial
+        measurements should be interpreted, and which actions are feasible. The
+        Embodiment Profile states these body-specific facts explicitly, as a compact,
+        replaceable document. At deployment, the harness loads the profile selected for
+        the active embodiment and retains it throughout the session. Replacing the
+        profile changes the body-specific context as a unit while task instructions
+        retain the same form. This is what makes one harness portable across
+        embodiments. Localizing embodiment knowledge in one document keeps it
+        consistent across decisions and makes adaptation easier to inspect, maintain,
+        and validate.
+      </p>
+      <p>
+        The Embodiment Profile organizes stable body-specific information into three
+        complementary sections, summarized in <a href="#tab2">Table 2</a>.
+      </p>
+
+      <figure class="table" id="tab2">
+        <figcaption class="caption"><strong>Table 2.</strong> The three sections of the
+        Embodiment Profile, their stored items, and their role in model
+        decisions.</figcaption>
+        <div class="table-scroll"><table class="tab">
+          <thead>
+            <tr>
+              <th>Profile item</th>
+              <th>Stored information</th>
+              <th>Decision support</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="3" scope="colgroup">Operational Envelope</th>
+            </tr>
+            <tr>
+              <td>Base Footprint</td>
+              <td>Radius or dimensions of the body's ground footprint.</td>
+              <td>Relates available space to the area occupied by the body.</td>
+            </tr>
+            <tr>
+              <td>Base Mobility</td>
+              <td>Supported base translations and rotations.</td>
+              <td>Rules out motion commands that the base cannot execute.</td>
+            </tr>
+            <tr>
+              <td>Reachable Workspace</td>
+              <td>End-effector reach and operating height.</td>
+              <td>Determines whether an object or location is physically reachable.</td>
+            </tr>
+            <tr>
+              <th colspan="3" scope="colgroup">Perception Configuration</th>
+            </tr>
+            <tr>
+              <td>Sensor Modalities</td>
+              <td>Types of evidence available to the model.</td>
+              <td>Identifies whether a decision can use images or distance evidence.</td>
+            </tr>
+            <tr>
+              <td>Model-Visible Views</td>
+              <td>Named mounted camera views exposed to the model.</td>
+              <td>Identifies the views that the model can request.</td>
+            </tr>
+            <tr>
+              <th colspan="3" scope="colgroup">Base-Relative Positions</th>
+            </tr>
+            <tr>
+              <td>Camera Positions</td>
+              <td>Fixed camera positions relative to the base center.</td>
+              <td>Situates visual evidence on the active body.</td>
+            </tr>
+            <tr>
+              <td>Initial Gripper Positions</td>
+              <td>Gripper positions in the initial posture relative to the base center.</td>
+              <td>Situates the manipulation interfaces on the active body.</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </figure>
+
+      <p>
+        Operational Envelope records the body's stable limits for motion and
+        manipulation. The base is whatever carries the body, a wheeled chassis or a
+        humanoid's legs, and its entries record what the base can do, not how it does
+        it. Perception Configuration describes the evidence made available to the
+        model, such as color images and clearance measurements. Base-Relative Positions
+        records where sensing and manipulation interfaces are located relative to the
+        base center. Taken together, Operational Envelope constrains feasible actions,
+        Perception Configuration identifies the evidence available for a decision, and
+        Base-Relative Positions situates that evidence and the manipulation interfaces
+        on the active body.
+      </p>
+    </section>
+
+      <nav class="chapter-refs" aria-label="References">
+        <p class="refs-title">References</p>
+        <ol class="ref-list">
+        <li id="cite-10"><span class="ref-num">[10]</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</li>
+        <li id="cite-13"><span class="ref-num">[13]</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener"><em>Effective
+      Context Engineering for AI Agents</em></a>.</li>
+        <li id="cite-22"><span class="ref-num">[22]</span> Gu et al. (2024),
+      <a href="https://arxiv.org/abs/2309.16650" target="_blank" rel="noopener"><em>ConceptGraphs: Open-vocabulary 3D scene graphs for perception and
+      planning</em></a>.</li>
+        <li id="cite-23"><span class="ref-num">[23]</span> Rana et al. (2023),
+      <a href="https://arxiv.org/abs/2307.06135" target="_blank" rel="noopener"><em>SayPlan: Grounding large language
+      models using 3D scene graphs for scalable robot task planning</em></a>.</li>
+        <li id="cite-24"><span class="ref-num">[24]</span> Yoneda et al. (2024),
+      <a href="https://arxiv.org/abs/2306.17840" target="_blank" rel="noopener"><em>Statler: State-maintaining language models for embodied
+      reasoning</em></a>.</li>
+        <li id="cite-25"><span class="ref-num">[25]</span> Armeni et al. (2019),
+      <a href="https://arxiv.org/abs/1910.02527" target="_blank" rel="noopener"><em>3D Scene Graph: A structure for unified semantics, 3D space, and
+      camera</em></a>.</li>
+        <li id="cite-26"><span class="ref-num">[26]</span> Rosinol et al. (2020),
+      <a href="https://arxiv.org/abs/2002.06289" target="_blank" rel="noopener"><em>3D dynamic scene graphs:
+      Actionable spatial perception with places, objects, and humans</em></a>.</li>
+        <li id="cite-27"><span class="ref-num">[27]</span> Takmaz et al. (2023),
+      <a href="https://arxiv.org/abs/2306.13631" target="_blank" rel="noopener"><em>OpenMask3D: Open-Vocabulary 3D Instance Segmentation</em></a>.</li>
+        <li id="cite-28"><span class="ref-num">[28]</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</li>
+        <li id="cite-29"><span class="ref-num">[29]</span> Jiang et al. (2024),
+      <a href="https://arxiv.org/abs/2402.15487" target="_blank" rel="noopener"><em>RoboEXP: Action-Conditioned Scene Graph via Interactive Exploration for
+      Robotic Manipulation</em></a>.</li>
+        <li id="cite-30"><span class="ref-num">[30]</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener"><em>Demystifying
+      evals for AI agents</em></a>.</li>
+        <li id="cite-31"><span class="ref-num">[31]</span> Black et al. (2024),
+      <a href="https://doi.org/10.48550/arXiv.2410.24164" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0</sub>: A
+      Vision-Language-Action Flow Model for General Robot Control</em></a>.</li>
+        <li id="cite-32"><span class="ref-num">[32]</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</li>
+        <li id="cite-33"><span class="ref-num">[33]</span> Meyer (2002),
+      <a href="https://doi.org/10.1109/2.161279" target="_blank" rel="noopener"><em>Applying &#8216;design by contract&#8217;</em></a>.</li>
+        <li id="cite-34"><span class="ref-num">[34]</span> Anthropic (2026),
+      <a href="https://www.anthropic.com/engineering/claude-code-auto-mode" target="_blank" rel="noopener"><em>How We
+      Built Claude Code Auto Mode: A Safer Way to Skip Permissions</em></a>.</li>
+        <li id="cite-35"><span class="ref-num">[35]</span> Huang et al. (2024),
+      <a href="https://arxiv.org/abs/2310.01798" target="_blank" rel="noopener"><em>Large Language Models Cannot Self-Correct Reasoning Yet</em></a>.</li>
+        <li id="cite-36"><span class="ref-num">[36]</span> Panickssery et al. (2024),
+      <a href="https://arxiv.org/abs/2404.13076" target="_blank" rel="noopener"><em>LLM Evaluators Recognize and Favor Their Own Generations</em></a>.</li>
+        <li id="cite-37"><span class="ref-num">[37]</span> Liu et al. (2023),
+      <a href="https://arxiv.org/abs/2306.15724" target="_blank" rel="noopener"><em>REFLECT: Summarizing Robot Experiences for Failure Explanation and
+      Correction</em></a>.</li>
+        <li id="cite-38"><span class="ref-num">[38]</span> Guo et al. (2024),
+      <a href="https://arxiv.org/abs/2307.00329" target="_blank" rel="noopener"><em>DoReMi: Grounding language model by detecting and recovering from
+      plan-execution misalignment</em></a>.</li>
+        </ol>
+      </nav>
+      <nav class="pager"><a class="prev" href="system.html">&larr; 3&ensp;System Architecture</a><a class="next" href="experiments.html">5&ensp;Experiments &rarr;</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>

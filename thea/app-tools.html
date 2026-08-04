@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Tool Registry — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li class="current"><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">A</span>Tool Registry</h2>
+
+      <p>
+        <a href="#tab4">Table 4</a> lists the Astribot S1 tool registry. Its entries follow the protocol
+        of <a href="system.html#s33">&sect;3.3</a>: physical capabilities use
+        deployment backends, while lightweight context and interaction tools run
+        in-process. Slash-separated lists are the admissible values; quoted strings
+        are free-form descriptions; refs like <code>desk_24</code> name Scene Graph
+        entities.
+      </p>
+
+      <figure class="table full-width" id="tab4">
+        <figcaption class="caption"><strong>Table 4.</strong> Tools deployed on the
+        Astribot S1, grouped by function. <code>evaluate_run</code> is registered
+        alongside them but invoked by the harness through a post-hook, never selected
+        by the model (<a href="gaps.html#eval">&sect;4.2</a>).</figcaption>
+        <div class="tab-scroll">
+        <div class="table-scroll"><table class="tab tab-registry">
+          <thead>
+            <tr><th>Tool</th><th>Description</th><th>Backend</th><th>Parameter</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><th colspan="5" scope="colgroup">Navigation</th></tr>
+            <tr>
+              <td><code>navigate_to</code></td>
+              <td>Approach an object or location.</td>
+              <td>SysNav&nbsp;<a class="cite" href="#ref-28">[28]</a></td>
+              <td><code>target</code></td>
+              <td>e.g. &ldquo;drink area&rdquo;/desk_24</td>
+            </tr>
+            <tr>
+              <td rowspan="3"><code>move_base</code></td>
+              <td rowspan="3">Translate or rotate within safety bounds.</td>
+              <td rowspan="3">Astribot S1 SDK</td>
+              <td><code>direction</code></td>
+              <td>forward/backward/left/right/turn_left/turn_right</td>
+            </tr>
+            <tr>
+              <td><code>distance_m</code></td>
+              <td>0.03&ndash;0.80&thinsp;m</td>
+            </tr>
+            <tr>
+              <td><code>angle_deg</code></td>
+              <td>3&ndash;30&deg;</td>
+            </tr>
+
+            <tr class="grp"><th colspan="5" scope="colgroup">Manipulation</th></tr>
+            <tr>
+              <td><code>pick_up</code></td>
+              <td>Grasp a localized object.</td>
+              <td>CaP-X/ACT/<var>&pi;</var><sub>0.5</sub><br><a class="cite" href="#ref-32">[32</a>,&thinsp;<a class="cite" href="#ref-39">39</a>,&thinsp;<a class="cite" href="#ref-10">10]</a></td>
+              <td><code>obj</code></td>
+              <td>e.g. &ldquo;orange juice&rdquo;/bottle_2</td>
+            </tr>
+            <tr>
+              <td><code>place</code></td>
+              <td>Place the held object on a table or in a box.</td>
+              <td>CaP-X/ACT/<var>&pi;</var><sub>0.5</sub></td>
+              <td><code>target</code></td>
+              <td>e.g. &ldquo;table&rdquo;/table_2</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><code>open_drawer</code></td>
+              <td rowspan="2">Open a drawer.</td>
+              <td rowspan="2">CaP-X/ACT/<var>&pi;</var><sub>0.5</sub></td>
+              <td><code>container_ref</code></td>
+              <td>e.g. cabinet_87</td>
+            </tr>
+            <tr>
+              <td><code>drawer_level</code></td>
+              <td>higher/lower</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><code>close_drawer</code></td>
+              <td rowspan="2">Close a drawer.</td>
+              <td rowspan="2">CaP-X/ACT/<var>&pi;</var><sub>0.5</sub></td>
+              <td><code>container_ref</code></td>
+              <td>e.g. cabinet_87</td>
+            </tr>
+            <tr>
+              <td><code>drawer_level</code></td>
+              <td>higher/lower</td>
+            </tr>
+            <tr>
+              <td><code>trash_drop</code></td>
+              <td>Drop the held object into a bin.</td>
+              <td>CaP-X/ACT/<var>&pi;</var><sub>0.5</sub></td>
+              <td><code>trash_ref</code></td>
+              <td>e.g. trash_can_54</td>
+            </tr>
+
+            <tr class="grp"><th colspan="5" scope="colgroup">Perception</th></tr>
+            <tr>
+              <td><code>tilt_head</code></td>
+              <td>Tilt the head camera to a given pitch angle.</td>
+              <td>Astribot S1 SDK</td>
+              <td><code>pitch_deg</code></td>
+              <td>0&ndash;60&deg;</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><code>get_object_relations</code></td>
+              <td rowspan="2">Query an object's spatial and semantic relations.</td>
+              <td rowspan="2">Scene Graph</td>
+              <td><code>obj</code></td>
+              <td>e.g. cup_2</td>
+            </tr>
+            <tr>
+              <td><code>relation</code> <span class="tool-opt">(optional)</span></td>
+              <td>on/inside/holding/near</td>
+            </tr>
+            <tr>
+              <td><code>get_image</code></td>
+              <td>Retrieve stored images of an object.</td>
+              <td>Scene Graph</td>
+              <td><code>obj</code></td>
+              <td>e.g. cup_2</td>
+            </tr>
+
+            <tr class="grp"><th colspan="5" scope="colgroup">Skills</th></tr>
+            <tr>
+              <td><code>load_skill</code></td>
+              <td>Load the instructions of a registered skill.</td>
+              <td><span class="sc">Thea</span></td>
+              <td><code>name</code></td>
+              <td>e.g. tidy-workspace</td>
+            </tr>
+
+            <tr class="grp"><th colspan="5" scope="colgroup">User Interaction</th></tr>
+            <tr>
+              <td rowspan="3"><code>query_user</code></td>
+              <td rowspan="3">Request and await clarification.</td>
+              <td rowspan="3">Lark</td>
+              <td><code>question</code></td>
+              <td>e.g. &ldquo;No plain water; which drink should I bring?&rdquo;</td>
+            </tr>
+            <tr>
+              <td><code>candidate_refs</code> <span class="tool-opt">(optional)</span></td>
+              <td>e.g. bottle_3</td>
+            </tr>
+            <tr>
+              <td><code>observation_views</code> <span class="tool-opt">(optional)</span></td>
+              <td>e.g. torso_rgbd</td>
+            </tr>
+            <tr>
+              <td rowspan="2"><code>notify_user</code></td>
+              <td rowspan="2">Send a non-blocking update.</td>
+              <td rowspan="2">Lark</td>
+              <td><code>message</code></td>
+              <td>e.g. &ldquo;I found an empty orange-juice bottle on desk&hellip;&rdquo;</td>
+            </tr>
+            <tr>
+              <td><code>notification_type</code> <span class="tool-opt">(optional)</span></td>
+              <td>progress/warning/completion</td>
+            </tr>
+          </tbody>
+        </table></div>
+        </div>
+      </figure>
+
+      <span class="sidenote is-citation" id="ref-28"><span class="sn">[28]:</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-32"><span class="sn">[32]:</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-39"><span class="sn">[39]:</span> Zhao et al. (2023),
+      <a href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener"><em>Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-10"><span class="sn">[10]:</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</span>
+    </section>
+
+      <nav class="chapter-refs" aria-label="References">
+        <p class="refs-title">References</p>
+        <ol class="ref-list">
+        <li id="cite-10"><span class="ref-num">[10]</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</li>
+        <li id="cite-28"><span class="ref-num">[28]</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</li>
+        <li id="cite-32"><span class="ref-num">[32]</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</li>
+        <li id="cite-39"><span class="ref-num">[39]</span> Zhao et al. (2023),
+      <a href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener"><em>Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</em></a>.</li>
+        </ol>
+      </nav>
+      <nav class="pager"><a class="prev" href="discussion.html">&larr; 7&ensp;Discussion</a><a class="next" href="app-context.html">B&ensp;Context Structure &rarr;</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>

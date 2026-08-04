@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human-aware AI Lab @ EIT</title>
+<meta name="description" content="Human-aware AI Lab at Eastern Institute of Technology, Ningbo. We build AI systems that perceive, understand, and interact with humans.">
+<style>
+/* 与项目页(thea/)同一套视觉语言:淡墨底 #F2F3F2、墨色 #1B1C1B、灰靛链接
+   #4A6480/#384E66;Pagella 衬线标题 + Lato 正文。字体直接复用项目页的文件,
+   路径相对站点根(本页在 gh-pages 根,thea/ 是它的子目录)。 */
+@font-face { font-family: 'Lato'; src: url('thea/assets/fonts/Lato-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lato'; src: url('thea/assets/fonts/Lato-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'TeX Gyre Pagella'; src: url('thea/assets/fonts/TeXGyrePagella-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TeX Gyre Pagella'; src: url('thea/assets/fonts/TeXGyrePagella-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap; }
+
+html { background: #F2F3F2; font-size: 18px; }
+body {
+  margin: 0; min-height: 100vh; min-height: 100svh;
+  display: grid; place-items: center;
+  background: #F2F3F2; color: #1B1C1B;
+  font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.65;
+}
+/* max-width 放到 44rem:tagline 一整句在桌面上单行排完,不折行 */
+main { text-align: center; padding: 3rem 1.5rem; max-width: 44rem; }
+h1 {
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-size: 2.35rem; font-weight: 700; margin: 0 0 .4rem; text-wrap: balance;
+}
+/* 机构名:Pagella 小型大写,与论文 \textsc 的形象一致;静态灰,hover 转学校红 */
+.affil {
+  font-family: 'TeX Gyre Pagella', Palatino, 'Palatino Linotype', Georgia, serif;
+  font-variant-caps: small-caps; letter-spacing: .05em;
+  font-size: 1.08rem; color: #5A5C5A; margin: 0;
+}
+.affil a:hover { color: #92071C; }
+hr { border: 0; border-top: 1px solid #D8DAD8; width: 4.5rem; margin: 1.9rem auto; }
+/* tagline 与 PI 是一组,行间只留半行距 */
+.tagline { font-size: 1.15rem; margin: 0 0 .5rem; text-wrap: balance; }
+.pi { font-size: 1.15rem; margin: 0; }
+.soon { font-style: italic; color: #8A8C8A; font-size: .95rem; margin: 0; }
+
+a { color: inherit; text-decoration: none; transition: color .15s; }
+a:hover { color: #4A6480; }
+.pi a { color: #4A6480; }
+.pi a:hover { color: #384E66; }
+
+@media (max-width: 26rem) { html { font-size: 16px; } }
+</style>
+<main>
+  <h1>Human-aware AI Lab</h1>
+  <p class="affil">@ <a href="https://www.eitech.edu.cn/en/" target="_blank" rel="noopener">Eastern Institute of Technology, Ningbo</a></p>
+  <hr>
+  <p class="tagline">We build AI systems that perceive, understand, and interact with humans.</p>
+  <p class="pi">Principal Investigator: <a href="https://wentao.live" target="_blank" rel="noopener">Wentao Zhu</a></p>
+  <hr>
+  <p class="soon">More details coming soon.</p>
+</main>
+</html>

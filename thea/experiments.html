@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Experiments — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li class="current"><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">5</span>Experiments</h2>
+      <p>
+        We evaluate <span class="sc">Thea</span> on real robots in real-world
+        environments. The experiments explore three questions. The first is how the
+        full harness compares with alternative execution architectures as task
+        complexity increases. The second is how reliably the evaluator, on which
+        closed-loop execution depends, judges the state of an ongoing task. The third
+        is what capabilities emerge from the composition of tools in complete
+        deployments across different embodiments.
+      </p>
+    </section>
+
+    <section id="s51">
+      <h2><span class="sec-num">5.1</span>Task Setup</h2>
+      <p>
+        Our experiments span three robots with distinct embodiments. The main
+        quantitative experiments run on the Astribot S1, a wheeled dual-arm humanoid
+        that combines an actuated head and torso, an omnidirectional mobile base, and
+        two gripper end effectors, 25 degrees of freedom in total. We additionally
+        explore <span class="sc">Thea</span> on AgileX Cobot Magic, which pairs two
+        arms with a mobile base, and on Unitree G1, which carries BrainCo Revo 2
+        dexterous hands with six degrees of freedom per hand. These deployments test
+        whether the same harness can compose capabilities exposed by different
+        physical interfaces.
+      </p>
+
+      <figure class="table" id="tab3">
+        <figcaption class="caption"><strong>Table 3.</strong> Real-world tasks of
+        increasing difficulty.</figcaption>
+        <div class="table-scroll"><table class="tab">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Task</th>
+              <th>Task description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>L1</td>
+              <td>Short-horizon manipulation</td>
+              <td>Pick up one tabletop object and place it into a basket.</td>
+            </tr>
+            <tr>
+              <td>L2</td>
+              <td>Long-horizon manipulation</td>
+              <td>Pick up all tabletop objects and place them into a basket.</td>
+            </tr>
+            <tr>
+              <td>L3</td>
+              <td>Navigation and manipulation</td>
+              <td>Navigate to one table, retrieve the instructed object, and deliver
+              it to a target table.</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </figure>
+
+      <p>
+        To evaluate <span class="sc">Thea</span> and the baselines across tasks of
+        increasing difficulty, we organize the experiments into three levels, L1–L3,
+        as summarized in <a href="#tab3">Table 3</a>. L1 is a simple pick-and-place task that isolates a
+        single manipulation cycle on a fixed tabletop. L2 preserves the fixed-table
+        setting but extends the task horizon. The agent must repeatedly locate, pick,
+        and place every object on the table into a basket while tracking progress
+        across multiple manipulation cycles. L3 is the most challenging task and
+        couples navigation with manipulation across two workspaces, requiring the
+        agent to alternate between the two as it travels to the source, identifies
+        and retrieves the instructed object, navigates to the destination, and
+        completes the delivery. Across tasks, we vary object categories and
+        placements. For each method, we conduct 20 independent trials on L1 and L2
+        and 15 independent trials on L3.
+      </p>
+      <span class="sidenote is-citation" id="ref-39"><span class="sn">[39]:</span> Zhao et al. (2023),
+      <a href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener"><em>Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-40"><span class="sn">[40]:</span> Wu et al. (2026),
+      <a href="https://arxiv.org/abs/2607.06403" target="_blank" rel="noopener"><em>From Foundation to Application:
+      Improving VLA Models in Practice</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-10"><span class="sn">[10]:</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-41"><span class="sn">[41]:</span> Ahn et al. (2022),
+      <a href="https://arxiv.org/abs/2204.01691" target="_blank" rel="noopener"><em>Do As I Can, Not As I Say: Grounding Language in Robotic
+      Affordances</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-32"><span class="sn">[32]:</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-28"><span class="sn">[28]:</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</span>
+      <p>
+        We compare <span class="sc">Thea</span> with the following systems:
+        end-to-end policies&nbsp;[<a href="#ref-10">10</a>,&thinsp;<a href="#ref-39">39</a>,&thinsp;<a href="#ref-40">40</a>], a Coding-as-Policy baseline, and a
+        hierarchical planning method based on SayCan&nbsp;<a class="cite" href="#ref-41">[41]</a>. The
+        Coding-as-Policy baseline revises its robot-control program over multiple
+        turns using execution traces and structured text describing the initial
+        scene, subsequent visual changes, and task completion. This follows the
+        CaP-Bench M3 setting in CaP-X&nbsp;<a class="cite" href="#ref-32">[32]</a>. We use GPT-5.5 with reasoning
+        effort set to <code>high</code> as the decision model for
+        <span class="sc">Thea</span>, CaP-X, and SayCan. For perception,
+        <span class="sc">Thea</span> builds on the Astribot S1 SDK and
+        SysNav&nbsp;<a class="cite" href="#ref-28">[28]</a>. Each end-to-end policy is trained or fine-tuned on 200
+        collected demonstrations per task. The Coding-as-Policy and hierarchical
+        planning methods use the same tools and underlying implementations as
+        <span class="sc">Thea</span> (<a href="app-tools.html#tab4">Table 4</a>, Appendix A). For the orchestration
+        baselines&nbsp;[<a href="#ref-32">32</a>,&thinsp;<a href="#ref-41">41</a>], this setup controls for the underlying robot
+        capabilities and isolates how each architecture selects and composes tools,
+        and how it recovers when they fail. Two of the end-to-end baselines, ACT and
+        <em><var>&pi;</var></em><sub>0.5</sub>, are the same policies that back
+        <span class="sc">Thea</span>'s manipulation tools (<a href="app-tools.html#tab4">Table 4</a>, Appendix A). The
+        differences reported below therefore reflect how complete each
+        architecture's orchestration is, not how capable the underlying policies
+        are.
+      </p>
+    </section>
+
+    <section id="s52">
+      <h2><span class="sec-num">5.2</span>Scaling with Task Complexity</h2>
+
+      <p>
+        <a href="#fig8">Figure 8</a> reports the task success rates of ACT&nbsp;<a class="cite" href="#ref-39">[39]</a>,
+        LingBot-VLA-V2&nbsp;<a class="cite" href="#ref-40">[40]</a>, <em><var>&pi;</var></em><sub>0.5</sub><a class="cite" href="#ref-10">[10]</a>,
+        CaP-X&nbsp;<a class="cite" href="#ref-32">[32]</a>, SayCan&nbsp;<a class="cite" href="#ref-41">[41]</a>, and <span class="sc">Thea</span>
+        across L1–L3. Beyond absolute performance, the comparison shows how each
+        architecture scales as task horizon and compositional complexity grow. A
+        trial counts as successful only if every instruction-specified object
+        reaches its target location and the robot completes all required navigation
+        and manipulation stages; outcomes are judged by human annotators from
+        recorded trajectories, independently of the online evaluator.
+      </p>
+      <figure class="fig full-width" id="fig8">
+        <img src="assets/task_success.png"
+             alt="Bar chart: task success rates of ACT, LingBot-VLA-V2, pi 0.5, CaP-X, SayCan, and Thea across tasks L1 to L3, with error bars showing one standard error.">
+        <figcaption><strong>Figure 8.</strong> Task success rates of the baselines
+        and <span class="sc">Thea</span> across tasks of increasing difficulty.
+        Error bars show one standard error across runs. ACT is omitted from L3
+        because it is not language-conditioned.</figcaption>
+      </figure>
+
+
+      <p>
+        <span class="sc">Thea</span> achieves the highest success rate at all three
+        levels. On L1 the gap among methods is small. On L2,
+        <span class="sc">Thea</span> evaluates each grasp and retries the failed
+        ones instead of carrying an invalid sequence forward. On L3, the agent calls
+        <code>navigate_to</code> and then <code>move_base</code> to bring the robot
+        to a pose better suited to the next manipulation, and adjusts the pose again
+        when a manipulation fails. For the end-to-end policies (ACT, LingBot-VLA-V2,
+        <em><var>&pi;</var></em><sub>0.5</sub>), a failure in the middle of a task goes
+        undetected, and the run does not recover. CaP-X generates and revises
+        programs across multiple turns; SayCan selects the next skill with no
+        verdict on the last. The gap that widens from L1 to L3 follows the
+        reliability arithmetic of <a href="harness.html">§2</a>, where per-step
+        failures compound with task length. It also reflects key properties of the
+        harness. The model selects and composes tools as the task requires, and the
+        evaluator closes the loop, making outcomes observable and failures
+        recoverable.
+      </p>
+
+    </section>
+
+    <section id="s53">
+      <h2><span class="sec-num">5.3</span>Evaluator Accuracy</h2>
+      <span class="sidenote is-citation" id="ref-42"><span class="sn">[42]:</span> Qwen Team (2026),
+      <a href="https://qwen.ai/blog?id=qwen3.7-plus" target="_blank" rel="noopener"><em>Qwen3.7-Plus: Multimodal Agent
+      Intelligence</em></a>.</span>
+      <p>
+        The recovery behind the results above rests on the evaluator, as the
+        analysis of <a href="harness.html">§2</a> suggests. We therefore measure how
+        reliably the evaluator judges the state of an ongoing physical task. The
+        test set consists of 90 trajectory checkpoints collected from Astribot S1,
+        AgileX Cobot Magic, and Unitree G1, sampled in equal numbers after
+        successful completion, mid-execution, and after unrecovered failures. Two
+        human annotators labeled each checkpoint independently from the complete
+        trajectory, resolving disagreements by replay and discussion. We use
+        Qwen3.7-Plus&nbsp;<a class="cite" href="#ref-42">[42]</a> as the evaluator
+        model throughout our experiments. At test time
+        the evaluator sees only its evaluation prompt, including the per-tool
+        post-condition (the expected world state after the call), and the
+        synchronized camera observations.
+      </p>
+
+      <figure class="fig" id="fig9">
+        <img src="assets/evaluator_confusion.png"
+             alt="Confusion matrices of evaluator predictions against ground-truth success, failure, and in-progress states across three robot embodiments.">
+        <figcaption><strong>Figure 9.</strong> Evaluator predictions against
+        ground-truth success, failure, and in-progress states across three robot
+        embodiments.</figcaption>
+      </figure>
+
+      <span class="sidenote footnote" id="fn-1"><span class="sn">1.</span> The three-state average,
+      taken as an approximation of the binary <var>&alpha;</var> defined in
+      <a href="harness.html">§2</a>.</span>
+      <p>
+        <a href="#fig9">Figure 9</a> reports the classification performance for each state separately,
+        with an average accuracy of 93.3%. The remaining errors all run in one
+        direction: 6.7% of failed and 13.3% of in-progress checkpoints are judged
+        successful, while no successful checkpoint is misjudged. These errors are
+        the harmful kind, because a false success either forfeits a needed retry or
+        cuts an action short. Reducing this error mode is an important next step.
+        Substituting the measured accuracy (<var>&alpha;</var> =
+        0.93)<sup><a href="#fn-1">1</a></sup>, per-step success <var>p</var> = 0.8, and up to
+        <var>k</var> = 5 retries into the formulation of
+        <a href="harness.html">§2</a>, a five-step task completes with probability
+        0.33 in open loop and 0.91 under the harness, broadly consistent with the
+        trend in <a href="#fig8">Figure 8</a>.
+      </p>
+    </section>
+
+    <section id="s54">
+      <h2><span class="sec-num">5.4</span>Emergent Capabilities</h2>
+      <p>
+        This subsection moves from the fixed tasks above to longer, open-ended tasks
+        in more complex, realistic settings. <span class="sc">Thea</span> runs with
+        the full harness, every tool and component available, and we observe what
+        the agent as a whole composes out of them. The demonstrations below sample
+        the capabilities that emerge, and Appendix C provides the execution logs of
+        the demos.
+      </p>
+      <p>
+        <span class="run-in">Long-horizon task composition.</span> Across these
+        deployments, <span class="sc">Thea</span> carries user requests through to
+        completion over extended sequences of physical interaction. The difficulty
+        concentrates where navigation and manipulation alternate, because each
+        manipulation depends on where the previous move left the robot.
+        <span class="sc">Thea</span> composes the alternation from its tools
+        (<a href="#fig10a">Figure 10a</a>): it
+        reads the target's position from the scene graph, approaches with
+        <code>navigate_to</code>, refines the base pose with <code>move_base</code>
+        within the measured clearances, and hands each manipulation's outcome to the
+        evaluator, whose verdict decides whether to adjust and retry or move on.
+        <a href="#fig10">Figure 10</a> shows representative trajectories, each composed at run time from
+        the same general tools; none follows a script prepared for the task.
+      </p>
+
+      <figure class="fig full-width" id="fig10">
+        <div class="subfig-row" id="fig10a">
+          <img src="assets/emergent/row1_1.jpg"
+               alt="The robot navigates and manipulates in sequence to retrieve and deliver a power bank, frame 1 of 3.">
+          <img src="assets/emergent/row1_2.jpg"
+               alt="The robot navigates and manipulates in sequence to retrieve and deliver a power bank, frame 2 of 3.">
+          <img src="assets/emergent/row1_3.jpg"
+               alt="The robot navigates and manipulates in sequence to retrieve and deliver a power bank, frame 3 of 3.">
+        </div>
+        <figcaption class="subcap"><strong>(a)</strong> The robot executes a
+        long-horizon sequence of navigation and manipulation, composed at run time,
+        to retrieve and deliver a power bank.</figcaption>
+        <div class="subfig-row" id="fig10b">
+          <img src="assets/emergent/row2_1.jpg"
+               alt="The robot searches cabinet drawers for a power bank absent from the scene graph, frame 1 of 3.">
+          <img src="assets/emergent/row2_2.jpg"
+               alt="The robot searches cabinet drawers for a power bank absent from the scene graph, frame 2 of 3.">
+          <img src="assets/emergent/row2_3.jpg"
+               alt="The robot searches cabinet drawers for a power bank absent from the scene graph, frame 3 of 3.">
+        </div>
+        <figcaption class="subcap"><strong>(b)</strong> The robot actively searches
+        the cabinet drawers to locate the power bank when the target is absent from
+        the scene graph.</figcaption>
+        <div class="subfig-row" id="fig10c">
+          <img src="assets/emergent/row3_1.jpg"
+               alt="The robot repositions using the evaluator's failure reason and completes the grasp after a failed attempt, frame 1 of 3.">
+          <img src="assets/emergent/row3_2.jpg"
+               alt="The robot repositions using the evaluator's failure reason and completes the grasp after a failed attempt, frame 2 of 3.">
+          <img src="assets/emergent/row3_3.jpg"
+               alt="The robot repositions using the evaluator's failure reason and completes the grasp after a failed attempt, frame 3 of 3.">
+        </div>
+        <figcaption class="subcap"><strong>(c)</strong> The robot uses the
+        evaluator's failure reason to reposition relative to the object and complete
+        the grasp after the initial attempt fails.</figcaption>
+        <div class="subfig-row" id="fig10d">
+          <img src="assets/emergent/row4_1.jpg"
+               alt="The robot asks the user for an alternative when the requested water is unavailable, then retrieves the selected drink, frame 1 of 3.">
+          <img src="assets/emergent/row4_2.jpg"
+               alt="The robot asks the user for an alternative when the requested water is unavailable, then retrieves the selected drink, frame 2 of 3.">
+          <img src="assets/emergent/row4_3.jpg"
+               alt="The robot asks the user for an alternative when the requested water is unavailable, then retrieves the selected drink, frame 3 of 3.">
+        </div>
+        <figcaption class="subcap"><strong>(d)</strong> The robot queries the user
+        for an alternative when the requested water is unavailable, then retrieves
+        the selected drink.</figcaption>
+        <div class="subfig-row" id="fig10e">
+          <img src="assets/emergent/row5_1.jpg"
+               alt="Three robots run the same harness with embodiment-specific profiles and tool implementations, frame 1 of 3.">
+          <img src="assets/emergent/row5_2.jpg"
+               alt="Three robots run the same harness with embodiment-specific profiles and tool implementations, frame 2 of 3.">
+          <img src="assets/emergent/row5_3.jpg"
+               alt="Three robots run the same harness with embodiment-specific profiles and tool implementations, frame 3 of 3.">
+        </div>
+        <figcaption class="subcap"><strong>(e)</strong> The three robots share the
+        same harness, with embodiment-specific profiles and tool
+        implementations.</figcaption>
+        <figcaption><strong>Figure 10.</strong> Demonstrations of emergent
+        capabilities enabled by the shared harness across long-horizon task
+        composition, active perception, failure recovery, user interaction, and
+        cross-embodiment portability.</figcaption>
+      </figure>
+
+      <p>
+        <span class="run-in">Active perception.</span> Active perception takes two
+        forms. When a requested object appears nowhere in the scene graph,
+        <span class="sc">Thea</span> explores the environment. It navigates to a
+        cabinet, opens and inspects its drawers in sequence (<a href="#fig10b">Figure 10b</a>), and
+        writes the previously occluded contents into the graph. When the evidence lies outside
+        the current view, <span class="sc">Thea</span> adjusts the view instead,
+        calling <code>tilt_head</code> to bring the relevant region into the camera.
+        The two operate at different scales, moving the body and moving the camera,
+        but follow the same logic: perception is an action the model chooses, and
+        the new perception informs the next decision.
+      </p>
+      <p>
+        <span class="run-in">Failure recovery.</span> Physical execution does not
+        always satisfy the intended post-condition on the first attempt. When it
+        does not, the evaluator returns the failure with a reason, and
+        <span class="sc">Thea</span> decides the next call from that reason and the
+        surrounding evidence (<a href="#fig10c">Figure 10c</a>), perhaps adjusting the base pose before retrying, or
+        switching to a tool backed by a different policy. When a retry succeeds, the
+        consolidation at task end writes the recovery into that tool's experience.
+      </p>
+      <p>
+        <span class="run-in">User interaction.</span> <span class="sc">Thea</span>
+        keeps the user reachable throughout the task. A request may prove vague, a
+        choice may hinge on the user's preference, or progress may be worth
+        surfacing; <code>query_user</code> and <code>notify_user</code> serve these
+        moments, and the model calls them when the need arises. In the beverage
+        scene (<a href="#fig10d">Figure 10d</a>), the user asks for a bottle of water and the scene graph holds none;
+        rather than grasping a substitute of its own choosing,
+        <span class="sc">Thea</span> asks the user which of the drinks it does see
+        to bring, and retrieves the one the user selects.
+      </p>
+      <p>
+        <span class="run-in">Cross-embodiment portability.</span> The same harness
+        runs on all three embodiments, Astribot S1, AgileX Cobot Magic, and Unitree
+        G1 (<a href="#fig10e">Figure 10e</a>). Nothing in the loop refers to a particular body; what is body-specific
+        enters through the Embodiment Profile and the tool implementations behind
+        the registry. Moving to a new robot therefore means writing its profile and
+        its tools, while the loop above them, interpreting requests, selecting
+        tools, weighing evaluator verdicts, carries over unchanged.
+      </p>
+    </section>
+
+      <nav class="chapter-refs" aria-label="References">
+        <p class="refs-title">References</p>
+        <ol class="ref-list">
+        <li id="cite-10"><span class="ref-num">[10]</span> Black et al. (2025),
+      <a href="https://arxiv.org/abs/2504.16054" target="_blank" rel="noopener"><em><var>&pi;</var><sub>0.5</sub>: A Vision-Language-Action Model with Open-World
+      Generalization</em></a>.</li>
+        <li id="cite-28"><span class="ref-num">[28]</span> Zhu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.06914" target="_blank" rel="noopener"><em>SysNav: Multi-Level Systematic Cooperation Enables Real-World,
+      Cross-Embodiment Object Navigation</em></a>.</li>
+        <li id="cite-32"><span class="ref-num">[32]</span> Fu et al. (2026),
+      <a href="https://arxiv.org/abs/2603.22435" target="_blank" rel="noopener"><em>CaP-X: A framework for
+      benchmarking and improving coding agents for robot
+      manipulation</em></a>.</li>
+        <li id="cite-39"><span class="ref-num">[39]</span> Zhao et al. (2023),
+      <a href="https://arxiv.org/abs/2304.13705" target="_blank" rel="noopener"><em>Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</em></a>.</li>
+        <li id="cite-40"><span class="ref-num">[40]</span> Wu et al. (2026),
+      <a href="https://arxiv.org/abs/2607.06403" target="_blank" rel="noopener"><em>From Foundation to Application:
+      Improving VLA Models in Practice</em></a>.</li>
+        <li id="cite-41"><span class="ref-num">[41]</span> Ahn et al. (2022),
+      <a href="https://arxiv.org/abs/2204.01691" target="_blank" rel="noopener"><em>Do As I Can, Not As I Say: Grounding Language in Robotic
+      Affordances</em></a>.</li>
+        <li id="cite-42"><span class="ref-num">[42]</span> Qwen Team (2026),
+      <a href="https://qwen.ai/blog?id=qwen3.7-plus" target="_blank" rel="noopener"><em>Qwen3.7-Plus: Multimodal Agent
+      Intelligence</em></a>.</li>
+        </ol>
+      </nav>
+      <nav class="pager"><a class="prev" href="gaps.html">&larr; 4&ensp;Bridging the Gaps</a><a class="next" href="related.html">6&ensp;Related Work &rarr;</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>

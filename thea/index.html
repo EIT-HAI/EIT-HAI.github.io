@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thea: Towards the Harness of Embodied Agents</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page cover">
+
+  <div class="article">
+    <section id="top" class="hero">
+      <h1>Towards the Harness of Embodied Agents</h1>
+      <p class="authors">Qi Wang<sup>&dagger;</sup>, Tianyi Wang<sup>&dagger;</sup>, Chengyang Li<sup>&dagger;</sup>, Shikun Ban, Yurun Chen,<br>
+        Yizhong Ge, Jason Qin, Chengtai Li<sup>&dagger;</sup>, Wentao Zhu<sup>&dagger;</sup></p>
+      <p class="affil">Eastern Institute of Technology, Ningbo</p>
+      <p class="authors-note"><sup>&dagger;</sup>&thinsp;Core contributors</p>
+      <p class="date-line">Technical Report, July 2026</p>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="#citation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+      <p class="tldr"><span class="sc">TL;DR</span>: <em><span class="sc">Thea</span> brings coding agents to the physical world.</em></p>
+      <figure class="video-figure">
+        <p class="v-request"><span class="v-label">Instruction</span>&ldquo;Grab me a water.&rdquo;</p>
+        <div class="vshell">
+          <div class="vwrap">
+            <video class="video-slot" autoplay muted playsinline>
+              <source src="https://github.com/EIT-HAI/Thea/releases/download/demo-v1/act1.mp4" type="video/mp4">
+            </video>
+            <button class="vbig" aria-label="Play"><span class="vbig-disc"><svg viewBox="0 0 96 96" fill="currentColor" stroke="currentColor" stroke-width="7" stroke-linejoin="round"><path d="M28 20v56l46-28z"/></svg></span></button>
+          </div>
+          <div class="vbar" data-video>
+            <button class="vbtn" data-act="play" aria-label="Play or pause"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 6v12"/><path d="M14.5 6v12"/></svg></button>
+            <div class="vtrack" role="slider" aria-label="Seek" tabindex="0"><div class="vfill"></div></div>
+            <span class="vtime">0:00 / 0:00</span>
+            <button class="vbtn" data-act="mute" aria-label="Unmute"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 6v12L7.5 14.5H4z"/><path d="m16.5 10 4 4"/><path d="m20.5 10-4 4"/></svg></button>
+            <button class="vbtn" data-act="full" aria-label="Fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H4v5"/><path d="M15 4h5v5"/><path d="M9 20H4v-5"/><path d="M15 20h5v-5"/></svg></button>
+          </div>
+        </div>
+        <figcaption class="caption">Watch the full demo (5:44) on <a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a> or <a href="#">Bilibili</a>.</figcaption>
+      </figure>
+      <div class="abstract-card prose">
+        <p class="card-title">Abstract</p>
+        <p>The success of coding agents has established the <em>harness</em> as a paradigm: what an agent achieves depends not on the model alone, but on the infrastructure around it. We ask whether the same paradigm extends to embodied agents in the physical world. We present <span class="sc">Thea</span>, a harness in which an agentic loop orchestrates robot capabilities, each wrapped as a callable tool. It inherits the core components of coding agents, modified as the physical world requires. The world, however, withholds two abilities that software grants for free: reading the state of the world, and judging the outcome of an action. To bridge these gaps, <span class="sc">Thea</span> introduces <em>Scene Graph as Context</em>, a persistent, symbolic representation of the world, and <em>Evaluation as Exit Codes</em>, which detects when an action should terminate, judges whether it succeeded, and on failure diagnoses the cause. Together they close the loop between the agent and the physical world. Rich behaviors then emerge from the composition of tools, and the closed loop carries long-horizon tasks to completion in real environments.</p>
+      </div>
+      <div class="abstract-card">
+        <p class="card-title">Contents</p>
+        <ol class="cover-toc">
+          <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+          <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+          <li><details>
+            <summary><a href="system.html"><span class="toc-num">3</span>System Architecture</a></summary>
+            <ol class="sub">
+              <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+              <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+              <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+              <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+              <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+              <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+              <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+            </ol>
+          </details></li>
+          <li><details>
+            <summary><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a></summary>
+            <ol class="sub">
+              <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+              <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+              <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+            </ol>
+          </details></li>
+          <li><details>
+            <summary><a href="experiments.html"><span class="toc-num">5</span>Experiments</a></summary>
+            <ol class="sub">
+              <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+              <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+              <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+              <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+            </ol>
+          </details></li>
+          <li><details>
+            <summary><a href="related.html"><span class="toc-num">6</span>Related Work</a></summary>
+            <ol class="sub">
+              <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+              <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+              <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+            </ol>
+          </details></li>
+          <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+          <li class="appendix-first"><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+          <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+          <li><details>
+            <summary><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a></summary>
+            <ol class="sub">
+              <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+              <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+              <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+              <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+            </ol>
+          </details></li>
+        </ol>
+      </div>
+      <div class="abstract-card" id="citation">
+        <p class="card-title">Citation</p>
+        <div class="bib-wrap">
+          <button class="bib-copy" onclick="copyBib(this)">Copy</button>
+<pre id="bibtex"><span class="bt-ent">@misc</span>{<span class="bt-key">thea2026</span>,
+  <span class="bt-field">title</span>  = {Towards the Harness of Embodied Agents},
+  <span class="bt-field">author</span> = {Qi Wang and Tianyi Wang and Chengyang Li and Shikun Ban and Yurun Chen
+            and Yizhong Ge and Jason Qin and Chengtai Li and Wentao Zhu},
+  <span class="bt-field">year</span>   = {2026},
+  <span class="bt-field">note</span>   = {Technical Report},
+}</pre>
+        </div>
+      </div>
+      <nav class="pager"><a class="next" href="intro.html">Start reading &mdash; 1&ensp;Introduction &rarr;</a></nav>
+      <script>
+      function copyBib(btn){navigator.clipboard.writeText(document.getElementById('bibtex').textContent).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},2000);});}
+      </script>
+    </section>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var bar = document.querySelector('.vbar[data-video]');
+  var v = document.querySelector('video.video-slot');
+  if (!bar || !v) return;
+  var I = {"play": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 5.5v13l11-6.5z\"/></svg>", "pause": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9.5 6v12\"/><path d=\"M14.5 6v12\"/></svg>", "muted": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9.5h3.5L12 6v12L7.5 14.5H4z\"/><path d=\"m16.5 10 4 4\"/><path d=\"m20.5 10-4 4\"/></svg>", "sound": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9.5h3.5L12 6v12L7.5 14.5H4z\"/><path d=\"M15.5 9.8a3.5 3.5 0 0 1 0 4.4\"/><path d=\"M18 7.6a7 7 0 0 1 0 8.8\"/></svg>", "full": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 4H4v5\"/><path d=\"M15 4h5v5\"/><path d=\"M9 20H4v-5\"/><path d=\"M15 20h5v-5\"/></svg>", "unfull": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9h5V4\"/><path d=\"M20 9h-5V4\"/><path d=\"M4 15h5v5\"/><path d=\"M20 15h-5v5\"/></svg>"};
+  var btn = {}, acts = ['play', 'mute', 'full'];
+  acts.forEach(function (a) { btn[a] = bar.querySelector('[data-act="' + a + '"]'); });
+  var track = bar.querySelector('.vtrack'), fill = bar.querySelector('.vfill'),
+      time = bar.querySelector('.vtime');
+
+  function fmt(s) {
+    if (!isFinite(s)) return '0:00';
+    var m = Math.floor(s / 60);
+    return m + ':' + ('0' + Math.floor(s % 60)).slice(-2);
+  }
+  var wrap = document.querySelector('.vwrap'), big = wrap && wrap.querySelector('.vbig');
+  function paint() {
+    btn.play.innerHTML = v.paused ? I.play : I.pause;
+    btn.play.setAttribute('aria-label', v.paused ? 'Play' : 'Pause');
+    btn.mute.innerHTML = v.muted ? I.muted : I.sound;
+    btn.mute.setAttribute('aria-label', v.muted ? 'Unmute' : 'Mute');
+    // 大按钮只在暂停时出现,且只有播放三角一个状态(对齐 PI),所以不换图标
+    if (wrap) wrap.classList.toggle('is-paused', v.paused);
+  }
+  function tick() {
+    var d = v.duration || 0;
+    fill.style.width = (d ? (v.currentTime / d) * 100 : 0) + '%';
+    time.textContent = fmt(v.currentTime) + ' / ' + fmt(d);
+  }
+  function seek(e) {
+    var r = track.getBoundingClientRect();
+    var x = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) / r.width;
+    if (v.duration) v.currentTime = Math.max(0, Math.min(1, x)) * v.duration;
+  }
+
+  function toggle() { v.paused ? v.play() : v.pause(); }
+  btn.play.addEventListener('click', toggle);
+  // 点画面本身也能播/停:原生 controls 就是这个行为,关掉 controls 后画面变得不响应,
+  // 反直觉。键盘可达性由控件条上的按钮承担,这里只补鼠标/触摸的直觉动作。
+  v.addEventListener('click', toggle);
+  if (big) big.addEventListener('click', toggle);
+  btn.mute.addEventListener('click', function () { v.muted = !v.muted; paint(); });
+  btn.full.addEventListener('click', function () {
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      return;
+    }
+    // 全屏 .vshell(视频 + 控件条):全屏 .vwrap 会把控件条甩在外面,全屏后
+    // 没有音量/退出按钮;全屏 <video> 连大播放钮也甩掉。
+    // iOS Safari 不支持元素全屏,只有 video.webkitEnterFullscreen,退回到那条。
+    var box = document.querySelector('.vshell') || wrap || v;
+    var fn = box.requestFullscreen || box.webkitRequestFullscreen;
+    if (fn) fn.call(box);
+    else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+  });
+  // 拖拽监听挂在 document 上而不是轨道上:指针一旦拖出轨道范围(很容易发生),
+  // 挂在轨道上的 pointermove/pointerup 就收不到了,拖动会中途断掉
+  track.addEventListener('pointerdown', function (e) {
+    e.preventDefault();
+    track.classList.add('is-dragging');
+    seek(e);
+    var mv = function (ev) { ev.preventDefault(); seek(ev); };
+    var up = function () {
+      track.classList.remove('is-dragging');
+      document.removeEventListener('pointermove', mv);
+      document.removeEventListener('pointerup', up);
+      document.removeEventListener('pointercancel', up);
+    };
+    document.addEventListener('pointermove', mv);
+    document.addEventListener('pointerup', up);
+    document.addEventListener('pointercancel', up);
+  });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') v.currentTime += 5;
+    else if (e.key === 'ArrowLeft') v.currentTime -= 5;
+    else return;
+    e.preventDefault();
+  });
+
+  // 全屏钮双态:进入后换"缩回"图标(esc 退出也走这个事件,状态不会挂错)
+  function fsPaint() {
+    var fs = document.fullscreenElement || document.webkitFullscreenElement;
+    btn.full.innerHTML = fs ? I.unfull : I.full;
+    btn.full.setAttribute('aria-label', fs ? 'Exit fullscreen' : 'Fullscreen');
+  }
+  ['fullscreenchange', 'webkitfullscreenchange'].forEach(function (ev) {
+    document.addEventListener(ev, fsPaint);
+  });
+
+  v.addEventListener('timeupdate', tick);
+  v.addEventListener('loadedmetadata', tick);
+  ['play', 'pause', 'ended', 'volumechange'].forEach(function (ev) { v.addEventListener(ev, paint); });
+  // 不循环:播完停在最后一帧。再点播放键从头放,而不是卡在末尾原地不动
+  v.addEventListener('ended', function () { v.currentTime = 0; });
+  paint(); tick();
+})();
+</script>
+</body>
+</html>

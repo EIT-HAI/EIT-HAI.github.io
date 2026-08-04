@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 System Architecture — Thea</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <h1>Towards the Harness of Embodied Agents</h1>
+    <nav class="links">
+      <a href="paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9.5 13h5"/><path d="M9.5 17h5"/></svg>Paper</a>
+      <a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 8-4.5 4 4.5 4"/><path d="m15.5 8 4.5 4-4.5 4"/></svg>Code</a>
+      <span class="link-group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M10.2 9v6l5-3z"/></svg><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">YouTube</a><span
+        class="lg-sep">/</span><a href="#">Bilibili</a></span>
+      <a href="index.html#citation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4.5c-2 0-2.5 1-2.5 2.8v1.9c0 1.5-.6 2.4-1.9 2.8 1.3.4 1.9 1.3 1.9 2.8v1.9c0 1.8.5 2.8 2.5 2.8"/><path d="M15 4.5c2 0 2.5 1 2.5 2.8v1.9c0 1.5.6 2.4 1.9 2.8-1.3.4-1.9 1.3-1.9 2.8v1.9c0 1.8-.5 2.8-2.5 2.8"/></svg>BibTeX</a>
+    </nav>
+  </header>
+
+    <nav class="toc" aria-label="Contents">
+      <a class="toc-home" href="index.html"><span class="sc">Thea</span></a>
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="intro.html"><span class="toc-num">1</span>Introduction</a></li>
+        <li><a href="harness.html"><span class="toc-num">2</span>Why the Harness Works</a></li>
+        <li class="current"><a href="system.html"><span class="toc-num">3</span>System Architecture</a>
+          <ol class="sub">
+            <li><a href="system.html#s31"><span class="toc-num">3.1</span>Agentic Loop</a></li>
+            <li><a href="system.html#s32"><span class="toc-num">3.2</span>Context Engineering</a></li>
+            <li><a href="system.html#s33"><span class="toc-num">3.3</span>Tool Protocol</a></li>
+            <li><a href="system.html#s34"><span class="toc-num">3.4</span>Skills</a></li>
+            <li><a href="system.html#s35"><span class="toc-num">3.5</span>Memory</a></li>
+            <li><a href="system.html#s36"><span class="toc-num">3.6</span>Safety</a></li>
+            <li><a href="system.html#s37"><span class="toc-num">3.7</span>User Interaction</a></li>
+          </ol>
+        </li>
+        <li><a href="gaps.html"><span class="toc-num">4</span>Bridging the Gaps</a>
+          <ol class="sub">
+            <li><a href="gaps.html#scene-graph"><span class="toc-num">4.1</span>Scene Graph as Context</a></li>
+            <li><a href="gaps.html#eval"><span class="toc-num">4.2</span>Evaluation as Exit Codes</a></li>
+            <li><a href="gaps.html#embodiment"><span class="toc-num">4.3</span>Embodiment Profile</a></li>
+          </ol>
+        </li>
+        <li><a href="experiments.html"><span class="toc-num">5</span>Experiments</a>
+          <ol class="sub">
+            <li><a href="experiments.html#s51"><span class="toc-num">5.1</span>Task Setup</a></li>
+            <li><a href="experiments.html#s52"><span class="toc-num">5.2</span>Scaling with Task Complexity</a></li>
+            <li><a href="experiments.html#s53"><span class="toc-num">5.3</span>Evaluator Accuracy</a></li>
+            <li><a href="experiments.html#s54"><span class="toc-num">5.4</span>Emergent Capabilities</a></li>
+          </ol>
+        </li>
+        <li><a href="related.html"><span class="toc-num">6</span>Related Work</a>
+          <ol class="sub">
+            <li><a href="related.html#s61"><span class="toc-num">6.1</span>Coding Agents</a></li>
+            <li><a href="related.html#s62"><span class="toc-num">6.2</span>Embodied Foundation Models</a></li>
+            <li><a href="related.html#s63"><span class="toc-num">6.3</span>Orchestration for Embodied Agents</a></li>
+          </ol>
+        </li>
+        <li><a href="discussion.html"><span class="toc-num">7</span>Discussion</a></li>
+      </ol>
+      <p class="toc-title toc-appendix">Appendix</p>
+      <ol class="appendix">
+        <li><a href="app-tools.html"><span class="toc-num">A</span>Tool Registry</a></li>
+        <li><a href="app-context.html"><span class="toc-num">B</span>Context Structure</a></li>
+        <li><a href="app-log.html"><span class="toc-num">C</span>Demo Execution Logs</a>
+          <ol class="sub">
+            <li><a href="app-log.html#beverage"><span class="toc-num">C.1</span>Beverage Retrieval</a></li>
+            <li><a href="app-log.html#powerbank"><span class="toc-num">C.2</span>Power-Bank Search</a></li>
+            <li><a href="app-log.html#desk"><span class="toc-num">C.3</span>Desk Cleanup</a></li>
+            <li><a href="app-log.html#basket"><span class="toc-num">C.4</span>Basket Delivery</a></li>
+          </ol>
+        </li>
+      </ol>
+      <div class="toc-actions">
+        <a href="paper.pdf" target="_blank" rel="noopener">Paper</a><span>&middot;</span><a href="https://github.com/EIT-HAI/Thea" target="_blank" rel="noopener">Code</a><span>&middot;</span><a href="https://youtu.be/Sm9jFmfnOF0" target="_blank" rel="noopener">Video</a><span>&middot;</span><a href="index.html#citation" target="_blank" rel="noopener">BibTeX</a>
+      </div>
+    </nav>
+
+  <div class="article">
+    <section id="top">
+      <h2><span class="sec-num">3</span>System Architecture</h2>
+      <p>
+        This section is organized by a single question: what form does each component
+        of a coding agent take in the physical world? The answer has the following
+        parts. An <em>agentic loop</em> (<a href="#s31">§3.1</a>) drives the agent. At
+        each turn the <em>model</em>, a vision-language model, reads the state of the
+        world and issues a tool call for the harness to execute; we reserve
+        <em>policy</em> for the low-level controllers that tools invoke.
+        <em>Context engineering</em> (<a href="#s32">§3.2</a>) determines what the
+        model actually reads at each turn. A <em>tool protocol</em>
+        (<a href="#s33">§3.3</a>) defines how each capability is packaged so that the
+        loop can execute it uniformly. A <em>skill system</em>
+        (<a href="#s34">§3.4</a>) injects domain knowledge into the context when the
+        situation demands it. A <em>memory system</em> (<a href="#s35">§3.5</a>) lets
+        the agent accumulate what it learns, at every scope from a single task to the
+        lifetime of a deployment. Finally, <em>safety</em> (<a href="#s36">§3.6</a>)
+        bounds what the agent may do at all. Each component is inherited from the
+        architecture of coding agents, and each is reshaped in some way by the demands
+        of the physical world. The components that the physical world requires, with
+        no counterpart to inherit, follow in <a href="gaps.html">§4</a>.
+      </p>
+    </section>
+
+    <section id="s31">
+      <h2><span class="sec-num">3.1</span>Agentic Loop</h2>
+      <span class="sidenote"><strong>Time units used throughout.</strong><br>
+      <strong>turn</strong> — one cycle of the loop: a model call plus the tool
+      execution it requests.<br>
+      <strong>task</strong> — one user instruction handled to completion; it opens a
+      run of the loop, spans as many turns as needed, and ends when the model returns
+      no tool call.<br>
+      <strong>session</strong> — one continuous engagement with the user; tasks follow
+      one another within it, and the accumulated messages carry across them
+      (<a href="#s32">§3.2</a>).</span>
+      <span class="sidenote"><code>build_context</code> — assembles everything the model reads, by lifetime;
+      expanded in <a href="#s32">§3.2</a> (<a href="#lst2">Listing 2</a>).<br>
+      <code>update_memory</code> — consolidates the finished task's record into
+      durable memory; the subject of <a href="#s35">§3.5</a> (<a href="#lst7">Listing 7</a>).</span>
+      <p>
+        <a href="#lst1">Listing 1</a> shows the agentic loop. Each turn, the harness gathers the context,
+        the model reads it and picks the next action, and the harness executes the
+        tool call it names and appends the result; a response with no tool call ends
+        the task. This is the same loop that drives coding agents: the same
+        accumulating messages, the same termination convention. The control flow fits
+        in these few lines.
+      </p>
+
+      <figure class="listing" id="lst1">
+        <pre><code><span class="kw">def</span> agent_loop(instruction, session) -&gt; str:
+    <span class="str">"""Perceive, decide, act, repeat until done."""</span>
+    messages = session.messages
+    messages.append(instruction)
+
+    <span class="kw">while</span> <span class="bi">True</span>:
+        <span class="cmt"># perceive: gather what the model reads</span>
+        context = build_context(session)
+
+        <span class="cmt"># decide: the model picks the next action</span>
+        response = llm(context)
+        messages.append(response)
+        <span class="kw">if</span> <span class="kw">not</span> response.tool_calls:  <span class="cmt"># done</span>
+            update_memory(session)
+            <span class="kw">return</span> response.text
+
+        <span class="cmt"># act: execute one tool call per turn</span>
+        call = response.tool_calls[0]
+        messages.append(execute(call))</code></pre>
+        <figcaption><strong>Listing 1.</strong> Agentic loop.</figcaption>
+      </figure>
+
+      <p>
+        Everything the model reads is curated in <code>build_context</code>, from
+        durable instructions to physical evidence gathered fresh every turn.
+        <a href="#s32">Section 3.2</a> unpacks this function, and the world state it
+        draws on is the subject of <a href="gaps.html#scene-graph">§4.1</a>.
+      </p>
+      <p>
+        As in coding agents, every capability is exposed as a <em>tool</em>.
+        Navigation, manipulation, evaluation, and user interaction are all entries in
+        the same flat <em>tool registry</em>, and the loop has no special-cased logic
+        for any of them. The model issues exactly one <em>tool call</em> per turn,
+        because physical actions and their consequences are hard to predict. This
+        <em>reactive</em> principle (execute one tool call, observe the outcome, then
+        decide the next) lets the agent adapt to a world it cannot fully anticipate.
+        The absence of a tool call closes the task, and the final text reports its
+        outcome.
+      </p>
+      <p>
+        Under this design, <em>evaluation</em> is also a tool, but its invocation is
+        not left to the model's discretion. In coding agents, evaluation is invisible.
+        A shell command returns an exit code and a stack trace, and the model reads
+        the result like any other tool output. The physical world provides no such
+        signal, so <span class="sc">Thea</span> makes evaluation an explicit tool, and
+        the harness triggers it structurally. A post-execution hook invokes the
+        evaluator after every manipulation (<a href="gaps.html#eval">§4.2</a>).
+      </p>
+    </section>
+
+    <section id="s32">
+      <h2><span class="sec-num">3.2</span>Context Engineering</h2>
+      <span class="sidenote is-citation" id="ref-13"><span class="sn">[13]:</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener"><em>Effective
+      Context Engineering for AI Agents</em></a>.</span>
+      <p>
+        Context engineering curates what the model reads. The context window is a
+        finite, attention-limited resource, and what fills it largely determines what
+        the agent does&nbsp;<a class="cite" href="#ref-13">[13]</a>. Unlike coding agents, which can often recover
+        context by reading durable files and preserving a growing transcript,
+        <span class="sc">Thea</span> must also refresh physical evidence whose
+        validity changes with robot motion and external events. Context engineering in
+        <span class="sc">Thea</span> therefore assigns each model-visible input both a
+        representational role and a lifetime, so stable operating knowledge, current
+        physical evidence, and historical trace occupy distinct parts of the context
+        window: resident, refreshed, and accumulated. <a href="#lst2">Listing 2</a> unpacks
+        <code>build_context</code> from <a href="#lst1">Listing 1</a>, <a href="#tab1">Table 1</a> lists the contents of each
+        lifetime, and <a href="#fig3">Figure 3</a> shows how they evolve across turns.
+      </p>
+      <span class="sidenote is-citation" id="ref-12"><span class="sn">[12]:</span> Berman et al. (2026),
+      <a href="https://www.anthropic.com/research/claude-plays-robotics" target="_blank" rel="noopener"><em>Claude
+      Plays Robotics</em></a>.</span>
+      <span class="sidenote">Each lifetime has its own source: the resident blocks are
+      loaded at task start, the refreshed values are pulled from the sensor side, and
+      the accumulated record lives and grows in the session.</span>
+      <p>
+        Resident context holds the System Prompt, Memory, Embodiment Profile, and Tool
+        Definitions. Accumulated context holds Instructions, Task Notes, Model
+        Responses, and Tool Results. These two lifetimes behave just as they do in
+        coding agents. Instructions stay, and the record grows. Refreshed context holds
+        the Scene Graph Brief and Observations, and is where the difference above
+        lands. Observations are the body's current sensor
+        readings: camera images and clearance measurements, the LiDAR-detected
+        distances to nearby obstacles. They expire quickly, and their durable content
+        is distilled into the scene graph, a holistic representation of the world, so
+        the latest of each is all a decision needs. Context-truncation experiments in
+        robot manipulation point the same way. Models rely on the recent past far more
+        than on a broad accumulated history&nbsp;<a class="cite" href="#ref-12">[12]</a>. Appendix B expands
+        each item to its full model-facing structure.
+      </p>
+
+      <figure class="listing" id="lst2">
+        <pre><code><span class="kw">def</span> build_context(session) -&gt; Context:
+    session.messages.append(task_notes())
+    <span class="kw">return</span> Context(
+        <span class="cmt"># resident: loaded at task start</span>
+        session.system_prompt, session.memory,
+        session.profile, session.tool_schemas,
+        <span class="cmt"># refreshed: pulled fresh, kept latest</span>
+        scene_graph.latest(), observe(),
+        <span class="cmt"># accumulated: the growing record</span>
+        session.messages,
+    )</code></pre>
+        <figcaption><strong>Listing 2.</strong> Context assembly for one turn.</figcaption>
+      </figure>
+
+      <figure class="table" id="tab1">
+        <figcaption class="caption"><strong>Table 1.</strong> Context lifetimes for
+        one turn: resident context stays stable, refreshed context is replaced before
+        each decision, and accumulated context grows through ordinary turns.
+        Compaction may replace older history, and Task Notes expire with the active
+        task.</figcaption>
+        <div class="table-scroll"><table class="tab">
+          <thead>
+            <tr><th>Lifetime</th><th>Contents</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Resident</strong></td>
+              <td><strong>System Prompt.</strong> The agent's role and operating
+              rules.<br>
+              <strong>Memory.</strong> Durable memory from <code>MEMORY.md</code>:
+              preferences, conventions, and lessons.<br>
+              <strong>Embodiment Profile.</strong> Description of the active
+              embodiment: body, cameras, frames, and physical limits.<br>
+              <strong>Tool Definitions.</strong> <code>name</code>,
+              <code>description</code> (with the tool's experience summary appended),
+              and <code>inputSchema</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Refreshed</strong></td>
+              <td><strong>Scene Graph Brief.</strong> Compact rendering of the current
+              global world state.<br>
+              <strong>Observations.</strong> Camera images and clearance
+              measurements.</td>
+            </tr>
+            <tr>
+              <td><strong>Accumulated</strong></td>
+              <td><strong>Instructions.</strong> Messages from the user.<br>
+              <strong>Task Notes.</strong> Concise active-task working record.<br>
+              <strong>Model Responses.</strong> Model-generated messages, including
+              text and previous tool calls.<br>
+              <strong>Tool Results.</strong> Return envelopes from executed
+              tools.</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </figure>
+
+      <p>
+        <span class="run-in">Resident.</span> Resident context states the durable
+        conditions for the next decision. The System Prompt states the agent's role
+        and its operating rules: one tool call per turn, which evidence source serves
+        which purpose, and when to re-observe instead of trusting stale context.
+        Memory contributes durable knowledge carried across sessions, such as
+        preferences, conventions, and lessons, while tool-specific experience is keyed
+        separately (<a href="#s35">§3.5</a>). The Embodiment Profile gives the model
+        the body's cameras, frames, and physical limits in the same place every time
+        (<a href="gaps.html#embodiment">§4.3</a>). Tool Definitions are the
+        model-visible side of each tool's contract (<a href="#s33">§3.3</a>); the
+        post-condition never enters the model's context, and only the evaluator reads
+        it (<a href="gaps.html#eval">§4.2</a>). When a tool has accumulated
+        experience, the harness appends a compact summary of it to that tool's
+        description at task start (<a href="#s35">§3.5</a>).
+      </p>
+      <p>
+        <span class="run-in">Refreshed.</span> Refreshed context states what the
+        harness currently claims about the world, at two scales. The scene graph
+        supplies the global scale: a structured summary of what is where, distilled
+        from everything the robot has observed so far. The graph itself lives in the
+        harness; what enters the context is its compact rendering, the scene graph
+        brief, regenerated with source and freshness metadata before each model call
+        (<a href="gaps.html#scene-graph">§4.1</a>). Observations supply the local
+        scale: current camera images and clearance measurements. These distances
+        report the nearest obstacles forward, backward, left, and right for local
+        motion decisions, not the semantic distance to a target. The two complement
+        each other. Observations are raw and instantaneous, valid for this decision
+        only, while the scene graph is organized and persistent, yet what it asserts
+        is always about the present. Together they let the model ground every action
+        in the world as it is, not as it was when some earlier tool ran.
+      </p>
+
+      <figure class="fig" id="fig3">
+        <img src="assets/context_engineering.png"
+             alt="Diagram: context evolution across ordinary turns — resident context stays stable, refreshed context is replaced before each model decision, and accumulated context grows.">
+        <figcaption><strong>Figure 3.</strong> Context evolution across ordinary
+        turns. Resident context stays stable, refreshed context is replaced before
+        each model decision, and accumulated context grows. Compaction and task-end
+        expiry are not shown.</figcaption>
+      </figure>
+
+      <p>
+        <span class="run-in">Accumulated.</span> Accumulated messages preserve what
+        has happened within the session. When a new instruction arrives inside the
+        same session, the harness appends it to existing messages rather than opening
+        a separate transcript. Before each decision, the harness also appends Task
+        Notes as a concise active-task working record. Inside the loop, Model
+        Responses add model-generated text and previous tool calls, and Tool Results
+        add compact return envelopes from executed tools. These entries help recovery
+        by recording what was tried and what came back. Compaction touches only this
+        lifetime. As a conversation nears the model's context window, older messages
+        are summarized into a shorter record, while resident and refreshed context are
+        preserved&nbsp;<a class="cite" href="#ref-13">[13]</a>.
+      </p>
+    </section>
+
+    <section id="s33">
+      <h2><span class="sec-num">3.3</span>Tool Protocol</h2>
+      <span class="sidenote is-citation" id="ref-14"><span class="sn">[14]:</span> Anthropic (2024),
+      <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener"><em>Introducing
+      the Model Context Protocol</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-15"><span class="sn">[15]:</span> Yang et al. (2024),
+      <a href="https://arxiv.org/abs/2405.15793" target="_blank" rel="noopener"><em>SWE-agent: Agent-Computer Interfaces Enable Automated Software
+      Engineering</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-16"><span class="sn">[16]:</span> Anthropic (2024),
+      <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener"><em>Building
+      Effective Agents</em></a>.</span>
+      <span class="sidenote is-citation" id="ref-17"><span class="sn">[17]:</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/writing-tools-for-agents" target="_blank" rel="noopener"><em>Writing
+      Effective Tools for AI Agents—Using AI Agents</em></a>.</span>
+      <p>
+        Every capability in <span class="sc">Thea</span> is a tool: a
+        <code>name</code>, a <code>description</code>, and an
+        <code>inputSchema</code>, the tool <em>definition</em> of the Model Context
+        Protocol&nbsp;<a class="cite" href="#ref-14">[14]</a>. Before a call, this definition is everything the model
+        knows about what a tool does, which is why coding agents treat this
+        agent-computer interface with the same care as an interface built for
+        people&nbsp;[<a href="#ref-15">15</a>,&thinsp;<a href="#ref-16">16</a>,&thinsp;<a href="#ref-17">17</a>]. What the physical world changes is how much this
+        interface must specify. The rest of this section unpacks the protocol: the
+        contract a tool file carries, how it registers, the envelope every call
+        returns, who executes it, and the hooks it passes through.
+      </p>
+      <p>
+        <span class="run-in">The contract.</span> A coding tool rarely needs to
+        explain when it will fail, but a physical tool wraps a policy with a success
+        distribution, so its description states preconditions (e.g. “target within
+        reach, gripper empty”), the character of the underlying policy, and what to
+        try when it fails. Each tool file also binds its own <em>post-condition</em>,
+        a few sentences stating what the world should look like if this particular
+        call succeeded; at evaluation time the evaluator retrieves it by tool name, so
+        the success criterion travels with the tool rather than with the prompt, and
+        the model never sees it (<a href="gaps.html#eval">§4.2</a>). In effect, each
+        tool file carries the tool's full contract: the <code>inputSchema</code> says
+        how to call it, the <code>description</code> says when, and the post-condition
+        says how its outcome will be judged.
+      </p>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 3" id="lst3">
+        <div class="code-card"><pre><code><span class="kw"><strong>def</strong></span> pick_up(
+  object_name: Annotated[str,
+    Field(description=<span class="str">"..."</span>)],
+  ...,
+) -&gt; dict:
+  <span class="str">"""Run CaP-X pick-object;
+  returns a run id.
+
+  When to use: ...
+  Readiness: ...
+  Do not use: ...
+  Result: ...
+  """</span>
+
+<span class="cmt"># success criterion: fetched by
+# evaluator, never shown to model</span>
+POST_CONDITION = (<span class="str">"..."</span>)</code></pre></div>
+        <figcaption><strong>Listing 3.</strong> A deployed tool file
+        (<code>pick_up</code>), contents elided; it registers as the
+        <code>Tool</code> of Listing 4.</figcaption>
+      </div>
+
+      <p>
+        <a href="#lst3">Listing 3</a> shows the shape of one such contract as deployed.
+      </p>
+      <p>
+        <span class="run-in">Registration.</span> A one-line registration,
+        <code>server.tool()(pick_up)</code>, turns the file of <a href="#lst3">Listing 3</a> into the
+        <code>Tool</code> of <a href="#lst4">Listing 4</a>: the function name, the docstring, and the
+        signature compile into the three fields of <code>schema</code>
+        (<code>name</code>, <code>description</code>, <code>inputSchema</code>), and the body is
+        what <code>call()</code> executes. <a href="#lst4">Listing 4</a> also shows the envelope every
+        call returns; who executes it, and the hooks a call must pass through, are
+        traced by <a href="#fig4">Figure 4</a>.
+      </p>
+
+      <figure class="listing" id="lst4">
+        <pre><code><span class="kw">class</span> Tool(Protocol):
+    schema: dict  <span class="cmt"># the MCP tool definition:</span>
+                  <span class="cmt"># {name, description, inputSchema},</span>
+                  <span class="cmt"># introspected at registration from</span>
+                  <span class="cmt"># the file's signature and docstring</span>
+    <span class="kw">def</span> call(<span class="bi">self</span>, args: dict) -&gt; dict:
+        <span class="cmt"># executes the tool file's function body</span>
+        ...  <span class="cmt">#    {"success": True,  **value}</span>
+             <span class="cmt"># or {"success": False, "reason": reason}</span></code></pre>
+        <figcaption><strong>Listing 4.</strong> The tool protocol: one interface and
+        one result envelope for every tool.</figcaption>
+      </figure>
+
+      <figure class="fig" id="fig4">
+        <img src="assets/tool_protocol.png"
+             alt="Diagram: the model issues a tool call; pre-hooks preflight it, one backend executes it, and post-hooks trigger follow-up work before the result returns to the model.">
+        <figcaption><strong>Figure 4.</strong> The model issues a tool call.
+        Pre-hooks preflight the call, one backend executes it, and post-hooks trigger
+        follow-up work before the result returns to the model.</figcaption>
+      </figure>
+
+      <p>
+        <span class="run-in">The envelope.</span> Every tool returns the same
+        envelope: a <code>success</code> flag, a value when it succeeds, and a
+        <code>reason</code> when it fails. The value is, in the loop's vocabulary, the
+        model's next observation; for a policy-backed tool it can be as thin as a run
+        handle, an identifier for the ongoing policy execution (a <em>run</em>), with
+        the substantive evidence arriving when the post-hook brings in the evaluator
+        (<a href="gaps.html#eval">§4.2</a>). Failure never raises an exception; a
+        failed call returns a <code>reason</code> such as “the robot is too far from
+        the target to grasp”, the closest thing a physical action has to
+        <code>stderr</code>. How verdicts and reasons are produced is the subject of
+        <a href="gaps.html#eval">§4.2</a>; what the agent does with them is
+        deliberately unscripted. Recoveries emerge from the model recombining the same
+        tools, not from hand-designed recovery routines.
+      </p>
+      <span class="sidenote"><a href="app-tools.html#tab4">Table 4</a> (Appendix A) lists the tool registry deployed on
+      one embodiment.</span>
+      <p>
+        <span class="run-in">Execution.</span> Who executes a call depends on its
+        weight. Lightweight queries run in-process (<code>BuiltinTool</code> in
+        <a href="#fig4">Figure 4</a>), while heavyweight capabilities (e.g. the navigation stack, the
+        manipulation policies) each run in their own subprocess speaking the Model
+        Context Protocol&nbsp;<a class="cite" href="#ref-14">[14]</a> (<code>MCPTool</code>). The registry presents
+        both as one flat list, and the model cannot tell them apart. This indifference
+        is what portability rests on. A policy backend can crash, restart, or be
+        upgraded behind the same interface, and nothing above the protocol notices;
+        the same subprocess boundary is what lets one harness drive backends written
+        against three different robot stacks.
+      </p>
+      <p>
+        <span class="run-in">Hooks.</span> A call never travels straight from the
+        model to the tool (<a href="#fig4">Figure 4</a>). Each call passes through deterministic
+        interception points that the harness owns and the model cannot skip:
+        pre-execution hooks that preflight the call (and may rewrite or block it), and
+        post-execution hooks that trigger follow-up work; an intercepted call returns
+        through the ordinary result channel like any other failure. The two that
+        matter most are a safety check that reads fresh clearance measurements before
+        any base motion (<a href="#s36">§3.6</a>) and a hook that invokes the
+        evaluator automatically after every manipulation
+        (<a href="gaps.html#eval">§4.2</a>). One discipline decides where each rule
+        lives: rules about a single tool go into its description; rules the model must
+        never be trusted to follow go into hooks; neither belongs in the system
+        prompt, which stays short and tool-agnostic.
+      </p>
+    </section>
+
+    <section id="s34">
+      <h2><span class="sec-num">3.4</span>Skills</h2>
+      <span class="sidenote is-citation" id="ref-18"><span class="sn">[18]:</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener"><em>Equipping
+      Agents for the Real World with Agent Skills</em></a>.</span>
+      <p>
+        Tools give the model capabilities; skills give it knowledge. Concretely, a
+        skill is a directory holding a <code>SKILL.md</code> file: YAML front matter
+        carrying a <code>name</code> and a <code>description</code>, an instruction
+        body in free-form markdown, and optionally bundled resources such as reference
+        files or scripts. Loading follows the progressive disclosure of coding
+        agents&nbsp;<a class="cite" href="#ref-18">[18]</a>, in three levels: the name and description of every
+        registered skill stay resident in the context at a cost of tens of tokens
+        each, the body enters the context through <code>load_skill</code> only when
+        the model judges that the task at hand matches a description, and bundled
+        resources are read only if the instructions call for them. Nothing in this
+        mechanism is specific to robots; it transfers unchanged.
+      </p>
+      <p>
+        What the physical world sharpens is the boundary between skills and tools. A
+        tool is a contract: schema validation, safety checks, permissions, and
+        evaluation all attach at the call boundary (<a href="#s33">§3.3</a>). A skill
+        is advice: text the model reads and may weigh. In a world with no sandbox and
+        no undo, whatever acts must sit on the contract side, so a manipulation policy
+        is always wrapped as a tool and never delivered as a skill that teaches the
+        model how to invoke it; on the advice side the guarantees would have nothing
+        to attach to. Skills are left holding exactly what text is good at: knowledge.
+        Which knowledge is decided by elimination: rules about a single tool go into
+        its description, behavior needed on every turn goes into the System Prompt
+        (<a href="#s32">§3.2</a>), lessons the system accumulates on its own go into
+        memory (<a href="#s35">§3.5</a>), and what is left falls to skills. In
+        practice this ranges from the operating sequence of a particular appliance to
+        the house rules of a particular workspace.
+      </p>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 5" id="lst5">
+        <div class="code-card"><pre><code><span class="cmt">---</span>
+<span class="kw">name</span>: tidy-workspace
+<span class="kw">description</span>: Rules for tidying
+  a desk: what to remove, what
+  to keep, and how to report.
+<span class="cmt">---</span>
+<span class="bi"><strong>## Working order</strong></span>
+- ...
+<span class="bi"><strong>## What to remove / what to keep</strong></span>
+- ...
+<span class="bi"><strong>## Wrap-up</strong></span>
+- ...</code></pre></div>
+        <figcaption><strong>Listing 5.</strong> A skill is a markdown file: the
+        deployed <code>tidy-workspace/SKILL.md</code>, contents elided.</figcaption>
+      </div>
+
+      <p>
+        <a href="#lst5">Listing 5</a> shows the shape of one deployed in <span class="sc">Thea</span>: a
+        page of boundary judgments for tidying a desk, knowledge at the level of
+        convention rather than of operation. As a skill is only text, the skill system
+        extends by editing a file: a new appliance, a new house rule, with no
+        retraining and no code change.
+      </p>
+    </section>
+
+    <section id="s35">
+      <h2><span class="sec-num">3.5</span>Memory</h2>
+      <p>
+        Memory in <span class="sc">Thea</span> is a lifecycle rather than a single
+        store.
+      </p>
+      <p>
+        <span class="run-in">Task Notes.</span> Inside a running task, the agent first
+        needs a notepad: a place that keeps what has been done and what remains, so
+        that a long task never depends on the model re-deriving its own
+        progress&nbsp;<a class="cite" href="#ref-13">[13]</a>. In <span class="sc">Thea</span> this notepad is Task
+        Notes, a concise record that preserves continuity inside one task. A task
+        begins when the user gives an instruction and ends when the model returns no
+        tool call. At task start, the harness resets Task Notes. After each tool
+        result, it appends a brief event. The notes carry the current goal, phase, and
+        timeline. They are the working record for the active task, not a session
+        transcript and not live world state.
+      </p>
+
+      <div class="margin-listing" role="figure" aria-label="Listing 6" id="lst6">
+        <div class="code-card"><pre><code><span class="bi"><strong>Task Notes</strong></span>
+<span class="kw">Task summary</span>:
+- Goal: current instruction
+- Current phase: ...
+<span class="kw">Timeline</span>:
+- task_start: ...
+
+<span class="bi"><strong>Memory</strong></span>
+- [user-preference] User gives
+  robot tasks in Chinese.
+
+<span class="bi"><strong>Tool Experience</strong></span>
+open_drawer
+<span class="kw">Success</span>:
+- Lower drawer pulled outward
+  with a visible gap.
+<span class="kw">Failure</span>:
+- If distance is reported or no gap
+  appears, move forward before retrying.</code></pre></div>
+        <figcaption><strong>Listing 6.</strong> Abridged memory artifacts: a Task
+        Notes shape, a Memory entry, and success/failure tool
+        experience.</figcaption>
+      </div>
+
+      <span class="sidenote is-citation" id="ref-19"><span class="sn">[19]:</span> Qu et al. (2025),
+      <a href="https://arxiv.org/abs/2410.08197" target="_blank" rel="noopener"><em>From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven
+      Interactions</em></a>.</span>
+      <p>
+        <span class="run-in">Durable stores.</span> Beyond a single task, the agent
+        needs durable memory. Some of what it learns is general: who the user is and
+        how things are usually done. Some is specific to one tool: how it succeeds and
+        how it fails, lessons that make the next call better. Coding agents have
+        little of the tool-specific kind: <code>grep</code> does exactly what its
+        description says, every call, so the tool itself leaves nothing to learn. A
+        tool that wraps a policy is different. Its description promises only a
+        tendency, and where it actually succeeds or fails must be learned from
+        use&nbsp;<a class="cite" href="#ref-19">[19]</a> (<a href="#s33">§3.3</a>). <span class="sc">Thea</span>
+        therefore keeps two durable stores: <code>MEMORY.md</code>, the same
+        cross-session memory file a coding agent keeps, and
+        <code>tool_experience/</code>, one file per tool. Both are written at task
+        end, when the harness consolidates the completed Task Notes, splitting entries
+        by where they will return to the model: cross-task knowledge to Memory,
+        tool-scoped lessons to that tool's experience file. The consolidation call
+        scores each candidate, and the harness writes only those above a confidence
+        threshold. Evaluator verdicts
+        (<a href="gaps.html#eval">§4.2</a>) enter this pipeline only as evidence in
+        the trace, never as direct writes. A single verdict is a hypothesis, and
+        whether the agent actually recovered from it shows only in the completed
+        trajectory. <a href="#lst7">Listing 7</a> shows the consolidation step, and <a href="#fig5">Figure 5</a> draws the
+        full cycle.
+      </p>
+
+      <figure class="fig" id="fig5">
+        <img src="assets/memory_rings.png"
+             alt="Diagram: memory lifecycle — Task Notes cycle within a task, consolidation writes MEMORY.md and tool experience files at task end, and both are read back into resident context at task start.">
+        <figcaption><strong>Figure 5.</strong> Memory lifecycle. Each store cycles
+        around the Context hub at its own period. Within a task, the harness
+        summarizes each turn's events into Task Notes and reads the snapshot back into
+        the accumulated messages before each turn. At task end, consolidation writes
+        accepted cross-task entries to <code>MEMORY.md</code> and accepted tool-scoped
+        lessons to that tool's experience file. At task start, both are read back into
+        resident context, Memory directly and tool experience as a summary inside each
+        tool's description.</figcaption>
+      </figure>
+
+      <figure class="listing" id="lst7">
+        <pre><code><span class="kw">def</span> update_memory(session) -&gt; <span class="bi">None</span>:
+    <span class="str">"""Consolidate a finished task into durable memory."""</span>
+    <span class="cmt"># one model call reads the completed Task Notes and</span>
+    <span class="cmt"># splits them: cross-task knowledge vs tool lessons</span>
+    memory, lessons = llm(CONSOLIDATE, session.task_notes)
+    append_memory(<span class="str">"MEMORY.md"</span>, memory)  <span class="cmt"># user preferences</span>
+    <span class="kw">for</span> lesson <span class="kw">in</span> lessons:              <span class="cmt"># how a grasp fails</span>
+        path = f<span class="str">"tool_experience/{lesson.tool}.md"</span>
+        append_memory(path, lesson.entry)</code></pre>
+        <figcaption><strong>Listing 7.</strong> Memory consolidation, run once at
+        task end.</figcaption>
+      </figure>
+
+      <p>
+        <span class="run-in">Read paths.</span> The three read-back arrows differ in
+        what the return buys. Task Notes expire with the task; until then, each
+        snapshot keeps the model current on its own progress. Memory returns as
+        resident context, so durable knowledge is visible on every decision without an
+        extra tool call. Tool experience is keyed by tool identity rather than by
+        session or user; the harness appends a summary of each tool's file to that
+        tool's description, so the lessons sit beside its preconditions, failure
+        modes, and recovery hints, exactly where the model weighs whether to call it.
+        Description quality largely determines call quality&nbsp;<a class="cite" href="#ref-17">[17]</a>, so the memory
+        lifecycle does more than remember. What it writes and reloads is, in effect,
+        the interface between the model and its tools. The agent improves its own
+        interface with use.
+      </p>
+    </section>
+
+    <section id="s36">
+      <h2><span class="sec-num">3.6</span>Safety</h2>
+      <span class="sidenote is-citation" id="ref-20"><span class="sn">[20]:</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/claude-code-sandboxing" target="_blank" rel="noopener"><em>Claude
+      Code Sandboxing</em></a>.</span>
+      <p>
+        Coding agents secure themselves with permission rules and an operating-system
+        sandbox&nbsp;<a class="cite" href="#ref-20">[20]</a>: the rules tell the agent what it <em>should</em> do, with
+        denials enforced below the model, and the sandbox bounds what it <em>can</em>
+        do. Neither is available in the physical world. No sandbox contains a physical
+        action (simulation covers part of this need, but not the deployed world), and
+        many actions cannot be undone. Safety must therefore be enforced before the
+        action.
+      </p>
+      <span class="sidenote is-citation" id="ref-21"><span class="sn">[21]:</span> Ahn et al. (2024),
+      <a href="https://arxiv.org/abs/2401.12963" target="_blank" rel="noopener"><em>Autort: Embodied foundation
+      models for large scale orchestration of robotic agents</em></a>.</span>
+      <p>
+        <span class="sc">Thea</span> builds safety into the machinery rather than into
+        the model's behavior&nbsp;<a class="cite" href="#ref-21">[21]</a>. Deterministic checks live in the hooks and
+        the execution pipeline of <a href="#s33">§3.3</a>, and the model can neither
+        skip nor persuade them. The main one is a <em>safety filter</em> on base
+        motion. Before the model decides, the filter puts four-direction clearance
+        measurements into the refreshed context, so the model plans with nearby
+        obstacles in view. Before the robot moves, its hook obtains a fresh reading,
+        blocks navigation when no immediate direction is admissible, and clamps direct
+        translations to the admissible distance. The loop itself is conservative:
+        physical actions run one at a time (<a href="#s31">§3.1</a>), a failure budget
+        halts the loop instead of letting it run away, and when unsure the agent can
+        stop and ask the user (<code>query_user</code>, <a href="#s37">§3.7</a>).
+        Safety is one of the deepest differences between coding agents and embodied
+        agents in the physical world; <span class="sc">Thea</span> makes an initial
+        attempt, and much remains open: force limits, safety around people, and
+        deployment beyond the lab.
+      </p>
+    </section>
+
+    <section id="s37">
+      <h2><span class="sec-num">3.7</span>User Interaction</h2>
+      <p>
+        Coding agents keep the user reachable throughout a task. The model can ask a
+        blocking clarification question or surface progress, and autonomy is defined
+        with structured returns to the human for information or judgement&nbsp;<a class="cite" href="#ref-16">[16]</a>.
+        <span class="sc">Thea</span> carries this over as two tools whose endpoint is
+        a person. <code>query_user</code> asks and waits: for a choice among lookalike
+        targets, for confirmation of a borderline action, for permission before
+        touching something personal. <code>notify_user</code> tells without waiting:
+        that a long action is starting, that something unexpected happened, that the
+        task is beyond what the robot can do. When to call either is a tool choice
+        like any other in the agentic loop (<a href="#s31">§3.1</a>).
+      </p>
+      <p>
+        In the harness, the two tools compose with everything else. Because they are
+        ordinary tool calls, everything that shapes tool choice shapes them too. A
+        question comes as a last resort rather than a reflex, after the scene graph
+        and the current observations have been consulted, and it can attach the
+        graph's candidate refs and views so the answer returns as evidence the rest of
+        the task can ground on (<a href="gaps.html#interface">§4.1.2</a>). A skill can
+        state when a notification is warranted for its task, and Memory keeps settled
+        answers as standing preferences so the same question is not asked twice.
+        Keeping the user in the loop is what keeps an embodied agent adaptive to the
+        unknown and the unexpected: it neither guesses nor fails silently.
+      </p>
+    </section>
+
+      <nav class="chapter-refs" aria-label="References">
+        <p class="refs-title">References</p>
+        <ol class="ref-list">
+        <li id="cite-12"><span class="ref-num">[12]</span> Berman et al. (2026),
+      <a href="https://www.anthropic.com/research/claude-plays-robotics" target="_blank" rel="noopener"><em>Claude
+      Plays Robotics</em></a>.</li>
+        <li id="cite-13"><span class="ref-num">[13]</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener"><em>Effective
+      Context Engineering for AI Agents</em></a>.</li>
+        <li id="cite-14"><span class="ref-num">[14]</span> Anthropic (2024),
+      <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener"><em>Introducing
+      the Model Context Protocol</em></a>.</li>
+        <li id="cite-15"><span class="ref-num">[15]</span> Yang et al. (2024),
+      <a href="https://arxiv.org/abs/2405.15793" target="_blank" rel="noopener"><em>SWE-agent: Agent-Computer Interfaces Enable Automated Software
+      Engineering</em></a>.</li>
+        <li id="cite-16"><span class="ref-num">[16]</span> Anthropic (2024),
+      <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener"><em>Building
+      Effective Agents</em></a>.</li>
+        <li id="cite-17"><span class="ref-num">[17]</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/writing-tools-for-agents" target="_blank" rel="noopener"><em>Writing
+      Effective Tools for AI Agents—Using AI Agents</em></a>.</li>
+        <li id="cite-18"><span class="ref-num">[18]</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener"><em>Equipping
+      Agents for the Real World with Agent Skills</em></a>.</li>
+        <li id="cite-19"><span class="ref-num">[19]</span> Qu et al. (2025),
+      <a href="https://arxiv.org/abs/2410.08197" target="_blank" rel="noopener"><em>From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven
+      Interactions</em></a>.</li>
+        <li id="cite-20"><span class="ref-num">[20]</span> Anthropic (2025),
+      <a href="https://www.anthropic.com/engineering/claude-code-sandboxing" target="_blank" rel="noopener"><em>Claude
+      Code Sandboxing</em></a>.</li>
+        <li id="cite-21"><span class="ref-num">[21]</span> Ahn et al. (2024),
+      <a href="https://arxiv.org/abs/2401.12963" target="_blank" rel="noopener"><em>Autort: Embodied foundation
+      models for large scale orchestration of robotic agents</em></a>.</li>
+        </ol>
+      </nav>
+      <nav class="pager"><a class="prev" href="harness.html">&larr; 2&ensp;Why the Harness Works</a><a class="next" href="gaps.html">4&ensp;Bridging the Gaps &rarr;</a></nav>
+  </div>
+</div>
+
+<footer>
+  HAI Lab, Eastern Institute of Technology, Ningbo
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.toc li.current .sub a');
+  var pairs = [];
+  links.forEach(function (a) {
+    var sec = document.getElementById(decodeURIComponent(a.hash).slice(1));
+    if (sec) pairs.push([sec, a]);
+  });
+  if (!pairs.length) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = window.innerHeight * 0.3, cur = null;
+    pairs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p[1]; });
+    pairs.forEach(function (p) { p[1].classList.toggle('active', p[1] === cur); });
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.article a[href^="#ref-"]');
+    if (!a) return;
+    var n = a.getAttribute('href').slice(5);
+    var side = document.getElementById('ref-' + n);
+    if (side && side.getBoundingClientRect().height > 0) return;  // 边注可见,交给原生
+    var li = document.getElementById('cite-' + n);
+    if (!li) return;
+    e.preventDefault();
+    li.scrollIntoView({ block: 'center' });
+    if (history.replaceState) history.replaceState(null, '', '#cite-' + n);
+  });
+})();
+</script>
+</body>
+</html>
