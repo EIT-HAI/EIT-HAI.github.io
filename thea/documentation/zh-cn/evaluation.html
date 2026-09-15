@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Install &amp; Setup" href="../setup/index.html"><link rel="prev" title="Thea Documentation" href="../index.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="参考资料" href="reference.html"><link rel="prev" title="Scene Graph" href="scene-graph.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
-        <title>Usage - Thea Documentation</title>
+        <title>Evaluation as Exit Codes - Thea Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -222,16 +222,16 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Install &amp; Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../zh-cn/index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/usage.html">使用方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/setup.html">安装与配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/harness.html">Harness 核心机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/port-to-your-robot.html">接入真实机器人</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/scene-graph.html">Scene Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/evaluation.html">Evaluation as Exit Codes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/reference.html">参考资料</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="usage.html">使用方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">安装与配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harness.html">Harness 核心机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="port-to-your-robot.html">接入真实机器人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-graph.html">Scene Graph</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Evaluation as Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">参考资料</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -274,7 +274,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/usage/index.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/zh-cn/evaluation.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -292,212 +292,186 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h1>
-<p>Thea is a provider-neutral Harness for embodied agents. It owns the Agentic
-Loop, context lifetimes, Tool execution, post-execution Evaluation, and the
-boundaries through which a deployment supplies physical-world evidence.</p>
-<p>Prefer Chinese? Read the <a class="reference internal" href="../zh-cn/index.html"><span class="std std-doc">中文文档</span></a>.</p>
-<p>The public release can be used in five ways:</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Deployment</p></th>
-<th class="head"><p>What you provide</p></th>
-<th class="head"><p>What Thea provides</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Local terminal</p></td>
-<td><p>A configured model credential</p></td>
-<td><p>The complete Agentic Loop and terminal-backed user interaction without Lark or a robot</p></td>
-</tr>
-<tr class="row-odd"><td><p>Feishu/Lark channel</p></td>
-<td><p>App credentials, authorized users, and a configured model</p></td>
-<td><p>Per-user Harness sessions, cards, images, clarification, and notifications</p></td>
-</tr>
-<tr class="row-even"><td><p>Harness library</p></td>
-<td><p>A model and model-visible Tools</p></td>
-<td><p>Agentic Loop, Context, Tool Protocol, Memory, Skills, hooks, and logs</p></td>
-</tr>
-<tr class="row-odd"><td><p>Simulator</p></td>
-<td><p>A LIBERO or RoboTwin 2.0 environment and primitive policy</p></td>
-<td><p>Observation projection, policy-backed Tool integration, and evaluator wiring</p></td>
-</tr>
-<tr class="row-even"><td><p>Physical robot</p></td>
-<td><p>Robot SDK adapters, sensing, policies, Scene Graph, and post-execution evidence</p></td>
-<td><p>The same runtime and public interfaces used in simulation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The root launcher maps these paths to four modes:</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Command mode</p></th>
-<th class="head"><p>Process started</p></th>
-<th class="head"><p>Additional requirement</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--mode</span> <span class="pre">cli</span></code></p></td>
-<td><p>Interactive terminal, or one instruction with <code class="docutils literal notranslate"><span class="pre">--instruction</span></code></p></td>
-<td><p>Model configuration and credential</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--mode</span> <span class="pre">channel</span></code></p></td>
-<td><p>Feishu/Lark channel with the default Harness</p></td>
-<td><p>Model and Lark credentials</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--mode</span> <span class="pre">simulation</span></code></p></td>
-<td><p>Feishu/Lark channel with a simulator Harness factory</p></td>
-<td><p>Lark credentials, importable factory, and <code class="docutils literal notranslate"><span class="pre">thea-simulation</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--mode</span> <span class="pre">robot</span></code></p></td>
-<td><p>Feishu/Lark channel with a robot Harness factory</p></td>
-<td><p>Lark credentials and importable factory</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">simulation</span></code> and <code class="docutils literal notranslate"><span class="pre">robot</span></code> are channel-hosted deployment modes, not standalone
-simulator or hardware executables. Applications without Lark compose <code class="docutils literal notranslate"><span class="pre">Harness</span></code>
-in Python and call <code class="docutils literal notranslate"><span class="pre">run_stream()</span></code> directly. Run <code class="docutils literal notranslate"><span class="pre">./run.sh</span> <span class="pre">--help</span></code> for the
-complete launcher options.</p>
-<section id="choose-a-starting-point">
-<h2>Choose a starting point<a class="headerlink" href="#choose-a-starting-point" title="Link to this heading">¶</a></h2>
-<section id="run-the-harness-in-a-terminal">
-<h3>Run the Harness in a terminal<a class="headerlink" href="#run-the-harness-in-a-terminal" title="Link to this heading">¶</a></h3>
-<p>Install the repository, configure a real model in <code class="docutils literal notranslate"><span class="pre">.env</span></code> and <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>,
-then start the interactive terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>cli<span class="w"> </span>--check
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>cli
-</pre></div>
-</div>
-<p>This path requires no Lark credential and no simulator or physical robot. It
-also supports a single instruction:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./run.sh<span class="w"> </span>--mode<span class="w"> </span>cli<span class="w"> </span>--instruction<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span><span class="s2">"Notify the user that the Harness is ready, then explain what ran."</span>
-</pre></div>
-</div>
-</section>
-<section id="run-the-complete-channel">
-<h3>Run the complete channel<a class="headerlink" href="#run-the-complete-channel" title="Link to this heading">¶</a></h3>
-<p>Install all public packages, configure a model and Feishu/Lark credentials,
-then start the channel:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>channel<span class="w"> </span>--check
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>channel
-</pre></div>
-</div>
-<p>The channel creates one Harness session per authorized user and registers
-<code class="docutils literal notranslate"><span class="pre">query_user</span></code> and <code class="docutils literal notranslate"><span class="pre">notify_user</span></code> as model-visible Tools.</p>
-</section>
-<section id="connect-a-simulator">
-<h3>Connect a simulator<a class="headerlink" href="#connect-a-simulator" title="Link to this heading">¶</a></h3>
-<p>Install the selected benchmark environment separately, build a factory that
-returns one <code class="docutils literal notranslate"><span class="pre">Harness</span></code>, configure the Lark credentials described above, and run
-the preflight before starting the channel:</p>
-<p><code class="docutils literal notranslate"><span class="pre">my_runtime.sim:create_harness</span></code> is an example import path. Implement it using
-the simulation guide before running this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./run.sh<span class="w"> </span>--mode<span class="w"> </span>simulation<span class="w"> </span>--check<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--harness-factory<span class="w"> </span>my_runtime.sim:create_harness
-
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>simulation<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--harness-factory<span class="w"> </span>my_runtime.sim:create_harness
-</pre></div>
-</div>
-<p>The factory connects the benchmark episode, primitive policy Tools,
-Observation provider, and evaluator. See <a class="reference internal" href="../reference/simulation.html"><span class="std std-doc">Simulation</span></a>
-for the LIBERO and RoboTwin 2.0 adapter boundaries.</p>
-</section>
-<section id="connect-a-physical-robot">
-<h3>Connect a physical robot<a class="headerlink" href="#connect-a-physical-robot" title="Link to this heading">¶</a></h3>
-<p>Keep hardware SDKs and deployment-specific code outside the Harness package.
-Expose them through the public interfaces, configure the Lark credentials, and
-validate the factory before starting the channel:</p>
-<p><code class="docutils literal notranslate"><span class="pre">my_runtime.robot:create_harness</span></code> is an example import path and must resolve to
-the factory in your deployment package:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./run.sh<span class="w"> </span>--mode<span class="w"> </span>robot<span class="w"> </span>--check<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--harness-factory<span class="w"> </span>my_runtime.robot:create_harness
-
-./run.sh<span class="w"> </span>--mode<span class="w"> </span>robot<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--harness-factory<span class="w"> </span>my_runtime.robot:create_harness
-</pre></div>
-</div>
-<p>The factory owns the robot connection and must return one configured
-<code class="docutils literal notranslate"><span class="pre">Harness</span></code>. Start from <a class="reference internal" href="../harness/port-to-your-robot.html"><span class="std std-doc">Port to Your Robot</span></a>,
-then connect <a class="reference internal" href="../scene-graph/index.html"><span class="std std-doc">Scene Graph</span></a> and
-<a class="reference internal" href="../evaluation/index.html"><span class="std std-doc">Evaluation</span></a> when physical execution is ready.</p>
-</section>
-</section>
-<section id="extend-an-existing-harness">
-<h2>Extend an Existing Harness<a class="headerlink" href="#extend-an-existing-harness" title="Link to this heading">¶</a></h2>
-<p>Use the smallest public boundary that matches the new capability:</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Goal</p></th>
-<th class="head"><p>First step</p></th>
-<th class="head"><p>Detailed guide</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Change the model</p></td>
-<td><p>Configure <code class="docutils literal notranslate"><span class="pre">llm</span></code> or implement <code class="docutils literal notranslate"><span class="pre">ModelProtocol</span></code>.</p></td>
-<td><p><a class="reference internal" href="../harness/model-and-tools.html"><span class="std std-doc">Models and Tools</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Add a Tool</p></td>
-<td><p>Register an annotated callable, <code class="docutils literal notranslate"><span class="pre">BuiltinTool</span></code>, or MCP capability with <code class="docutils literal notranslate"><span class="pre">ToolRegistry</span></code>.</p></td>
-<td><p><a class="reference internal" href="../harness/model-and-tools.html"><span class="std std-doc">Models and Tools</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p>Add current evidence</p></td>
-<td><p>Implement <code class="docutils literal notranslate"><span class="pre">ObservationProvider</span></code> and, when needed, <code class="docutils literal notranslate"><span class="pre">BaseClearanceProvider</span></code>.</p></td>
-<td><p><a class="reference internal" href="../harness/observation-and-safety.html"><span class="std std-doc">Observation and Safety</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Add reusable task guidance</p></td>
-<td><p>Create a directory-backed <code class="docutils literal notranslate"><span class="pre">SKILL.md</span></code> and select <code class="docutils literal notranslate"><span class="pre">skills.dir</span></code>.</p></td>
-<td><p><a class="reference internal" href="../harness/memory-and-skills.html"><span class="std std-doc">Memory, Skills, and Embodiment</span></a></p></td>
-</tr>
-<tr class="row-even"><td><p>Add persistent world state</p></td>
-<td><p>Implement <code class="docutils literal notranslate"><span class="pre">SceneGraphProtocol</span></code> and its ref-keyed queries.</p></td>
-<td><p><a class="reference internal" href="../scene-graph/index.html"><span class="std std-doc">Scene Graph</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Add physical outcome checks</p></td>
-<td><p>Connect post-execution evidence and <code class="docutils literal notranslate"><span class="pre">EvaluatorProtocol</span></code>.</p></td>
-<td><p><a class="reference internal" href="../evaluation/index.html"><span class="std std-doc">Evaluation</span></a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="how-one-task-runs">
-<h2>How one task runs<a class="headerlink" href="#how-one-task-runs" title="Link to this heading">¶</a></h2>
-<p>One user instruction starts one Task. Each Turn follows the same reactive
-cycle:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>refresh evidence
-  -&gt; model decision
-  -&gt; execute at most one selected Tool
-  -&gt; run configured hooks
-  -&gt; record the result
-  -&gt; refresh again
-</pre></div>
-</div>
-<p>The model may return text together with one Tool Call. A Task ends when the
-model returns no Tool Call or when the Harness terminates the run. The final
-text becomes the task report.</p>
-</section>
-<section id="recommended-reading-order">
-<h2>Recommended reading order<a class="headerlink" href="#recommended-reading-order" title="Link to this heading">¶</a></h2>
+          <section id="evaluation-as-exit-codes">
+<h1>Evaluation as Exit Codes<a class="headerlink" href="#evaluation-as-exit-codes" title="Link to this heading">¶</a></h1>
+<p>Evaluation as Exit Codes 用来补上物理执行不会自动给出的结果信号。配置过的
+物理 Tool 完成后，Harness 会通过隐藏的执行后 hook 调用独立评估器。</p>
+<p>评估器只接收：</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="../setup/index.html"><span class="std std-doc">Install &amp; Setup</span></a></p></li>
-<li><p><a class="reference internal" href="../harness/index.html"><span class="std std-doc">Harness</span></a></p></li>
-<li><p><a class="reference internal" href="../harness/port-to-your-robot.html"><span class="std std-doc">Port to Your Robot</span></a></p></li>
-<li><p><a class="reference internal" href="../scene-graph/index.html"><span class="std std-doc">Scene Graph</span></a></p></li>
-<li><p><a class="reference internal" href="../evaluation/index.html"><span class="std std-doc">Evaluation</span></a></p></li>
-<li><p><a class="reference internal" href="../reference/configuration.html"><span class="std std-doc">Configuration</span></a></p></li>
-<li><p><a class="reference internal" href="../reference/api.html"><span class="std std-doc">API</span></a></p></li>
+<li><p>被选中 Tool 的后置条件；</p></li>
+<li><p>与该 Tool 的 <code class="docutils literal notranslate"><span class="pre">run_id</span></code> 关联的执行后 <code class="docutils literal notranslate"><span class="pre">Observation</span></code>。</p></li>
+</ol>
+<p>它不会接收执行模型的 reasoning、自我报告、当前用户指令或后端结果字段。</p>
+<section id="id1">
+<h2>公开版本提供什么<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Thea 提供</p></th>
+<th class="head"><p>部署方提供</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>隐藏 <code class="docutils literal notranslate"><span class="pre">evaluate_run</span></code> Tool 和结构化执行后触发逻辑</p></td>
+<td><p>每个被评估物理 Tool 返回非空 <code class="docutils literal notranslate"><span class="pre">run_id</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">EvaluatorProtocol</span></code> 和类型化三态判定</p></td>
+<td><p>自定义评估器或配置给 <code class="docutils literal notranslate"><span class="pre">ModelEvaluator</span></code> 的模型</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PostExecutionObservationProvider</span></code></p></td>
+<td><p>从 <code class="docutils literal notranslate"><span class="pre">run_id</span></code> 解析客观执行后证据</p></td>
+</tr>
+<tr class="row-odd"><td><p>每个 Tool 的后置条件边界</p></td>
+<td><p>每个物理 Tool 的真实成功标准</p></td>
+</tr>
+<tr class="row-even"><td><p>对 <code class="docutils literal notranslate"><span class="pre">process</span></code>、<code class="docutils literal notranslate"><span class="pre">success</span></code>、<code class="docutils literal notranslate"><span class="pre">failure</span></code> 的校验</p></td>
+<td><p>分段执行策略的语义</p></td>
+</tr>
+<tr class="row-odd"><td><p>success-gated Scene Graph update</p></td>
+<td><p>部署侧由执行结果推导出的图状态变化</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>公开包不包含机器人产物目录、策略日志格式、相机同步逻辑或通用
+后置条件。</p>
+</section>
+<section id="id2">
+<h2>判定结果协议<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">EvaluatorVerdict</span>
+
+<span class="n">verdict</span> <span class="o">=</span> <span class="n">EvaluatorVerdict</span><span class="p">(</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">"failure"</span><span class="p">,</span>
+    <span class="n">evidence</span><span class="o">=</span><span class="p">(</span>
+        <span class="s2">"the bottle remains on the table"</span><span class="p">,</span>
+        <span class="s2">"the gripper closed without lifting it"</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">failure_reason</span><span class="o">=</span><span class="s2">"the robot stopped too far from the bottle to grasp it"</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">status</span></code> 只能是：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">process</span></code>：执行应继续进入另一个动作片段；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">success</span></code>：后置条件已满足；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failure</span></code>：执行应停止，失败原因返回 Agentic Loop。</p></li>
+</ul>
+<p>只有列在 <code class="docutils literal notranslate"><span class="pre">evaluation.segment_tools</span></code> 中的 Tool 才能返回 <code class="docutils literal notranslate"><span class="pre">process</span></code>。</p>
+</section>
+<section id="id3">
+<h2>绑定后置条件<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>进程内 Tool 可以直接携带判定标准：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">BuiltinTool</span>
+
+<span class="n">registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
+    <span class="n">BuiltinTool</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"pick_object"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"Pick one confirmed Scene Graph ref."</span><span class="p">,</span>
+        <span class="n">input_schema</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+            <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"target"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">}},</span>
+            <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"target"</span><span class="p">],</span>
+            <span class="s2">"additionalProperties"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">fn</span><span class="o">=</span><span class="n">pick_object</span><span class="p">,</span>
+        <span class="n">post_condition</span><span class="o">=</span><span class="p">(</span>
+            <span class="s2">"The requested object is visibly lifted and held by the gripper."</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>MCP Tool 可以在配置中按名称映射同样的协议：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">evaluation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">required_tools</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">pick_object</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">segment_tools</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="w">  </span><span class="nt">max_segments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="w">  </span><span class="nt">post_conditions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pick_object</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">      </span><span class="no">The requested object is visibly lifted and held by the gripper.</span>
+</pre></div>
+</div>
+<p>每个被评估 Tool 都必须返回非空 <code class="docutils literal notranslate"><span class="pre">run_id</span></code>，即使后端自己报告失败。后端状态不是
+物理判定结果。</p>
+</section>
+<section id="id4">
+<h2>连接执行后证据<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>部署方决定 <code class="docutils literal notranslate"><span class="pre">run_id</span></code> 如何解析为证据：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">Observation</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyPostExecutionObservationProvider</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Observation</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">capture_observation_for_run</span><span class="p">(</span><span class="n">run_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>返回的 <code class="docutils literal notranslate"><span class="pre">Observation</span></code> 不应包含本地路径，也不应绑定某个后端实现。它可以携带命名
+相机视图、base clearance、timestamp、来源信息和紧凑摘要。<code class="docutils literal notranslate"><span class="pre">ModelEvaluator</span></code>
+默认最多转发三个命名视觉视图。</p>
+</section>
+<section id="id5">
+<h2>选择评估器<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<p>可以使用内置的模型评估器：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">ModelEvaluator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">harness.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_model</span>
+
+<span class="n">evaluator</span> <span class="o">=</span> <span class="n">ModelEvaluator</span><span class="p">(</span>
+    <span class="n">build_model</span><span class="p">(</span>
+        <span class="s2">"openai"</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>也可以实现确定性、学习型或服务后端支撑的评估器：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">EvaluationRequest</span><span class="p">,</span> <span class="n">EvaluatorVerdict</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyEvaluator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">EvaluationRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EvaluatorVerdict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">judge_post_condition</span><span class="p">(</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">post_condition</span><span class="p">,</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">post_execution_observation</span><span class="p">,</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>实现必须返回 <code class="docutils literal notranslate"><span class="pre">EvaluatorVerdict</span></code>。</p>
+</section>
+<section id="harness">
+<h2>组合 Harness<a class="headerlink" href="#harness" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">harness</span> <span class="o">=</span> <span class="n">Harness</span><span class="p">(</span>
+    <span class="n">config</span><span class="p">,</span>
+    <span class="n">registry</span><span class="o">=</span><span class="n">registry</span><span class="p">,</span>
+    <span class="n">evaluator</span><span class="o">=</span><span class="n">evaluator</span><span class="p">,</span>
+    <span class="n">post_execution_observation_provider</span><span class="o">=</span><span class="p">(</span><span class="n">MyPostExecutionObservationProvider</span><span class="p">()),</span>
+    <span class="n">scene_graph</span><span class="o">=</span><span class="n">scene_graph</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>调用链如下：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>evaluated physical Tool
+  -&gt; automatic post-execution hook
+  -&gt; hidden evaluate_run(run_id, target_tool_name)
+  -&gt; PostExecutionObservationProvider.capture(run_id)
+  -&gt; EvaluatorProtocol.evaluate(post-condition, Observation)
+  -&gt; process | success | failure
+</pre></div>
+</div>
+<p>模型不能选择 <code class="docutils literal notranslate"><span class="pre">evaluate_run</span></code>。Harness 从完成的物理 Tool 派生该调用，并且不会把
+它的 Tool Definition 暴露给模型。</p>
+</section>
+<section id="id6">
+<h2>复现完整行为<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<p>在另一台机器人或策略上复现时：</p>
+<ol class="arabic simple">
+<li><p>为每个被评估 Tool 定义可见、可测试的后置条件。</p></li>
+<li><p>让 Tool 在物理执行开始后返回稳定 <code class="docutils literal notranslate"><span class="pre">run_id</span></code>。</p></li>
+<li><p>保留判断该 run 所需的证据。</p></li>
+<li><p>实现 <code class="docutils literal notranslate"><span class="pre">capture(run_id)</span></code>，返回类型化的执行后 <code class="docutils literal notranslate"><span class="pre">Observation</span></code>。</p></li>
+<li><p>配置 <code class="docutils literal notranslate"><span class="pre">ModelEvaluator</span></code> 或实现 <code class="docutils literal notranslate"><span class="pre">EvaluatorProtocol</span></code>。</p></li>
+<li><p>将 Tool 加入 <code class="docutils literal notranslate"><span class="pre">evaluation.required_tools</span></code>。</p></li>
+<li><p>如果 Tool 分段执行，将其加入 <code class="docutils literal notranslate"><span class="pre">evaluation.segment_tools</span></code> 并设置 <code class="docutils literal notranslate"><span class="pre">max_segments</span></code>。</p></li>
+<li><p>验证只有 success 才能触发 Scene Graph 执行更新。</p></li>
 </ol>
 </section>
 </section>
@@ -507,23 +481,23 @@ text becomes the task report.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../setup/index.html">
+          <a class="next-page" href="reference.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Install &amp; Setup</div>
+                <div class="title">参考资料</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="scene-graph.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Scene Graph</div>
                 
               </div>
             </a>
@@ -557,17 +531,14 @@ text becomes the task report.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Usage</a><ul>
-<li><a class="reference internal" href="#choose-a-starting-point">Choose a starting point</a><ul>
-<li><a class="reference internal" href="#run-the-harness-in-a-terminal">Run the Harness in a terminal</a></li>
-<li><a class="reference internal" href="#run-the-complete-channel">Run the complete channel</a></li>
-<li><a class="reference internal" href="#connect-a-simulator">Connect a simulator</a></li>
-<li><a class="reference internal" href="#connect-a-physical-robot">Connect a physical robot</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#extend-an-existing-harness">Extend an Existing Harness</a></li>
-<li><a class="reference internal" href="#how-one-task-runs">How one task runs</a></li>
-<li><a class="reference internal" href="#recommended-reading-order">Recommended reading order</a></li>
+<li><a class="reference internal" href="#">Evaluation as Exit Codes</a><ul>
+<li><a class="reference internal" href="#id1">公开版本提供什么</a></li>
+<li><a class="reference internal" href="#id2">判定结果协议</a></li>
+<li><a class="reference internal" href="#id3">绑定后置条件</a></li>
+<li><a class="reference internal" href="#id4">连接执行后证据</a></li>
+<li><a class="reference internal" href="#id5">选择评估器</a></li>
+<li><a class="reference internal" href="#harness">组合 Harness</a></li>
+<li><a class="reference internal" href="#id6">复现完整行为</a></li>
 </ul>
 </li>
 </ul>

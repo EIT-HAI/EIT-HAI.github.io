@@ -224,7 +224,17 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Install &amp; Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../zh-cn/index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/usage.html">使用方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/setup.html">安装与配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/harness.html">Harness 核心机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/port-to-your-robot.html">接入真实机器人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/scene-graph.html">Scene Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/evaluation.html">Evaluation as Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/reference.html">参考资料</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../harness/concepts.html">Runtime and Context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harness/model-and-tools.html">Models and Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harness/observation-and-safety.html">Observation and Safety</a></li>
@@ -235,7 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scene-graph/index.html">Scene Graph</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Evaluation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../reference/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/api.html">API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/simulation.html">Thea Simulation Adapters</a></li>
@@ -334,12 +344,12 @@ formats, camera synchronization, or a universal set of post-conditions.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">EvaluatorVerdict</span>
 
 <span class="n">verdict</span> <span class="o">=</span> <span class="n">EvaluatorVerdict</span><span class="p">(</span>
-    <span class="n">status</span><span class="o">=</span><span class="s2">&quot;failure&quot;</span><span class="p">,</span>
+    <span class="n">status</span><span class="o">=</span><span class="s2">"failure"</span><span class="p">,</span>
     <span class="n">evidence</span><span class="o">=</span><span class="p">(</span>
-        <span class="s2">&quot;the bottle remains on the table&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;the gripper closed without lifting it&quot;</span><span class="p">,</span>
+        <span class="s2">"the bottle remains on the table"</span><span class="p">,</span>
+        <span class="s2">"the gripper closed without lifting it"</span><span class="p">,</span>
     <span class="p">),</span>
-    <span class="n">failure_reason</span><span class="o">=</span><span class="s2">&quot;the robot stopped too far from the bottle to grasp it&quot;</span><span class="p">,</span>
+    <span class="n">failure_reason</span><span class="o">=</span><span class="s2">"the robot stopped too far from the bottle to grasp it"</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -360,17 +370,17 @@ Agentic Loop.</p></li>
 
 <span class="n">registry</span><span class="o">.</span><span class="n">register</span><span class="p">(</span>
     <span class="n">BuiltinTool</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pick_object&quot;</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Pick one confirmed Scene Graph ref.&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"pick_object"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"Pick one confirmed Scene Graph ref."</span><span class="p">,</span>
         <span class="n">input_schema</span><span class="o">=</span><span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">}},</span>
-            <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+            <span class="s2">"properties"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"target"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"string"</span><span class="p">}},</span>
+            <span class="s2">"required"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"target"</span><span class="p">],</span>
+            <span class="s2">"additionalProperties"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="n">fn</span><span class="o">=</span><span class="n">pick_object</span><span class="p">,</span>
         <span class="n">post_condition</span><span class="o">=</span><span class="p">(</span>
-            <span class="s2">&quot;The requested object is visibly lifted and held by the gripper.&quot;</span>
+            <span class="s2">"The requested object is visibly lifted and held by the gripper."</span>
         <span class="p">),</span>
     <span class="p">)</span>
 <span class="p">)</span>
@@ -412,8 +422,8 @@ summary. <code class="docutils literal notranslate"><span class="pre">ModelEvalu
 
 <span class="n">evaluator</span> <span class="o">=</span> <span class="n">ModelEvaluator</span><span class="p">(</span>
     <span class="n">build_model</span><span class="p">(</span>
-        <span class="s2">&quot;openai&quot;</span><span class="p">,</span>
-        <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span>
+        <span class="s2">"openai"</span><span class="p">,</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o-mini"</span><span class="p">,</span>
     <span class="p">)</span>
 <span class="p">)</span>
 </pre></div>

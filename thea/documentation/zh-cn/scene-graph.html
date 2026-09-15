@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Evaluation" href="../evaluation/index.html"><link rel="prev" title="Deployment Guide" href="../harness/deployment.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Evaluation as Exit Codes" href="evaluation.html"><link rel="prev" title="接入真实机器人" href="port-to-your-robot.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
         <title>Scene Graph - Thea Documentation</title>
@@ -224,14 +224,14 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Install &amp; Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../zh-cn/index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/usage.html">使用方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/setup.html">安装与配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/harness.html">Harness 核心机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/port-to-your-robot.html">接入真实机器人</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/scene-graph.html">Scene Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/evaluation.html">Evaluation as Exit Codes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../zh-cn/reference.html">参考资料</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="usage.html">使用方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">安装与配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="harness.html">Harness 核心机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="port-to-your-robot.html">接入真实机器人</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Scene Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evaluation.html">Evaluation as Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">参考资料</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -243,7 +243,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../harness/deployment.html">Deployment Guide</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Scene Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-graph/index.html">Scene Graph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../evaluation/index.html">Evaluation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../reference/configuration.html">Configuration</a></li>
@@ -274,7 +274,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/scene-graph/index.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/zh-cn/scene-graph.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -294,55 +294,50 @@
         <article role="main" id="furo-main-content">
           <section id="scene-graph">
 <h1>Scene Graph<a class="headerlink" href="#scene-graph" title="Link to this heading">¶</a></h1>
-<p>The Scene Graph makes a physical environment readable and addressable across
-Turns. Current images and depth describe one view at one moment. The working
-graph organizes that evidence into persistent object refs, coarse spatial
-state, robot state, typed relations, and freshness metadata.</p>
-<p>The Harness does not prescribe a detector, mapper, database, or robot SDK.
-Those systems remain behind <code class="docutils literal notranslate"><span class="pre">SceneGraphProtocol</span></code>.</p>
-<section id="what-the-public-release-provides">
-<h2>What the public release provides<a class="headerlink" href="#what-the-public-release-provides" title="Link to this heading">¶</a></h2>
+<p>Scene Graph 让物理环境在多个 Turns 之间保持可读、可引用。当前图像和深度只
+描述某一时刻的某个视角；working graph 会把这些证据组织成持久对象 refs、
+粗粒度空间状态、机器人状态、类型化关系和新鲜度信息。</p>
+<p>Harness 不规定检测器、建图模块、数据库或机器人 SDK。这些系统都位于
+<code class="docutils literal notranslate"><span class="pre">SceneGraphProtocol</span></code> 后面。</p>
+<section id="id1">
+<h2>公开版本提供什么<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Thea provides</p></th>
-<th class="head"><p>A deployment provides</p></th>
+<tr class="row-odd"><th class="head"><p>Thea 提供</p></th>
+<th class="head"><p>部署方提供</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SceneGraphProtocol</span></code> for refresh, Brief generation, and confirmed execution updates</p></td>
-<td><p>Perception, localization, tracking, association, and graph storage</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SceneGraphProtocol</span></code>：刷新、生成 Brief、应用已确认的执行更新</p></td>
+<td><p>感知、定位、跟踪、关联和图存储</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code> and typed decision-facing records</p></td>
-<td><p>Conversion from the working graph to those records</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code> 和面向决策的类型化记录</p></td>
+<td><p>从 working graph 到这些 records 的转换</p></td>
 </tr>
-<tr class="row-even"><td><p>Canonical Brief rendering into Refreshed context</p></td>
-<td><p>The coordinate frame and provenance carried by the Brief</p></td>
+<tr class="row-even"><td><p>Brief 到 Refreshed context 的标准渲染</p></td>
+<td><p>Brief 使用的坐标系和来源信息</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SceneGraphQueryProtocol</span></code></p></td>
-<td><p>Relation and stored-image lookup by existing ref</p></td>
+<td><p>根据已有 ref 查询关系和存储图像</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">get_object_relations</span></code> and <code class="docutils literal notranslate"><span class="pre">get_image</span></code> registration</p></td>
-<td><p>The underlying relation edges and visual evidence</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">get_object_relations</span></code> 和 <code class="docutils literal notranslate"><span class="pre">get_image</span></code> 注册</p></td>
+<td><p>底层 relation edges 和视觉证据</p></td>
 </tr>
-<tr class="row-odd"><td><p>Evaluator-gated execution update call</p></td>
-<td><p>The deployment-specific state changes caused by a successful Tool</p></td>
+<tr class="row-odd"><td><p>由评估器判定后才触发的执行更新调用</p></td>
+<td><p>成功 Tool 导致的部署侧状态变化</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The public package therefore reproduces the Harness-side contract, not a
-complete scene-understanding stack.</p>
+<p>公开包复现的是 Harness 侧协议，不是一套完整的场景理解系统。</p>
 </section>
-<section id="working-graph-and-scene-graph-brief">
-<h2>Working graph and Scene Graph Brief<a class="headerlink" href="#working-graph-and-scene-graph-brief" title="Link to this heading">¶</a></h2>
-<p>The deployment-owned working graph may contain detailed geometry, all relation
-edges, stored visual evidence, and provider-specific state. Passing that graph
-to the model every Turn would repeatedly consume context capacity with details
-that most decisions do not need.</p>
-<p><code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code> is the field-selected projection placed in Refreshed
-context. It retains every object ref while selecting only frequently needed
-fields:</p>
+<section id="working-graph-scene-graph-brief">
+<h2>Working Graph 与 Scene Graph Brief<a class="headerlink" href="#working-graph-scene-graph-brief" title="Link to this heading">¶</a></h2>
+<p>部署侧 working graph 可以包含细粒度几何、所有 relation edges、存储视觉证据和
+后端内部状态。每轮都把完整 working graph 给模型会浪费大量上下文。</p>
+<p><code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code> 是放入 Refreshed context 的字段选择投影。它保留每个对象
+ref，但只选择决策常用字段：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">SceneGraphBrief</span><span class="p">,</span>
     <span class="n">SceneGraphObjectBrief</span><span class="p">,</span>
@@ -369,15 +364,14 @@ fields:</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Object records can additionally carry <code class="docutils literal notranslate"><span class="pre">container_state</span></code> and tracked
-<code class="docutils literal notranslate"><span class="pre">contents</span></code>. The working graph may encode <code class="docutils literal notranslate"><span class="pre">on</span></code>, <code class="docutils literal notranslate"><span class="pre">inside</span></code>, <code class="docutils literal notranslate"><span class="pre">holding</span></code>, and <code class="docutils literal notranslate"><span class="pre">near</span></code>
-relations. Relations and stored images remain behind ref-keyed queries rather
-than entering the Brief by default.</p>
-<p>Compactness comes from field selection, not node pruning.</p>
+<p>对象记录还可以携带 <code class="docutils literal notranslate"><span class="pre">container_state</span></code> 和被跟踪的 <code class="docutils literal notranslate"><span class="pre">contents</span></code>。working graph 可以
+编码 <code class="docutils literal notranslate"><span class="pre">on</span></code>、<code class="docutils literal notranslate"><span class="pre">inside</span></code>、<code class="docutils literal notranslate"><span class="pre">holding</span></code>、<code class="docutils literal notranslate"><span class="pre">near</span></code> 等关系。默认情况下，relations 和
+stored images 不进入 Brief，而是通过按 ref 查询的 Tools 暴露。</p>
+<p>紧凑性来自字段选择，而不是剪掉节点。</p>
 </section>
-<section id="connect-an-existing-scene-graph">
-<h2>Connect an existing Scene Graph<a class="headerlink" href="#connect-an-existing-scene-graph" title="Link to this heading">¶</a></h2>
-<p>Implement the persistent world-state boundary:</p>
+<section id="id2">
+<h2>接入现有 Scene Graph<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>实现持久世界状态边界：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="n">SceneGraphBrief</span>
 
 
@@ -404,7 +398,7 @@ than entering the Brief by default.</p>
         <span class="p">)</span>
 </pre></div>
 </div>
-<p>Pass the provider to <code class="docutils literal notranslate"><span class="pre">Harness</span></code>:</p>
+<p>传给 <code class="docutils literal notranslate"><span class="pre">Harness</span></code>：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">harness</span> <span class="o">=</span> <span class="n">Harness</span><span class="p">(</span>
     <span class="n">config</span><span class="p">,</span>
     <span class="n">scene_graph</span><span class="o">=</span><span class="n">scene_graph</span><span class="p">,</span>
@@ -413,13 +407,12 @@ than entering the Brief by default.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Before each model call, the Harness invokes <code class="docutils literal notranslate"><span class="pre">refresh_from_perception()</span></code>, reads
-<code class="docutils literal notranslate"><span class="pre">brief()</span></code>, and regenerates the text placed in Refreshed context. The working
-graph itself persists across calls.</p>
+<p>每次模型调用前，Harness 会调用 <code class="docutils literal notranslate"><span class="pre">refresh_from_perception()</span></code>，读取 <code class="docutils literal notranslate"><span class="pre">brief()</span></code>，并
+重新生成放入 Refreshed context 的文本。working graph 本身会跨调用保留。</p>
 </section>
-<section id="add-ref-keyed-queries">
-<h2>Add ref-keyed queries<a class="headerlink" href="#add-ref-keyed-queries" title="Link to this heading">¶</a></h2>
-<p>Use the same provider to expose omitted detail:</p>
+<section id="ref-tools">
+<h2>添加按 ref 查询的 Tools<a class="headerlink" href="#ref-tools" title="Link to this heading">¶</a></h2>
+<p>同一个 provider 可以暴露被 Brief 省略的细节：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">harness</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">SceneGraphRelation</span><span class="p">,</span>
     <span class="n">VisualEvidence</span><span class="p">,</span>
@@ -428,8 +421,6 @@ graph itself persists across calls.</p>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MySceneGraph</span><span class="p">:</span>
-    <span class="c1"># SceneGraphProtocol methods omitted.</span>
-
     <span class="k">def</span><span class="w"> </span><span class="nf">has_ref</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ref</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">objects</span>
 
@@ -456,60 +447,43 @@ graph itself persists across calls.</p>
 <span class="n">register_scene_graph_query_tools</span><span class="p">(</span><span class="n">registry</span><span class="p">,</span> <span class="n">scene_graph</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The registered Tools accept <code class="docutils literal notranslate"><span class="pre">obj</span></code> as the model-visible parameter. Its value is
-an existing Scene Graph ref:</p>
+<p>注册出的 Tools 使用 <code class="docutils literal notranslate"><span class="pre">obj</span></code> 作为模型可见参数，其值必须是已有 Scene Graph ref：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">get_object_relations(obj,</span> <span class="pre">relation=None)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get_image(obj)</span></code></p></li>
 </ul>
-<p>Both require a ref already present in the latest Brief. Stored visual evidence
-may be historical; current manipulation evidence belongs in a fresh
-Observation.</p>
+<p>两者都要求 ref 已经出现在最新 Brief 中。存储视觉证据可能是历史证据；当前操作
+证据应来自最新 Observation。</p>
 </section>
-<section id="reproduce-a-compatible-backend">
-<h2>Reproduce a compatible backend<a class="headerlink" href="#reproduce-a-compatible-backend" title="Link to this heading">¶</a></h2>
-<p>A compatible backend needs the following pipeline:</p>
+<section id="id3">
+<h2>兼容后端需要什么<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>兼容后端至少需要以下 pipeline：</p>
 <ol class="arabic simple">
-<li><p><strong>Acquire evidence.</strong> Read the deployment’s RGB, depth, pose, and other
-localization inputs.</p></li>
-<li><p><strong>Create object observations.</strong> Detect or segment entities and estimate
-coarse geometry in a declared coordinate frame.</p></li>
-<li><p><strong>Resolve refs.</strong> Associate compatible observations across frames so the
-same entity retains one ref whenever possible.</p></li>
-<li><p><strong>Maintain graph state.</strong> Update object and container nodes, robot pose and
-holding state, freshness, provenance, timestamps, and the supported typed
-relations.</p></li>
-<li><p><strong>Retain visual evidence.</strong> Keep a ref-to-image index that can return
-<code class="docutils literal notranslate"><span class="pre">VisualEvidence</span></code> without exposing deployment-local file paths.</p></li>
-<li><p><strong>Project the Brief.</strong> Return all working-graph refs with selected coarse
-fields through <code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code>.</p></li>
-<li><p><strong>Apply confirmed action updates.</strong> Change execution-derived state only
-after the Harness passes an evaluator-confirmed success to
-<code class="docutils literal notranslate"><span class="pre">apply_confirmed_execution()</span></code>.</p></li>
+<li><p>获取 RGB、depth、pose 和其他定位输入。</p></li>
+<li><p>检测或分割实体，并在声明坐标系中估计粗粒度几何。</p></li>
+<li><p>跨帧关联观测，让同一实体尽可能保持同一个 ref。</p></li>
+<li><p>维护对象、容器、机器人 pose、holding state、新鲜度、来源信息、时间戳和类型化关系。</p></li>
+<li><p>保留 ref-to-image 索引，返回不暴露本地路径的 <code class="docutils literal notranslate"><span class="pre">VisualEvidence</span></code>。</p></li>
+<li><p>通过 <code class="docutils literal notranslate"><span class="pre">SceneGraphBrief</span></code> 返回所有 refs 和选中的粗粒度字段。</p></li>
+<li><p>只有当 Harness 传入评估器确认的 success 时，才应用由执行结果推导出的更新。</p></li>
 </ol>
-<p><a class="reference external" href="https://arxiv.org/abs/2603.06914">SysNav</a> is one useful systems reference for
-constructing a structured scene representation from real-world perception for
-cross-embodiment ObjectNav. It can inform the perception, mapping, and
-hierarchical spatial-representation side of a backend. Thea adds a different
-boundary around that representation: a field-selected Brief for model context,
-queries keyed by persistent ref, and evaluator-gated execution updates.</p>
-<p>SysNav is a reference design, not a dependency. Any backend that satisfies the
-public protocols can be used.</p>
+<p><a class="reference external" href="https://arxiv.org/abs/2603.06914">SysNav</a> 是构建真实世界 structured scene
+representation 的有用系统参考，但不是 Thea 的依赖。任意后端只要满足公开
+protocols，都可以接入。</p>
 </section>
-<section id="verify-the-integration">
-<h2>Verify the integration<a class="headerlink" href="#verify-the-integration" title="Link to this heading">¶</a></h2>
-<p>Check the boundary in this order:</p>
+<section id="id4">
+<h2>验证集成<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>按以下顺序检查：</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">brief()</span></code> returns unique refs and valid confidence values.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">render_scene_graph_brief(brief)</span></code> lists every ref expected by the model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">get_object_relations</span></code> and <code class="docutils literal notranslate"><span class="pre">get_image</span></code> reject unknown refs.</p></li>
-<li><p>The Brief is regenerated after perception refresh.</p></li>
-<li><p>A failed evaluator verdict leaves execution-derived graph state unchanged.</p></li>
-<li><p>A successful verdict applies exactly one deployment-defined update.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">brief()</span></code> 返回唯一 refs 和合法 confidence。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">render_scene_graph_brief(brief)</span></code> 列出模型应看到的全部 refs。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_object_relations</span></code> 和 <code class="docutils literal notranslate"><span class="pre">get_image</span></code> 拒绝未知 refs。</p></li>
+<li><p>感知 refresh 后 Brief 会重新生成。</p></li>
+<li><p>评估器给出失败判定时，不改变由执行结果推导出的图状态。</p></li>
+<li><p>成功判定只应用一次部署定义的更新。</p></li>
 </ol>
-<p>The Scene Graph identifies an entity and its coarse location. It does not
-decide whether the current pose is ready for manipulation or whether an action
-succeeded.</p>
+<p>Scene Graph 识别实体和粗略位置；它不判断当前 pose 是否适合操作，也不判断动作
+是否成功。</p>
 </section>
 </section>
 
@@ -518,23 +492,23 @@ succeeded.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../evaluation/index.html">
+          <a class="next-page" href="evaluation.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Evaluation</div>
+                <div class="title">Evaluation as Exit Codes</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../harness/deployment.html">
+          <a class="prev-page" href="port-to-your-robot.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Deployment Guide</div>
+                <div class="title">接入真实机器人</div>
                 
               </div>
             </a>
@@ -569,12 +543,12 @@ succeeded.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Scene Graph</a><ul>
-<li><a class="reference internal" href="#what-the-public-release-provides">What the public release provides</a></li>
-<li><a class="reference internal" href="#working-graph-and-scene-graph-brief">Working graph and Scene Graph Brief</a></li>
-<li><a class="reference internal" href="#connect-an-existing-scene-graph">Connect an existing Scene Graph</a></li>
-<li><a class="reference internal" href="#add-ref-keyed-queries">Add ref-keyed queries</a></li>
-<li><a class="reference internal" href="#reproduce-a-compatible-backend">Reproduce a compatible backend</a></li>
-<li><a class="reference internal" href="#verify-the-integration">Verify the integration</a></li>
+<li><a class="reference internal" href="#id1">公开版本提供什么</a></li>
+<li><a class="reference internal" href="#working-graph-scene-graph-brief">Working Graph 与 Scene Graph Brief</a></li>
+<li><a class="reference internal" href="#id2">接入现有 Scene Graph</a></li>
+<li><a class="reference internal" href="#ref-tools">添加按 ref 查询的 Tools</a></li>
+<li><a class="reference internal" href="#id3">兼容后端需要什么</a></li>
+<li><a class="reference internal" href="#id4">验证集成</a></li>
 </ul>
 </li>
 </ul>

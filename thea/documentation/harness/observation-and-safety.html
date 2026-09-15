@@ -224,7 +224,17 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Install &amp; Setup</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Harness</a><input aria-label="Toggle navigation of Harness" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../zh-cn/index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/usage.html">使用方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/setup.html">安装与配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/harness.html">Harness 核心机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/port-to-your-robot.html">接入真实机器人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/scene-graph.html">Scene Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/evaluation.html">Evaluation as Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/reference.html">参考资料</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Harness</a><input aria-label="Toggle navigation of Harness" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="concepts.html">Runtime and Context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-and-tools.html">Models and Tools</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Observation and Safety</a></li>
@@ -235,7 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scene-graph/index.html">Scene Graph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../evaluation/index.html">Evaluation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">Reference</a><input aria-label="Toggle navigation of Reference" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../reference/configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/api.html">API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/simulation.html">Thea Simulation Adapters</a></li>
@@ -298,15 +308,15 @@ default runtime operation, not a model-visible Tool.</p>
         <span class="n">Observation</span><span class="p">(</span>
             <span class="n">visuals</span><span class="o">=</span><span class="p">(</span>
                 <span class="n">VisualEvidence</span><span class="p">(</span>
-                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;front&quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s2">"front"</span><span class="p">,</span>
                     <span class="n">data</span><span class="o">=</span><span class="n">read_front_camera_jpeg</span><span class="p">(),</span>
-                    <span class="n">media_type</span><span class="o">=</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span>
-                    <span class="n">caption</span><span class="o">=</span><span class="s2">&quot;Current front camera&quot;</span><span class="p">,</span>
-                    <span class="n">freshness</span><span class="o">=</span><span class="s2">&quot;current&quot;</span><span class="p">,</span>
+                    <span class="n">media_type</span><span class="o">=</span><span class="s2">"image/jpeg"</span><span class="p">,</span>
+                    <span class="n">caption</span><span class="o">=</span><span class="s2">"Current front camera"</span><span class="p">,</span>
+                    <span class="n">freshness</span><span class="o">=</span><span class="s2">"current"</span><span class="p">,</span>
                 <span class="p">),</span>
             <span class="p">),</span>
             <span class="n">captured_at</span><span class="o">=</span><span class="n">current_timestamp</span><span class="p">(),</span>
-            <span class="n">provenance</span><span class="o">=</span><span class="s2">&quot;robot_camera&quot;</span><span class="p">,</span>
+            <span class="n">provenance</span><span class="o">=</span><span class="s2">"robot_camera"</span><span class="p">,</span>
         <span class="p">),</span>
         <span class="n">turn</span><span class="o">=</span><span class="n">turn</span><span class="p">,</span>
     <span class="p">)</span>
@@ -361,14 +371,14 @@ call, emits structured events, or blocks execution with a Tool Result:</p>
                 <span class="n">call</span><span class="p">,</span>
                 <span class="n">events</span><span class="o">=</span><span class="p">(</span>
                     <span class="p">{</span>
-                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;safety_check&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;turn&quot;</span><span class="p">:</span> <span class="n">turn</span><span class="p">,</span>
-                        <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"safety_check"</span><span class="p">,</span>
+                        <span class="s2">"turn"</span><span class="p">:</span> <span class="n">turn</span><span class="p">,</span>
+                        <span class="s2">"success"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
                     <span class="p">},</span>
                 <span class="p">),</span>
                 <span class="n">blocked_result</span><span class="o">=</span><span class="p">{</span>
-                    <span class="s2">&quot;success&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-                    <span class="s2">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;The requested motion exceeds the workspace limit.&quot;</span><span class="p">,</span>
+                    <span class="s2">"success"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="s2">"reason"</span><span class="p">:</span> <span class="s2">"The requested motion exceeds the workspace limit."</span><span class="p">,</span>
                 <span class="p">},</span>
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">PreExecutionHookResult</span><span class="p">(</span><span class="n">call</span><span class="p">)</span>

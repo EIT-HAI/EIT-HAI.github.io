@@ -224,7 +224,17 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/index.html">Install &amp; Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../zh-cn/index.html">Thea 中文文档</a><input aria-label="Toggle navigation of Thea 中文文档" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/usage.html">使用方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/setup.html">安装与配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/harness.html">Harness 核心机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/port-to-your-robot.html">接入真实机器人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/scene-graph.html">Scene Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/evaluation.html">Evaluation as Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zh-cn/reference.html">参考资料</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../harness/index.html">Harness</a><input aria-label="Toggle navigation of Harness" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../harness/concepts.html">Runtime and Context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harness/model-and-tools.html">Models and Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../harness/observation-and-safety.html">Observation and Safety</a></li>
@@ -235,7 +245,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scene-graph/index.html">Scene Graph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../evaluation/index.html">Evaluation</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Reference</a><input aria-label="Toggle navigation of Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Reference</a><input aria-label="Toggle navigation of Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html">API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulation.html">Thea Simulation Adapters</a></li>
@@ -295,7 +305,7 @@ progress and final cards, sends Observation images, and registers
 </pre></div>
 </div>
 <p>For a manual installation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;./harness[anthropic]&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'./harness[anthropic]'</span>
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>./lark
 </pre></div>
 </div>
@@ -333,9 +343,9 @@ returns one <code class="docutils literal notranslate"><span class="pre">Harness
 <p><code class="docutils literal notranslate"><span class="pre">query_user</span></code> pauses the active Agentic Loop until the same authorized user
 answers, cancels, or the timeout expires:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;question&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Which bottle do you mean?&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;candidate_refs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bottle_12&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bottle_18&quot;</span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;observation_views&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;front&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;wrist&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="nt">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Which bottle do you mean?"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"candidate_refs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bottle_12"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bottle_18"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"observation_views"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"front"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wrist"</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
