@@ -142,9 +142,8 @@ body,button,input,select,textarea,pre,code,kbd,samp,h1,h2,h3,.sc,.affiliation,.t
 @media(max-width:960px){.navigation-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:640px){.trace-engine{right:2cqw;bottom:48px;width:48cqw;height:16cqw}.trace-hud-head{height:4cqw;padding:0 1.5cqw;gap:.8cqw}.trace-hud-head::after{left:1.5cqw;right:1.5cqw}.trace-hud-title{font-size:clamp(7px,1.55cqw,10px)}.trace-hud-subtitle{font-size:clamp(6px,1.25cqw,8px)}.trace-events{height:12cqw;padding:.8cqw 1.5cqw}.trace-event{grid-template-columns:max(6px,1.1cqw) minmax(0,1fr);column-gap:max(3px,.75cqw);font-size:clamp(6px,1.1cqw,8px);line-height:clamp(8px,1.65cqw,10px)}}
 
-/* Prose matches the main-site paragraph reference; navigation stays sans-serif. */
+/* Prose and action links match the main Introduction page's Lato. */
 .abstract,.experiment-copy,.evidence-heading p,.mechanism-heading p,.section-lede{max-width:43rem;font-size:1rem;line-height:1.65;color:var(--ink)}
-.abstract,.experiment-copy,.evidence-heading p,.mechanism-heading p,.section-lede,.task,.result,.conclusion-grid p,.run-details p,.media-note,.trace-note{font-family:'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,'Songti SC','SimSun',serif}
 .experiment-copy{margin:0 0 1rem}
 .evidence-heading,.mechanism-heading{margin-bottom:1rem}
 .evidence-heading p,.mechanism-heading p{margin-top:.45rem}
@@ -171,3 +170,7 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .trace-event{flex:none;grid-template-columns:10px minmax(0,1fr);column-gap:6px;line-height:22px}
 @media(max-width:640px){.trace-engine{width:62cqw;height:56px;bottom:48px}.trace-hud-head{height:22px;padding:0 6px}.trace-events{height:34px;padding:4px 6px}}
 @media(max-width:359px){.trace-video-wrap{min-height:106px}}
+.thea-return{display:inline-block;font:400 var(--type-body)/1.5 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif;color:var(--ink);text-decoration:none}
+.thea-return::before{content:'\2190';margin-right:.34em;color:#a9aaa5;transition:color .15s}
+.thea-return .sc{font-family:inherit;font-size:inherit;font-variant-caps:small-caps;letter-spacing:.03em}
+.thea-return:hover,.thea-return:hover::before{color:#bc6448}
