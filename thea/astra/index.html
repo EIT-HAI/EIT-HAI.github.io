@@ -8,11 +8,11 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3dbe4572d0ac">
   <script src="data.js" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=6995db1567c1" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js" defer></script>
 </head>
@@ -26,67 +26,58 @@
     <p class="affiliation" data-i18n="affiliation">HAI Lab · Eastern Institute of Technology, Ningbo</p>
     <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea brought the coding-agent harness to the physical world by supplying a persistent readable world state and verifiable action outcomes. With GPT-6 Astra operating a robot SDK inside a coding environment, we revisit tool granularity and ask which harness components come from the model, the coding harness, or the physical-world layer.</span></p>
     <nav class="paper-nav" aria-label="Paper sections">
-      <a href="#thea"><span>01</span><b data-i18n="shortThea">Thea</b></a>
-      <a href="#tools"><span>02</span><b data-i18n="shortTools">Tools</b></a>
-      <a href="#harness"><span>03</span><b data-i18n="shortHarness">Harness</b></a>
-      <a href="#remains"><span>04</span><b data-i18n="shortRemains">What remains</b></a>
+      <a href="#tools"><span>01</span><b data-i18n="shortTools">Tools</b></a>
+      <a href="#harness"><span>02</span><b data-i18n="shortHarness">Harness</b></a>
+      <a href="#remains"><span>03</span><b data-i18n="shortRemains">What remains</b></a>
     </nav>
   </header>
   <main class="wrap" id="experiments">
-    <section class="experiment-group paper-section" id="thea" aria-labelledby="thea-title">
-      <div class="section-heading"><div><p class="section-number">01</p><h2 id="thea-title" data-i18n="theaTitle">Thea: A Harness for the Physical World</h2></div></div>
-      <div class="thea-bridge">
-        <div class="thea-copy">
-          <p class="section-lede" data-i18n="theaIntro">The physical world withholds two things that software grants for free. Thea adds both to the agent loop.</p>
-          <div class="gap-list">
-            <div><span>01</span><div><h3 data-i18n="worldGapTitle">Readable world state</h3><p data-i18n="worldGapText">Scene Graph as Context turns local observations into persistent symbols that can be briefed before the next decision.</p></div></div>
-            <div><span>02</span><div><h3 data-i18n="outcomeGapTitle">Verifiable outcomes</h3><p data-i18n="outcomeGapText">Evaluation as Exit Codes checks a tool’s post-condition and returns a reason when recovery is needed.</p></div></div>
-          </div>
-        </div>
-        <figure class="paper-figure"><img id="harness-overview" alt="The Thea harness with tools, scene graph and evaluator" width="1920" height="784"><figcaption data-i18n="figureOneCaption">Tools, a persistent scene graph, and an independent evaluator close the physical-world loop.</figcaption></figure>
-      </div>
-    </section>
-
     <section class="experiment-group paper-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-heading"><div><p class="section-number">02</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div><p class="setup" data-i18n="robotSetup">Astribot S1 · Left parallel gripper</p></div>
-      <div class="evidence-heading plain-heading"><div><h3 data-i18n="directControlTitle">Direct SDK control</h3><p data-i18n="robotIntro">We tested Astribot S1’s left parallel gripper on four tasks. They cover tabletop cleanup, manipulation after moving the base, drawer retrieval, and loaded transfer.</p></div></div>
+      <div class="section-heading"><div><p class="section-number">01</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div><p class="setup" data-i18n="robotSetup">Astribot S1 · Left parallel gripper</p></div>
+      <div class="evidence-heading plain-heading"><div><h3 data-i18n="directControlTitle">Direct SDK control</h3><p data-i18n="robotIntro">We gave GPT-6 Astra, running in Codex, the Astribot S1 Python SDK and its documentation. Using the left parallel gripper, the agent attempted four tasks: tabletop cleanup, cleanup after a base approach, drawer retrieval and closure, and loaded transfer.</p></div></div>
+      <p class="experiment-copy" data-i18n="robotMethod">The agent registered head-camera RGB-D observations in the base frame, solved inverse kinematics against the SDK’s forward kinematics, screened joint samples for self-collision, and issued one motion segment at a time. Base movement used velocity pulses gated by lidar clearance.</p>
+      <p class="experiment-copy" data-i18n="robotObservation">The first errors were geometric and were corrected during execution. All four tasks reached the final states shown below, illustrating the control code the model can construct for these particular tasks.</p>
       <div class="experiment-grid" id="robot-grid"></div>
     </section>
 
     <section class="experiment-group paper-section" id="harness" aria-labelledby="harness-title">
-      <div class="section-heading"><div><p class="section-number">03</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div><p class="setup" data-i18n="harnessSetup">Model · coding harness · physical-world layer</p></div>
-      <p class="section-lede wide" data-i18n="harnessIntro">Codex supplies the write–run–read–fix loop, tool execution and files. The record below is organized around the four physical-world mechanisms discussed in the paper.</p>
+      <div class="section-heading"><div><p class="section-number">02</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div><p class="setup" data-i18n="harnessSetup">Model · coding harness · physical-world layer</p></div>
+      <p class="section-lede wide" data-i18n="harnessIntro">Codex supplied the agent loop, tool execution, files and the write–run–read–fix cycle. We read the experiments through four physical-world mechanisms: keeping track of the world, checking action outcomes, understanding the body, and retaining useful procedures.</p>
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and memory</h3><p data-i18n="worldStateIntro">Each of the 18 simulation runs pairs its complete saved-observation replay with that run’s own sanitized observable agent trace.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and memory</h3><p data-i18n="worldStateIntro">The 18 navigation runs are grouped into Astra, instructed scene-graph memory, and navigation-evaluation conditions, with three runs per condition in each dataset. Each replay pairs the saved observations with that run’s observable agent events; completed and incomplete runs are both retained.</p></div></div>
+        <p class="experiment-copy" data-i18n="worldStateMethod">In graph-memory runs, the agent wrote room and route records to files and consulted them during navigation. These records are estimates maintained within the current run. Read the replay together with the context stream and Workspace to follow new observations, route choices and later revisits. Completion labels follow the recorded run outcome, including its stopping criterion.</p>
       <div class="navigation-family"><h3>LHPR-VLN</h3><div class="navigation-grid" id="lhpr-grid"></div></div>
       <div class="navigation-family"><h3>HabitatGS-Benchmark <span class="muted">(SuperNav tasks)</span></h3><div class="navigation-grid" id="supernav-grid"></div></div>
       </section>
 
       <section class="mechanism" id="outcome-checking" aria-labelledby="outcome-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Outcome checking</h3><p data-i18n="outcomeIntro">A reached motion target is not a successful grasp. The wrist rose 7.58 mm while the cup remained supported.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Outcome checking</h3><p data-i18n="outcomeIntro">The Revo2 cup-lift trials ask whether reaching a motion target means that the object was actually lifted. A useful outcome check must inspect the cup and its support after the motion.</p></div></div>
+        <p class="experiment-copy" data-i18n="outcomeMethod">In the cup-rim trials, the wrist rose about 7.58 mm while the cup stayed on its support. The agent inspected post-action images, rejected unsuccessful lifts and adjusted its grasp. These were task-specific visual checks whose accuracy was not independently measured.</p>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-outcome-grid"></div>
       </section>
 
       <section class="mechanism" id="body-limits" aria-labelledby="body-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits and safety</h3><p data-i18n="bodyIntro">Observed hand landmarks and the URDF projection expose the gap between the installed body model and the Revo2 hand.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits and safety</h3><p data-i18n="bodyIntro">After the Revo2 hand was installed, the existing collision model still described the parallel gripper. The experiment compares observed hand-surface landmarks with calibrated model projections to expose this geometry mismatch.</p></div></div>
+        <p class="experiment-copy" data-i18n="bodyMethod">Human-prompted geometry checks gave local per-finger RMS errors of 1.35–2.20 mm at a fixed hand shape. After slight closure, overall RMS error was 5.26 mm and the maximum was 9.57 mm. Calibration at one hand shape did not guarantee the same geometric accuracy after the fingers moved.</p>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-body-grid"></div>
       </section>
 
       <section class="mechanism skills-block" id="skills" aria-labelledby="skills-title">
-        <div class="mechanism-heading"><span>Workspace</span><div><h3 id="skills-title" data-i18n="skillsTitle">Skills and reusable files</h3><p data-i18n="skillsIntro">Each navigation run exposes its saved final workspace in the run index above. These navigation files document the displayed runs; they are not a substitute for the separate robot-workspace evidence behind the paper’s cross-task reuse claim.</p></div></div>
+        <div class="mechanism-heading"><span>Workspace</span><div><h3 id="skills-title" data-i18n="skillsTitle">Skills and reusable files</h3><p data-i18n="skillsIntro">We examine reusable code as part of the agent’s working memory. Every navigation run above exposes its saved final Workspace, so readers can inspect the procedures and state files produced during that run.</p></div></div>
+        <p class="experiment-copy" data-i18n="skillsMethod">Open a run’s Workspace to inspect its navigation helpers, task scripts and, where present, scene_graph.json. A helper script preserves a procedure; a scene graph preserves discovered world state. The provided, modified and new labels distinguish the initial interface from files left by the run. These snapshots document navigation, rather than the separate code reuse across the four robot tasks.</p>
       </section>
 
       <section class="mechanism supplementary" id="revo" aria-labelledby="revo-title">
-        <div class="mechanism-heading"><span data-i18n="supplementaryLabel">Supplementary</span><div><h3 id="revo-title" data-i18n="revoTitle">Complete Revo2 trial record</h3><p data-i18n="revoIntro">All remaining Revo2 evidence is retained here, including unsuccessful lifts and the recording gaps in Stage 06.</p></div></div>
+        <div class="mechanism-heading"><span data-i18n="supplementaryLabel">Supplementary</span><div><h3 id="revo-title" data-i18n="revoTitle">Complete Revo2 trial record</h3><p data-i18n="revoIntro">These records follow the same empty plastic cup from unsuccessful lifts and a tilted grasp to an upright hold and one completed transfer. The final transfer required no in-trial manual reset; the cup stood upright after release and hand withdrawal. The complete recording contains 13 cuts across unrecorded intervals.</p></div></div>
         <p class="setup revo-setup" data-i18n="revoSetup">Astribot S1 · Revo2 right hand · Same empty plastic cup</p>
         <div class="experiment-grid revo-grid" id="revo-supp-grid"></div>
       </section>
     </section>
 
     <section class="experiment-group paper-section" id="remains" aria-labelledby="remains-title">
-      <div class="section-heading"><div><p class="section-number">04</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
-      <p class="section-lede wide" data-i18n="remainsIntro">The two gaps remain: the runs still had to re-sense the world and judge their own outcomes. What changes is the responsibility carried around the model.</p>
+      <div class="section-heading"><div><p class="section-number">03</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
+      <p class="section-lede wide" data-i18n="remainsIntro">Across these demonstrations, the model wrote control code while the coding harness supplied the execution loop and files. The runs still had to re-sense the world, check what their actions achieved and work within the body’s limits. The observations motivate the following responsibilities for a physical-world harness.</p>
       <div class="conclusion-grid">
         <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward</h3><p data-i18n="changeToolText">The model can write motion segments directly against the SDK, so the model–tool line is no longer fixed.</p></article>
         <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work</h3><p data-i18n="changeProfileText">Kinematic limits, workspace and calibration become explicit when they are no longer hidden inside a policy.</p></article>

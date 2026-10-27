@@ -26,7 +26,7 @@
 .subtitle{margin:-.55rem 0 .6rem;font:400 1.25rem/1.35 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif}
 .abstract{max-width:43rem;margin:1.45rem auto 0;text-align:left;font:400 .94rem/1.72 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif}
 .abstract strong{font-weight:700}
-.paper-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:2rem auto 0;max-width:43rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left}
+.paper-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:2rem auto 0;max-width:43rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left}
 .paper-nav a{display:flex;align-items:baseline;gap:.55rem;padding:.58rem .7rem;border-right:1px solid var(--line);font-size:.72rem}
 .paper-nav a:last-child{border-right:0}
 .paper-nav span{font:400 .58rem/1.4 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif;color:var(--muted)}
@@ -48,6 +48,8 @@
 .evidence-heading>span,.mechanism-heading>span{padding-top:.18rem;color:var(--blue);font:700 .58rem/1.4 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif;letter-spacing:.04em;text-transform:uppercase}
 .evidence-heading h3,.mechanism-heading h3{font-size:1.2rem;line-height:1.32}
 .evidence-heading p,.mechanism-heading p{max-width:43rem;margin-top:.28rem;color:var(--muted);font-size:.74rem;line-height:1.62}
+.experiment-copy{max-width:43rem;margin:0 0 1.2rem;color:var(--muted);font-size:.84rem;line-height:1.75}
+.evidence-heading p,.mechanism-heading p{font-size:.84rem;line-height:1.75}
 .mechanism{padding-top:2.35rem;margin-top:2.35rem;border-top:1px solid var(--line);scroll-margin-top:1.5rem}
 .mechanism:first-of-type{margin-top:0}
 .direct-evidence-grid{grid-template-columns:minmax(0,1fr)}
@@ -129,5 +131,6 @@ body,button,input,select,textarea,pre,code,kbd,samp,h1,h2,h3,.sc,.affiliation,.t
 .trace-hud-title{font-size:clamp(7px,1.15cqw,11px)}
 .trace-hud-subtitle{font-size:clamp(6px,.9cqw,9px)}
 .trace-event{grid-template-columns:max(6px,.9cqw) minmax(0,1fr);column-gap:max(3px,.55cqw);font-size:clamp(6px,.92cqw,8.5px);line-height:clamp(8px,1.25cqw,11px)}
+@media(max-width:640px){.paper-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.paper-nav a{padding:.58rem .45rem;gap:.4rem}.paper-nav a:nth-child(2){border-right:1px solid var(--line)}.paper-nav a:nth-child(-n+2){border-bottom:0}}
 @media(max-width:960px){.navigation-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:640px){.trace-engine{right:2cqw;bottom:48px;width:48cqw;height:16cqw}.trace-hud-head{height:4cqw;padding:0 1.5cqw;gap:.8cqw}.trace-hud-head::after{left:1.5cqw;right:1.5cqw}.trace-hud-title{font-size:clamp(7px,1.55cqw,10px)}.trace-hud-subtitle{font-size:clamp(6px,1.25cqw,8px)}.trace-events{height:12cqw;padding:.8cqw 1.5cqw}.trace-event{grid-template-columns:max(6px,1.1cqw) minmax(0,1fr);column-gap:max(3px,.75cqw);font-size:clamp(6px,1.1cqw,8px);line-height:clamp(8px,1.65cqw,10px)}}
