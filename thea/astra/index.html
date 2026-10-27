@@ -8,17 +8,17 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=376315d37ca7">
-  <script src="data.js?v=2cd3255c6345" defer></script>
+  <link rel="stylesheet" href="style.css?v=18f583397a7e">
+  <script src="data.js?v=c239cdb654b3" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=4e59a275a891" defer></script>
+  <script src="app.js?v=544c7ec1c7cf" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#experiments">Skip to experiments</a>
-  <div class="topline wrap"><a class="sc" href="#top">Thea</a><div class="language" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></div>
+  <div class="topline wrap"><a class="home-link" href="https://eit-hai.github.io/thea/" data-i18n="backHome">← Thea main site</a><div class="language" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></div>
   <header class="masthead wrap">
     <p class="track" data-i18n="track">CoRL 2026 Late-Breaking Results</p>
     <h1 data-i18n="title">Thea: Towards the Harness of Embodied Agents</h1>
@@ -42,10 +42,10 @@
 
     <section class="experiment-group paper-section" id="harness" aria-labelledby="harness-title">
       <div class="section-heading"><div><p class="section-number">02</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div><p class="setup" data-i18n="harnessSetup">Model · coding harness · physical-world layer</p></div>
-      <p class="section-lede wide" data-i18n="harnessIntro">If the model can write robot-control code, what does a physical-world harness still need to provide? The following experiments separate four needs: remembering places, checking whether an action worked, keeping the body model accurate, and retaining reusable procedures. Codex supplies the execution loop and files; these experiments examine what those digital mechanisms do not guarantee in the physical world.</p>
+      <p class="section-lede wide" data-i18n="harnessIntro">If the model can write robot-control code, what does a physical-world harness still need to provide? The original Thea addressed two gaps: making world state readable and action outcomes verifiable. We revisit those two gaps, alongside body constraints and reusable procedures. Codex supplies the execution loop and files, but these digital mechanisms alone do not guarantee the physical result.</p>
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and memory</h3><p data-i18n="worldStateIntro">Does writing down rooms and routes help the agent navigate and revisit places? We compare Astra, Astra instructed to maintain scene-graph memory, and a navigation-evaluation condition: three runs per condition in each of two datasets, for 18 runs in total.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and spatial memory</h3><p data-i18n="worldStateIntro">Does writing down rooms and routes help the agent navigate and revisit places? We compare Astra, Astra instructed to maintain scene-graph memory, and a navigation-evaluation condition: three runs per condition in each of two datasets, for 18 runs in total.</p></div></div>
         <p class="experiment-copy" data-i18n="worldStateObservation">In HabitatGS/SuperNav, Astra completed 2 of 3 runs, instructed graph memory completed 3 of 3, and the navigation-evaluation condition completed 0 of 3. In LHPR-VLN, none of the nine runs completed. These small sets show a benefit in the first setting, not a solution to navigation in general. Labels retain each run’s original stopping criterion: reaching all stages without a valid completion/STOP is still not completion.</p>
         <p class="experiment-copy" data-i18n="worldStateMethod">In graph-memory runs, room and route records were written to files and consulted later. The video, synchronized context stream and Workspace let you follow how new observations led to route choices and revisits. The graph is an estimate built within that run, not a supplied ground-truth map.</p>
       <div class="navigation-family"><h3>LHPR-VLN</h3><div class="navigation-grid" id="lhpr-grid"></div></div>
@@ -54,7 +54,7 @@
 
       <section class="mechanism" id="outcome-checking" aria-labelledby="outcome-title">
         <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Outcome checking</h3><p data-i18n="outcomeIntro">Does a completed motion mean a successful grasp? No: in these Revo2 trials, the wrist reached its target while the cup stayed on its support. The distinction is between what the robot was commanded to do and what actually happened to the object.</p></div></div>
-        <p class="experiment-copy" data-i18n="outcomeMethod">In two cup-rim attempts, the wrist rose about 7.58 mm but the cup remained on the plate. The agent used post-action images to reject those attempts and revise its grasp. Observing the object exposed a failure that SDK completion alone missed; the accuracy of these task-specific visual checks was not independently measured.</p>
+        <p class="experiment-copy" data-i18n="outcomeMethod">In two cup-rim attempts, the wrist rose about 7.58 mm but the cup remained on the plate. The agent used post-action images to reject those attempts and revise its grasp. Observing the object exposed a failure that SDK completion alone missed. These were task-specific self-checks of unmeasured accuracy, not an independent evaluator.</p>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-outcome-grid"></div>
       </section>
 
@@ -87,7 +87,7 @@
       </div>
     </section>
   </main>
-  <footer class="wrap"><span data-i18n="footer">HAI Lab · Eastern Institute of Technology, Ningbo</span><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
+  <footer class="wrap"><span data-i18n="footer">HAI Lab · Eastern Institute of Technology, Ningbo</span><a href="https://eit-hai.github.io/thea/" data-i18n="backHome">← Thea main site</a><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
   <dialog id="image-viewer"><button type="button" id="close-image" aria-label="Close image">×</button><img id="large-image" alt=""><p id="large-caption"></p></dialog>
 </body>
 </html>

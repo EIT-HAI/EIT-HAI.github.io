@@ -75,8 +75,8 @@ window.EXPERIMENTS = {
     {
       "id": "04",
       "title": {
-        "en": "Single loaded transfer",
-        "zh": "一次载物整体搬运"
+        "en": "Bowl transport",
+        "zh": "碗搬运（内装方块）"
       },
       "task": {
         "en": "Carry the bowl and cube to the round table in one loaded trip.",
