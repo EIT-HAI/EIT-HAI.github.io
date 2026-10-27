@@ -17,7 +17,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/01_tabletop_50x.mp4",
+          "src": "assets/media/web-h264-v1/01_tabletop_50x.mp4",
           "poster": "assets/images/01_tabletop_final.jpg",
           "en": "Head camera · 50×",
           "zh": "头部相机 · 50 倍速"
@@ -41,7 +41,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/02_mobile_50x.mp4",
+          "src": "assets/media/web-h264-v1/02_mobile_50x.mp4",
           "poster": "assets/images/02_mobile_final.jpg",
           "en": "Third-person view · 50×",
           "zh": "第三视角 · 50 倍速"
@@ -65,7 +65,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/03_cabinet_50x.mp4",
+          "src": "assets/media/web-h264-v1/03_cabinet_50x.mp4",
           "poster": "assets/images/03_cabinet_final.jpg",
           "en": "Head camera · 50× · Two sessions",
           "zh": "头部相机 · 50 倍速 · 两次会话拼接"
@@ -89,7 +89,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/04_single_trip_transfer_50x.mp4",
+          "src": "assets/media/web-h264-v1/04_single_trip_transfer_50x.mp4",
           "poster": "assets/images/04_single_trip_transfer_final.jpg",
           "en": "Head camera · 50×",
           "zh": "头部相机 · 50 倍速"
@@ -130,7 +130,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/revo2-s2_lift2.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s2_lift2.mp4",
           "poster": "assets/images/revo2-s2_lift2_poster.jpg",
           "en": "Second lift attempt · 11.65 s",
           "zh": "第二次试抬 · 11.65 秒"
@@ -150,7 +150,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/revo2-s3_lift.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s3_lift.mp4",
           "poster": "assets/images/revo2-s3_lift_poster.jpg",
           "en": "Side-grasp lift · 11.67 s",
           "zh": "侧握试抬 · 11.67 秒"
@@ -201,7 +201,7 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/revo2-s5_tilt.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s5_tilt.mp4",
           "poster": "assets/images/revo2-s5_tilt_poster.jpg",
           "en": "Wrap-grasp attempt · 21.10 s",
           "zh": "包握尝试 · 21.10 秒"
@@ -227,14 +227,14 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/revo2-s5_hold_head.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s5_hold_head.mp4",
           "poster": "assets/images/revo2-s5_hold_head_poster.jpg",
           "en": "Head camera · 20.92 s",
           "zh": "头部视角 · 20.92 秒"
         },
         {
           "type": "video",
-          "src": "assets/media/revo2-s5_hold_torso.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s5_hold_torso.mp4",
           "poster": "assets/images/revo2-s5_hold_torso_poster.jpg",
           "en": "Torso camera · 21.02 s",
           "zh": "躯干视角 · 21.02 秒"
@@ -260,14 +260,14 @@ window.EXPERIMENTS = {
       "media": [
         {
           "type": "video",
-          "src": "assets/media/revo2-s6-transfer-clean.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s6-transfer-clean.mp4",
           "poster": "assets/images/revo2-s6-transfer-clean-poster.jpg",
           "en": "Two-view clean export · 2:22",
           "zh": "双视角无字版 · 2 分 22 秒"
         },
         {
           "type": "video",
-          "src": "assets/media/revo2-s6-full-clean.mp4",
+          "src": "assets/media/web-h264-v1/revo2-s6-full-clean.mp4",
           "poster": "assets/images/revo2-s6-full-clean-poster.jpg",
           "en": "Complete clean record · 13 evidence-gap cuts · 18:51",
           "zh": "完整无字记录 · 13 处缺录跳切 · 18 分 51 秒"
@@ -294,7 +294,7 @@ window.EXPERIMENTS = {
       "actions": 498,
       "stop": "policy_stop",
       "image": "assets/images/nav-astra-supernav-1.png",
-"video": "assets/media/navigation-multiview-r3/astra-supernav-1-multiview.mp4",
+"video": "assets/media/web-h264-v1/astra-supernav-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-supernav-1-poster.jpg",
       "replayFrames": 42,
       "replayFps": 1,
@@ -312,7 +312,7 @@ window.EXPERIMENTS = {
       "actions": 436,
       "stop": "policy_stop",
       "image": "assets/images/nav-astra-supernav-2.png",
-      "video": "assets/media/navigation-multiview-r3/astra-supernav-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/astra-supernav-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-supernav-2-poster.jpg",
       "replayFrames": 43,
       "replayFps": 1,
@@ -330,7 +330,7 @@ window.EXPERIMENTS = {
       "actions": 299,
       "stop": "policy_stop",
       "image": "assets/images/nav-astra-supernav-3.png",
-      "video": "assets/media/navigation-multiview-r3/astra-supernav-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/astra-supernav-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-supernav-3-poster.jpg",
       "replayFrames": 29,
       "replayFps": 1,
@@ -348,7 +348,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-graph-lhpr-1.png",
-      "video": "assets/media/navigation-multiview-r3/graph-lhpr-1-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-lhpr-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-lhpr-1-poster.jpg",
       "replayFrames": 59,
       "replayFps": 1,
@@ -366,7 +366,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-graph-lhpr-2.png",
-      "video": "assets/media/navigation-multiview-r3/graph-lhpr-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-lhpr-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-lhpr-2-poster.jpg",
       "replayFrames": 56,
       "replayFps": 1,
@@ -384,7 +384,7 @@ window.EXPERIMENTS = {
       "actions": 226,
       "stop": "sequence_submitted",
       "image": "assets/images/nav-graph-lhpr-3.png",
-      "video": "assets/media/navigation-multiview-r3/graph-lhpr-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-lhpr-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-lhpr-3-poster.jpg",
       "replayFrames": 39,
       "replayFps": 1,
@@ -402,7 +402,7 @@ window.EXPERIMENTS = {
       "actions": 470,
       "stop": "policy_stop",
       "image": "assets/images/nav-graph-supernav-1.png",
-      "video": "assets/media/navigation-multiview-r3/graph-supernav-1-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-supernav-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-supernav-1-poster.jpg",
       "replayFrames": 48,
       "replayFps": 1,
@@ -420,7 +420,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "policy_stop",
       "image": "assets/images/nav-graph-supernav-2.png",
-      "video": "assets/media/navigation-multiview-r3/graph-supernav-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-supernav-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-supernav-2-poster.jpg",
       "replayFrames": 45,
       "replayFps": 1,
@@ -438,7 +438,7 @@ window.EXPERIMENTS = {
       "actions": 277,
       "stop": "policy_stop",
       "image": "assets/images/nav-graph-supernav-3.png",
-      "video": "assets/media/navigation-multiview-r3/graph-supernav-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/graph-supernav-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/graph-supernav-3-poster.jpg",
       "replayFrames": 26,
       "replayFps": 1,
@@ -456,7 +456,7 @@ window.EXPERIMENTS = {
       "actions": 281,
       "stop": "sequence_submitted",
       "image": "assets/images/nav-astra-lhpr-1.png",
-      "video": "assets/media/navigation-multiview-r3/astra-lhpr-1-multiview.mp4",
+      "video": "assets/media/web-h264-v1/astra-lhpr-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-lhpr-1-poster.jpg",
       "replayFrames": 44,
       "replayFps": 1,
@@ -474,7 +474,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-astra-lhpr-2.png",
-      "video": "assets/media/navigation-multiview-r3/astra-lhpr-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/astra-lhpr-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-lhpr-2-poster.jpg",
       "replayFrames": 61,
       "replayFps": 1,
@@ -492,7 +492,7 @@ window.EXPERIMENTS = {
       "actions": 351,
       "stop": "sequence_submitted",
       "image": "assets/images/nav-astra-lhpr-3.png",
-      "video": "assets/media/navigation-multiview-r3/astra-lhpr-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/astra-lhpr-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/astra-lhpr-3-poster.jpg",
       "replayFrames": 52,
       "replayFps": 1,
@@ -510,7 +510,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-lhpr-1.png",
-      "video": "assets/media/navigation-multiview-r3/eval-lhpr-1-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-lhpr-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-lhpr-1-poster.jpg",
       "replayFrames": 57,
       "replayFps": 1,
@@ -528,7 +528,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-lhpr-2.png",
-      "video": "assets/media/navigation-multiview-r3/eval-lhpr-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-lhpr-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-lhpr-2-poster.jpg",
       "replayFrames": 64,
       "replayFps": 1,
@@ -546,7 +546,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-lhpr-3.png",
-      "video": "assets/media/navigation-multiview-r3/eval-lhpr-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-lhpr-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-lhpr-3-poster.jpg",
       "replayFrames": 86,
       "replayFps": 1,
@@ -564,7 +564,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-supernav-1.png",
-      "video": "assets/media/navigation-multiview-r3/eval-supernav-1-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-supernav-1-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-supernav-1-poster.jpg",
       "replayFrames": 62,
       "replayFps": 1,
@@ -582,7 +582,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-supernav-2.png",
-      "video": "assets/media/navigation-multiview-r3/eval-supernav-2-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-supernav-2-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-supernav-2-poster.jpg",
       "replayFrames": 63,
       "replayFps": 1,
@@ -600,7 +600,7 @@ window.EXPERIMENTS = {
       "actions": 500,
       "stop": "navigation_action_limit",
       "image": "assets/images/nav-eval-supernav-3.png",
-      "video": "assets/media/navigation-multiview-r3/eval-supernav-3-multiview.mp4",
+      "video": "assets/media/web-h264-v1/eval-supernav-3-multiview.mp4",
       "videoPoster": "assets/media/navigation-multiview-r3/eval-supernav-3-poster.jpg",
       "replayFrames": 50,
       "replayFps": 1,

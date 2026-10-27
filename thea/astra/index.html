@@ -8,11 +8,11 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=3dbe4572d0ac">
-  <script src="data.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=376315d37ca7">
+  <script src="data.js?v=2cd3255c6345" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=6995db1567c1" defer></script>
+  <script src="app.js?v=4e59a275a891" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js" defer></script>
 </head>
@@ -24,7 +24,7 @@
     <h1 data-i18n="title">Thea: Towards the Harness of Embodied Agents</h1>
     <p class="subtitle" data-i18n="subtitle">Revisited after GPT-6 Astra</p>
     <p class="affiliation" data-i18n="affiliation">HAI Lab · Eastern Institute of Technology, Ningbo</p>
-    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea brought the coding-agent harness to the physical world by supplying a persistent readable world state and verifiable action outcomes. With GPT-6 Astra operating a robot SDK inside a coding environment, we revisit tool granularity and ask which harness components come from the model, the coding harness, or the physical-world layer.</span></p>
+    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea carried the harness paradigm of coding agents into the physical world by adding a persistent readable world state and a verifiable judgment of each action. With GPT-6 Astra operating a robot SDK inside a coding environment, we revisit tool granularity and ask which harness components come from the model, the coding harness, or the physical-world layer.</span></p>
     <nav class="paper-nav" aria-label="Paper sections">
       <a href="#tools"><span>01</span><b data-i18n="shortTools">Tools</b></a>
       <a href="#harness"><span>02</span><b data-i18n="shortHarness">Harness</b></a>
@@ -34,42 +34,43 @@
   <main class="wrap" id="experiments">
     <section class="experiment-group paper-section" id="tools" aria-labelledby="tools-title">
       <div class="section-heading"><div><p class="section-number">01</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div><p class="setup" data-i18n="robotSetup">Astribot S1 · Left parallel gripper</p></div>
-      <div class="evidence-heading plain-heading"><div><h3 data-i18n="directControlTitle">Direct SDK control</h3><p data-i18n="robotIntro">We gave GPT-6 Astra, running in Codex, the Astribot S1 Python SDK and its documentation. Using the left parallel gripper, the agent attempted four tasks: tabletop cleanup, cleanup after a base approach, drawer retrieval and closure, and loaded transfer.</p></div></div>
+      <div class="evidence-heading plain-heading"><div><h3 data-i18n="directControlTitle">Direct SDK control</h3><p data-i18n="robotIntro">Can a coding agent control a robot without a prewritten pick-and-place skill? We gave GPT-6 Astra in Codex the Astribot S1 Python SDK and its documentation, with no Thea component, and asked it to perform the four left-gripper tasks below.</p></div></div>
+      <p class="experiment-copy" data-i18n="robotObservation">The agent corrected early geometric errors and all four tasks reached the displayed final states: objects in the plate, a retrieved cube and closed drawer, and a loaded bowl delivered to the destination table. For these tasks, the model constructed control code rather than invoking a learned manipulation policy. The drawer video combines two sessions.</p>
       <p class="experiment-copy" data-i18n="robotMethod">The agent registered head-camera RGB-D observations in the base frame, solved inverse kinematics against the SDK’s forward kinematics, screened joint samples for self-collision, and issued one motion segment at a time. Base movement used velocity pulses gated by lidar clearance.</p>
-      <p class="experiment-copy" data-i18n="robotObservation">The first errors were geometric and were corrected during execution. All four tasks reached the final states shown below, illustrating the control code the model can construct for these particular tasks.</p>
       <div class="experiment-grid" id="robot-grid"></div>
     </section>
 
     <section class="experiment-group paper-section" id="harness" aria-labelledby="harness-title">
       <div class="section-heading"><div><p class="section-number">02</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div><p class="setup" data-i18n="harnessSetup">Model · coding harness · physical-world layer</p></div>
-      <p class="section-lede wide" data-i18n="harnessIntro">Codex supplied the agent loop, tool execution, files and the write–run–read–fix cycle. We read the experiments through four physical-world mechanisms: keeping track of the world, checking action outcomes, understanding the body, and retaining useful procedures.</p>
+      <p class="section-lede wide" data-i18n="harnessIntro">If the model can write robot-control code, what does a physical-world harness still need to provide? The following experiments separate four needs: remembering places, checking whether an action worked, keeping the body model accurate, and retaining reusable procedures. Codex supplies the execution loop and files; these experiments examine what those digital mechanisms do not guarantee in the physical world.</p>
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and memory</h3><p data-i18n="worldStateIntro">The 18 navigation runs are grouped into Astra, instructed scene-graph memory, and navigation-evaluation conditions, with three runs per condition in each dataset. Each replay pairs the saved observations with that run’s observable agent events; completed and incomplete runs are both retained.</p></div></div>
-        <p class="experiment-copy" data-i18n="worldStateMethod">In graph-memory runs, the agent wrote room and route records to files and consulted them during navigation. These records are estimates maintained within the current run. Read the replay together with the context stream and Workspace to follow new observations, route choices and later revisits. Completion labels follow the recorded run outcome, including its stopping criterion.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and memory</h3><p data-i18n="worldStateIntro">Does writing down rooms and routes help the agent navigate and revisit places? We compare Astra, Astra instructed to maintain scene-graph memory, and a navigation-evaluation condition: three runs per condition in each of two datasets, for 18 runs in total.</p></div></div>
+        <p class="experiment-copy" data-i18n="worldStateObservation">In HabitatGS/SuperNav, Astra completed 2 of 3 runs, instructed graph memory completed 3 of 3, and the navigation-evaluation condition completed 0 of 3. In LHPR-VLN, none of the nine runs completed. These small sets show a benefit in the first setting, not a solution to navigation in general. Labels retain each run’s original stopping criterion: reaching all stages without a valid completion/STOP is still not completion.</p>
+        <p class="experiment-copy" data-i18n="worldStateMethod">In graph-memory runs, room and route records were written to files and consulted later. The video, synchronized context stream and Workspace let you follow how new observations led to route choices and revisits. The graph is an estimate built within that run, not a supplied ground-truth map.</p>
       <div class="navigation-family"><h3>LHPR-VLN</h3><div class="navigation-grid" id="lhpr-grid"></div></div>
       <div class="navigation-family"><h3>HabitatGS-Benchmark <span class="muted">(SuperNav tasks)</span></h3><div class="navigation-grid" id="supernav-grid"></div></div>
       </section>
 
       <section class="mechanism" id="outcome-checking" aria-labelledby="outcome-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Outcome checking</h3><p data-i18n="outcomeIntro">The Revo2 cup-lift trials ask whether reaching a motion target means that the object was actually lifted. A useful outcome check must inspect the cup and its support after the motion.</p></div></div>
-        <p class="experiment-copy" data-i18n="outcomeMethod">In the cup-rim trials, the wrist rose about 7.58 mm while the cup stayed on its support. The agent inspected post-action images, rejected unsuccessful lifts and adjusted its grasp. These were task-specific visual checks whose accuracy was not independently measured.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Outcome checking</h3><p data-i18n="outcomeIntro">Does a completed motion mean a successful grasp? No: in these Revo2 trials, the wrist reached its target while the cup stayed on its support. The distinction is between what the robot was commanded to do and what actually happened to the object.</p></div></div>
+        <p class="experiment-copy" data-i18n="outcomeMethod">In two cup-rim attempts, the wrist rose about 7.58 mm but the cup remained on the plate. The agent used post-action images to reject those attempts and revise its grasp. Observing the object exposed a failure that SDK completion alone missed; the accuracy of these task-specific visual checks was not independently measured.</p>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-outcome-grid"></div>
       </section>
 
       <section class="mechanism" id="body-limits" aria-labelledby="body-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits and safety</h3><p data-i18n="bodyIntro">After the Revo2 hand was installed, the existing collision model still described the parallel gripper. The experiment compares observed hand-surface landmarks with calibrated model projections to expose this geometry mismatch.</p></div></div>
-        <p class="experiment-copy" data-i18n="bodyMethod">Human-prompted geometry checks gave local per-finger RMS errors of 1.35–2.20 mm at a fixed hand shape. After slight closure, overall RMS error was 5.26 mm and the maximum was 9.57 mm. Calibration at one hand shape did not guarantee the same geometric accuracy after the fingers moved.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits and safety</h3><p data-i18n="bodyIntro">Does installing a new hand also give the agent an accurate model of its body? Here it did not: after Revo2 was installed, the collision model still described the old parallel gripper. Even after calibration, changing the hand shape increased the landmark error.</p></div></div>
+        <p class="experiment-copy" data-i18n="bodyMethod">Human-prompted checks compared observed hand-surface landmarks with calibrated model projections. At a fixed hand shape, local per-finger RMS errors were 1.35–2.20 mm; after slight closure, overall RMS was 5.26 mm, with a 9.57 mm maximum. A fit at one hand shape did not guarantee accuracy after motion, so calibration alone was not a safety guarantee.</p>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-body-grid"></div>
       </section>
 
       <section class="mechanism skills-block" id="skills" aria-labelledby="skills-title">
-        <div class="mechanism-heading"><span>Workspace</span><div><h3 id="skills-title" data-i18n="skillsTitle">Skills and reusable files</h3><p data-i18n="skillsIntro">We examine reusable code as part of the agent’s working memory. Every navigation run above exposes its saved final Workspace, so readers can inspect the procedures and state files produced during that run.</p></div></div>
-        <p class="experiment-copy" data-i18n="skillsMethod">Open a run’s Workspace to inspect its navigation helpers, task scripts and, where present, scene_graph.json. A helper script preserves a procedure; a scene graph preserves discovered world state. The provided, modified and new labels distinguish the initial interface from files left by the run. These snapshots document navigation, rather than the separate code reuse across the four robot tasks.</p>
+        <div class="mechanism-heading"><span>Workspace</span><div><h3 id="skills-title" data-i18n="skillsTitle">Skills and reusable files</h3><p data-i18n="skillsIntro">What can the agent retain instead of rebuilding it for every task? Across the four S1 left-gripper tasks, capture, localization, inverse-kinematics and collision-screening modules were reused as files. This is reuse of procedures on the same robot, not evidence of transfer to a different embodiment.</p></div></div>
+        <p class="experiment-copy" data-i18n="skillsMethod">The Workspaces attached to the navigation runs provide a separate, inspectable record: helpers and scripts preserve procedures, while scene_graph.json, where present, preserves discovered world state. The provided, modified and new labels distinguish the starting interface from files left by the run. These final snapshots document navigation files; they are not the robot-module reuse evidence described above.</p>
       </section>
 
       <section class="mechanism supplementary" id="revo" aria-labelledby="revo-title">
-        <div class="mechanism-heading"><span data-i18n="supplementaryLabel">Supplementary</span><div><h3 id="revo-title" data-i18n="revoTitle">Complete Revo2 trial record</h3><p data-i18n="revoIntro">These records follow the same empty plastic cup from unsuccessful lifts and a tilted grasp to an upright hold and one completed transfer. The final transfer required no in-trial manual reset; the cup stood upright after release and hand withdrawal. The complete recording contains 13 cuts across unrecorded intervals.</p></div></div>
+        <div class="mechanism-heading"><span data-i18n="supplementaryLabel">Supplementary</span><div><h3 id="revo-title" data-i18n="revoTitle">Additional Revo2 trials</h3><p data-i18n="revoIntro">Did later attempts achieve more than wrist motion? These records show the same empty plastic cup progressing from failed lifts and a tilted grasp to an upright hold and one completed transfer. In that final transfer, the cup stood upright after release and hand withdrawal, with no in-trial manual reset. This is one demonstrated transfer, not a measured success rate; the full recording retains 13 cuts across unrecorded intervals.</p></div></div>
         <p class="setup revo-setup" data-i18n="revoSetup">Astribot S1 · Revo2 right hand · Same empty plastic cup</p>
         <div class="experiment-grid revo-grid" id="revo-supp-grid"></div>
       </section>
@@ -77,12 +78,12 @@
 
     <section class="experiment-group paper-section" id="remains" aria-labelledby="remains-title">
       <div class="section-heading"><div><p class="section-number">03</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
-      <p class="section-lede wide" data-i18n="remainsIntro">Across these demonstrations, the model wrote control code while the coding harness supplied the execution loop and files. The runs still had to re-sense the world, check what their actions achieved and work within the body’s limits. The observations motivate the following responsibilities for a physical-world harness.</p>
+      <p class="section-lede wide" data-i18n="remainsIntro">What changed is who writes the control stack: the model can now generate SDK-level procedures inside a coding harness. What did not change is the need to observe the world again, distinguish command completion from task success, and keep geometry aligned with the actual body. These demonstrations motivate the responsibilities below; they do not establish general safety or autonomous self-improvement.</p>
       <div class="conclusion-grid">
-        <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward</h3><p data-i18n="changeToolText">The model can write motion segments directly against the SDK, so the model–tool line is no longer fixed.</p></article>
-        <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work</h3><p data-i18n="changeProfileText">Kinematic limits, workspace and calibration become explicit when they are no longer hidden inside a policy.</p></article>
-        <article><span>03</span><h3 data-i18n="changeSafetyTitle">Safety moves into the harness</h3><p data-i18n="changeSafetyText">Lower-level commands require heavier workspace bounds, collision checks and force limits.</p></article>
-        <article><span>04</span><h3 data-i18n="changeEvalTitle">Evaluation precedes physical-world self-improvement</h3><p data-i18n="changeEvalText">Robot experience cannot become a reliable signal until the physical world has an equivalent of exit codes and unit tests.</p></article>
+        <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward</h3><p data-i18n="changeToolText">The four S1 tasks show the model writing below a pick-and-place interface. A harness therefore needs to expose more than one level of robot control.</p></article>
+        <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work</h3><p data-i18n="changeProfileText">The Revo2 mismatch shows why the exposed body model must track the installed hardware, its configuration and its calibration—not just a nominal robot description.</p></article>
+        <article><span>03</span><h3 data-i18n="changeSafetyTitle">Safety moves into the harness</h3><p data-i18n="changeSafetyText">SDK-level commands leave workspace bounds, collision checks and force limits to the surrounding system. Task completion alone does not verify that safety layer.</p></article>
+        <article><span>04</span><h3 data-i18n="changeEvalTitle">Evaluation precedes physical-world self-improvement</h3><p data-i18n="changeEvalText">The failed cup lifts show why motion completion is not a task-success signal. Reliable physical-world learning needs outcome checks whose accuracy can itself be tested.</p></article>
       </div>
     </section>
   </main>
