@@ -8,33 +8,32 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=18f583397a7e">
+  <link rel="stylesheet" href="style.css?v=b56a578e9720">
   <script src="data.js?v=c239cdb654b3" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=544c7ec1c7cf" defer></script>
+  <script src="app.js?v=ee21bdbbf483" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#experiments">Skip to experiments</a>
-  <div class="topline wrap"><a class="home-link" href="https://eit-hai.github.io/thea/" data-i18n="backHome">← Thea main site</a><div class="language" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></div>
+  <div class="topline wrap"><a class="sc" href="#top">Thea</a><div class="language" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></div>
   <header class="masthead wrap">
-    <p class="track" data-i18n="track">CoRL 2026 Late-Breaking Results</p>
     <h1 data-i18n="title">Thea: Towards the Harness of Embodied Agents</h1>
     <p class="subtitle" data-i18n="subtitle">Revisited after GPT-6 Astra</p>
     <p class="affiliation" data-i18n="affiliation">HAI Lab · Eastern Institute of Technology, Ningbo</p>
-    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea carried the harness paradigm of coding agents into the physical world by adding a persistent readable world state and a verifiable judgment of each action. With GPT-6 Astra operating a robot SDK inside a coding environment, we revisit tool granularity and ask which harness components come from the model, the coding harness, or the physical-world layer.</span></p>
     <nav class="paper-nav" aria-label="Paper sections">
-      <a href="#tools"><span>01</span><b data-i18n="shortTools">Tools</b></a>
-      <a href="#harness"><span>02</span><b data-i18n="shortHarness">Harness</b></a>
-      <a href="#remains"><span>03</span><b data-i18n="shortRemains">What remains</b></a>
+      <a href="#tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8.5 8-4.5 4 4.5 4m7-8 4.5 4-4.5 4"/></svg><span data-i18n="shortTools">Tools</span></a>
+      <a href="#harness"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-9 5 9 5 9-5-9-5Zm-9 9 9 5 9-5m-18 5 9 5 9-5"/></svg><span data-i18n="shortHarness">Harness</span></a>
+      <a href="#remains"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zM14 3v5h5M9.5 13h5m-5 4h5"/></svg><span data-i18n="shortRemains">What remains</span></a>
     </nav>
+    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea carried the harness paradigm of coding agents into the physical world by adding a persistent readable world state and a verifiable judgment of each action. With GPT-6 Astra operating a robot SDK inside a coding environment, we revisit tool granularity and ask which harness components come from the model, the coding harness, or the physical-world layer.</span></p>
   </header>
   <main class="wrap" id="experiments">
     <section class="experiment-group paper-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-heading"><div><p class="section-number">01</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div><p class="setup" data-i18n="robotSetup">Astribot S1 · Left parallel gripper</p></div>
-      <div class="evidence-heading plain-heading"><div><h3 data-i18n="directControlTitle">Direct SDK control</h3><p data-i18n="robotIntro">Can a coding agent control a robot without a prewritten pick-and-place skill? We gave GPT-6 Astra in Codex the Astribot S1 Python SDK and its documentation, with no Thea component, and asked it to perform the four left-gripper tasks below.</p></div></div>
+      <div class="section-heading"><div><p class="section-number">01</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div></div>
+      <p class="experiment-copy" data-i18n="robotIntro">Can a coding agent control a robot without a prewritten pick-and-place skill? We gave GPT-6 Astra in Codex the Astribot S1 Python SDK and its documentation, with no Thea component, and asked it to perform the four left-gripper tasks below.</p>
       <p class="experiment-copy" data-i18n="robotObservation">The agent corrected early geometric errors and all four tasks reached the displayed final states: objects in the plate, a retrieved cube and closed drawer, and a loaded bowl delivered to the destination table. For these tasks, the model constructed control code rather than invoking a learned manipulation policy. The drawer video combines two sessions.</p>
       <p class="experiment-copy" data-i18n="robotMethod">The agent registered head-camera RGB-D observations in the base frame, solved inverse kinematics against the SDK’s forward kinematics, screened joint samples for self-collision, and issued one motion segment at a time. Base movement used velocity pulses gated by lidar clearance.</p>
       <div class="experiment-grid" id="robot-grid"></div>
@@ -86,8 +85,9 @@
         <article><span>04</span><h3 data-i18n="changeEvalTitle">Evaluation precedes physical-world self-improvement</h3><p data-i18n="changeEvalText">The failed cup lifts show why motion completion is not a task-success signal. Reliable physical-world learning needs outcome checks whose accuracy can itself be tested.</p></article>
       </div>
     </section>
+    <nav class="site-pager" aria-label="Project navigation"><a href="https://eit-hai.github.io/thea/" data-i18n="backHome">Back to Thea main site →</a></nav>
   </main>
-  <footer class="wrap"><span data-i18n="footer">HAI Lab · Eastern Institute of Technology, Ningbo</span><a href="https://eit-hai.github.io/thea/" data-i18n="backHome">← Thea main site</a><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
+  <footer class="wrap"><span data-i18n="footer">HAI Lab · Eastern Institute of Technology, Ningbo</span><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
   <dialog id="image-viewer"><button type="button" id="close-image" aria-label="Close image">×</button><img id="large-image" alt=""><p id="large-caption"></p></dialog>
 </body>
 </html>
