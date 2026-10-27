@@ -1,0 +1,6112 @@
+{
+  "frame": {
+    "origin": "episode start",
+    "axes": "+x initially forward; +y initially left; +z up",
+    "units": "metres"
+  },
+  "updated_at_action": 500,
+  "agent": {
+    "position": [
+      -13.265544456622772,
+      3.2830127018922197,
+      0
+    ],
+    "yaw_degrees": 90,
+    "uncertainty_m": 1.9499999999999995,
+    "note": "Dead reckoning is provisional and checked against RGB; commanded translations are not measured."
+  },
+  "nodes": [
+    {
+      "id": "study",
+      "category": "room",
+      "description": "Initial room with writing desk and corner windows",
+      "position": [
+        -1,
+        -1,
+        1.3
+      ],
+      "uncertainty_m": 1.5,
+      "observation_action_refs": [
+        0
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-_0py3tvl/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "desk",
+      "category": "desk",
+      "description": "Long gray writing desk with white desk chairs",
+      "position": [
+        -1,
+        -1.8,
+        0.75
+      ],
+      "uncertainty_m": 0.7,
+      "observation_action_refs": [
+        0
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-_0py3tvl/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "study_window",
+      "category": "window",
+      "description": "Black framed corner window",
+      "position": [
+        0.6,
+        0,
+        1.4
+      ],
+      "uncertainty_m": 0.7,
+      "observation_action_refs": [
+        0
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-_0py3tvl/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "study_door",
+      "category": "passage",
+      "description": "Open door from study into white corridor",
+      "position": [
+        -3,
+        0.25,
+        1
+      ],
+      "uncertainty_m": 0.8,
+      "observation_action_refs": [
+        0
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-_0py3tvl/back.png",
+          "camera": "back",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "corridor",
+      "category": "corridor",
+      "description": "White marble corridor with multiple side doors",
+      "position": [
+        -6,
+        0,
+        1.3
+      ],
+      "uncertainty_m": 1.5,
+      "observation_action_refs": [
+        22
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-3i8d87rq/front.png",
+          "camera": "front",
+          "action": 22
+        }
+      ]
+    },
+    {
+      "id": "room_right_1",
+      "category": "room",
+      "description": "North bedroom with low white bed, wall TV and cylindrical vanity stool; no matching armchair observed",
+      "position": [
+        -2.5,
+        4.5,
+        1.2
+      ],
+      "uncertainty_m": 1.5,
+      "observation_action_refs": [
+        22,
+        333
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-3i8d87rq/right.png",
+          "camera": "right",
+          "action": 22
+        },
+        {
+          "path": "images/observe-38rcr46i/front.png",
+          "camera": "front",
+          "action": 333
+        }
+      ]
+    },
+    {
+      "id": "living",
+      "category": "room",
+      "description": "Open living room with black piano, white chaise and seating",
+      "position": [
+        -13,
+        4,
+        1.3
+      ],
+      "uncertainty_m": 2,
+      "observation_action_refs": [
+        48
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-5b2epp6m/front.png",
+          "camera": "front",
+          "action": 48
+        }
+      ]
+    },
+    {
+      "id": "piano",
+      "category": "piano",
+      "description": "Black upright with open keyboard/music sheet and purple flowers; white chaise beside it",
+      "position": [
+        -14.8,
+        1.3,
+        0.75
+      ],
+      "uncertainty_m": 0.65,
+      "observation_action_refs": [
+        48,
+        67
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-5b2epp6m/front.png",
+          "camera": "front",
+          "action": 48
+        },
+        {
+          "path": "images/observe-8q9chstp/left.png",
+          "camera": "left",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "piano_flowers",
+      "category": "flowers",
+      "description": "Purple flowers in pale vase on piano",
+      "position": [
+        -13.8,
+        1.15,
+        1.4
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        48
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-5b2epp6m/front.png",
+          "camera": "front",
+          "action": 48
+        }
+      ]
+    },
+    {
+      "id": "white_chaise",
+      "category": "chaise_lounge",
+      "description": "White chaise/sectional extending alongside piano",
+      "position": [
+        -15.1,
+        3.8,
+        0.45
+      ],
+      "uncertainty_m": 0.8,
+      "observation_action_refs": [
+        48,
+        67
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-5b2epp6m/front.png",
+          "camera": "front",
+          "action": 48
+        },
+        {
+          "path": "images/observe-8q9chstp/left.png",
+          "camera": "left",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "white_lounge",
+      "category": "lounge_chair",
+      "description": "White sculpted lounge with broad headrest, gray throw and matching gray footstool, beside brass side table and window",
+      "position": [
+        -12.2,
+        8.2,
+        0.6
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        67,
+        124
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/front.png",
+          "camera": "front",
+          "action": 67
+        },
+        {
+          "path": "images/observe-p6qnupk7/right.png",
+          "camera": "right",
+          "action": 124
+        }
+      ]
+    },
+    {
+      "id": "lounge_side_table",
+      "category": "side_table",
+      "description": "Small round side table beside white lounge chair",
+      "position": [
+        -12.45,
+        7.4,
+        0.45
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        67
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/front.png",
+          "camera": "front",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "living_window",
+      "category": "window",
+      "description": "Large dark slatted window behind lounge chair",
+      "position": [
+        -13.6,
+        8.8,
+        1.5
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        67
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/front.png",
+          "camera": "front",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "glass_cabinet",
+      "category": "cabinet",
+      "description": "Tall black framed glass display cabinet next to entrance and tan chair",
+      "position": [
+        -10.9,
+        1.5,
+        1.2
+      ],
+      "uncertainty_m": 0.8,
+      "observation_action_refs": [
+        67
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/right.png",
+          "camera": "right",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "tan_accent",
+      "category": "accent_chair",
+      "description": "Tan upholstered curved modern accent chair with cushioned arms and swivel legs; glass cabinet behind",
+      "position": [
+        -12.5,
+        2.7,
+        0.55
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        60,
+        142
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-s0c02fvx/right.png",
+          "camera": "right",
+          "action": 60
+        },
+        {
+          "path": "images/observe-zq9z1msh/front.png",
+          "camera": "front",
+          "action": 142
+        }
+      ]
+    },
+    {
+      "id": "living_coffee_table",
+      "category": "coffee_table",
+      "description": "White low rounded rectangular coffee table on striped rug supporting tall leafy plant vase and smaller gray vase",
+      "position": [
+        -13.7,
+        4.1,
+        0.35
+      ],
+      "uncertainty_m": 1.0,
+      "observation_action_refs": [
+        67,
+        499
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/front.png",
+          "camera": "front",
+          "action": 67
+        },
+        {
+          "path": "images/observe-km_cpdbd/front.png",
+          "camera": "front",
+          "action": 499
+        }
+      ]
+    },
+    {
+      "id": "green_table_plant",
+      "category": "plant",
+      "description": "Green leaves on slender dark branching stems in tall white vase on coffee table by white sofa",
+      "position": [
+        -13.7,
+        4.35,
+        1.1
+      ],
+      "uncertainty_m": 1.0,
+      "observation_action_refs": [
+        67,
+        499
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8q9chstp/front.png",
+          "camera": "front",
+          "action": 67
+        },
+        {
+          "path": "images/observe-km_cpdbd/front.png",
+          "camera": "front",
+          "action": 499
+        }
+      ]
+    },
+    {
+      "id": "white_modular_seat",
+      "category": "chair_or_ottoman",
+      "description": "Low white modular ottoman with tan bolster, lacking chair back and arms",
+      "position": [
+        -14.2,
+        6.4,
+        0.4
+      ],
+      "uncertainty_m": 1.2,
+      "observation_action_refs": [
+        142,
+        160
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-zq9z1msh/back.png",
+          "camera": "back",
+          "action": 142
+        },
+        {
+          "path": "images/observe-n9_cvvlg/front.png",
+          "camera": "front",
+          "action": 160
+        }
+      ]
+    },
+    {
+      "id": "living_shelves",
+      "category": "shelves",
+      "description": "Narrow illuminated display shelves at window-side corner beside sofa",
+      "position": [
+        -15.7,
+        7.5,
+        1.4
+      ],
+      "uncertainty_m": 1.2,
+      "observation_action_refs": [
+        88
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-sr5l2v8x/left.png",
+          "camera": "left",
+          "action": 88
+        }
+      ]
+    },
+    {
+      "id": "bedroom_south",
+      "category": "bedroom",
+      "description": "Bedroom with double bed and small wall desk",
+      "position": [
+        -5,
+        -2.8,
+        1.2
+      ],
+      "uncertainty_m": 1.4,
+      "observation_action_refs": [
+        243
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8dilqdhr/front.png",
+          "camera": "front",
+          "action": 243
+        }
+      ]
+    },
+    {
+      "id": "bedroom_desk_chair",
+      "category": "armchair",
+      "description": "White slipcovered desk armchair in bedroom; no adjacent shelves seen",
+      "position": [
+        -6,
+        -2.8,
+        0.5
+      ],
+      "uncertainty_m": 1,
+      "observation_action_refs": [
+        243
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-8dilqdhr/front.png",
+          "camera": "front",
+          "action": 243
+        }
+      ]
+    },
+    {
+      "id": "study_armchair",
+      "category": "armchair",
+      "description": "White fabric armchair with padded seat/back and solid upholstered arms beside gray table and full-height open shelves",
+      "position": [
+        -0.35,
+        -1.8,
+        0.55
+      ],
+      "uncertainty_m": 0.65,
+      "observation_action_refs": [
+        285
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-rg_1r17y/front.png",
+          "camera": "front",
+          "action": 285
+        }
+      ]
+    },
+    {
+      "id": "study_shelves",
+      "category": "shelves",
+      "description": "Built-in open display shelves immediately alongside study armchair",
+      "position": [
+        0.4,
+        -2.4,
+        1.3
+      ],
+      "uncertainty_m": 0.8,
+      "observation_action_refs": [
+        285
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-rg_1r17y/front.png",
+          "camera": "front",
+          "action": 285
+        }
+      ]
+    },
+    {
+      "id": "north_branch",
+      "category": "passage",
+      "description": "Short branch with bathroom left and two bedrooms ahead",
+      "position": [
+        -8.4,
+        2.2,
+        1
+      ],
+      "uncertainty_m": 1.2,
+      "observation_action_refs": [
+        431
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-k5nfjakg/right.png",
+          "camera": "right",
+          "action": 431
+        }
+      ]
+    },
+    {
+      "id": "bedroom_nw",
+      "category": "bedroom",
+      "description": "Bedroom with gray bed and office swivel chair by window",
+      "position": [
+        -9,
+        5,
+        1.2
+      ],
+      "uncertainty_m": 1.8,
+      "observation_action_refs": [
+        392
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-bbhpu40n/front.png",
+          "camera": "front",
+          "action": 392
+        }
+      ]
+    },
+    {
+      "id": "bedroom_pink",
+      "category": "bedroom",
+      "description": "Pink-accent bedroom with bed and slim swivel desk chair by window shelves",
+      "position": [
+        -6.6,
+        4.4,
+        1.2
+      ],
+      "uncertainty_m": 1.8,
+      "observation_action_refs": [
+        439
+      ],
+      "image_refs": [
+        {
+          "path": "images/observe-mwt7he_z/front.png",
+          "camera": "front",
+          "action": 439
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "desk",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "study_window",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "study",
+      "relation": "connected_to",
+      "object": "corridor",
+      "via": "study_door"
+    },
+    {
+      "subject": "corridor",
+      "relation": "connected_to",
+      "object": "room_right_1",
+      "via": "open side doorway at estimated x=-4"
+    },
+    {
+      "subject": "corridor",
+      "relation": "connected_to",
+      "object": "living",
+      "via": "wide corridor mouth"
+    },
+    {
+      "subject": "piano_flowers",
+      "relation": "on",
+      "object": "piano"
+    },
+    {
+      "subject": "piano",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "white_chaise",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "green_table_plant",
+      "relation": "on",
+      "object": "living_coffee_table"
+    },
+    {
+      "subject": "white_lounge",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "lounge_side_table",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "living_window",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "glass_cabinet",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "tan_accent",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "living_coffee_table",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "corridor",
+      "relation": "connected_to",
+      "object": "bedroom_south",
+      "via": "door near x=-6"
+    },
+    {
+      "subject": "bedroom_desk_chair",
+      "relation": "in",
+      "object": "bedroom_south"
+    },
+    {
+      "subject": "study_armchair",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "study_shelves",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "corridor",
+      "relation": "connected_to",
+      "object": "north_branch",
+      "via": "side opening near x=-8.5"
+    },
+    {
+      "subject": "north_branch",
+      "relation": "connected_to",
+      "object": "bedroom_nw",
+      "via": "end doorway"
+    },
+    {
+      "subject": "north_branch",
+      "relation": "connected_to",
+      "object": "bedroom_pink",
+      "via": "northeast doorway"
+    }
+  ],
+  "targets": [
+    {
+      "order": 1,
+      "description": "black upright piano with purple flowers beside white chaise",
+      "candidate_ids": [
+        "piano"
+      ],
+      "selected_id": "piano",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-5b2epp6m/front.png",
+            "camera": "front",
+            "action": 48,
+            "note": "Black upright profile, purple flowers on top and adjacent white chaise all visible."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-8q9chstp/left.png",
+            "camera": "left",
+            "action": 67,
+            "note": "Navigated onto open floor directly before piano keyboard at action 67; unobstructed close approach, approximately 0.5\u20130.9 m from accessible front edge. This is a visual self-assessment, not evaluator feedback."
+          }
+        ]
+      },
+      "unchecked_alternatives": []
+    },
+    {
+      "order": 2,
+      "description": "sleek white lounge chair near side table and window",
+      "candidate_ids": [
+        "white_lounge"
+      ],
+      "selected_id": "white_lounge",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-8q9chstp/front.png",
+            "camera": "front",
+            "action": 67,
+            "note": "White sleek reclined lounge chair beside round side table and large window."
+          },
+          {
+            "path": "images/observe-p6qnupk7/right.png",
+            "camera": "right",
+            "action": 124,
+            "note": "Close side view confirms white lounge form against window; brass side table adjacent."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-p6qnupk7/right.png",
+            "camera": "right",
+            "action": 124,
+            "note": "Reached open floor immediately beside/front-right of white lounge after bypassing table; chair headrest and arm directly next to camera, estimated accessible gap under 0.7 m."
+          }
+        ]
+      },
+      "unchecked_alternatives": []
+    },
+    {
+      "order": 3,
+      "description": "tan modern accent chair next to glass cabinet",
+      "candidate_ids": [
+        "tan_accent"
+      ],
+      "selected_id": "tan_accent",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-8q9chstp/right.png",
+            "camera": "right",
+            "action": 67,
+            "note": "Tan curved chair seen beside tall glass cabinet at actions 60 and 67."
+          },
+          {
+            "path": "images/observe-8wd258c3/back.png",
+            "camera": "back",
+            "action": 83,
+            "note": "Tan upholstered modern swivel accent chair fully visible beside black glass cabinet; distinct from tan dining chairs."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-zq9z1msh/front.png",
+            "camera": "front",
+            "action": 142,
+            "note": "Walked to open floor immediately front-left of tan chair, approximately 0.5\u20130.8 m from its accessible seat/arm edge; glass cabinet remains visible behind."
+          }
+        ]
+      },
+      "unchecked_alternatives": []
+    },
+    {
+      "order": 4,
+      "description": "white cushioned armchair next to coffee table and shelves",
+      "candidate_ids": [
+        "white_modular_seat",
+        "bedroom_desk_chair",
+        "study_armchair"
+      ],
+      "selected_id": "study_armchair",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-zq9z1msh/back.png",
+            "camera": "back",
+            "action": 142,
+            "note": "White padded modular seat near coffee/side tables and corner shelves; shape not yet sufficiently resolved."
+          },
+          {
+            "path": "images/observe-rg_1r17y/front.png",
+            "camera": "front",
+            "action": 285,
+            "note": "White upholstered armchair has cushioned seat, back and arms immediately next to long gray table and built-in shelves. Strongest candidate so far."
+          },
+          {
+            "path": "images/observe-mwt7he_z/front.png",
+            "camera": "front",
+            "action": 439,
+            "note": "Alternative rooms checked: thin swivel office seats or bedside stool, not the solid white fabric cushioned armchair. Study chair uniquely matches white fabric, padded arms/seat and immediately adjacent extensive shelves plus gray freestanding table. Table-use ambiguity retained as limitation."
+          }
+        ],
+        "contradictions": [
+          {
+            "path": "images/observe-n9_cvvlg/front.png",
+            "camera": "front",
+            "action": 160,
+            "note": "Close view shows low ottoman/bench with tan bolster, not white cushioned armchair. Candidate rejected."
+          },
+          {
+            "path": "images/observe-8dilqdhr/front.png",
+            "camera": "front",
+            "action": 243,
+            "note": "Bedroom white armchair is at writing desk by bed; lacks requested shelves/coffee-table context. Lower-priority alternative."
+          },
+          {
+            "path": "images/observe-rg_1r17y/front.png",
+            "camera": "front",
+            "action": 285,
+            "note": "Adjacent gray table looks desk-height rather than conventional low coffee table; checking remaining room."
+          }
+        ]
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-vll5ypjb/front.png",
+            "camera": "front",
+            "action": 287,
+            "note": "Navigated to open floor directly at back/side of this chair; chair back is immediately below camera, estimated 0.3\u20130.5 m accessible approach. Identity remains under review."
+          }
+        ]
+      },
+      "unchecked_alternatives": [],
+      "assessment_note": "Supported as best visual/contextual match, with residual ambiguity because gray table appears desk-height. Not evaluator confirmation."
+    },
+    {
+      "order": 5,
+      "description": "green slender-branched plant on coffee table near sofa",
+      "candidate_ids": [
+        "green_table_plant"
+      ],
+      "selected_id": "green_table_plant",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-8q9chstp/front.png",
+            "camera": "front",
+            "action": 67,
+            "note": "Green leaves and slender branches in vase visibly supported by coffee table beside white sofa."
+          },
+          {
+            "path": "images/observe-km_cpdbd/front.png",
+            "camera": "front",
+            "action": 499,
+            "note": "Final close view resolves green leaves, slender branches, white vase standing on coffee table, and adjacent white sofa."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-km_cpdbd/front.png",
+            "camera": "front",
+            "action": 499,
+            "note": "Reached clear floor at right/front edge of coffee table after ordered earlier approaches. Estimate approximately 0.5\u20130.8 m of unobstructed floor to a table-side viewing position adjacent to plant. Visual estimate only; approved viewpoints and evaluator distances are hidden."
+          }
+        ]
+      },
+      "unchecked_alternatives": []
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 2,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 3,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 4,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 5,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 6,
+      "command": "turn_left",
+      "provisional_position": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 7,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.25,
+        3.061616997868383e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 8,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        6.123233995736766e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 9,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.75,
+        9.184850993605148e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 10,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.0,
+        1.2246467991473532e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 11,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.25,
+        1.5308084989341916e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 12,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.5,
+        1.83697019872103e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.75,
+        2.1431318985078683e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.0,
+        2.4492935982947064e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 15,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.25,
+        2.755455298081545e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.5,
+        3.061616997868383e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 17,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.75,
+        3.3677786976552215e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 18,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.0,
+        3.67394039744206e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 19,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.25,
+        3.980102097228898e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 20,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.5,
+        4.2862637970157366e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 21,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.75,
+        4.592425496802575e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 22,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.0,
+        4.898587196589413e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 23,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.25,
+        5.204748896376251e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 24,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.5,
+        5.510910596163089e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 25,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.75,
+        5.817072295949926e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 26,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.0,
+        6.123233995736764e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 27,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.25,
+        6.429395695523602e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 28,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.5,
+        6.73555739531044e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 29,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.75,
+        7.041719095097278e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 30,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        7.347880794884116e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 31,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.25,
+        7.654042494670954e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 32,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.5,
+        7.960204194457792e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 33,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.75,
+        8.266365894244629e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.0,
+        8.572527594031467e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.25,
+        8.878689293818305e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.5,
+        9.184850993605144e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.75,
+        9.491012693391982e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 38,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.0,
+        9.79717439317882e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 39,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.25,
+        1.0103336092965658e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 40,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.5,
+        1.0409497792752495e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 41,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.75,
+        1.0715659492539333e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 42,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.0,
+        1.1021821192326171e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.25,
+        1.132798289211301e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.5,
+        1.1634144591899847e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.75,
+        1.1940306291686685e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 46,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.0,
+        1.2246467991473523e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.25,
+        1.255262969126036e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.5,
+        1.2858791391047198e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.75,
+        1.3164953090834036e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.0,
+        1.3471114790620874e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 51,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.25,
+        1.3777276490407712e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 52,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.5,
+        1.408343819019455e-15,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 53,
+      "command": "turn_right",
+      "provisional_position": [
+        -11.5,
+        1.408343819019455e-15,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 54,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.71650635094611,
+        0.1250000000000014,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 55,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.93301270189222,
+        0.2500000000000014,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 56,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.14951905283833,
+        0.3750000000000014,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.366025403784441,
+        0.5000000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 58,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.582531754730551,
+        0.6250000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 59,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.799038105676662,
+        0.7500000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 60,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.015544456622772,
+        0.8750000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 61,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.232050807568882,
+        1.0000000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 63,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 64,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 65,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.448557158514992,
+        1.3750000000000013,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 66,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.448557158514992,
+        1.6250000000000013,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 67,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.448557158514992,
+        1.8750000000000013,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 68,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.448557158514992,
+        1.8750000000000013,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 69,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.323557158514992,
+        2.091506350946111,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 70,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.198557158514992,
+        2.308012701892221,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 71,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.073557158514992,
+        2.524519052838331,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 72,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        2.7410254037844406,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 73,
+      "command": "turn_left",
+      "provisional_position": [
+        -12.948557158514992,
+        2.7410254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        2.9910254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 75,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        3.2410254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 76,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        3.4910254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 77,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        3.7410254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        3.9910254037844406,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 79,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        4.241025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 80,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        4.491025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 81,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        4.741025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 82,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        4.991025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 83,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        5.241025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 84,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        5.491025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        5.741025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        5.991025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 87,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        6.241025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 88,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        6.491025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 89,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        6.741025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 90,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        6.991025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 91,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        7.241025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 92,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.948557158514992,
+        7.491025403784441,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 93,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.9486,
+        6.0,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 94,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.9486,
+        6.0,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 95,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.9486,
+        6.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 96,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.6986,
+        6.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 97,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.4486,
+        6.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 98,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.1986,
+        6.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 99,
+      "command": "turn_left",
+      "provisional_position": [
+        -12.1986,
+        6.0,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 100,
+      "command": "turn_left",
+      "provisional_position": [
+        -12.1986,
+        6.0,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 101,
+      "command": "turn_left",
+      "provisional_position": [
+        -12.1986,
+        6.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 102,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.1986,
+        6.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 103,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.1986,
+        6.5,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 104,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.1986,
+        6.75,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 105,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.1986,
+        7.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 106,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.1986,
+        6.25,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 107,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.1986,
+        6.25,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 108,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.1986,
+        6.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 109,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        6.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.6986,
+        6.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 111,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        6.25,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 112,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        6.25,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 113,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        6.25,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 114,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        6.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        6.5,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        6.75,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        7.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 118,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        7.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 119,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.4486,
+        7.5,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 120,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        7.5,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 121,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        7.5,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 122,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.4486,
+        7.5,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 123,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.6986,
+        7.5,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 124,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        7.5,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 125,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        7.5,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 126,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        7.5,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 127,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        7.5,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 128,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        7.25,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 129,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        7.0,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 130,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        6.75,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 131,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        6.5,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 132,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        6.25,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 133,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        6.0,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 134,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        5.75,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 135,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        5.5,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 136,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        5.25,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 137,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        5.0,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 138,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.75,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 139,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.5,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 140,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.25,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 141,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.0,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 142,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 143,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 144,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 145,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 146,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 147,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 148,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        3.75,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 149,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 150,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 151,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.5,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 152,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        4.75,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 153,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.9486,
+        5.0,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 154,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        5.0,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 155,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.9486,
+        5.0,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 156,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.165106350946111,
+        5.125,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 157,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.381612701892221,
+        5.25,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 158,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.598119052838332,
+        5.375,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 159,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.814625403784442,
+        5.5,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        5.625,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 161,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        5.625,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 162,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        5.625,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 163,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        5.625,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 164,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        5.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 165,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        5.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 166,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        5.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 167,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        4.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 168,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        4.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        4.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 170,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        4.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 171,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        3.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 172,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        3.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 173,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        3.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 174,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        3.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 175,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        2.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 176,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        2.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        2.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 178,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        2.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 179,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        1.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 180,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        1.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        1.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        1.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 183,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        0.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 184,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 185,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 186,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 187,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 188,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.781131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 189,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.531131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 190,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.281131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 191,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 192,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.781131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 193,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.531131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 194,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.281131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 195,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.031131754730552,
+        0.625,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 196,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.75,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 197,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.5,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 198,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.25,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 199,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.0,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 200,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.75,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 201,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.5,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 202,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.25,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 203,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.0,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 204,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.75,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 205,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.5,
+        0.0,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 206,
+      "command": "turn_right",
+      "provisional_position": [
+        -11.5,
+        0.625,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 207,
+      "command": "turn_right",
+      "provisional_position": [
+        -11.5,
+        0.625,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 208,
+      "command": "turn_right",
+      "provisional_position": [
+        -11.5,
+        0.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 209,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.5,
+        0.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 210,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.5,
+        0.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 211,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.5,
+        0.125,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 212,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.5,
+        0.125,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 213,
+      "command": "turn_left",
+      "provisional_position": [
+        -11.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 214,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 215,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 216,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 218,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 219,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 220,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 221,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 222,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 223,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 224,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 225,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 226,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 232,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 233,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 234,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 235,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 236,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 237,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 238,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 239,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 240,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 241,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 242,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 243,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 244,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 245,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 246,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 247,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 248,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 249,
+      "command": "turn_left",
+      "provisional_position": [
+        -6.0,
+        -1.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 250,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.875,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 251,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.625,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.375,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        -0.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 255,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 256,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 257,
+      "command": "turn_right",
+      "provisional_position": [
+        -6.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 258,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 259,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 260,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 263,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 264,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 265,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 266,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 267,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 268,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 269,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 270,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 271,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 272,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 273,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 274,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 275,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 276,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.25,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 277,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.0,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 278,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.75,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 279,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 280,
+      "command": "turn_right",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 281,
+      "command": "turn_right",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 282,
+      "command": "turn_right",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 283,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 284,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.375,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 285,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.625,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 286,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.875,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 287,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 288,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 289,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 290,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 291,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 292,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 293,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        -1.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 294,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.875,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 295,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.625,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 296,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.375,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 297,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        -0.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 298,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 299,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 300,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 301,
+      "command": "turn_left",
+      "provisional_position": [
+        -0.5,
+        0.125,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 302,
+      "command": "move_forward",
+      "provisional_position": [
+        -0.75,
+        0.12500000000000003,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 303,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.0,
+        0.12500000000000006,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 304,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.25,
+        0.12500000000000008,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 305,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.5,
+        0.1250000000000001,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 306,
+      "command": "move_forward",
+      "provisional_position": [
+        -1.75,
+        0.12500000000000014,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 307,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.0,
+        0.12500000000000017,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 308,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.25,
+        0.1250000000000002,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 309,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.5,
+        0.12500000000000022,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 310,
+      "command": "move_forward",
+      "provisional_position": [
+        -2.75,
+        0.12500000000000025,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 311,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.0,
+        0.12500000000000028,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 312,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.25,
+        0.1250000000000003,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 313,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.5,
+        0.12500000000000033,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 314,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.75,
+        0.12500000000000036,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 315,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.0,
+        0.1250000000000004,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 316,
+      "command": "turn_right",
+      "provisional_position": [
+        -4.0,
+        0.1250000000000004,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 317,
+      "command": "turn_right",
+      "provisional_position": [
+        -4.0,
+        0.1250000000000004,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 318,
+      "command": "turn_right",
+      "provisional_position": [
+        -4.0,
+        0.1250000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 319,
+      "command": "turn_right",
+      "provisional_position": [
+        -4.0,
+        0.1250000000000004,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 320,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.875,
+        0.34150635094611004,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 321,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.75,
+        0.5580127018922196,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 322,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        0.7745190528383292,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 323,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        0.7745190528383292,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 324,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.0245190528383292,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 325,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.2745190528383292,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 326,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.5245190528383292,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 327,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.7745190528383292,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 328,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.024519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 329,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.274519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 330,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.524519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 331,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.774519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 332,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        3.024519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 333,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 334,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 335,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 336,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 337,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 338,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 339,
+      "command": "turn_left",
+      "provisional_position": [
+        -3.625,
+        3.274519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 340,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        3.024519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 341,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.774519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 342,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.524519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 343,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.274519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 344,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        2.024519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 345,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.774519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 346,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.524519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 347,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.274519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 348,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        1.024519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 349,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        0.774519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 350,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        0.524519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 351,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.625,
+        0.274519052838329,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 352,
+      "command": "turn_right",
+      "provisional_position": [
+        -3.625,
+        0.274519052838329,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 353,
+      "command": "turn_right",
+      "provisional_position": [
+        -3.625,
+        0.274519052838329,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 354,
+      "command": "turn_right",
+      "provisional_position": [
+        -3.625,
+        0.274519052838329,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 355,
+      "command": "move_forward",
+      "provisional_position": [
+        -3.875,
+        0.27451905283832906,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 356,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.125,
+        0.2745190528383291,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 357,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.375,
+        0.27451905283832917,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 358,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.625,
+        0.2745190528383292,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 359,
+      "command": "move_forward",
+      "provisional_position": [
+        -4.875,
+        0.2745190528383293,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 360,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.125,
+        0.27451905283832934,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 361,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.375,
+        0.2745190528383294,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 362,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.625,
+        0.27451905283832945,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 363,
+      "command": "move_forward",
+      "provisional_position": [
+        -5.875,
+        0.2745190528383295,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 364,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.125,
+        0.27451905283832956,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 365,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.375,
+        0.2745190528383296,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 366,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.625,
+        0.27451905283832967,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 367,
+      "command": "move_forward",
+      "provisional_position": [
+        -6.875,
+        0.2745190528383297,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 368,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.125,
+        0.2745190528383298,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 369,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.375,
+        0.27451905283832984,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 370,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.625,
+        0.2745190528383299,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 371,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.875,
+        0.27451905283832995,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 372,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.125,
+        0.27451905283833,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 373,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        0.27451905283833006,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 374,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.625,
+        0.2745190528383301,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 375,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.625,
+        0.2745190528383301,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 376,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.625,
+        0.2745190528383301,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 377,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.625,
+        0.2745190528383301,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 378,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.625,
+        0.2745190528383301,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 379,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.5,
+        0.49102540378443976,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 380,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        0.7075317547305494,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 381,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        0.7075317547305494,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 382,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        0.9575317547305494,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 383,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        1.2075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 384,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        1.4575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 385,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        1.7075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 386,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        1.9575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 387,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 388,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.4575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 389,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.7075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 390,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 391,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        3.2075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 392,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 393,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 394,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 395,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 396,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 397,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 398,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        3.4575317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 399,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        3.2075317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 400,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 401,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.7075317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 402,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.4575317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 403,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 404,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 300
+    },
+    {
+      "action": 405,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 330
+    },
+    {
+      "action": 406,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 407,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.125,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 408,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.875,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 409,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.625,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 410,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.375,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 411,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 412,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 413,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.2075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 414,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.9,
+        2.4575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 415,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.9,
+        2.7075317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 416,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.9,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 417,
+      "command": "turn_right",
+      "provisional_position": [
+        -7.9,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 418,
+      "command": "turn_right",
+      "provisional_position": [
+        -7.9,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 419,
+      "command": "turn_right",
+      "provisional_position": [
+        -7.9,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 420,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.65,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 421,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.4,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 422,
+      "command": "move_forward",
+      "provisional_position": [
+        -7.15,
+        2.9575317547305495,
+        0
+      ],
+      "yaw": 0
+    },
+    {
+      "action": 423,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 30
+    },
+    {
+      "action": 424,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 425,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 426,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 427,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 428,
+      "command": "turn_left",
+      "provisional_position": [
+        -7.9,
+        2.25,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 429,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.15,
+        2.25,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 430,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.4,
+        2.25,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 431,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        2.25,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 432,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        2.25,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 433,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        2.25,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 434,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        2.25,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 435,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        2.25,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 436,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.525,
+        2.46650635094611,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 437,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.4,
+        2.6830127018922196,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 438,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.275,
+        2.8995190528383294,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 439,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 440,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 441,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 442,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 443,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 444,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 445,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.15,
+        3.1160254037844393,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 446,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.275,
+        2.89951905283833,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 447,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.4,
+        2.6830127018922205,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 448,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.525,
+        2.466506350946111,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 449,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        2.2500000000000018,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 450,
+      "command": "turn_left",
+      "provisional_position": [
+        -8.65,
+        2.2500000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 451,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        2.0000000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 452,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        1.7500000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 453,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        1.5000000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 454,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        1.2500000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 455,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        1.0000000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 456,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        0.7500000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 457,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        0.5000000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 458,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.65,
+        0.2500000000000018,
+        0
+      ],
+      "yaw": 270
+    },
+    {
+      "action": 459,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        0.2500000000000018,
+        0
+      ],
+      "yaw": 240
+    },
+    {
+      "action": 460,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        0.2500000000000018,
+        0
+      ],
+      "yaw": 210
+    },
+    {
+      "action": 461,
+      "command": "turn_right",
+      "provisional_position": [
+        -8.65,
+        0.2500000000000018,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 462,
+      "command": "move_forward",
+      "provisional_position": [
+        -8.75,
+        3.061616997868383e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 463,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.0,
+        6.123233995736766e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 464,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.25,
+        9.184850993605148e-17,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 465,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.5,
+        1.2246467991473532e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 466,
+      "command": "move_forward",
+      "provisional_position": [
+        -9.75,
+        1.5308084989341916e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 467,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.0,
+        1.83697019872103e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 468,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.25,
+        2.1431318985078683e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 469,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.5,
+        2.4492935982947064e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 470,
+      "command": "move_forward",
+      "provisional_position": [
+        -10.75,
+        2.755455298081545e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 471,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.0,
+        3.061616997868383e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 472,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.25,
+        3.3677786976552215e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 473,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.5,
+        3.67394039744206e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 474,
+      "command": "move_forward",
+      "provisional_position": [
+        -11.75,
+        3.980102097228898e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 475,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.0,
+        4.2862637970157366e-16,
+        0
+      ],
+      "yaw": 180
+    },
+    {
+      "action": 476,
+      "command": "turn_right",
+      "provisional_position": [
+        -12.0,
+        4.2862637970157366e-16,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 477,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.21650635094611,
+        0.12500000000000042,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 478,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.43301270189222,
+        0.2500000000000004,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 479,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.64951905283833,
+        0.3750000000000004,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 480,
+      "command": "move_forward",
+      "provisional_position": [
+        -12.866025403784441,
+        0.5000000000000003,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 481,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.082531754730551,
+        0.6250000000000003,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 482,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.299038105676662,
+        0.7500000000000003,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 483,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        0.8750000000000003,
+        0
+      ],
+      "yaw": 150
+    },
+    {
+      "action": 484,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.515544456622772,
+        0.8750000000000003,
+        0
+      ],
+      "yaw": 120
+    },
+    {
+      "action": 485,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.515544456622772,
+        0.8750000000000003,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 486,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        1.1250000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 487,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        1.3750000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 488,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        1.6250000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 489,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        1.8750000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 490,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        2.1250000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 491,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.515544456622772,
+        2.3750000000000004,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 492,
+      "command": "turn_right",
+      "provisional_position": [
+        -13.515544456622772,
+        1.85,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 493,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.390544456622772,
+        2.06650635094611,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 494,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.265544456622772,
+        2.2830127018922197,
+        0
+      ],
+      "yaw": 60
+    },
+    {
+      "action": 495,
+      "command": "turn_left",
+      "provisional_position": [
+        -13.265544456622772,
+        2.2830127018922197,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 496,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.265544456622772,
+        2.5330127018922197,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 497,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.265544456622772,
+        2.7830127018922197,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 498,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.265544456622772,
+        3.0330127018922197,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 499,
+      "command": "move_forward",
+      "provisional_position": [
+        -13.265544456622772,
+        3.2830127018922197,
+        0
+      ],
+      "yaw": 90
+    },
+    {
+      "action": 500,
+      "command": "stop",
+      "provisional_position": [
+        -13.265544456622772,
+        3.2830127018922197,
+        0
+      ],
+      "yaw": 90
+    }
+  ],
+  "observations": [
+    {
+      "action": 0,
+      "image_dir": "images/observe-_0py3tvl",
+      "note": "Start by windows in study. Door behind; no target identified."
+    },
+    {
+      "action": 22,
+      "image_dir": "images/observe-3i8d87rq",
+      "note": "Moved through study doorway; translation consistent with view."
+    },
+    {
+      "action": 48,
+      "image_dir": "images/observe-5b2epp6m",
+      "note": "Hall opens into living/dining area. Piano target visible beyond entrance."
+    },
+    {
+      "action": 67,
+      "image_dir": "images/observe-8q9chstp",
+      "note": "Close piano approach. Living seating arrangement seen. Next route uses open TV-side aisle to white window lounge; coffee table blocks central route."
+    },
+    {
+      "action": 92,
+      "image_dir": "images/observe-dsrgtxkz",
+      "note": "Blocked forward. Target 2 arrival remains unresolved. Will sidestep TV-side."
+    },
+    {
+      "action": 124,
+      "image_dir": "images/observe-p6qnupk7",
+      "note": "At close right-front side of target 2. Next return down clear TV-side aisle to tan chair."
+    },
+    {
+      "action": 142,
+      "image_dir": "images/observe-zq9z1msh",
+      "note": "Close tan chair approach. Fourth target unresolved; inspect window-end white modular seating before corridor rooms."
+    },
+    {
+      "action": 160,
+      "image_dir": "images/observe-n9_cvvlg",
+      "note": "Window-end seat is low ottoman, rejected for target 4. Revisit study via living entrance and known corridor."
+    },
+    {
+      "action": 243,
+      "image_dir": "images/observe-8dilqdhr",
+      "note": "Checked south bedroom. Returning to study whose shelves match better."
+    },
+    {
+      "action": 287,
+      "image_dir": "images/observe-vll5ypjb",
+      "note": "Close study-armchair approach; identity unresolved due coffee-table terminology. Check alternatives before final plant."
+    },
+    {
+      "action": 333,
+      "image_dir": "images/observe-38rcr46i",
+      "note": "North bedroom checked: bed and cylindrical stool; no armchair or coffee-table/shelves group."
+    },
+    {
+      "action": 439,
+      "image_dir": "images/observe-mwt7he_z",
+      "note": "Pink bedroom alternative checked. Return through north branch and corridor to living plant. 61 actions remain."
+    },
+    {
+      "action": 491,
+      "image_dir": "images/observe-fpi2r_nk",
+      "note": "Back beside piano, plant on coffee table ahead. Near-identical geometry to action 67 indicates about 0.5 m cumulative nominal displacement overestimate; final approach will use visible right table edge."
+    },
+    {
+      "action": 499,
+      "image_dir": "images/observe-km_cpdbd",
+      "note": "Final approach next to plant coffee table. One action reserved for explicit STOP."
+    }
+  ],
+  "localization_corrections": [
+    {
+      "action": 92,
+      "reason": "Images at 88 and 92 identical: four forward attempts made no displacement. Withdraw their full 1 m; action 84\u201388 travel also conservatively revised from 1.25 to approximately 0.75 m based on limited visual change. Obstacle likely small table/ottoman at feet.",
+      "position": [
+        -12.9486,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 105,
+      "reason": "Only small visual translation over four attempts; revise 1 m command to approximately 0.25 m due to low furniture collision.",
+      "position": [
+        -12.1986,
+        6.25,
+        0
+      ]
+    },
+    {
+      "action": 195,
+      "reason": "Recognized living-corridor mouth from action 48 in opposite view; realign lateral position with original corridor axis. Living-route drift approximately 0.6 m; previous living coordinates remain uncertain estimates.",
+      "position": [
+        -11,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 205,
+      "reason": "195 to 205 images nearly identical: forward blocked at corridor mouth. Withdraw 2.5 m and premature centreline reanchor; cabinet-side jamb requires lateral shift right.",
+      "position": [
+        -11.5,
+        0.625,
+        0
+      ]
+    },
+    {
+      "action": 410,
+      "reason": "Moved into basin-wall recess rather than bedroom; estimated forward motion revised to about 0.5 m, increase uncertainty. Bedroom opening lies north of recess.",
+      "position": [
+        -7.9,
+        2.2075317547305495,
+        0
+      ]
+    },
+    {
+      "action": 422,
+      "reason": "Recess blocks both north and east movement; visual views essentially unchanged. Withdraw attempted displacement and back out before turning.",
+      "position": [
+        -7.9,
+        2.25,
+        0
+      ]
+    },
+    {
+      "action": 461,
+      "reason": "Returned to main hall; kitchen opening, branch and end door align with action 40 view, reanchor to original corridor estimate.",
+      "position": [
+        -8.5,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 491,
+      "reason": "Recognized piano/front-living viewpoint close to action 67; revise y from 2.375 to 1.85, likely prior collision/sliding.",
+      "position": [
+        -13.515544456622772,
+        1.85,
+        0
+      ]
+    }
+  ],
+  "final_review": {
+    "action": 499,
+    "ordered_approach_actions": [
+      67,
+      124,
+      142,
+      287,
+      499
+    ],
+    "status": "All five have supported visual self-assessments; no evaluator feedback.",
+    "limitations": [
+      "Target 4 study armchair fits white fabric, cushioned seat/arms and shelves; adjoining long gray table appears desk-height, so identity retains residual ambiguity.",
+      "Global coordinates are approximate and several blocked translations were withdrawn; no ground-truth pose or approved viewpoint access.",
+      "Final approach proximity is estimated from images, not a measured geodesic."
+    ],
+    "stop_reason": "Used remaining navigation budget to approach final plant; explicit STOP is action 500."
+  }
+}

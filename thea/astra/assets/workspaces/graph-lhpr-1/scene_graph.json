@@ -1,0 +1,2411 @@
+{
+  "frame": {
+    "origin": "episode start",
+    "axes": "+x initially forward, +y initially left, +z up",
+    "units": "metres"
+  },
+  "updated_at_action": 500,
+  "agent_belief": {
+    "position": [
+      -10,
+      1,
+      11
+    ],
+    "heading_degrees": 270,
+    "uncertainty": "\u00b13m; last two forward commands not visually verified; coordinates are rough episode-local estimates only"
+  },
+  "nodes": [
+    {
+      "id": "stairwell_1",
+      "category": "stairwell",
+      "description": "Curved dark stairs with ornate black railing and tall arched windows; initial view faces upward.",
+      "position": [
+        0,
+        0,
+        null
+      ],
+      "uncertainty": "Extent and floor unknown",
+      "observations": [
+        {
+          "image": "images/observe-tum3k924/front.png",
+          "camera": "front",
+          "action": 0
+        },
+        {
+          "image": "images/observe-tum3k924/left.png",
+          "camera": "left",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "hall_lower",
+      "category": "hall",
+      "description": "Vaulted lower stair entrance with dark glass panels, two closed black doors, and bright architectural mural in recess. No decorative plant identified.",
+      "position": [
+        -3,
+        0,
+        -1
+      ],
+      "uncertainty": "Approximate location, \u00b11m; room semantics provisional",
+      "observations": [
+        {
+          "image": "images/observe-vhrli6uv/front.png",
+          "camera": "front",
+          "action": 24
+        },
+        {
+          "image": "images/observe-bxuep23_/front.png",
+          "camera": "front",
+          "action": 27
+        },
+        {
+          "image": "images/observe-1et0zhvl/right.png",
+          "camera": "right",
+          "action": 37
+        }
+      ]
+    },
+    {
+      "id": "hall_middle",
+      "category": "stair_landing",
+      "description": "Next full landing above start, second architectural mural and closed black doors/glass panels; stairs continue upward.",
+      "position": [
+        -2,
+        1,
+        2
+      ],
+      "uncertainty": "\u00b11m horizontal and elevation approximate",
+      "observations": [
+        {
+          "image": "images/observe-eg0774id/front.png",
+          "camera": "front",
+          "action": 118
+        },
+        {
+          "image": "images/observe-7tgrch02/front.png",
+          "camera": "front",
+          "action": 125
+        }
+      ]
+    },
+    {
+      "id": "hall_upper",
+      "category": "stair_landing",
+      "description": "Third observed full landing with red architectural mural, closed black doors, glass panels and another upward stair flight.",
+      "position": [
+        -2,
+        1,
+        5
+      ],
+      "uncertainty": "\u00b11m horizontal, \u00b11.5m elevation",
+      "observations": [
+        {
+          "image": "images/observe-khzixwak/front.png",
+          "camera": "front",
+          "action": 175
+        },
+        {
+          "image": "images/observe-t1i0_bck/front.png",
+          "camera": "front",
+          "action": 188
+        }
+      ]
+    },
+    {
+      "id": "hall_checker",
+      "category": "hall",
+      "description": "Highest explored stair landing with black-white checker tiles, open glass doorway to red-stair foyer.",
+      "position": [
+        -2,
+        0,
+        8
+      ],
+      "uncertainty": "\u00b11.5m position, \u00b12m elevation",
+      "observations": [
+        {
+          "image": "images/observe-_1xflm54/front.png",
+          "camera": "front",
+          "action": 250
+        },
+        {
+          "image": "images/observe-1n1bbmee/front.png",
+          "camera": "front",
+          "action": 261
+        }
+      ]
+    },
+    {
+      "id": "foyer_red",
+      "category": "hall",
+      "description": "Checkerboard foyer with red staircase and open side doorway to purple-carpet corridor.",
+      "position": [
+        -3,
+        -2,
+        8
+      ],
+      "uncertainty": "\u00b11.5m",
+      "observations": [
+        {
+          "image": "images/observe-1gokt0ee/front.png",
+          "camera": "front",
+          "action": 272
+        }
+      ]
+    },
+    {
+      "id": "corridor_purple",
+      "category": "hall",
+      "description": "Narrow purple carpet corridor with white motif, light walls and black doors.",
+      "position": [
+        -1,
+        -3,
+        8
+      ],
+      "uncertainty": "\u00b12m",
+      "observations": [
+        {
+          "image": "images/observe-mya_ium6/front.png",
+          "camera": "front",
+          "action": 285
+        }
+      ]
+    },
+    {
+      "id": "corridor_dark",
+      "category": "passage",
+      "description": "Second open foyer doorway, tan carpet with white motif, extensive black missing geometry beyond; upper fragments of furnishings visible.",
+      "position": [
+        -5,
+        -2,
+        8
+      ],
+      "uncertainty": "\u00b12m; onward traversability unresolved",
+      "observations": [
+        {
+          "image": "images/observe-7coqq2r6/front.png",
+          "camera": "front",
+          "action": 352
+        },
+        {
+          "image": "images/observe-0d8rz71p/front.png",
+          "camera": "front",
+          "action": 356
+        }
+      ]
+    },
+    {
+      "id": "hall_red_upper",
+      "category": "hall",
+      "description": "Red-floor upper landing with purple upholstered bench, framed photos, and further short stairs/opening. No plant visible in surveyed portion.",
+      "position": [
+        -5,
+        -3,
+        10.5
+      ],
+      "uncertainty": "\u00b12m horizontal and vertical",
+      "observations": [
+        {
+          "image": "images/observe-k0yvm90v/front.png",
+          "camera": "front",
+          "action": 432
+        },
+        {
+          "image": "images/observe-4jz4q0o5/front.png",
+          "camera": "front",
+          "action": 435
+        }
+      ]
+    },
+    {
+      "id": "lounge_dark",
+      "category": "living_room_candidate",
+      "description": "Dark-walled furnished room with purple armchairs and benches, framed pictures, wood floor, central spiral stair, and white cloth-covered tall table.",
+      "position": [
+        -7,
+        0,
+        11
+      ],
+      "uncertainty": "\u00b12m coordinates; living-room semantic identity provisional",
+      "observations": [
+        {
+          "image": "images/observe-8sh1iqff/front.png",
+          "camera": "front",
+          "action": 465
+        },
+        {
+          "image": "images/observe-p60h7tuu/left.png",
+          "camera": "left",
+          "action": 471
+        },
+        {
+          "image": "images/observe-7ang5wrh/front.png",
+          "camera": "front",
+          "action": 498
+        }
+      ]
+    },
+    {
+      "id": "table_low_1",
+      "category": "coffee_table_candidate",
+      "description": "Low pale-topped table beside purple bench near lounge entry.",
+      "position": [
+        -7,
+        -1,
+        11.5
+      ],
+      "uncertainty": "\u00b12m horizontal; table form visually supported, room match provisional",
+      "observations": [
+        {
+          "image": "images/observe-8sh1iqff/left.png",
+          "camera": "left",
+          "action": 465
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "hall_lower",
+      "relation": "connected_to",
+      "object": "stairwell_1",
+      "via": "lower stair flight"
+    },
+    {
+      "subject": "hall_middle",
+      "relation": "connected_to",
+      "object": "stairwell_1",
+      "via": "upper flight traversed"
+    },
+    {
+      "subject": "hall_upper",
+      "relation": "connected_to",
+      "object": "hall_middle",
+      "via": "two stair flights"
+    },
+    {
+      "subject": "hall_checker",
+      "relation": "connected_to",
+      "object": "hall_upper",
+      "via": "two stair flights"
+    },
+    {
+      "subject": "hall_checker",
+      "relation": "connected_to",
+      "object": "foyer_red",
+      "via": "open glass doorway"
+    },
+    {
+      "subject": "foyer_red",
+      "relation": "connected_to",
+      "object": "corridor_purple",
+      "via": "open side doorway"
+    },
+    {
+      "subject": "foyer_red",
+      "relation": "connected_to",
+      "object": "corridor_dark",
+      "via": "second open doorway"
+    },
+    {
+      "subject": "foyer_red",
+      "relation": "connected_to",
+      "object": "hall_red_upper",
+      "via": "red staircase, successfully ascended after realigning at base"
+    },
+    {
+      "subject": "hall_red_upper",
+      "relation": "connected_to",
+      "object": "lounge_dark",
+      "via": "short steps and open left door"
+    },
+    {
+      "subject": "table_low_1",
+      "relation": "in",
+      "object": "lounge_dark"
+    }
+  ],
+  "targets": [
+    {
+      "stage": 0,
+      "description": "decorative plant in the hall",
+      "candidate_ids": [],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "action": 498,
+            "image": "images/observe-7ang5wrh/front.png",
+            "note": "No decorative hall plant identified across explored stairs, halls and lounge."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      },
+      "unchecked_alternatives": [
+        "Unexplored areas beyond observed passages; plant location unresolved"
+      ]
+    },
+    {
+      "stage": 1,
+      "description": "coffee table in the living room",
+      "candidate_ids": [
+        "table_low_1"
+      ],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "action": 465,
+            "image": "images/observe-8sh1iqff/left.png",
+            "note": "Low table beside upholstered seating; plausible coffee table but specified living room not independently established."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      },
+      "unchecked_alternatives": [
+        "Room semantics and remaining lounge objects"
+      ]
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "move_forward"
+    },
+    {
+      "action": 2,
+      "command": "move_forward"
+    },
+    {
+      "action": 3,
+      "command": "move_forward"
+    },
+    {
+      "action": 4,
+      "command": "move_forward"
+    },
+    {
+      "action": 5,
+      "command": "turn_left"
+    },
+    {
+      "action": 6,
+      "command": "turn_left"
+    },
+    {
+      "action": 7,
+      "command": "turn_left"
+    },
+    {
+      "action": 8,
+      "command": "turn_left"
+    },
+    {
+      "action": 9,
+      "command": "turn_left"
+    },
+    {
+      "action": 10,
+      "command": "turn_left"
+    },
+    {
+      "action": 11,
+      "command": "move_forward"
+    },
+    {
+      "action": 12,
+      "command": "move_forward"
+    },
+    {
+      "action": 13,
+      "command": "move_forward"
+    },
+    {
+      "action": 14,
+      "command": "move_forward"
+    },
+    {
+      "action": 15,
+      "command": "move_forward"
+    },
+    {
+      "action": 16,
+      "command": "move_forward"
+    },
+    {
+      "action": 17,
+      "command": "move_forward"
+    },
+    {
+      "action": 18,
+      "command": "move_forward"
+    },
+    {
+      "action": 19,
+      "command": "move_forward"
+    },
+    {
+      "action": 20,
+      "command": "move_forward"
+    },
+    {
+      "action": 21,
+      "command": "move_forward"
+    },
+    {
+      "action": 22,
+      "command": "move_forward"
+    },
+    {
+      "action": 23,
+      "command": "move_forward"
+    },
+    {
+      "action": 24,
+      "command": "move_forward"
+    },
+    {
+      "action": 25,
+      "command": "turn_right"
+    },
+    {
+      "action": 26,
+      "command": "turn_right"
+    },
+    {
+      "action": 27,
+      "command": "turn_right"
+    },
+    {
+      "action": 28,
+      "command": "turn_left"
+    },
+    {
+      "action": 29,
+      "command": "turn_left"
+    },
+    {
+      "action": 30,
+      "command": "turn_left"
+    },
+    {
+      "action": 31,
+      "command": "move_forward"
+    },
+    {
+      "action": 32,
+      "command": "move_forward"
+    },
+    {
+      "action": 33,
+      "command": "move_forward"
+    },
+    {
+      "action": 34,
+      "command": "move_forward"
+    },
+    {
+      "action": 35,
+      "command": "move_forward"
+    },
+    {
+      "action": 36,
+      "command": "move_forward"
+    },
+    {
+      "action": 37,
+      "command": "move_forward"
+    },
+    {
+      "action": 38,
+      "command": "turn_left"
+    },
+    {
+      "action": 39,
+      "command": "turn_left"
+    },
+    {
+      "action": 40,
+      "command": "turn_left"
+    },
+    {
+      "action": 41,
+      "command": "move_forward"
+    },
+    {
+      "action": 42,
+      "command": "move_forward"
+    },
+    {
+      "action": 43,
+      "command": "move_forward"
+    },
+    {
+      "action": 44,
+      "command": "move_forward"
+    },
+    {
+      "action": 45,
+      "command": "move_forward"
+    },
+    {
+      "action": 46,
+      "command": "turn_left"
+    },
+    {
+      "action": 47,
+      "command": "turn_left"
+    },
+    {
+      "action": 48,
+      "command": "turn_left"
+    },
+    {
+      "action": 49,
+      "command": "move_forward"
+    },
+    {
+      "action": 50,
+      "command": "move_forward"
+    },
+    {
+      "action": 51,
+      "command": "move_forward"
+    },
+    {
+      "action": 52,
+      "command": "move_forward"
+    },
+    {
+      "action": 53,
+      "command": "move_forward"
+    },
+    {
+      "action": 54,
+      "command": "move_forward"
+    },
+    {
+      "action": 55,
+      "command": "move_forward"
+    },
+    {
+      "action": 56,
+      "command": "move_forward"
+    },
+    {
+      "action": 57,
+      "command": "move_forward"
+    },
+    {
+      "action": 58,
+      "command": "move_forward"
+    },
+    {
+      "action": 59,
+      "command": "move_forward"
+    },
+    {
+      "action": 60,
+      "command": "move_forward"
+    },
+    {
+      "action": 61,
+      "command": "turn_left"
+    },
+    {
+      "action": 62,
+      "command": "turn_left"
+    },
+    {
+      "action": 63,
+      "command": "turn_left"
+    },
+    {
+      "action": 64,
+      "command": "move_forward"
+    },
+    {
+      "action": 65,
+      "command": "move_forward"
+    },
+    {
+      "action": 66,
+      "command": "move_forward"
+    },
+    {
+      "action": 67,
+      "command": "turn_right"
+    },
+    {
+      "action": 68,
+      "command": "turn_right"
+    },
+    {
+      "action": 69,
+      "command": "turn_right"
+    },
+    {
+      "action": 70,
+      "command": "move_forward"
+    },
+    {
+      "action": 71,
+      "command": "move_forward"
+    },
+    {
+      "action": 72,
+      "command": "move_forward"
+    },
+    {
+      "action": 73,
+      "command": "move_forward"
+    },
+    {
+      "action": 74,
+      "command": "move_forward"
+    },
+    {
+      "action": 75,
+      "command": "move_forward"
+    },
+    {
+      "action": 76,
+      "command": "move_forward"
+    },
+    {
+      "action": 77,
+      "command": "move_forward"
+    },
+    {
+      "action": 78,
+      "command": "move_forward"
+    },
+    {
+      "action": 79,
+      "command": "move_forward"
+    },
+    {
+      "action": 80,
+      "command": "move_forward"
+    },
+    {
+      "action": 81,
+      "command": "move_forward"
+    },
+    {
+      "action": 82,
+      "command": "turn_left"
+    },
+    {
+      "action": 83,
+      "command": "turn_left"
+    },
+    {
+      "action": 84,
+      "command": "turn_left"
+    },
+    {
+      "action": 85,
+      "command": "move_forward"
+    },
+    {
+      "action": 86,
+      "command": "move_forward"
+    },
+    {
+      "action": 87,
+      "command": "move_forward"
+    },
+    {
+      "action": 88,
+      "command": "move_forward"
+    },
+    {
+      "action": 89,
+      "command": "turn_right"
+    },
+    {
+      "action": 90,
+      "command": "turn_right"
+    },
+    {
+      "action": 91,
+      "command": "turn_right"
+    },
+    {
+      "action": 92,
+      "command": "move_forward"
+    },
+    {
+      "action": 93,
+      "command": "move_forward"
+    },
+    {
+      "action": 94,
+      "command": "move_forward"
+    },
+    {
+      "action": 95,
+      "command": "turn_left"
+    },
+    {
+      "action": 96,
+      "command": "turn_left"
+    },
+    {
+      "action": 97,
+      "command": "turn_left"
+    },
+    {
+      "action": 98,
+      "command": "move_forward"
+    },
+    {
+      "action": 99,
+      "command": "move_forward"
+    },
+    {
+      "action": 100,
+      "command": "move_forward"
+    },
+    {
+      "action": 101,
+      "command": "move_forward"
+    },
+    {
+      "action": 102,
+      "command": "turn_left"
+    },
+    {
+      "action": 103,
+      "command": "turn_left"
+    },
+    {
+      "action": 104,
+      "command": "turn_left"
+    },
+    {
+      "action": 105,
+      "command": "move_forward"
+    },
+    {
+      "action": 106,
+      "command": "move_forward"
+    },
+    {
+      "action": 107,
+      "command": "move_forward"
+    },
+    {
+      "action": 108,
+      "command": "move_forward"
+    },
+    {
+      "action": 109,
+      "command": "move_forward"
+    },
+    {
+      "action": 110,
+      "command": "move_forward"
+    },
+    {
+      "action": 111,
+      "command": "move_forward"
+    },
+    {
+      "action": 112,
+      "command": "move_forward"
+    },
+    {
+      "action": 113,
+      "command": "move_forward"
+    },
+    {
+      "action": 114,
+      "command": "move_forward"
+    },
+    {
+      "action": 115,
+      "command": "move_forward"
+    },
+    {
+      "action": 116,
+      "command": "move_forward"
+    },
+    {
+      "action": 117,
+      "command": "move_forward"
+    },
+    {
+      "action": 118,
+      "command": "move_forward"
+    },
+    {
+      "action": 119,
+      "command": "move_forward"
+    },
+    {
+      "action": 120,
+      "command": "move_forward"
+    },
+    {
+      "action": 121,
+      "command": "move_forward"
+    },
+    {
+      "action": 122,
+      "command": "move_forward"
+    },
+    {
+      "action": 123,
+      "command": "turn_left"
+    },
+    {
+      "action": 124,
+      "command": "turn_left"
+    },
+    {
+      "action": 125,
+      "command": "turn_left"
+    },
+    {
+      "action": 126,
+      "command": "move_forward"
+    },
+    {
+      "action": 127,
+      "command": "move_forward"
+    },
+    {
+      "action": 128,
+      "command": "move_forward"
+    },
+    {
+      "action": 129,
+      "command": "move_forward"
+    },
+    {
+      "action": 130,
+      "command": "move_forward"
+    },
+    {
+      "action": 131,
+      "command": "turn_left"
+    },
+    {
+      "action": 132,
+      "command": "turn_left"
+    },
+    {
+      "action": 133,
+      "command": "turn_left"
+    },
+    {
+      "action": 134,
+      "command": "move_forward"
+    },
+    {
+      "action": 135,
+      "command": "move_forward"
+    },
+    {
+      "action": 136,
+      "command": "move_forward"
+    },
+    {
+      "action": 137,
+      "command": "move_forward"
+    },
+    {
+      "action": 138,
+      "command": "move_forward"
+    },
+    {
+      "action": 139,
+      "command": "move_forward"
+    },
+    {
+      "action": 140,
+      "command": "move_forward"
+    },
+    {
+      "action": 141,
+      "command": "move_forward"
+    },
+    {
+      "action": 142,
+      "command": "move_forward"
+    },
+    {
+      "action": 143,
+      "command": "move_forward"
+    },
+    {
+      "action": 144,
+      "command": "move_forward"
+    },
+    {
+      "action": 145,
+      "command": "move_forward"
+    },
+    {
+      "action": 146,
+      "command": "move_forward"
+    },
+    {
+      "action": 147,
+      "command": "move_forward"
+    },
+    {
+      "action": 148,
+      "command": "move_forward"
+    },
+    {
+      "action": 149,
+      "command": "move_forward"
+    },
+    {
+      "action": 150,
+      "command": "turn_left"
+    },
+    {
+      "action": 151,
+      "command": "turn_left"
+    },
+    {
+      "action": 152,
+      "command": "turn_left"
+    },
+    {
+      "action": 153,
+      "command": "move_forward"
+    },
+    {
+      "action": 154,
+      "command": "move_forward"
+    },
+    {
+      "action": 155,
+      "command": "move_forward"
+    },
+    {
+      "action": 156,
+      "command": "move_forward"
+    },
+    {
+      "action": 157,
+      "command": "move_forward"
+    },
+    {
+      "action": 158,
+      "command": "move_forward"
+    },
+    {
+      "action": 159,
+      "command": "turn_left"
+    },
+    {
+      "action": 160,
+      "command": "turn_left"
+    },
+    {
+      "action": 161,
+      "command": "turn_left"
+    },
+    {
+      "action": 162,
+      "command": "move_forward"
+    },
+    {
+      "action": 163,
+      "command": "move_forward"
+    },
+    {
+      "action": 164,
+      "command": "move_forward"
+    },
+    {
+      "action": 165,
+      "command": "move_forward"
+    },
+    {
+      "action": 166,
+      "command": "move_forward"
+    },
+    {
+      "action": 167,
+      "command": "move_forward"
+    },
+    {
+      "action": 168,
+      "command": "move_forward"
+    },
+    {
+      "action": 169,
+      "command": "move_forward"
+    },
+    {
+      "action": 170,
+      "command": "move_forward"
+    },
+    {
+      "action": 171,
+      "command": "move_forward"
+    },
+    {
+      "action": 172,
+      "command": "move_forward"
+    },
+    {
+      "action": 173,
+      "command": "move_forward"
+    },
+    {
+      "action": 174,
+      "command": "move_forward"
+    },
+    {
+      "action": 175,
+      "command": "move_forward"
+    },
+    {
+      "action": 176,
+      "command": "move_forward"
+    },
+    {
+      "action": 177,
+      "command": "move_forward"
+    },
+    {
+      "action": 178,
+      "command": "turn_left"
+    },
+    {
+      "action": 179,
+      "command": "turn_left"
+    },
+    {
+      "action": 180,
+      "command": "turn_left"
+    },
+    {
+      "action": 181,
+      "command": "move_forward"
+    },
+    {
+      "action": 182,
+      "command": "move_forward"
+    },
+    {
+      "action": 183,
+      "command": "move_forward"
+    },
+    {
+      "action": 184,
+      "command": "move_forward"
+    },
+    {
+      "action": 185,
+      "command": "move_forward"
+    },
+    {
+      "action": 186,
+      "command": "turn_left"
+    },
+    {
+      "action": 187,
+      "command": "turn_left"
+    },
+    {
+      "action": 188,
+      "command": "turn_left"
+    },
+    {
+      "action": 189,
+      "command": "move_forward"
+    },
+    {
+      "action": 190,
+      "command": "move_forward"
+    },
+    {
+      "action": 191,
+      "command": "move_forward"
+    },
+    {
+      "action": 192,
+      "command": "move_forward"
+    },
+    {
+      "action": 193,
+      "command": "move_forward"
+    },
+    {
+      "action": 194,
+      "command": "move_forward"
+    },
+    {
+      "action": 195,
+      "command": "move_forward"
+    },
+    {
+      "action": 196,
+      "command": "move_forward"
+    },
+    {
+      "action": 197,
+      "command": "move_forward"
+    },
+    {
+      "action": 198,
+      "command": "move_forward"
+    },
+    {
+      "action": 199,
+      "command": "move_forward"
+    },
+    {
+      "action": 200,
+      "command": "move_forward"
+    },
+    {
+      "action": 201,
+      "command": "move_forward"
+    },
+    {
+      "action": 202,
+      "command": "move_forward"
+    },
+    {
+      "action": 203,
+      "command": "move_forward"
+    },
+    {
+      "action": 204,
+      "command": "move_forward"
+    },
+    {
+      "action": 205,
+      "command": "turn_right"
+    },
+    {
+      "action": 206,
+      "command": "turn_right"
+    },
+    {
+      "action": 207,
+      "command": "turn_right"
+    },
+    {
+      "action": 208,
+      "command": "move_forward"
+    },
+    {
+      "action": 209,
+      "command": "move_forward"
+    },
+    {
+      "action": 210,
+      "command": "turn_left"
+    },
+    {
+      "action": 211,
+      "command": "turn_left"
+    },
+    {
+      "action": 212,
+      "command": "turn_left"
+    },
+    {
+      "action": 213,
+      "command": "move_forward"
+    },
+    {
+      "action": 214,
+      "command": "move_forward"
+    },
+    {
+      "action": 215,
+      "command": "move_forward"
+    },
+    {
+      "action": 216,
+      "command": "move_forward"
+    },
+    {
+      "action": 217,
+      "command": "move_forward"
+    },
+    {
+      "action": 218,
+      "command": "move_forward"
+    },
+    {
+      "action": 219,
+      "command": "move_forward"
+    },
+    {
+      "action": 220,
+      "command": "move_forward"
+    },
+    {
+      "action": 221,
+      "command": "move_forward"
+    },
+    {
+      "action": 222,
+      "command": "move_forward"
+    },
+    {
+      "action": 223,
+      "command": "move_forward"
+    },
+    {
+      "action": 224,
+      "command": "move_forward"
+    },
+    {
+      "action": 225,
+      "command": "move_forward"
+    },
+    {
+      "action": 226,
+      "command": "move_forward"
+    },
+    {
+      "action": 227,
+      "command": "turn_left"
+    },
+    {
+      "action": 228,
+      "command": "turn_left"
+    },
+    {
+      "action": 229,
+      "command": "turn_left"
+    },
+    {
+      "action": 230,
+      "command": "move_forward"
+    },
+    {
+      "action": 231,
+      "command": "move_forward"
+    },
+    {
+      "action": 232,
+      "command": "move_forward"
+    },
+    {
+      "action": 233,
+      "command": "move_forward"
+    },
+    {
+      "action": 234,
+      "command": "move_forward"
+    },
+    {
+      "action": 235,
+      "command": "move_forward"
+    },
+    {
+      "action": 236,
+      "command": "turn_left"
+    },
+    {
+      "action": 237,
+      "command": "turn_left"
+    },
+    {
+      "action": 238,
+      "command": "turn_left"
+    },
+    {
+      "action": 239,
+      "command": "move_forward"
+    },
+    {
+      "action": 240,
+      "command": "move_forward"
+    },
+    {
+      "action": 241,
+      "command": "move_forward"
+    },
+    {
+      "action": 242,
+      "command": "move_forward"
+    },
+    {
+      "action": 243,
+      "command": "move_forward"
+    },
+    {
+      "action": 244,
+      "command": "move_forward"
+    },
+    {
+      "action": 245,
+      "command": "move_forward"
+    },
+    {
+      "action": 246,
+      "command": "move_forward"
+    },
+    {
+      "action": 247,
+      "command": "move_forward"
+    },
+    {
+      "action": 248,
+      "command": "move_forward"
+    },
+    {
+      "action": 249,
+      "command": "move_forward"
+    },
+    {
+      "action": 250,
+      "command": "move_forward"
+    },
+    {
+      "action": 251,
+      "command": "move_forward"
+    },
+    {
+      "action": 252,
+      "command": "move_forward"
+    },
+    {
+      "action": 253,
+      "command": "turn_left"
+    },
+    {
+      "action": 254,
+      "command": "turn_left"
+    },
+    {
+      "action": 255,
+      "command": "turn_left"
+    },
+    {
+      "action": 256,
+      "command": "move_forward"
+    },
+    {
+      "action": 257,
+      "command": "move_forward"
+    },
+    {
+      "action": 258,
+      "command": "move_forward"
+    },
+    {
+      "action": 259,
+      "command": "move_forward"
+    },
+    {
+      "action": 260,
+      "command": "move_forward"
+    },
+    {
+      "action": 261,
+      "command": "move_forward"
+    },
+    {
+      "action": 262,
+      "command": "turn_right"
+    },
+    {
+      "action": 263,
+      "command": "move_forward"
+    },
+    {
+      "action": 264,
+      "command": "move_forward"
+    },
+    {
+      "action": 265,
+      "command": "move_forward"
+    },
+    {
+      "action": 266,
+      "command": "move_forward"
+    },
+    {
+      "action": 267,
+      "command": "move_forward"
+    },
+    {
+      "action": 268,
+      "command": "move_forward"
+    },
+    {
+      "action": 269,
+      "command": "move_forward"
+    },
+    {
+      "action": 270,
+      "command": "move_forward"
+    },
+    {
+      "action": 271,
+      "command": "turn_left"
+    },
+    {
+      "action": 272,
+      "command": "turn_left"
+    },
+    {
+      "action": 273,
+      "command": "turn_left"
+    },
+    {
+      "action": 274,
+      "command": "move_forward"
+    },
+    {
+      "action": 275,
+      "command": "move_forward"
+    },
+    {
+      "action": 276,
+      "command": "move_forward"
+    },
+    {
+      "action": 277,
+      "command": "move_forward"
+    },
+    {
+      "action": 278,
+      "command": "move_forward"
+    },
+    {
+      "action": 279,
+      "command": "turn_right"
+    },
+    {
+      "action": 280,
+      "command": "move_forward"
+    },
+    {
+      "action": 281,
+      "command": "move_forward"
+    },
+    {
+      "action": 282,
+      "command": "move_forward"
+    },
+    {
+      "action": 283,
+      "command": "turn_left"
+    },
+    {
+      "action": 284,
+      "command": "turn_left"
+    },
+    {
+      "action": 285,
+      "command": "turn_left"
+    },
+    {
+      "action": 286,
+      "command": "move_forward"
+    },
+    {
+      "action": 287,
+      "command": "move_forward"
+    },
+    {
+      "action": 288,
+      "command": "move_forward"
+    },
+    {
+      "action": 289,
+      "command": "move_forward"
+    },
+    {
+      "action": 290,
+      "command": "move_forward"
+    },
+    {
+      "action": 291,
+      "command": "move_forward"
+    },
+    {
+      "action": 292,
+      "command": "move_forward"
+    },
+    {
+      "action": 293,
+      "command": "move_forward"
+    },
+    {
+      "action": 294,
+      "command": "turn_right"
+    },
+    {
+      "action": 295,
+      "command": "move_forward"
+    },
+    {
+      "action": 296,
+      "command": "move_forward"
+    },
+    {
+      "action": 297,
+      "command": "move_forward"
+    },
+    {
+      "action": 298,
+      "command": "move_forward"
+    },
+    {
+      "action": 299,
+      "command": "turn_right"
+    },
+    {
+      "action": 300,
+      "command": "turn_right"
+    },
+    {
+      "action": 301,
+      "command": "turn_right"
+    },
+    {
+      "action": 302,
+      "command": "turn_right"
+    },
+    {
+      "action": 303,
+      "command": "turn_right"
+    },
+    {
+      "action": 304,
+      "command": "turn_right"
+    },
+    {
+      "action": 305,
+      "command": "move_forward"
+    },
+    {
+      "action": 306,
+      "command": "move_forward"
+    },
+    {
+      "action": 307,
+      "command": "move_forward"
+    },
+    {
+      "action": 308,
+      "command": "move_forward"
+    },
+    {
+      "action": 309,
+      "command": "move_forward"
+    },
+    {
+      "action": 310,
+      "command": "move_forward"
+    },
+    {
+      "action": 311,
+      "command": "move_forward"
+    },
+    {
+      "action": 312,
+      "command": "move_forward"
+    },
+    {
+      "action": 313,
+      "command": "turn_left"
+    },
+    {
+      "action": 314,
+      "command": "move_forward"
+    },
+    {
+      "action": 315,
+      "command": "move_forward"
+    },
+    {
+      "action": 316,
+      "command": "move_forward"
+    },
+    {
+      "action": 317,
+      "command": "turn_left"
+    },
+    {
+      "action": 318,
+      "command": "turn_left"
+    },
+    {
+      "action": 319,
+      "command": "turn_right"
+    },
+    {
+      "action": 320,
+      "command": "turn_right"
+    },
+    {
+      "action": 321,
+      "command": "move_forward"
+    },
+    {
+      "action": 322,
+      "command": "move_forward"
+    },
+    {
+      "action": 323,
+      "command": "move_forward"
+    },
+    {
+      "action": 324,
+      "command": "move_forward"
+    },
+    {
+      "action": 325,
+      "command": "turn_left"
+    },
+    {
+      "action": 326,
+      "command": "turn_left"
+    },
+    {
+      "action": 327,
+      "command": "turn_right"
+    },
+    {
+      "action": 328,
+      "command": "move_forward"
+    },
+    {
+      "action": 329,
+      "command": "move_forward"
+    },
+    {
+      "action": 330,
+      "command": "move_forward"
+    },
+    {
+      "action": 331,
+      "command": "move_forward"
+    },
+    {
+      "action": 332,
+      "command": "turn_left"
+    },
+    {
+      "action": 333,
+      "command": "move_forward"
+    },
+    {
+      "action": 334,
+      "command": "move_forward"
+    },
+    {
+      "action": 335,
+      "command": "turn_right"
+    },
+    {
+      "action": 336,
+      "command": "turn_right"
+    },
+    {
+      "action": 337,
+      "command": "turn_right"
+    },
+    {
+      "action": 338,
+      "command": "turn_right"
+    },
+    {
+      "action": 339,
+      "command": "move_forward"
+    },
+    {
+      "action": 340,
+      "command": "move_forward"
+    },
+    {
+      "action": 341,
+      "command": "move_forward"
+    },
+    {
+      "action": 342,
+      "command": "move_forward"
+    },
+    {
+      "action": 343,
+      "command": "move_forward"
+    },
+    {
+      "action": 344,
+      "command": "move_forward"
+    },
+    {
+      "action": 345,
+      "command": "turn_right"
+    },
+    {
+      "action": 346,
+      "command": "move_forward"
+    },
+    {
+      "action": 347,
+      "command": "move_forward"
+    },
+    {
+      "action": 348,
+      "command": "move_forward"
+    },
+    {
+      "action": 349,
+      "command": "turn_left"
+    },
+    {
+      "action": 350,
+      "command": "move_forward"
+    },
+    {
+      "action": 351,
+      "command": "move_forward"
+    },
+    {
+      "action": 352,
+      "command": "move_forward"
+    },
+    {
+      "action": 353,
+      "command": "move_forward"
+    },
+    {
+      "action": 354,
+      "command": "move_forward"
+    },
+    {
+      "action": 355,
+      "command": "move_forward"
+    },
+    {
+      "action": 356,
+      "command": "move_forward"
+    },
+    {
+      "action": 357,
+      "command": "turn_right"
+    },
+    {
+      "action": 358,
+      "command": "turn_right"
+    },
+    {
+      "action": 359,
+      "command": "turn_right"
+    },
+    {
+      "action": 360,
+      "command": "turn_right"
+    },
+    {
+      "action": 361,
+      "command": "turn_right"
+    },
+    {
+      "action": 362,
+      "command": "turn_right"
+    },
+    {
+      "action": 363,
+      "command": "move_forward"
+    },
+    {
+      "action": 364,
+      "command": "move_forward"
+    },
+    {
+      "action": 365,
+      "command": "move_forward"
+    },
+    {
+      "action": 366,
+      "command": "move_forward"
+    },
+    {
+      "action": 367,
+      "command": "move_forward"
+    },
+    {
+      "action": 368,
+      "command": "move_forward"
+    },
+    {
+      "action": 369,
+      "command": "move_forward"
+    },
+    {
+      "action": 370,
+      "command": "move_forward"
+    },
+    {
+      "action": 371,
+      "command": "move_forward"
+    },
+    {
+      "action": 372,
+      "command": "move_forward"
+    },
+    {
+      "action": 373,
+      "command": "turn_right"
+    },
+    {
+      "action": 374,
+      "command": "turn_right"
+    },
+    {
+      "action": 375,
+      "command": "turn_right"
+    },
+    {
+      "action": 376,
+      "command": "turn_right"
+    },
+    {
+      "action": 377,
+      "command": "turn_right"
+    },
+    {
+      "action": 378,
+      "command": "turn_left"
+    },
+    {
+      "action": 379,
+      "command": "turn_left"
+    },
+    {
+      "action": 380,
+      "command": "turn_left"
+    },
+    {
+      "action": 381,
+      "command": "turn_left"
+    },
+    {
+      "action": 382,
+      "command": "turn_left"
+    },
+    {
+      "action": 383,
+      "command": "turn_left"
+    },
+    {
+      "action": 384,
+      "command": "move_forward"
+    },
+    {
+      "action": 385,
+      "command": "move_forward"
+    },
+    {
+      "action": 386,
+      "command": "move_forward"
+    },
+    {
+      "action": 387,
+      "command": "move_forward"
+    },
+    {
+      "action": 388,
+      "command": "turn_right"
+    },
+    {
+      "action": 389,
+      "command": "turn_right"
+    },
+    {
+      "action": 390,
+      "command": "turn_right"
+    },
+    {
+      "action": 391,
+      "command": "move_forward"
+    },
+    {
+      "action": 392,
+      "command": "move_forward"
+    },
+    {
+      "action": 393,
+      "command": "move_forward"
+    },
+    {
+      "action": 394,
+      "command": "move_forward"
+    },
+    {
+      "action": 395,
+      "command": "turn_right"
+    },
+    {
+      "action": 396,
+      "command": "turn_right"
+    },
+    {
+      "action": 397,
+      "command": "turn_right"
+    },
+    {
+      "action": 398,
+      "command": "turn_right"
+    },
+    {
+      "action": 399,
+      "command": "turn_right"
+    },
+    {
+      "action": 400,
+      "command": "turn_right"
+    },
+    {
+      "action": 401,
+      "command": "turn_right"
+    },
+    {
+      "action": 402,
+      "command": "turn_right"
+    },
+    {
+      "action": 403,
+      "command": "turn_right"
+    },
+    {
+      "action": 404,
+      "command": "move_forward"
+    },
+    {
+      "action": 405,
+      "command": "move_forward"
+    },
+    {
+      "action": 406,
+      "command": "move_forward"
+    },
+    {
+      "action": 407,
+      "command": "turn_right"
+    },
+    {
+      "action": 408,
+      "command": "turn_right"
+    },
+    {
+      "action": 409,
+      "command": "turn_right"
+    },
+    {
+      "action": 410,
+      "command": "move_forward"
+    },
+    {
+      "action": 411,
+      "command": "move_forward"
+    },
+    {
+      "action": 412,
+      "command": "move_forward"
+    },
+    {
+      "action": 413,
+      "command": "turn_right"
+    },
+    {
+      "action": 414,
+      "command": "turn_right"
+    },
+    {
+      "action": 415,
+      "command": "turn_right"
+    },
+    {
+      "action": 416,
+      "command": "move_forward"
+    },
+    {
+      "action": 417,
+      "command": "move_forward"
+    },
+    {
+      "action": 418,
+      "command": "move_forward"
+    },
+    {
+      "action": 419,
+      "command": "move_forward"
+    },
+    {
+      "action": 420,
+      "command": "move_forward"
+    },
+    {
+      "action": 421,
+      "command": "move_forward"
+    },
+    {
+      "action": 422,
+      "command": "move_forward"
+    },
+    {
+      "action": 423,
+      "command": "move_forward"
+    },
+    {
+      "action": 424,
+      "command": "turn_right"
+    },
+    {
+      "action": 425,
+      "command": "turn_right"
+    },
+    {
+      "action": 426,
+      "command": "turn_right"
+    },
+    {
+      "action": 427,
+      "command": "move_forward"
+    },
+    {
+      "action": 428,
+      "command": "move_forward"
+    },
+    {
+      "action": 429,
+      "command": "move_forward"
+    },
+    {
+      "action": 430,
+      "command": "move_forward"
+    },
+    {
+      "action": 431,
+      "command": "move_forward"
+    },
+    {
+      "action": 432,
+      "command": "move_forward"
+    },
+    {
+      "action": 433,
+      "command": "turn_right"
+    },
+    {
+      "action": 434,
+      "command": "turn_right"
+    },
+    {
+      "action": 435,
+      "command": "turn_right"
+    },
+    {
+      "action": 436,
+      "command": "turn_left"
+    },
+    {
+      "action": 437,
+      "command": "turn_left"
+    },
+    {
+      "action": 438,
+      "command": "turn_left"
+    },
+    {
+      "action": 439,
+      "command": "move_forward"
+    },
+    {
+      "action": 440,
+      "command": "move_forward"
+    },
+    {
+      "action": 441,
+      "command": "move_forward"
+    },
+    {
+      "action": 442,
+      "command": "move_forward"
+    },
+    {
+      "action": 443,
+      "command": "move_forward"
+    },
+    {
+      "action": 444,
+      "command": "move_forward"
+    },
+    {
+      "action": 445,
+      "command": "move_forward"
+    },
+    {
+      "action": 446,
+      "command": "move_forward"
+    },
+    {
+      "action": 447,
+      "command": "move_forward"
+    },
+    {
+      "action": 448,
+      "command": "turn_left"
+    },
+    {
+      "action": 449,
+      "command": "turn_left"
+    },
+    {
+      "action": 450,
+      "command": "turn_left"
+    },
+    {
+      "action": 451,
+      "command": "move_forward"
+    },
+    {
+      "action": 452,
+      "command": "move_forward"
+    },
+    {
+      "action": 453,
+      "command": "move_forward"
+    },
+    {
+      "action": 454,
+      "command": "turn_right"
+    },
+    {
+      "action": 455,
+      "command": "turn_right"
+    },
+    {
+      "action": 456,
+      "command": "turn_right"
+    },
+    {
+      "action": 457,
+      "command": "move_forward"
+    },
+    {
+      "action": 458,
+      "command": "move_forward"
+    },
+    {
+      "action": 459,
+      "command": "move_forward"
+    },
+    {
+      "action": 460,
+      "command": "turn_left"
+    },
+    {
+      "action": 461,
+      "command": "turn_left"
+    },
+    {
+      "action": 462,
+      "command": "turn_left"
+    },
+    {
+      "action": 463,
+      "command": "move_forward"
+    },
+    {
+      "action": 464,
+      "command": "move_forward"
+    },
+    {
+      "action": 465,
+      "command": "move_forward"
+    },
+    {
+      "action": 466,
+      "command": "move_forward"
+    },
+    {
+      "action": 467,
+      "command": "move_forward"
+    },
+    {
+      "action": 468,
+      "command": "move_forward"
+    },
+    {
+      "action": 469,
+      "command": "move_forward"
+    },
+    {
+      "action": 470,
+      "command": "move_forward"
+    },
+    {
+      "action": 471,
+      "command": "move_forward"
+    },
+    {
+      "action": 472,
+      "command": "turn_right"
+    },
+    {
+      "action": 473,
+      "command": "turn_right"
+    },
+    {
+      "action": 474,
+      "command": "move_forward"
+    },
+    {
+      "action": 475,
+      "command": "move_forward"
+    },
+    {
+      "action": 476,
+      "command": "move_forward"
+    },
+    {
+      "action": 477,
+      "command": "move_forward"
+    },
+    {
+      "action": 478,
+      "command": "move_forward"
+    },
+    {
+      "action": 479,
+      "command": "move_forward"
+    },
+    {
+      "action": 480,
+      "command": "move_forward"
+    },
+    {
+      "action": 481,
+      "command": "turn_left"
+    },
+    {
+      "action": 482,
+      "command": "turn_left"
+    },
+    {
+      "action": 483,
+      "command": "turn_left"
+    },
+    {
+      "action": 484,
+      "command": "move_forward"
+    },
+    {
+      "action": 485,
+      "command": "move_forward"
+    },
+    {
+      "action": 486,
+      "command": "move_forward"
+    },
+    {
+      "action": 487,
+      "command": "move_forward"
+    },
+    {
+      "action": 488,
+      "command": "turn_right"
+    },
+    {
+      "action": 489,
+      "command": "move_forward"
+    },
+    {
+      "action": 490,
+      "command": "move_forward"
+    },
+    {
+      "action": 491,
+      "command": "move_forward"
+    },
+    {
+      "action": 492,
+      "command": "move_forward"
+    },
+    {
+      "action": 493,
+      "command": "turn_left"
+    },
+    {
+      "action": 494,
+      "command": "move_forward"
+    },
+    {
+      "action": 495,
+      "command": "move_forward"
+    },
+    {
+      "action": 496,
+      "command": "move_forward"
+    },
+    {
+      "action": 497,
+      "command": "turn_left"
+    },
+    {
+      "action": 498,
+      "command": "turn_left"
+    },
+    {
+      "action": 499,
+      "command": "move_forward"
+    },
+    {
+      "action": 500,
+      "command": "move_forward",
+      "episode_over": true
+    }
+  ],
+  "localization_notes": [
+    {
+      "action": 45,
+      "image": "images/observe-vn3l2ry0/front.png",
+      "note": "Glass-panel approach partly blocked; withdraw full nominal lateral displacement. Bright recess is mural, not doorway."
+    },
+    {
+      "action": 204,
+      "image": "images/observe-vhokpkmw/front.png",
+      "note": "Most of 189\u2013204 blocked by stair railing at base. Withdraw nominal 4m forward estimate; still on third observed full landing."
+    },
+    {
+      "action": 337,
+      "image": "images/observe-nye13ol_/left.png",
+      "note": "Red stair approach showed no displacement in final two forward attempts; base alignment unconfirmed."
+    },
+    {
+      "action": 356,
+      "image": "images/observe-0d8rz71p/front.png",
+      "note": "Second corridor approach shows limited movement and missing geometry; no onward passage confirmed."
+    }
+  ],
+  "termination": {
+    "reason": "500-action limit reached; episode_over returned true at action 500",
+    "task_status": "incomplete",
+    "stops_submitted": 0,
+    "note": "No supported hall plant identity or arrival, so no irreversible STOP submitted. Coffee-table candidate remains provisional; no evaluator success inferred."
+  }
+}

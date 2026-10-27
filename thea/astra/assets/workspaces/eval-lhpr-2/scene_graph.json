@@ -1,0 +1,3044 @@
+{
+  "version": 2,
+  "episode_id": "batch_1_episode_episode_20",
+  "frame": {
+    "origin": "start",
+    "axes": "+x initially forward; +y initially left; +z up"
+  },
+  "updated_at_action": 500,
+  "agent_belief": {
+    "position": [
+      5.823557158514983,
+      -5.5284936490538925,
+      2.8
+    ],
+    "heading_degrees": 270,
+    "uncertainty_m": 4.5299999999999985,
+    "position_basis": "Nominal action integration, subject to visual correction; forward motion unverified until observed"
+  },
+  "nodes": [
+    {
+      "id": "hall_1",
+      "category": "hallway",
+      "description": "Narrow wood-floored passage beside white wall, openings at both ends",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "action": 0,
+          "camera": "right",
+          "image": "images/observe-3bk2n7x2/right.png"
+        }
+      ]
+    },
+    {
+      "id": "bedroom_1",
+      "category": "bedroom",
+      "description": "White duvet dark wood bed, large black-framed glass doors, white chair",
+      "position": [
+        -1,
+        2,
+        0
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "action": 3,
+          "camera": "left",
+          "image": "images/observe-red79kb5/left.png"
+        }
+      ]
+    },
+    {
+      "id": "bed_1",
+      "category": "bed",
+      "description": "Dark wood bed with white rumpled bedding and tan/gold pillow",
+      "position": [
+        -2,
+        1,
+        0.6
+      ],
+      "uncertainty_m": 0.8,
+      "observations": [
+        {
+          "action": 13,
+          "camera": "front",
+          "image": "images/observe-g7k0uly7/front.png"
+        }
+      ]
+    },
+    {
+      "id": "closet_1",
+      "category": "walk_in_closet",
+      "description": "Open wood shelving with clothing, handbags and window; attached to bedroom corridor",
+      "position": [
+        -1.5,
+        -1,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "action": 37,
+          "camera": "front",
+          "image": "images/observe-3oz5snkp/front.png"
+        }
+      ]
+    },
+    {
+      "id": "dining_1",
+      "category": "dining_area",
+      "description": "Long dining area with tall glass wine cabinets on right and stone doorway to bedroom hall",
+      "position": [
+        2,
+        -5,
+        0
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "action": 66,
+          "camera": "front",
+          "image": "images/observe-m4vgl6rl/front.png"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_1",
+      "category": "kitchen",
+      "description": "Galley counters and island with metal stools beside dining area, black-framed exterior door at end",
+      "position": [
+        8,
+        -4.5,
+        0
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "action": 96,
+          "camera": "front",
+          "image": "images/observe-vikvzuid/front.png"
+        }
+      ]
+    },
+    {
+      "id": "living_1",
+      "category": "living_room",
+      "description": "Sofa and tall black-framed windows through stone openings along dining area",
+      "position": [
+        6,
+        -2,
+        0
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "action": 90,
+          "camera": "left",
+          "image": "images/observe-eio8otvk/left.png"
+        },
+        {
+          "action": 383,
+          "camera": "front",
+          "image": "images/observe-h073kyu9/front.png"
+        }
+      ]
+    },
+    {
+      "id": "bathroom_1",
+      "category": "bathroom",
+      "description": "Ensuite with gold mosaic shower, chrome radiator, purple floating double vanity and white partition",
+      "position": [
+        2,
+        1.5,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "action": 210,
+          "camera": "front",
+          "image": "images/observe-4k6kqziv/front.png"
+        },
+        {
+          "action": 210,
+          "camera": "right",
+          "image": "images/observe-4k6kqziv/right.png"
+        },
+        {
+          "action": 216,
+          "camera": "right",
+          "image": "images/observe-1pmvreyf/right.png"
+        }
+      ]
+    },
+    {
+      "id": "towel_1",
+      "category": "bath_towel_candidate",
+      "description": "Large white fabric draped over wooden chair back and seat beside bedroom glass doors; uneven hanging edges distinguish it from chair frame",
+      "position": [
+        0.1,
+        2.6,
+        0.8
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "action": 199,
+          "camera": "front",
+          "image": "images/observe-pwb2keth/front.png"
+        },
+        {
+          "action": 165,
+          "camera": "front",
+          "image": "images/observe-1p9n33dh/front.png"
+        },
+        {
+          "action": 287,
+          "camera": "front",
+          "image": "images/observe-4i4ylayy/front.png"
+        }
+      ]
+    },
+    {
+      "id": "chair_1",
+      "category": "chair",
+      "description": "Wooden chair beside bedroom glass doors and ensuite door",
+      "position": [
+        0.1,
+        2.6,
+        0.5
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "action": 199,
+          "camera": "front",
+          "image": "images/observe-pwb2keth/front.png"
+        }
+      ]
+    },
+    {
+      "id": "laundry_1",
+      "category": "utility_laundry_room",
+      "description": "Stacked washer/dryer and storage boxes behind white door off dining area",
+      "position": [
+        2,
+        -2.5,
+        0
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "action": 344,
+          "camera": "front",
+          "image": "images/observe-yxvg4cti/front.png"
+        }
+      ]
+    },
+    {
+      "id": "stairs_1",
+      "category": "stairs",
+      "description": "Open wooden treads on black metal frame, rises from far window toward dining-side ceiling",
+      "position": [
+        5.5,
+        0,
+        1.5
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "action": 383,
+          "camera": "front",
+          "image": "images/observe-h073kyu9/front.png"
+        }
+      ]
+    },
+    {
+      "id": "landing_2",
+      "category": "upstairs_landing",
+      "description": "Wood floor landing with blue room to left, corridor ahead to attic bedroom, further room to right",
+      "position": [
+        5,
+        -1,
+        2.8
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "action": 437,
+          "camera": "front",
+          "image": "images/observe-mg6z6288/front.png"
+        },
+        {
+          "action": 437,
+          "camera": "left",
+          "image": "images/observe-mg6z6288/left.png"
+        }
+      ]
+    },
+    {
+      "id": "bedroom_2",
+      "category": "bedroom",
+      "description": "Upstairs attic bedroom with blue accent wall, white wicker bed and dresser, wicker chest under narrow window",
+      "position": [
+        6,
+        -4,
+        2.8
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "action": 467,
+          "camera": "left",
+          "image": "images/observe-6w3m5uy5/left.png"
+        },
+        {
+          "action": 467,
+          "camera": "front",
+          "image": "images/observe-6w3m5uy5/front.png"
+        }
+      ]
+    },
+    {
+      "id": "towel_2",
+      "category": "bath_towel_candidate",
+      "description": "Long cream textile with animal motifs hanging vertically beside bed and wicker chest",
+      "position": [
+        6.773557158514983,
+        -7.327531754730549,
+        3.8
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "action": 483,
+          "camera": "front",
+          "image": "images/observe-2ncblk_f/front.png"
+        },
+        {
+          "action": 481,
+          "camera": "front",
+          "image": "images/observe-i4hqa9o8/front.png"
+        }
+      ]
+    },
+    {
+      "id": "decor_parrots_1",
+      "category": "decorative_birds",
+      "description": "Blue and yellow parrot-shaped decorations on white wicker dresser; not identifiable towels",
+      "position": [
+        null,
+        null,
+        3.8
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "action": 497,
+          "camera": "left",
+          "image": "images/observe-kgdna67v/left.png"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "subject": "hall_1",
+      "relation": "connected_to",
+      "object": "bedroom_1",
+      "via": "open end of passage"
+    },
+    {
+      "subject": "bed_1",
+      "relation": "in",
+      "object": "bedroom_1"
+    },
+    {
+      "subject": "closet_1",
+      "relation": "connected_to",
+      "object": "hall_1",
+      "via": "open side doorway"
+    },
+    {
+      "subject": "hall_1",
+      "relation": "connected_to",
+      "object": "dining_1",
+      "via": "stone-trimmed doorway"
+    },
+    {
+      "subject": "dining_1",
+      "relation": "connected_to",
+      "object": "kitchen_1",
+      "via": "open aisle beside dining chairs"
+    },
+    {
+      "subject": "dining_1",
+      "relation": "connected_to",
+      "object": "living_1",
+      "via": "stone arch openings"
+    },
+    {
+      "subject": "bedroom_1",
+      "relation": "connected_to",
+      "object": "bathroom_1",
+      "via": "door beside white chair"
+    },
+    {
+      "subject": "towel_1",
+      "relation": "on",
+      "object": "chair_1"
+    },
+    {
+      "subject": "chair_1",
+      "relation": "in",
+      "object": "bedroom_1"
+    },
+    {
+      "subject": "towel_1",
+      "relation": "in",
+      "object": "bedroom_1"
+    },
+    {
+      "subject": "laundry_1",
+      "relation": "connected_to",
+      "object": "dining_1",
+      "via": "white door in first stone opening"
+    },
+    {
+      "subject": "stairs_1",
+      "relation": "in",
+      "object": "living_1"
+    },
+    {
+      "subject": "living_1",
+      "relation": "connected_to",
+      "object": "landing_2",
+      "via": "stairs_1"
+    },
+    {
+      "subject": "landing_2",
+      "relation": "connected_to",
+      "object": "bedroom_2",
+      "via": "short corridor beside separate toilet"
+    },
+    {
+      "subject": "towel_2",
+      "relation": "in",
+      "object": "bedroom_2"
+    },
+    {
+      "subject": "decor_parrots_1",
+      "relation": "in",
+      "object": "bedroom_2"
+    }
+  ],
+  "targets": [
+    {
+      "stage": 0,
+      "description": "bath towel in bedroom",
+      "candidate_ids": [
+        "towel_1",
+        "towel_2"
+      ],
+      "selected_id": "towel_2",
+      "identity": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "action": 483,
+            "image": "images/observe-2ncblk_f/front.png",
+            "note": "Long folded hanging textile with printed motifs beside bed; plausible bath towel in confirmed bedroom."
+          }
+        ],
+        "contradictions": [
+          "Narrow profile and hanging loop may indicate a decorative textile rather than bath towel.",
+          "Current RGB does not clearly distinguish hanging textile from decorative fabric."
+        ]
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "action": 483,
+            "image": "images/observe-2ncblk_f/front.png",
+            "note": "Clear floor immediately in front of hanging textile; approximate navigable approach within 0.7m."
+          }
+        ]
+      }
+    },
+    {
+      "stage": 1,
+      "description": "laundry basket in bathroom",
+      "candidate_ids": [],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      }
+    },
+    {
+      "stage": 2,
+      "description": "bag in kitchen",
+      "candidate_ids": [],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      }
+    }
+  ],
+  "unchecked_alternatives": [
+    "White textiles on wicker chest",
+    "Other upstairs bedroom not inspected"
+  ],
+  "action_history": [
+    {
+      "action": 4,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 5,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 6,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 7,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 8,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 9,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 10,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 11,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 12,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 13,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 14,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 15,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 16,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 17,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 18,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 19,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 20,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 21,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 22,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 23,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 24,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 25,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 26,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 27,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 28,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 29,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 30,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 31,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 32,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 33,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 34,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 35,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 36,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 37,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 38,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 39,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 40,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 41,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 42,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 43,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 44,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 45,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 46,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 47,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 48,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 49,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 50,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 51,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 52,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 53,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 54,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 55,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 56,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 57,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 58,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 59,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 60,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 61,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 62,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 63,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 64,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 65,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 66,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 67,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 68,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 69,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 70,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 71,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 72,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 73,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 74,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 75,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 76,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 77,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 78,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 79,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 80,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 81,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 82,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 83,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 84,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 85,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 86,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 87,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 88,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 89,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 90,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 91,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 92,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 93,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 94,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 95,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 96,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 97,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 98,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 99,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 100,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 101,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 102,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 103,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 104,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 105,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 106,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 107,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 108,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 109,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 110,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 111,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 112,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 113,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 114,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 115,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 116,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 117,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 118,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 119,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 120,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 121,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 122,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 123,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 124,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 125,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 126,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 127,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 128,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 129,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 130,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 131,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 132,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 133,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 134,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 135,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 136,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 137,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 138,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 139,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 140,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 141,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 142,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 143,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 144,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 145,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 146,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 147,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 148,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 149,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 150,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 151,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 152,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 153,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 154,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 155,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 156,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 157,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 158,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 159,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 160,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 161,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 162,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 163,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 164,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 165,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 166,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 167,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 168,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 169,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 170,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 171,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 172,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 173,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 174,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 175,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 176,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 177,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 178,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 179,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 180,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 181,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 182,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 183,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 184,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 185,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 186,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 187,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 188,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 189,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 190,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 191,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 192,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 193,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 194,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 195,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 196,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 197,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 198,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 199,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 200,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 201,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 202,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 203,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 204,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 205,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 206,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 207,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 208,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 209,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 210,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 211,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 212,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 213,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 214,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 215,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 216,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 217,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 218,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 219,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 220,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 221,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 222,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 223,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 224,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 225,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 226,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 227,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 228,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 229,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 230,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 231,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 232,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 233,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 234,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 235,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 236,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 237,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 238,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 239,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 240,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 241,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 242,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 243,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 244,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 245,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 246,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 247,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 248,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 249,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 250,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 251,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 252,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 253,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 254,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 255,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 256,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 257,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 258,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 259,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 260,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 261,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 262,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 263,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 264,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 265,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 266,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 267,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 268,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 269,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 270,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 271,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 272,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 273,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 274,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 275,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 276,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 277,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 278,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 279,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 280,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 281,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 282,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 283,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 284,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 285,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 286,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 287,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 287,
+      "primitive": "stop",
+      "executed": false
+    },
+    {
+      "action": 288,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 289,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 290,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 291,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 292,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 293,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 294,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 295,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 296,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 297,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 298,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 299,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 300,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 301,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 302,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 303,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 304,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 305,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 306,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 307,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 308,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 309,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 310,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 311,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 312,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 313,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 314,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 315,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 316,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 317,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 318,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 319,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 320,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 321,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 322,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 323,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 324,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 325,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 326,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 327,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 328,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 329,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 330,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 331,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 332,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 333,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 334,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 335,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 336,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 337,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 338,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 339,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 340,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 341,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 342,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 343,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 344,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 345,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 346,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 347,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 348,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 349,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 350,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 351,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 352,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 353,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 354,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 355,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 356,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 357,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 358,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 359,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 360,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 361,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 362,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 363,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 364,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 365,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 366,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 367,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 368,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 369,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 370,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 371,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 372,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 373,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 374,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 375,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 376,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 377,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 378,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 379,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 380,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 381,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 382,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 383,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 384,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 385,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 386,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 387,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 388,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 389,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 390,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 391,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 392,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 393,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 394,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 395,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 396,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 397,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 398,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 399,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 400,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 401,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 402,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 403,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 404,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 405,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 406,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 407,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 408,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 409,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 410,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 411,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 412,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 413,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 414,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 415,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 416,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 417,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 418,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 419,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 420,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 421,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 422,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 423,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 424,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 425,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 426,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 427,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 428,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 429,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 430,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 431,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 432,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 433,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 434,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 435,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 436,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 437,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 438,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 439,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 440,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 441,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 442,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 443,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 444,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 445,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 446,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 447,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 448,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 449,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 450,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 451,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 452,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 453,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 454,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 455,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 456,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 457,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 458,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 459,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 460,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 461,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 462,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 463,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 464,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 465,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 466,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 467,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 468,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 469,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 470,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 471,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 472,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 473,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 474,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 475,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 476,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 477,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 478,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 479,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 480,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 481,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 482,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 483,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 483,
+      "primitive": "stop",
+      "executed": false
+    },
+    {
+      "action": 484,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 485,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 486,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 487,
+      "primitive": "turn_right",
+      "executed": true
+    },
+    {
+      "action": 488,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 489,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 490,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 491,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 492,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 493,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 494,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 495,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 496,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 497,
+      "primitive": "move_forward",
+      "executed": true
+    },
+    {
+      "action": 498,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 499,
+      "primitive": "turn_left",
+      "executed": true
+    },
+    {
+      "action": 500,
+      "primitive": "turn_left",
+      "executed": true
+    }
+  ],
+  "localization_notes": [
+    {
+      "action": 155,
+      "image": "images/observe-_5t427hc/front.png",
+      "note": "Returned bedroom entrance matches initial corridor; position re-anchored approximately, cumulative nominal drift withdrawn."
+    },
+    {
+      "action": 188,
+      "image": "images/observe-8nased3x/front.png",
+      "note": "Forward toward head blocked by bed; withdrew three nominal forward increments. Foot of bed and exercise machine constrain passage."
+    },
+    {
+      "action": 373,
+      "image": "images/observe-9mo_usks/front.png",
+      "note": "Stone wall blocked entry; withdrew unsupported forward displacement and will align farther along wall."
+    },
+    {
+      "action": 451,
+      "image": "images/observe-6gb5ct8o/front.png",
+      "note": "Identical RGB to action445: all six forward attempts blocked near right-hand corridor corner. Withdrawn nominal movement."
+    }
+  ],
+  "review_log": [
+    {
+      "action": 287,
+      "stage": 0,
+      "gate_passed": false,
+      "stop_executed": false,
+      "note": "Review separate from world evidence; no native feedback."
+    },
+    {
+      "action": 483,
+      "stage": 0,
+      "gate_passed": false,
+      "stop_executed": false,
+      "note": "Review only; no native success feedback."
+    }
+  ]
+}

@@ -1,0 +1,3837 @@
+{
+  "frame": {
+    "origin": "episode start",
+    "axes": {
+      "+x": "initial forward",
+      "+y": "initial left",
+      "+z": "up"
+    },
+    "units": "metres"
+  },
+  "updated_at_action": 277,
+  "agent": {
+    "position": [
+      1.7810889132455348,
+      0.40192378864668843,
+      0
+    ],
+    "heading_degrees": 90,
+    "uncertainty_m": 1.075,
+    "note": "Start defined as origin; translations are action-derived hypotheses checked against RGB."
+  },
+  "world": {
+    "nodes": {
+      "main_room": {
+        "id": "main_room",
+        "category": "room",
+        "description": "Open children play/library room with wood floor",
+        "position": [
+          3,
+          0,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 4
+        },
+        "observations": [
+          {
+            "path": "images/observe-1a3mt72n/front.png",
+            "camera": "front",
+            "action": 0
+          }
+        ],
+        "updated_at_action": 0
+      },
+      "wood_floor": {
+        "id": "wood_floor",
+        "category": "floor",
+        "description": "Continuous pale wooden floor",
+        "position": [
+          2,
+          -2,
+          0
+        ],
+        "uncertainty": {
+          "radius_m": 6
+        },
+        "observations": [
+          {
+            "path": "images/observe-1a3mt72n/right.png",
+            "camera": "right",
+            "action": 0
+          }
+        ],
+        "updated_at_action": 0
+      },
+      "reception": {
+        "id": "reception",
+        "category": "desk",
+        "description": "Curved pale wood reception with mint horizontal illuminated strip",
+        "position": [
+          3.9,
+          -4.0,
+          0.55
+        ],
+        "uncertainty": {
+          "radius_m": 1.5
+        },
+        "observations": [
+          {
+            "path": "images/observe-1a3mt72n/right.png",
+            "camera": "right",
+            "action": 0
+          },
+          {
+            "path": "images/observe-k0hipuk5/front.png",
+            "camera": "front",
+            "action": 21
+          }
+        ],
+        "updated_at_action": 0
+      },
+      "red_house_1": {
+        "id": "red_house_1",
+        "category": "playhouse",
+        "description": "Corner red wooden playhouse with triangular pitched roof, dark blue floor and dessert chalkboard interior; large cream/teal/pink shelf bank adjoining corner and media shelves on opposite side.",
+        "position": [
+          1.9,
+          0.7,
+          1.2
+        ],
+        "uncertainty": {
+          "radius_m": 1.0
+        },
+        "observations": [
+          {
+            "path": "images/observe-csh2dufe/left.png",
+            "camera": "left",
+            "action": 167
+          },
+          {
+            "path": "images/observe-qrji4ipo/front.png",
+            "camera": "front",
+            "action": 258
+          },
+          {
+            "path": "images/observe-qrji4ipo/right.png",
+            "camera": "right",
+            "action": 258
+          },
+          {
+            "path": "images/observe-519dzkr8/front.png",
+            "camera": "front",
+            "action": 274
+          },
+          {
+            "path": "images/observe-zj4dp6ua/left.png",
+            "camera": "left",
+            "action": 276
+          }
+        ],
+        "updated_at_action": 276
+      },
+      "corner_shelves": {
+        "id": "corner_shelves",
+        "category": "shelves",
+        "description": "Cream cubbies with teal divider and pink lower shelves",
+        "position": [
+          -1,
+          -0.8,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 1
+        },
+        "observations": [
+          {
+            "path": "images/observe-1a3mt72n/back.png",
+            "camera": "back",
+            "action": 0
+          },
+          {
+            "path": "images/observe-1a3mt72n/right.png",
+            "camera": "right",
+            "action": 0
+          }
+        ],
+        "updated_at_action": 0
+      },
+      "wood_partition": {
+        "id": "wood_partition",
+        "category": "partition",
+        "description": "Pale wood wall with mint arched interior window",
+        "position": [
+          0.8,
+          -3,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 1.0
+        },
+        "observations": [
+          {
+            "path": "images/observe-1a3mt72n/right.png",
+            "camera": "right",
+            "action": 0
+          }
+        ],
+        "updated_at_action": 0
+      },
+      "lounge_sofa": {
+        "id": "lounge_sofa",
+        "category": "sofa",
+        "description": "Dark green curved plush sofa beneath black-framed window",
+        "position": [
+          1.2,
+          -8.2,
+          0.5
+        ],
+        "uncertainty": {
+          "radius_m": 1.5
+        },
+        "observations": [
+          {
+            "path": "images/observe-dxm8jsmj/front.png",
+            "camera": "front",
+            "action": 14
+          },
+          {
+            "path": "images/observe-0zlod36j/right.png",
+            "camera": "right",
+            "action": 137
+          }
+        ],
+        "updated_at_action": 14
+      },
+      "lounge": {
+        "id": "lounge",
+        "category": "room",
+        "description": "Wood-paneled reception lounge with sofa, low white table and window",
+        "position": [
+          2,
+          -5.5,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 2
+        },
+        "observations": [
+          {
+            "path": "images/observe-dxm8jsmj/front.png",
+            "camera": "front",
+            "action": 14
+          }
+        ],
+        "updated_at_action": 14
+      },
+      "animal_stool": {
+        "id": "animal_stool",
+        "category": "stool",
+        "description": "Dark green upholstered animal-shaped stool on floor left of curved green sofa",
+        "position": [
+          2.95,
+          -8.0,
+          0.35
+        ],
+        "uncertainty": {
+          "radius_m": 0.8
+        },
+        "observations": [
+          {
+            "path": "images/observe-dxm8jsmj/front.png",
+            "camera": "front",
+            "action": 14
+          },
+          {
+            "path": "images/observe-s0xgfzok/front.png",
+            "camera": "front",
+            "action": 113
+          },
+          {
+            "path": "images/observe-2u8es3o7/front.png",
+            "camera": "front",
+            "action": 134
+          },
+          {
+            "path": "images/observe-0zlod36j/front.png",
+            "camera": "front",
+            "action": 137
+          }
+        ],
+        "updated_at_action": 137
+      },
+      "red_house_2": {
+        "id": "red_house_2",
+        "category": "playhouse",
+        "description": "Red pitched wooden playhouse with Back to School chalkboard interior, beside balloon wall and narrow media shelves; separate from dessert-themed corner house.",
+        "position": [
+          9.0,
+          0.7,
+          1.2
+        ],
+        "uncertainty": {
+          "radius_m": 1.5
+        },
+        "observations": [
+          {
+            "path": "images/observe-dxm8jsmj/left.png",
+            "camera": "left",
+            "action": 14
+          },
+          {
+            "path": "images/observe-8_cx2f99/front.png",
+            "camera": "front",
+            "action": 231
+          }
+        ],
+        "updated_at_action": 14
+      },
+      "activity_area": {
+        "id": "activity_area",
+        "category": "place",
+        "description": "Open play area with white tables/chairs and polygon rugs",
+        "position": [
+          9,
+          -4.5,
+          0
+        ],
+        "uncertainty": {
+          "radius_m": 2
+        },
+        "observations": [
+          {
+            "path": "images/observe-loki8slq/right.png",
+            "camera": "right",
+            "action": 40
+          },
+          {
+            "path": "images/observe-loki8slq/front.png",
+            "camera": "front",
+            "action": 40
+          }
+        ],
+        "updated_at_action": 40
+      },
+      "moon_wall": {
+        "id": "moon_wall",
+        "category": "wall",
+        "description": "White wall with moons, stars and constellations; no balloon seen",
+        "position": [
+          8,
+          -7,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 2
+        },
+        "observations": [
+          {
+            "path": "images/observe-loki8slq/right.png",
+            "camera": "right",
+            "action": 40
+          }
+        ],
+        "updated_at_action": 40
+      },
+      "toy_train": {
+        "id": "toy_train",
+        "category": "toy",
+        "description": "Colorful green and orange wooden toy train visible on central play floor",
+        "position": [
+          9.8,
+          -5.8,
+          0.2
+        ],
+        "uncertainty": {
+          "radius_m": 1.5
+        },
+        "observations": [
+          {
+            "path": "images/observe-loki8slq/right.png",
+            "camera": "right",
+            "action": 40
+          },
+          {
+            "path": "images/observe-1k0opqkt/right.png",
+            "camera": "right",
+            "action": 50
+          },
+          {
+            "path": "images/observe-5kuj3bvv/front.png",
+            "camera": "front",
+            "action": 206
+          },
+          {
+            "path": "images/observe-ui0mwn8s/front.png",
+            "camera": "front",
+            "action": 209
+          }
+        ],
+        "updated_at_action": 40
+      },
+      "letter_shelves": {
+        "id": "letter_shelves",
+        "category": "shelves",
+        "description": "Large cream bookcase with oversized colored REA...Y letters",
+        "position": [
+          12,
+          -3.5,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 2
+        },
+        "observations": [
+          {
+            "path": "images/observe-loki8slq/front.png",
+            "camera": "front",
+            "action": 40
+          }
+        ],
+        "updated_at_action": 40
+      },
+      "balloon_wall": {
+        "id": "balloon_wall",
+        "category": "wall",
+        "description": "White wall beside second red playhouse and tall doorway, with blue/green/pink hot air balloons and white clouds",
+        "position": [
+          10.6,
+          1.25,
+          1.3
+        ],
+        "uncertainty": {
+          "radius_m": 1
+        },
+        "observations": [
+          {
+            "path": "images/observe-1k0opqkt/left.png",
+            "camera": "left",
+            "action": 50
+          },
+          {
+            "path": "images/observe-rnly1u5v/front.png",
+            "camera": "front",
+            "action": 66
+          }
+        ],
+        "updated_at_action": 50
+      },
+      "balloon_stickers": {
+        "id": "balloon_stickers",
+        "category": "decoration",
+        "description": "Striped pastel hot-air balloon and fluffy cloud stickers",
+        "position": [
+          10.6,
+          1.2,
+          1.5
+        ],
+        "uncertainty": {
+          "radius_m": 1
+        },
+        "observations": [
+          {
+            "path": "images/observe-1k0opqkt/left.png",
+            "camera": "left",
+            "action": 50
+          }
+        ],
+        "updated_at_action": 50
+      },
+      "corner_play_area": {
+        "id": "corner_play_area",
+        "category": "place",
+        "description": "End corner bounded by cubby shelf wall, wood lounge partition and media wall; contains dessert-themed red house and small toys",
+        "position": [
+          1,
+          -0.5,
+          0
+        ],
+        "uncertainty": {
+          "radius_m": 1.2
+        },
+        "observations": [
+          {
+            "path": "images/observe-qrji4ipo/front.png",
+            "camera": "front",
+            "action": 258
+          }
+        ],
+        "updated_at_action": 258
+      }
+    },
+    "relations": [
+      {
+        "subject": "main_room",
+        "relation": "in",
+        "object": "wood_floor"
+      },
+      {
+        "subject": "reception",
+        "relation": "on",
+        "object": "wood_floor"
+      },
+      {
+        "subject": "red_house_1",
+        "relation": "in",
+        "object": "main_room"
+      },
+      {
+        "subject": "corner_shelves",
+        "relation": "in",
+        "object": "main_room"
+      },
+      {
+        "subject": "lounge",
+        "relation": "connected_to",
+        "object": "main_room",
+        "via": "wide opening beside arched wood partition"
+      },
+      {
+        "subject": "animal_stool",
+        "relation": "on",
+        "object": "wood_floor"
+      },
+      {
+        "subject": "animal_stool",
+        "relation": "in",
+        "object": "lounge"
+      },
+      {
+        "subject": "lounge_sofa",
+        "relation": "in",
+        "object": "lounge"
+      },
+      {
+        "subject": "toy_train",
+        "relation": "on",
+        "object": "wood_floor"
+      },
+      {
+        "subject": "toy_train",
+        "relation": "in",
+        "object": "activity_area"
+      },
+      {
+        "subject": "activity_area",
+        "relation": "in",
+        "object": "main_room"
+      },
+      {
+        "subject": "balloon_stickers",
+        "relation": "attached_to",
+        "object": "balloon_wall"
+      },
+      {
+        "subject": "balloon_wall",
+        "relation": "part_of",
+        "object": "main_room"
+      },
+      {
+        "subject": "red_house_1",
+        "relation": "in",
+        "object": "corner_play_area"
+      },
+      {
+        "subject": "corner_play_area",
+        "relation": "in",
+        "object": "main_room"
+      }
+    ]
+  },
+  "targets": [
+    {
+      "order": 1,
+      "description": "curved light wood reception desk with mint green light strip",
+      "candidate_ids": [
+        "reception"
+      ],
+      "selected_id": "reception",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-1a3mt72n/right.png",
+            "camera": "right",
+            "action": 0,
+            "supports": "Pale wood curved counter and continuous mint light strip match target 1."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-k0hipuk5/front.png",
+            "camera": "front",
+            "action": 21,
+            "supports": "Approached across unobstructed reception floor to counter edge; counter top fills lower view, estimated front clearance 0.4\u20130.7 m. This is a proximity assessment, not evaluator feedback."
+          }
+        ],
+        "contradictions": []
+      }
+    },
+    {
+      "order": 2,
+      "description": "wall with hot air balloon and cloud stickers",
+      "candidate_ids": [
+        "balloon_wall"
+      ],
+      "selected_id": "balloon_wall",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-1k0opqkt/left.png",
+            "camera": "left",
+            "action": 50,
+            "supports": "Distinct striped hot air balloons in blue, green and pink, with several white cloud stickers, on wall beyond school-themed red house."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-rnly1u5v/front.png",
+            "camera": "front",
+            "action": 66,
+            "supports": "Walked clear floor directly up to balloon wall beside red house; stickers dominate view and wall-floor junction falls below image, estimated wall clearance 0.7\u20130.9 m."
+          }
+        ],
+        "contradictions": []
+      }
+    },
+    {
+      "order": 3,
+      "description": "dark green plush animal stool on wooden floor beside curved green sofa",
+      "candidate_ids": [
+        "animal_stool"
+      ],
+      "selected_id": "animal_stool",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-2u8es3o7/front.png",
+            "camera": "front",
+            "action": 134,
+            "supports": "Close view confirms dark green plush animal with four short legs, ears and long rounded head, beside curved green sofa on wood floor."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-0zlod36j/front.png",
+            "camera": "front",
+            "action": 137,
+            "supports": "Advanced on clear floor until stool immediately below camera/front image, estimated 0.5\u20130.8 m from its front; approach followed balloon wall visit."
+          }
+        ],
+        "contradictions": []
+      }
+    },
+    {
+      "order": 4,
+      "description": "colorful wooden toy train centered in play area",
+      "candidate_ids": [
+        "toy_train"
+      ],
+      "selected_id": "toy_train",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-5kuj3bvv/front.png",
+            "camera": "front",
+            "action": 206,
+            "supports": "Wooden engine with blue roof and yellow chimney, green carriage and orange rear car, on floor centered between play tables."
+          },
+          {
+            "path": "images/observe-1k0opqkt/right.png",
+            "camera": "right",
+            "action": 50,
+            "supports": "Wide view establishes central play-area floor location, distinct from tabletop railway."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-5kuj3bvv/front.png",
+            "camera": "front",
+            "action": 206,
+            "supports": "Train immediately ahead on unobstructed floor, its engine at image bottom."
+          },
+          {
+            "path": "images/observe-ui0mwn8s/front.png",
+            "camera": "front",
+            "action": 209,
+            "supports": "Advanced 0.75 m and train dropped entirely below horizontal camera while room parallax confirms movement; estimated close side/front clearance 0.5\u20130.8 m."
+          }
+        ],
+        "contradictions": []
+      }
+    },
+    {
+      "order": 5,
+      "description": "red wooden triangular playhouse in corner near shelves",
+      "candidate_ids": [
+        "red_house_1",
+        "red_house_2"
+      ],
+      "selected_id": "red_house_1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-csh2dufe/left.png",
+            "camera": "left",
+            "action": 167,
+            "supports": "Red wooden side walls and pitched triangular roof visible beside tall cream/teal/pink shelving."
+          },
+          {
+            "path": "images/observe-qrji4ipo/front.png",
+            "camera": "front",
+            "action": 258,
+            "supports": "Return view establishes end corner with shelf bank directly adjoining house; unlike school-themed alternative farther along wall."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "path": "images/observe-519dzkr8/front.png",
+            "camera": "front",
+            "action": 274,
+            "supports": "Moved from side of house to open front threshold, viewing interior directly with red sidewalls beside camera."
+          },
+          {
+            "path": "images/observe-zj4dp6ua/front.png",
+            "camera": "front",
+            "action": 276,
+            "supports": "Further short forward approach on blue interior/threshold floor; now within house opening, with enclosing red wall close at right. Close navigable approach supported after train visit."
+          }
+        ],
+        "contradictions": []
+      },
+      "alternative_assessments": [
+        {
+          "id": "red_house_2",
+          "identity": "unresolved",
+          "evidence": [
+            {
+              "path": "images/observe-8_cx2f99/front.png",
+              "camera": "front",
+              "action": 231,
+              "supports": "Matches red wood and triangular roof but lies along media/balloon wall; corner and large-shelf relation fits house1 more strongly."
+            }
+          ],
+          "approach": [
+            {
+              "path": "images/observe-8_cx2f99/front.png",
+              "camera": "front",
+              "action": 231,
+              "supports": "Reached open floor at front threshold after target4; structure fills view."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_right",
+      "position_hypothesis": [
+        0,
+        0,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": null
+    },
+    {
+      "action": 2,
+      "command": "turn_right",
+      "position_hypothesis": [
+        0,
+        0,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": null
+    },
+    {
+      "action": 3,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.12500000000000003,
+        -0.21650635094610965,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 4,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.25000000000000006,
+        -0.4330127018922193,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 5,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.3750000000000001,
+        -0.649519052838329,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 6,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.5000000000000001,
+        -0.8660254037844386,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 7,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.6250000000000001,
+        -1.0825317547305482,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 8,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.7500000000000001,
+        -1.2990381056766578,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 9,
+      "command": "move_forward",
+      "position_hypothesis": [
+        0.8750000000000001,
+        -1.5155444566227674,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 10,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.0000000000000002,
+        -1.732050807568877,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 11,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.1250000000000002,
+        -1.9485571585149866,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 12,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.2500000000000002,
+        -2.1650635094610964,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.3750000000000002,
+        -2.381569860407206,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.5000000000000002,
+        -2.598076211353316,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 15,
+      "command": "turn_left",
+      "position_hypothesis": [
+        1.5000000000000002,
+        -2.598076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": null
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.7165063509461098,
+        -2.723076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 17,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.9330127018922194,
+        -2.848076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 18,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.149519052838329,
+        -2.973076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 19,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.3660254037844384,
+        -3.098076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 20,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5825317547305477,
+        -3.223076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 21,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.799038105676657,
+        -3.348076211353316,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": false
+    },
+    {
+      "action": 22,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.799038105676657,
+        -3.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": null
+    },
+    {
+      "action": 23,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.799038105676657,
+        -3.348076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": null
+    },
+    {
+      "action": 24,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.015544456622767,
+        -3.223076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 25,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.2320508075688767,
+        -3.098076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 26,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.4485571585149866,
+        -2.973076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 27,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.6650635094610964,
+        -2.848076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 28,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.881569860407206,
+        -2.723076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 29,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.098076211353316,
+        -2.598076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 30,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.314582562299425,
+        -2.473076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 31,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": false
+    },
+    {
+      "action": 32,
+      "command": "turn_right",
+      "position_hypothesis": [
+        4.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": null
+    },
+    {
+      "action": 33,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.781088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.281088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.781088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 38,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 39,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.281088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 40,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 41,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.781088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 42,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.281088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.781088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 46,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.281088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.531088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.781088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 51,
+      "command": "turn_left",
+      "position_hypothesis": [
+        9.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": null
+    },
+    {
+      "action": 52,
+      "command": "turn_left",
+      "position_hypothesis": [
+        9.031088913245535,
+        -2.348076211353316,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": null
+    },
+    {
+      "action": 53,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.156088913245535,
+        -2.131569860407206,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 54,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.281088913245535,
+        -1.9150635094610966,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 55,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.698557158514987,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 56,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.531088913245535,
+        -1.4820508075688774,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.656088913245535,
+        -1.2655444566227678,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 58,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.781088913245535,
+        -1.0490381056766582,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 59,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.906088913245535,
+        -0.8325317547305486,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 60,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.031088913245535,
+        -0.616025403784439,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 61,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.156088913245535,
+        -0.3995190528383294,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.281088913245535,
+        -0.18301270189221974,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 63,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.406088913245535,
+        0.03349364905388991,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 64,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.531088913245535,
+        0.24999999999999956,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 65,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.656088913245535,
+        0.4665063509461092,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 66,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 67,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": null
+    },
+    {
+      "action": 68,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": null
+    },
+    {
+      "action": 69,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": null
+    },
+    {
+      "action": 70,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": null
+    },
+    {
+      "action": 71,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": null
+    },
+    {
+      "action": 72,
+      "command": "turn_right",
+      "position_hypothesis": [
+        10.781088913245535,
+        0.6830127018922189,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": null
+    },
+    {
+      "action": 73,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.656088913245535,
+        0.46650635094610926,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.531088913245535,
+        0.24999999999999967,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 75,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.406088913245535,
+        0.03349364905389007,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 76,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.281088913245535,
+        -0.18301270189221952,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 77,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.156088913245535,
+        -0.3995190528383291,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "position_hypothesis": [
+        10.031088913245535,
+        -0.6160254037844387,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 79,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.906088913245535,
+        -0.8325317547305483,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 80,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.781088913245535,
+        -1.049038105676658,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 81,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 82,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 210,
+      "translation_verified": null
+    },
+    {
+      "action": 83,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": null
+    },
+    {
+      "action": 84,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.906088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 87,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 88,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 89,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 90,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.906088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 91,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 92,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 93,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 94,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.906088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 95,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 96,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 97,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 98,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.906088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 99,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 100,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 101,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 102,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.906088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 103,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.656088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 104,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.406088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 105,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 106,
+      "command": "turn_left",
+      "position_hypothesis": [
+        4.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 210,
+      "translation_verified": null
+    },
+    {
+      "action": 107,
+      "command": "turn_left",
+      "position_hypothesis": [
+        4.156088913245535,
+        -1.2655444566227676,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": null
+    },
+    {
+      "action": 108,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.031088913245535,
+        -1.4820508075688772,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 109,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.9060889132455348,
+        -1.6985571585149868,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.7810889132455348,
+        -1.9150635094610964,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 111,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.6560889132455348,
+        -2.1315698604072058,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 112,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.5310889132455348,
+        -2.348076211353315,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 113,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.4060889132455348,
+        -2.5645825622994245,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 114,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.2810889132455348,
+        -2.781088913245534,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.1560889132455348,
+        -2.9975952641916432,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -3.2141016151377526,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.9060889132455348,
+        -3.430607966083862,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 118,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -3.6471143170299714,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 119,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.6560889132455348,
+        -3.8636206679760807,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 120,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5310889132455348,
+        -4.08012701892219,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 121,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": false
+    },
+    {
+      "action": 122,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": null
+    },
+    {
+      "action": 123,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": null
+    },
+    {
+      "action": 124,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5310889132455348,
+        -4.513139720814409,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 125,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.6560889132455348,
+        -4.729646071760518,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 126,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -4.946152422706628,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 127,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.9060889132455348,
+        -5.162658773652737,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 128,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.379165124598846,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 129,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.379165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": null
+    },
+    {
+      "action": 130,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.629165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 131,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.879165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 132,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.129165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 133,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.379165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 134,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.629165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 135,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.879165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 136,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.129165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 137,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 138,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": null
+    },
+    {
+      "action": 139,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 210,
+      "translation_verified": null
+    },
+    {
+      "action": 140,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": null
+    },
+    {
+      "action": 141,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 142,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 143,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.379165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": null
+    },
+    {
+      "action": 144,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -7.129165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 145,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.879165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 146,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.629165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 147,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.379165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 148,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -6.129165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 149,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.879165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 150,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.629165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 151,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.379165124598846,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 152,
+      "command": "turn_left",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -5.379165124598846,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 153,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.9060889132455348,
+        -5.162658773652737,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 154,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -4.946152422706628,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 155,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.6560889132455348,
+        -4.729646071760518,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 156,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5310889132455348,
+        -4.513139720814409,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 157,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 158,
+      "command": "turn_right",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": null
+    },
+    {
+      "action": 159,
+      "command": "turn_right",
+      "position_hypothesis": [
+        2.4060889132455348,
+        -4.2966333698682995,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": null
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5310889132455348,
+        -4.08012701892219,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 161,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.6560889132455348,
+        -3.8636206679760803,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 162,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -3.6471143170299705,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 163,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.9060889132455348,
+        -3.4306079660838606,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 164,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -3.214101615137751,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 165,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.1560889132455348,
+        -2.997595264191641,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 166,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.2810889132455348,
+        -2.781088913245531,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 167,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.4060889132455348,
+        -2.5645825622994214,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 168,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.5310889132455348,
+        -2.3480762113533116,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.6560889132455348,
+        -2.1315698604072018,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 170,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.7810889132455348,
+        -1.9150635094610922,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 171,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.9060889132455348,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 60,
+      "translation_verified": false
+    },
+    {
+      "action": 172,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.9060889132455348,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 30,
+      "translation_verified": null
+    },
+    {
+      "action": 173,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.9060889132455348,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": null
+    },
+    {
+      "action": 174,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.156088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 175,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 176,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.656088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.906088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 178,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.156088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 179,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 180,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.656088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.906088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.156088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 183,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 184,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.656088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 185,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.906088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 186,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.156088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 187,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 188,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.656088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 189,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.906088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 190,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.156088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 191,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 0,
+      "translation_verified": false
+    },
+    {
+      "action": 192,
+      "command": "turn_right",
+      "position_hypothesis": [
+        8.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 330,
+      "translation_verified": null
+    },
+    {
+      "action": 193,
+      "command": "turn_right",
+      "position_hypothesis": [
+        8.406088913245535,
+        -1.6985571585149826,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": null
+    },
+    {
+      "action": 194,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.531088913245535,
+        -1.9150635094610922,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 195,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.656088913245535,
+        -2.1315698604072018,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 196,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.781088913245535,
+        -2.3480762113533116,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 197,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.906088913245535,
+        -2.5645825622994214,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 198,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.031088913245535,
+        -2.781088913245531,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 199,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.156088913245535,
+        -2.997595264191641,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 200,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.281088913245535,
+        -3.214101615137751,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 201,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.4306079660838606,
+        0
+      ],
+      "heading": 300,
+      "translation_verified": false
+    },
+    {
+      "action": 202,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.4306079660838606,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": null
+    },
+    {
+      "action": 203,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.6806079660838606,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 204,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.9306079660838606,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 205,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.18060796608386,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 206,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.43060796608386,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 207,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.68060796608386,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 208,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.93060796608386,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 209,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 270,
+      "translation_verified": false
+    },
+    {
+      "action": 210,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 240,
+      "translation_verified": null
+    },
+    {
+      "action": 211,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 210,
+      "translation_verified": null
+    },
+    {
+      "action": 212,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": null
+    },
+    {
+      "action": 213,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 214,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 215,
+      "command": "turn_right",
+      "position_hypothesis": [
+        9.406088913245535,
+        -5.18060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": null
+    },
+    {
+      "action": 216,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.93060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.68060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 218,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.43060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 219,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -4.18060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 220,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.93060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 221,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.68060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 222,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.43060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 223,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -3.18060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 224,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -2.93060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 225,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -2.68060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 226,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -2.43060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -2.18060796608386,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.9306079660838602,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.6806079660838602,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.4306079660838602,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 232,
+      "command": "turn_left",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 233,
+      "command": "turn_left",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 234,
+      "command": "turn_left",
+      "position_hypothesis": [
+        9.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": null
+    },
+    {
+      "action": 235,
+      "command": "move_forward",
+      "position_hypothesis": [
+        9.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 236,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.906088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 237,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.656088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 238,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 239,
+      "command": "move_forward",
+      "position_hypothesis": [
+        8.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 240,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.906088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 241,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.656088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 242,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 243,
+      "command": "move_forward",
+      "position_hypothesis": [
+        7.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 244,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.906088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 245,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.656088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 246,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 247,
+      "command": "move_forward",
+      "position_hypothesis": [
+        6.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 248,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.906088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 249,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.656088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 250,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 251,
+      "command": "move_forward",
+      "position_hypothesis": [
+        5.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.906088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.656088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.406088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 255,
+      "command": "move_forward",
+      "position_hypothesis": [
+        4.156088913245535,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 256,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.9060889132455348,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 257,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.6560889132455348,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 258,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.4060889132455348,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 259,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.4060889132455348,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 260,
+      "command": "turn_right",
+      "position_hypothesis": [
+        3.4060889132455348,
+        -1.1806079660838602,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.2810889132455348,
+        -0.9641016151377505,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.1560889132455348,
+        -0.7475952641916408,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 263,
+      "command": "move_forward",
+      "position_hypothesis": [
+        3.0310889132455348,
+        -0.5310889132455311,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 264,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.9060889132455348,
+        -0.3145825622994214,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 265,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -0.09807621135331171,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": false
+    },
+    {
+      "action": 266,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -0.09807621135331171,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 267,
+      "command": "turn_left",
+      "position_hypothesis": [
+        2.7810889132455348,
+        -0.09807621135331171,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": null
+    },
+    {
+      "action": 268,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.5310889132455348,
+        -0.09807621135331168,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 269,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.2810889132455348,
+        -0.09807621135331165,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 270,
+      "command": "move_forward",
+      "position_hypothesis": [
+        2.0310889132455348,
+        -0.09807621135331163,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 271,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.7810889132455348,
+        -0.0980762113533116,
+        0
+      ],
+      "heading": 180,
+      "translation_verified": false
+    },
+    {
+      "action": 272,
+      "command": "turn_right",
+      "position_hypothesis": [
+        1.7810889132455348,
+        -0.0980762113533116,
+        0
+      ],
+      "heading": 150,
+      "translation_verified": null
+    },
+    {
+      "action": 273,
+      "command": "turn_right",
+      "position_hypothesis": [
+        1.7810889132455348,
+        -0.0980762113533116,
+        0
+      ],
+      "heading": 120,
+      "translation_verified": null
+    },
+    {
+      "action": 274,
+      "command": "turn_right",
+      "position_hypothesis": [
+        1.7810889132455348,
+        -0.0980762113533116,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": null
+    },
+    {
+      "action": 275,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.7810889132455348,
+        0.1519237886466884,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 276,
+      "command": "move_forward",
+      "position_hypothesis": [
+        1.7810889132455348,
+        0.40192378864668843,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": false
+    },
+    {
+      "action": 277,
+      "command": "stop",
+      "position_hypothesis": [
+        1.7810889132455348,
+        0.40192378864668843,
+        0
+      ],
+      "heading": 90,
+      "translation_verified": null
+    }
+  ],
+  "localization_history": [
+    {
+      "action": 14,
+      "evidence": "observe-dxm8jsmj compared with initial views",
+      "note": "Visible passage through reception entrance and coherent desk/partition parallax support forward translation; metric distance remains approximate."
+    },
+    {
+      "action": 21,
+      "note": "Desk expanded substantially after 0.75 m command; no blockage evident."
+    },
+    {
+      "action": 66,
+      "note": "Wall enlarged consistently across observed approach; position relative to wall and house supports translation."
+    },
+    {
+      "action": 113,
+      "note": "Returned to reception entrance; same desk, arched partition, shelves and houses support global loop consistency. Coarse drift remains uncertain; current floor route clearly open."
+    },
+    {
+      "action": 167,
+      "note": "Retraced lounge path; view matches action113 from opposite heading, supporting return pose with modest drift."
+    },
+    {
+      "action": 258,
+      "note": "Reached same corner area consistently with original observations; no collision or unexplained discontinuity evident. Corrected initial rough house1 centre toward x1.9 using new bearing."
+    },
+    {
+      "action": 276,
+      "note": "Final pose is near/inside open house threshold. Geometry stays approximate; action-derived coordinates are not measured simulator pose and no target viewpoint coordinates were accessed."
+    }
+  ],
+  "plan": {
+    "current_target": 5,
+    "unchecked_alternatives": [],
+    "next_destination": null,
+    "review": "Reviewed ordered evidence: reception21, balloon wall66, animal stool137, floor train209, corner playhouse274\u2013276. Each identity uses distinctive appearance and spatial context. House2 remains distinct alternative with weaker corner/shelf relation and was also closely inspected after train at231. No observed contradiction invalidates selected approaches. These are fallible self-assessments; no evaluator feedback exists."
+  },
+  "stop_reason": "All five requested identities and close ordered approaches judged supported from RGB/action history; terminate explicitly at final corner playhouse."
+}

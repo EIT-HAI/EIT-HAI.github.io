@@ -1,0 +1,8851 @@
+{
+  "frame": {
+    "origin": "episode start",
+    "axes": "+x initially forward, +y initially left, +z up",
+    "units": "metres"
+  },
+  "updated_at_action": 470,
+  "localization": {
+    "position": [
+      -8.542468245269449,
+      9.47451905283833,
+      0
+    ],
+    "yaw_degrees": 60,
+    "uncertainty_m": 1.0,
+    "status": "Final pose approximately consistent with recognized kitchen landmarks; exact simulator pose unknown",
+    "corrections": [
+      {
+        "action": 16,
+        "reason": "Bed-foot collision inferred; nominal forward travel unsupported",
+        "old_position": [
+          -2.366,
+          -0.5,
+          0
+        ],
+        "new_position": [
+          -1,
+          -0.5,
+          0
+        ]
+      },
+      {
+        "action": 52,
+        "reason": "Exit and wardrobe scale indicate blocked forward progress",
+        "old_position": [
+          -4.5,
+          1.1160254037844388,
+          0
+        ],
+        "new_position": [
+          -4.5,
+          -0.3,
+          0
+        ]
+      }
+    ]
+  },
+  "world": {
+    "nodes": {
+      "bedroom": {
+        "id": "bedroom",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/back.png",
+            "camera": "back",
+            "action": 0
+          }
+        ],
+        "category": "room",
+        "description": "Start bedroom with twin beds, sofa, TV and balcony glazing",
+        "position": [
+          -1,
+          0,
+          1.5
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "beds": {
+        "id": "beds",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/back.png",
+            "camera": "back",
+            "action": 0
+          }
+        ],
+        "category": "bed",
+        "description": "Two white beds with wooden cane headboard",
+        "position": [
+          -2,
+          0.5,
+          0.6
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "sofa": {
+        "id": "sofa",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/left.png",
+            "camera": "left",
+            "action": 0
+          }
+        ],
+        "category": "sofa",
+        "description": "Cream sofa beside glazed balcony",
+        "position": [
+          0,
+          1.5,
+          0.5
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "beige_hanging": {
+        "id": "beige_hanging",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/left.png",
+            "camera": "left",
+            "action": 0
+          }
+        ],
+        "category": "wall_hanging",
+        "description": "Beige macrame on rod above sofa; lacks black/white pattern",
+        "position": [
+          0,
+          1.8,
+          1.7
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "balcony": {
+        "id": "balcony",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/front.png",
+            "camera": "front",
+            "action": 0
+          }
+        ],
+        "category": "place",
+        "description": "Balcony beyond glazing, chairs and small round table",
+        "position": [
+          2,
+          0,
+          0.5
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "balcony_plant": {
+        "id": "balcony_plant",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/front.png",
+            "camera": "front",
+            "action": 0
+          }
+        ],
+        "category": "plant",
+        "description": "Broad green leaves outside beside balcony chairs",
+        "position": [
+          2,
+          1.5,
+          1.2
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "wardrobe_1": {
+        "id": "wardrobe_1",
+        "image_refs": [
+          {
+            "image": "images/observe-ikmgnxul/front.png",
+            "camera": "front",
+            "action": 9
+          },
+          {
+            "image": "images/observe-tqv5uh8h/front.png",
+            "camera": "front",
+            "action": 31
+          },
+          {
+            "image": "images/observe-m1y85p4m/front.png",
+            "camera": "front",
+            "action": 35
+          },
+          {
+            "image": "images/observe-m1ol2dce/front.png",
+            "camera": "front",
+            "action": 172
+          },
+          {
+            "image": "images/observe-r_6nyahe/front.png",
+            "camera": "front",
+            "action": 394
+          }
+        ],
+        "category": "wardrobe",
+        "description": "Tall open wood frame with three hanging white bathrobes and lower wood/cane cabinet beside bathroom arch",
+        "position": [
+          -5.4,
+          -1,
+          1.25
+        ],
+        "uncertainty_m": 0.5,
+        "updated_at_action": 394
+      },
+      "bathroom_arch": {
+        "id": "bathroom_arch",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/back.png",
+            "camera": "back",
+            "action": 0
+          },
+          {
+            "image": "images/observe-m1ol2dce/front.png",
+            "camera": "front",
+            "action": 172
+          }
+        ],
+        "category": "passage",
+        "description": "Rounded white arch connecting dressing aisle and bathroom",
+        "position": [
+          -4.7,
+          -1.5,
+          1.3
+        ],
+        "uncertainty_m": 0.7,
+        "updated_at_action": 172
+      },
+      "vanity_1": {
+        "id": "vanity_1",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/back.png",
+            "camera": "back",
+            "action": 0
+          },
+          {
+            "image": "images/observe-m1y85p4m/front.png",
+            "camera": "front",
+            "action": 35
+          },
+          {
+            "image": "images/observe-c2e_45h0/front.png",
+            "camera": "front",
+            "action": 192
+          }
+        ],
+        "category": "vanity",
+        "description": "Gray stone trough basin on wooden open under-base with twin rounded mirrors; inside bathroom beside robe arch",
+        "position": [
+          -5.4,
+          -2.2,
+          0.8
+        ],
+        "uncertainty_m": 0.5,
+        "updated_at_action": 192
+      },
+      "bedroom_opening": {
+        "id": "bedroom_opening",
+        "image_refs": [
+          {
+            "image": "images/observe-t6sz2rrj/back.png",
+            "camera": "back",
+            "action": 0
+          }
+        ],
+        "category": "passage",
+        "description": "Wide rectangular opening behind beds, clear route on left in rear view",
+        "position": [
+          -3,
+          -1.5,
+          1.3
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 0
+      },
+      "dressing_area": {
+        "id": "dressing_area",
+        "image_refs": [
+          {
+            "image": "images/observe-tqv5uh8h/front.png",
+            "camera": "front",
+            "action": 31
+          }
+        ],
+        "category": "place",
+        "description": "White-floored area behind beds, wardrobe, small table and bathroom arch",
+        "position": [
+          -4,
+          -0.5,
+          1
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 31
+      },
+      "dressing_table": {
+        "id": "dressing_table",
+        "image_refs": [
+          {
+            "image": "images/observe-m1y85p4m/right.png",
+            "camera": "right",
+            "action": 35
+          }
+        ],
+        "category": "table",
+        "description": "Small wooden desk behind bed near exit doorway",
+        "position": [
+          -4,
+          0.8,
+          0.75
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 35
+      },
+      "exit_door": {
+        "id": "exit_door",
+        "image_refs": [
+          {
+            "image": "images/observe-m1y85p4m/right.png",
+            "camera": "right",
+            "action": 35
+          },
+          {
+            "image": "images/observe-v4u4cnn3/front.png",
+            "camera": "front",
+            "action": 40
+          },
+          {
+            "image": "images/observe-5v81uf7u/front.png",
+            "camera": "front",
+            "action": 65
+          }
+        ],
+        "category": "passage",
+        "description": "Bedroom exit at end of narrow desk aisle",
+        "position": [
+          -5,
+          1.3,
+          1.1
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 65
+      },
+      "corridor": {
+        "id": "corridor",
+        "image_refs": [
+          {
+            "image": "images/observe-xsos3l9h/left.png",
+            "camera": "left",
+            "action": 74
+          }
+        ],
+        "category": "place",
+        "description": "Covered gray-tiled corridor outside bedroom, arches and glazed doors",
+        "position": [
+          -7,
+          3.2,
+          1.2
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 74
+      },
+      "living_kitchen": {
+        "id": "living_kitchen",
+        "image_refs": [
+          {
+            "image": "images/observe-pjoxn9ey/right.png",
+            "camera": "right",
+            "action": 81
+          },
+          {
+            "image": "images/observe-43enyzoo/back.png",
+            "camera": "back",
+            "action": 469
+          }
+        ],
+        "category": "room",
+        "description": "Open kitchen/living room with sunken seating, bar and continuous floor aisles",
+        "position": [
+          -11,
+          7,
+          1.2
+        ],
+        "uncertainty_m": 1.3,
+        "updated_at_action": 469
+      },
+      "garden": {
+        "id": "garden",
+        "image_refs": [
+          {
+            "image": "images/observe-pjoxn9ey/left.png",
+            "camera": "left",
+            "action": 81
+          }
+        ],
+        "category": "place",
+        "description": "Outdoor planted rock garden outside corridor arches",
+        "position": [
+          -7,
+          1,
+          0.2
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 81
+      },
+      "white_counter": {
+        "id": "white_counter",
+        "image_refs": [
+          {
+            "image": "images/observe-ym1lid3l/right.png",
+            "camera": "right",
+            "action": 85
+          },
+          {
+            "image": "images/observe-43enyzoo/right.png",
+            "camera": "right",
+            "action": 469
+          }
+        ],
+        "category": "counter_component",
+        "description": "White body and pale work surface of kitchen_counter_1; earlier distant white counter observation now linked by matching bar, stools, shelves and plant",
+        "position": [
+          -8,
+          7.1,
+          0.85
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 469
+      },
+      "kitchen_counter_1": {
+        "id": "kitchen_counter_1",
+        "image_refs": [
+          {
+            "image": "images/observe-hnkezswl/front.png",
+            "camera": "front",
+            "action": 98
+          },
+          {
+            "image": "images/observe-c0fldzec/front.png",
+            "camera": "front",
+            "action": 111
+          },
+          {
+            "image": "images/observe-_1iey157/right.png",
+            "camera": "right",
+            "action": 117
+          }
+        ],
+        "category": "counter",
+        "description": "Pale working surface, wood bar ledge, gray divider; stools in front and shelf behind",
+        "position": [
+          -8.3,
+          6.8,
+          0.9
+        ],
+        "uncertainty_m": 0.6,
+        "updated_at_action": 117
+      },
+      "stools_1": {
+        "id": "stools_1",
+        "image_refs": [
+          {
+            "image": "images/observe-hnkezswl/front.png",
+            "camera": "front",
+            "action": 98
+          }
+        ],
+        "category": "stools",
+        "description": "Two rustic wooden stools in front of kitchen bar",
+        "position": [
+          -8,
+          6.5,
+          0.4
+        ],
+        "uncertainty_m": 1.2,
+        "updated_at_action": 98
+      },
+      "kitchen_shelves": {
+        "id": "kitchen_shelves",
+        "image_refs": [
+          {
+            "image": "images/observe-hnkezswl/front.png",
+            "camera": "front",
+            "action": 98
+          },
+          {
+            "image": "images/observe-43enyzoo/front.png",
+            "camera": "front",
+            "action": 469
+          }
+        ],
+        "category": "shelf",
+        "description": "Wood wall shelving behind kitchen counter near palm",
+        "position": [
+          -7.2,
+          9.1,
+          1.5
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 469
+      },
+      "plant_1": {
+        "id": "plant_1",
+        "image_refs": [
+          {
+            "image": "images/observe-_1iey157/front.png",
+            "camera": "front",
+            "action": 117
+          },
+          {
+            "image": "images/observe-odsojr_r/front.png",
+            "camera": "front",
+            "action": 446
+          },
+          {
+            "image": "images/observe-iryx7f3t/front.png",
+            "camera": "front",
+            "action": 456
+          },
+          {
+            "image": "images/observe-o_lgnykv/front.png",
+            "camera": "front",
+            "action": 467
+          },
+          {
+            "image": "images/observe-43enyzoo/front.png",
+            "camera": "front",
+            "action": 469
+          }
+        ],
+        "category": "plant",
+        "description": "Tall green multi-stem indoor palm in pale floor pot beside white kitchen counter end and black-framed window",
+        "position": [
+          -8.3,
+          9.9,
+          1.3
+        ],
+        "uncertainty_m": 0.5,
+        "updated_at_action": 469
+      },
+      "living_entry": {
+        "id": "living_entry",
+        "image_refs": [
+          {
+            "image": "images/observe-1artkwgu/back.png",
+            "camera": "back",
+            "action": 102
+          }
+        ],
+        "category": "passage",
+        "description": "Open glazed entry midway along garden corridor",
+        "position": [
+          -9.5,
+          3.7,
+          1.2
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 102
+      },
+      "patterned_fabric": {
+        "id": "patterned_fabric",
+        "image_refs": [
+          {
+            "image": "images/observe-c0fldzec/back.png",
+            "camera": "back",
+            "action": 111
+          },
+          {
+            "image": "images/observe-wkvdtsvc/front.png",
+            "camera": "front",
+            "action": 267
+          },
+          {
+            "image": "images/observe-lfjeidsz/right.png",
+            "camera": "right",
+            "action": 285
+          },
+          {
+            "image": "images/observe-ki30mgxj/left.png",
+            "camera": "left",
+            "action": 299
+          }
+        ],
+        "category": "wall_hanging",
+        "description": "Black-and-white diamond/zigzag patterned fabric with fringe on horizontal wooden rod beside dining table",
+        "position": [
+          -17,
+          4.2,
+          1.6
+        ],
+        "uncertainty_m": 0.6,
+        "updated_at_action": 299
+      },
+      "dining_table": {
+        "id": "dining_table",
+        "image_refs": [
+          {
+            "image": "images/observe-c0fldzec/back.png",
+            "camera": "back",
+            "action": 111
+          },
+          {
+            "image": "images/observe-wkvdtsvc/front.png",
+            "camera": "front",
+            "action": 267
+          },
+          {
+            "image": "images/observe-lfjeidsz/right.png",
+            "camera": "right",
+            "action": 285
+          }
+        ],
+        "category": "table",
+        "description": "Wooden dining table and four cushioned wood chairs beside textile",
+        "position": [
+          -17,
+          5.4,
+          0.75
+        ],
+        "uncertainty_m": 0.7,
+        "updated_at_action": 285
+      },
+      "kitchen_beige_hanging": {
+        "id": "kitchen_beige_hanging",
+        "image_refs": [
+          {
+            "image": "images/observe-c0fldzec/front.png",
+            "camera": "front",
+            "action": 111
+          }
+        ],
+        "category": "wall_hanging",
+        "description": "Cream macrame on rod in arched kitchen niche; not black and white",
+        "position": [
+          -6.8,
+          6.4,
+          1.7
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 111
+      },
+      "bathroom": {
+        "id": "bathroom",
+        "image_refs": [
+          {
+            "image": "images/observe-b67ygrlc/front.png",
+            "camera": "front",
+            "action": 185
+          }
+        ],
+        "category": "room",
+        "description": "Narrow white bathroom with gray trough basin, wooden under-shelf, mirrors and window",
+        "position": [
+          -4.7,
+          -2.5,
+          1.2
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 185
+      },
+      "fabric_rod": {
+        "id": "fabric_rod",
+        "image_refs": [
+          {
+            "image": "images/observe-ki30mgxj/front.png",
+            "camera": "front",
+            "action": 299
+          }
+        ],
+        "category": "rod",
+        "description": "Wooden horizontal rod supporting black/white textile",
+        "position": [
+          -17,
+          4.2,
+          2.1
+        ],
+        "uncertainty_m": 0.6,
+        "updated_at_action": 299
+      },
+      "dining_area": {
+        "id": "dining_area",
+        "image_refs": [
+          {
+            "image": "images/observe-ki30mgxj/right.png",
+            "camera": "right",
+            "action": 299
+          }
+        ],
+        "category": "place",
+        "description": "Dining nook beyond living-room lattice partition",
+        "position": [
+          -17,
+          5.6,
+          1
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 299
+      },
+      "kitchen_window": {
+        "id": "kitchen_window",
+        "image_refs": [
+          {
+            "image": "images/observe-iryx7f3t/front.png",
+            "camera": "front",
+            "action": 456
+          }
+        ],
+        "category": "window",
+        "description": "Tall black-framed window directly beside palm and kitchen counter",
+        "position": [
+          -8.6,
+          10.8,
+          1.5
+        ],
+        "uncertainty_m": 0.8,
+        "updated_at_action": 456
+      }
+    },
+    "relations": [
+      {
+        "subject": "beds",
+        "relation": "in",
+        "object": "bedroom"
+      },
+      {
+        "subject": "sofa",
+        "relation": "in",
+        "object": "bedroom"
+      },
+      {
+        "subject": "beige_hanging",
+        "relation": "in",
+        "object": "bedroom"
+      },
+      {
+        "subject": "bedroom",
+        "relation": "connected_to",
+        "object": "dressing_area",
+        "via": "bedroom_opening"
+      },
+      {
+        "subject": "dressing_area",
+        "relation": "connected_to",
+        "object": "corridor",
+        "via": "exit_door"
+      },
+      {
+        "subject": "corridor",
+        "relation": "connected_to",
+        "object": "living_kitchen",
+        "via": "living_entry"
+      },
+      {
+        "subject": "kitchen_counter_1",
+        "relation": "in",
+        "object": "living_kitchen"
+      },
+      {
+        "subject": "stools_1",
+        "relation": "in",
+        "object": "living_kitchen"
+      },
+      {
+        "subject": "kitchen_shelves",
+        "relation": "in",
+        "object": "living_kitchen"
+      },
+      {
+        "subject": "plant_1",
+        "relation": "in",
+        "object": "living_kitchen"
+      },
+      {
+        "subject": "dressing_area",
+        "relation": "connected_to",
+        "object": "bathroom",
+        "via": "bathroom_arch"
+      },
+      {
+        "subject": "vanity_1",
+        "relation": "in",
+        "object": "bathroom"
+      },
+      {
+        "subject": "wardrobe_1",
+        "relation": "in",
+        "object": "dressing_area"
+      },
+      {
+        "subject": "patterned_fabric",
+        "relation": "attached_to",
+        "object": "fabric_rod"
+      },
+      {
+        "subject": "patterned_fabric",
+        "relation": "in",
+        "object": "dining_area"
+      },
+      {
+        "subject": "dining_table",
+        "relation": "in",
+        "object": "dining_area"
+      },
+      {
+        "subject": "dining_area",
+        "relation": "connected_to",
+        "object": "living_kitchen",
+        "via": "side aisle beside sunken seating"
+      },
+      {
+        "subject": "white_counter",
+        "relation": "part_of",
+        "object": "kitchen_counter_1",
+        "evidence_action": 469
+      },
+      {
+        "subject": "kitchen_window",
+        "relation": "part_of",
+        "object": "living_kitchen",
+        "evidence_action": 469
+      }
+    ]
+  },
+  "targets": [
+    {
+      "order": 1,
+      "description": "wooden kitchen counter with light surface between two stools and shelf",
+      "candidate_ids": [
+        "kitchen_counter_1"
+      ],
+      "selected_id": "kitchen_counter_1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-c0fldzec/front.png",
+            "camera": "front",
+            "action": 111,
+            "supports": "Wood ledge and light working surface, two stools seen in action102 front and shelves behind; unique kitchen counter in observed room"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-_1iey157/right.png",
+            "camera": "right",
+            "action": 117,
+            "supports": "Reached unobstructed floor directly beside bar front after close approach at action111 and one metre along front; estimated sub-metre approach to nearby bar viewpoint, no evaluator feedback"
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "description": "gray bathroom vanity with wooden base through doorway beside robe wardrobe",
+      "candidate_ids": [
+        "vanity_1"
+      ],
+      "selected_id": "vanity_1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-b67ygrlc/front.png",
+            "camera": "front",
+            "action": 185,
+            "supports": "Gray basin and wood base visible through arch next to white robe wardrobe"
+          },
+          {
+            "image": "images/observe-c2e_45h0/front.png",
+            "camera": "front",
+            "action": 192,
+            "supports": "Close gray sink and mirrors verify same vanity"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-c2e_45h0/front.png",
+            "camera": "front",
+            "action": 192,
+            "supports": "Walked through arch into clear bathroom floor directly in front of sink, estimated 0.4-0.7 m from basin front; close navigable viewpoint reached after kitchen"
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "description": "black and white patterned fabric on rod near table",
+      "candidate_ids": [
+        "patterned_fabric"
+      ],
+      "selected_id": "patterned_fabric",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-lfjeidsz/right.png",
+            "camera": "right",
+            "action": 285,
+            "supports": "Black and white motifs, rod and nearby dining table all visible"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-ki30mgxj/left.png",
+            "camera": "left",
+            "action": 299,
+            "supports": "Reached floor directly alongside central textile at estimated 0.4-0.6 m wall offset, after traversing its front edge; clear continuous route from living aisle"
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "description": "tall open wooden wardrobe with white robes beside bathroom archway",
+      "candidate_ids": [
+        "wardrobe_1"
+      ],
+      "selected_id": "wardrobe_1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-m1y85p4m/front.png",
+            "camera": "front",
+            "action": 35,
+            "supports": "Full tall open wooden wardrobe, white robes, lower cabinet and adjacent bathroom arch"
+          },
+          {
+            "image": "images/observe-r_6nyahe/front.png",
+            "camera": "front",
+            "action": 394,
+            "supports": "Same wooden frame and white bathrobes at close approach; adjoining bathroom in left view"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-r_6nyahe/front.png",
+            "camera": "front",
+            "action": 394,
+            "supports": "Returned after fabric visit and stood directly in front of robes on clear dressing-area floor, estimated 0.4-0.6 m from wardrobe front"
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "description": "tall indoor green plant near white counter beside window",
+      "candidate_ids": [
+        "plant_1"
+      ],
+      "selected_id": "plant_1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-iryx7f3t/front.png",
+            "camera": "front",
+            "action": 456,
+            "supports": "Tall green indoor palm in floor pot directly beside white counter and black-framed window; distinct from outdoor garden and balcony plants"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-43enyzoo/front.png",
+            "camera": "front",
+            "action": 469,
+            "supports": "Reached clear indoor floor directly beside palm pot after passing counter end; estimated 0.3-0.6 m approach to adjacent viewpoint, with observed final translation; after wardrobe return"
+          }
+        ]
+      }
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_right",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 2,
+      "command": "turn_right",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 3,
+      "command": "turn_right",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 4,
+      "command": "turn_right",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 5,
+      "command": "turn_right",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 6,
+      "command": "move_forward",
+      "nominal_start": [
+        0,
+        0,
+        0
+      ],
+      "nominal_end": [
+        -0.21650635094610965,
+        -0.12500000000000003,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 7,
+      "command": "move_forward",
+      "nominal_start": [
+        -0.21650635094610965,
+        -0.12500000000000003,
+        0
+      ],
+      "nominal_end": [
+        -0.4330127018922193,
+        -0.25000000000000006,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 8,
+      "command": "move_forward",
+      "nominal_start": [
+        -0.4330127018922193,
+        -0.25000000000000006,
+        0
+      ],
+      "nominal_end": [
+        -0.649519052838329,
+        -0.3750000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 9,
+      "command": "move_forward",
+      "nominal_start": [
+        -0.649519052838329,
+        -0.3750000000000001,
+        0
+      ],
+      "nominal_end": [
+        -0.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 10,
+      "command": "turn_right",
+      "nominal_start": [
+        -0.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -0.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 11,
+      "command": "move_forward",
+      "nominal_start": [
+        -0.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -1.1160254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 12,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.1160254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -1.3660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.3660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -1.6160254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.6160254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -1.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 15,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.8660254037844386,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -2.1160254037844384,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "nominal_start": [
+        -2.1160254037844384,
+        -0.5000000000000001,
+        0
+      ],
+      "nominal_end": [
+        -2.3660254037844384,
+        -0.5000000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 17,
+      "command": "turn_left",
+      "nominal_start": [
+        -1,
+        -0.5,
+        0
+      ],
+      "nominal_end": [
+        -1,
+        -0.5,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 18,
+      "command": "turn_left",
+      "nominal_start": [
+        -1,
+        -0.5,
+        0
+      ],
+      "nominal_end": [
+        -1,
+        -0.5,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 19,
+      "command": "turn_left",
+      "nominal_start": [
+        -1,
+        -0.5,
+        0
+      ],
+      "nominal_end": [
+        -1,
+        -0.5,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 20,
+      "command": "move_forward",
+      "nominal_start": [
+        -1,
+        -0.5,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -0.75,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 21,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.0,
+        -0.75,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -1.0,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 22,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.0,
+        -1.0,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 23,
+      "command": "turn_right",
+      "nominal_start": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 24,
+      "command": "turn_right",
+      "nominal_start": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 25,
+      "command": "turn_right",
+      "nominal_start": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 26,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.25,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 27,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.25,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.5,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 28,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.5,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -1.75,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 29,
+      "command": "move_forward",
+      "nominal_start": [
+        -1.75,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -2.0,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 30,
+      "command": "move_forward",
+      "nominal_start": [
+        -2.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -2.25,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 31,
+      "command": "move_forward",
+      "nominal_start": [
+        -2.25,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -2.5,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 32,
+      "command": "move_forward",
+      "nominal_start": [
+        -2.5,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -2.75,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 33,
+      "command": "move_forward",
+      "nominal_start": [
+        -2.75,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -3.0,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "nominal_start": [
+        -3.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -3.25,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "nominal_start": [
+        -3.25,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -3.5,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "nominal_start": [
+        -3.5,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -3.75,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "nominal_start": [
+        -3.75,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 38,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 39,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 40,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 41,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 42,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.0,
+        -1.25,
+        0
+      ],
+      "nominal_end": [
+        -4.125,
+        -1.0334936490538904,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.125,
+        -1.0334936490538904,
+        0
+      ],
+      "nominal_end": [
+        -4.25,
+        -0.8169872981077807,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.25,
+        -0.8169872981077807,
+        0
+      ],
+      "nominal_end": [
+        -4.375,
+        -0.600480947161671,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.375,
+        -0.600480947161671,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.3839745962155613,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 46,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.5,
+        -0.3839745962155613,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.3839745962155613,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        -0.3839745962155613,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.1339745962155613,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        -0.1339745962155613,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        0.11602540378443871,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        0.11602540378443871,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        0.3660254037844387,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        0.3660254037844387,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        0.6160254037844387,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 51,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        0.6160254037844387,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        0.8660254037844387,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 52,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        0.8660254037844387,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        1.1160254037844388,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 53,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 54,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 55,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "nominal_end": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 56,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.5,
+        -0.3,
+        0
+      ],
+      "nominal_end": [
+        -4.75,
+        -0.29999999999999993,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.75,
+        -0.29999999999999993,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 58,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 59,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 60,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 61,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        -0.2999999999999999,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        -0.04999999999999988,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        -0.04999999999999988,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        0.20000000000000012,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 63,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        0.20000000000000012,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        0.4500000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 64,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        0.4500000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        0.7000000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 65,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        0.7000000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        0.9500000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 66,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        0.9500000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        1.2000000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 67,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        1.2000000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        1.4500000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 68,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        1.4500000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        1.7000000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 69,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        1.7000000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        1.9500000000000002,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 70,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        1.9500000000000002,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        2.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 71,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        2.2,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        2.45,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 72,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        2.45,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        2.7,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 73,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        2.7,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        2.95,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        2.95,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 75,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 76,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 77,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.25,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 79,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.25,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.5,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 80,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -5.75,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 81,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.75,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -6.0,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 82,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -6.25,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 83,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.25,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -6.5,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 84,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -6.75,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.75,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -7.0,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -7.25,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 87,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.25,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -7.5,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 88,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -7.75,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 89,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.75,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -8.0,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 90,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -8.25,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 91,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.25,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -8.5,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 92,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -8.75,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 93,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.75,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.0,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 94,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.0,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.25,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 95,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.25,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 96,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 97,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 98,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 99,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        3.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.45,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 100,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        3.45,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.7,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 101,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        3.7,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        3.95,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 102,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        3.95,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        4.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 103,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        4.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        4.45,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 104,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        4.45,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        4.7,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 105,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        4.7,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        4.95,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 106,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        4.95,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        5.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 107,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        5.2,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 108,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 109,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "nominal_end": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.5,
+        5.45,
+        0
+      ],
+      "nominal_end": [
+        -9.28349364905389,
+        5.575,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 111,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.28349364905389,
+        5.575,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 112,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 113,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 114,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        5.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        5.95,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        5.95,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.2,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        6.2,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.45,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        6.45,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 118,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 119,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 120,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 121,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 122,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 123,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        6.7,
+        0
+      ],
+      "nominal_end": [
+        -9.19198729810778,
+        6.483493649053891,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 124,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.19198729810778,
+        6.483493649053891,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.266987298107781,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 125,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        6.266987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.266987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 126,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.266987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.016987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 127,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.016987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.766987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 128,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.766987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.516987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 129,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.516987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.266987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 130,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.266987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.016987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 131,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.016987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.766987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 132,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.766987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.516987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 133,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.516987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.266987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 134,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.266987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.016987298107781,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 135,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.016987298107781,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.7669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 136,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.7669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 137,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 138,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 139,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 140,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 141,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -8.81698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 142,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.81698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -8.56698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 143,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.56698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -8.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 144,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.31698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -8.06698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 145,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.06698729810778,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -7.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 146,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -7.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 147,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -7.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 148,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -7.0669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 149,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.0669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -6.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 150,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -6.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 151,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -6.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 152,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -6.0669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 153,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.0669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 154,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.8169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 155,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.5669872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 156,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 157,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 158,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 159,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.2669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.2669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.0169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 161,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.0169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.7669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 162,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.7669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.5169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 163,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.2669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 164,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.2669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.0169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 165,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.0169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.7669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 166,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.7669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.5169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 167,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.2669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 168,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.2669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.0169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.0169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.7669872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 170,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.7669872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.5169872981077814,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 171,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.5169872981077814,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.26698729810778143,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 172,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.26698729810778143,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 173,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 174,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 175,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 176,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 178,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 179,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 180,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.23301270189221857,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.23301270189221857,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.48301270189221857,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 183,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.48301270189221857,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.7330127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 184,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.7330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.9830127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 185,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.9830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.2330127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 186,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.4830127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 187,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.4830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.7330127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 188,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.7330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.9830127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 189,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.9830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 190,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 191,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 192,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 193,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 194,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 195,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 196,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -2.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.9830127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 197,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.9830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.7330127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 198,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.7330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.4830127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 199,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.4830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.2330127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 200,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.2330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.9830127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 201,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.9830127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.7330127018922186,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 202,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.7330127018922186,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.48301270189221857,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 203,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.48301270189221857,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.23301270189221857,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 204,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.23301270189221857,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 205,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 206,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        0.016987298107781434,
+        0
+      ],
+      "nominal_end": [
+        -4.9419872981077795,
+        0.2334936490538911,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 207,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.9419872981077795,
+        0.2334936490538911,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.4500000000000008,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 208,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.4500000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.4500000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 209,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.4500000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.7000000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 210,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.7000000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.9500000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 211,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.9500000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.2000000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 212,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.2000000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.4500000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 213,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.4500000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.7000000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 214,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.7000000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.9500000000000008,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 215,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.9500000000000008,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.200000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 216,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.450000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.700000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 218,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.950000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 219,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.950000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.200000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 220,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 221,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 222,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 223,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 224,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 225,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 226,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 232,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 233,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 234,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 235,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 236,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 237,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.56698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 238,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.56698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.81698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 239,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.81698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 240,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 241,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 242,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 243,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 244,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.700000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 245,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.950000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 246,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.950000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.200000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 247,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.450000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 248,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 249,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 250,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 251,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 255,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 256,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 257,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 258,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 259,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 260,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 263,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 264,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 265,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 266,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 267,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 268,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 269,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 270,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 271,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 272,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 273,
+      "command": "turn_left",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 274,
+      "command": "turn_left",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 275,
+      "command": "turn_left",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 276,
+      "command": "turn_right",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 277,
+      "command": "turn_right",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 278,
+      "command": "turn_right",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 279,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 280,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 281,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 282,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 283,
+      "command": "turn_left",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 284,
+      "command": "turn_left",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 285,
+      "command": "turn_left",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 286,
+      "command": "turn_right",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 287,
+      "command": "turn_right",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 288,
+      "command": "turn_right",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 289,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 290,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 291,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 292,
+      "command": "turn_left",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 293,
+      "command": "turn_left",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 294,
+      "command": "turn_left",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 295,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 296,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 297,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 298,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 299,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 300,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 301,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 302,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 303,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 304,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 305,
+      "command": "turn_right",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 306,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 307,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 308,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -16.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 309,
+      "command": "move_forward",
+      "nominal_start": [
+        -16.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 310,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 311,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 312,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -15.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 313,
+      "command": "move_forward",
+      "nominal_start": [
+        -15.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 314,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 315,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 316,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -14.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 317,
+      "command": "move_forward",
+      "nominal_start": [
+        -14.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 318,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 319,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 320,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -13.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 321,
+      "command": "move_forward",
+      "nominal_start": [
+        -13.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 322,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 323,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 324,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -12.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 325,
+      "command": "move_forward",
+      "nominal_start": [
+        -12.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 326,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 327,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 328,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -11.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 329,
+      "command": "move_forward",
+      "nominal_start": [
+        -11.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 330,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 331,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 332,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -10.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 333,
+      "command": "move_forward",
+      "nominal_start": [
+        -10.06698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 334,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.81698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 335,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.56698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 336,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 337,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 338,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 339,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.450000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 340,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.200000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 341,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.950000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 342,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.950000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 343,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 344,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 345,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 346,
+      "command": "turn_left",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 347,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 348,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.81698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 349,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.81698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.56698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 350,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.56698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 351,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.31698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -8.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 352,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.06698729810778,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 353,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 354,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 355,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -7.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 356,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 357,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 358,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 359,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -6.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 360,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.0669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 361,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.8169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 362,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.5669872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 363,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 364,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 365,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 366,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.200000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 367,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.950000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 368,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.950000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 369,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.450000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 370,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        2.200000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 371,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        2.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.950000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 372,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.950000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.700000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 373,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.700000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.450000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 374,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.450000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        1.200000000000001,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 375,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        1.200000000000001,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.9500000000000011,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 376,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.9500000000000011,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.7000000000000011,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 377,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.7000000000000011,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.45000000000000107,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 378,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.45000000000000107,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        0.20000000000000107,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 379,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        0.20000000000000107,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 380,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 381,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 382,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 383,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 384,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 0,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 385,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 330,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 386,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 300,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 387,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 388,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.29999999999999893,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 389,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.29999999999999893,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.5499999999999989,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 390,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.5499999999999989,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.7999999999999989,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 391,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.7999999999999989,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 270,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 392,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 240,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 393,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 210,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 394,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 395,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 396,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 397,
+      "command": "turn_right",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 398,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -1.049999999999999,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.7999999999999989,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 399,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.7999999999999989,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.5499999999999989,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 400,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.5499999999999989,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.29999999999999893,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 401,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.29999999999999893,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 402,
+      "command": "turn_left",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 403,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.8169872981077795,
+        -0.049999999999998934,
+        0
+      ],
+      "nominal_end": [
+        -4.9419872981077795,
+        0.16650635094611074,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 404,
+      "command": "move_forward",
+      "nominal_start": [
+        -4.9419872981077795,
+        0.16650635094611074,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.3830127018922204,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 405,
+      "command": "turn_right",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.3830127018922204,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.3830127018922204,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 406,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.3830127018922204,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.6330127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 407,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.6330127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        0.8830127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 408,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        0.8830127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.1330127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 409,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.1330127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.3830127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 410,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.3830127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.6330127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 411,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.6330127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        1.8830127018922205,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 412,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        1.8830127018922205,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.1330127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 413,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.1330127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.3830127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 414,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.6330127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 415,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.6330127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        2.8830127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 416,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        2.8830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.1330127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 417,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.1330127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 418,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 419,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 420,
+      "command": "turn_left",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 421,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 422,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 423,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -5.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 424,
+      "command": "move_forward",
+      "nominal_start": [
+        -5.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -6.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 425,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -6.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 426,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -6.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 427,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -6.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 428,
+      "command": "move_forward",
+      "nominal_start": [
+        -6.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -7.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 429,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.0669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -7.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 430,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.3169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -7.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 431,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.5669872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -7.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 432,
+      "command": "move_forward",
+      "nominal_start": [
+        -7.8169872981077795,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -8.06698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 433,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.06698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -8.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 434,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -8.56698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 435,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.56698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -8.81698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 436,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.81698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.06698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 437,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.06698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 180,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 438,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 150,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 439,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 120,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 440,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 441,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.3830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.6330127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 442,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.6330127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        3.8830127018922207,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 443,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        3.8830127018922207,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.133012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 444,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.133012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.383012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 445,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.383012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.633012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 446,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.633012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        4.883012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 447,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        4.883012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.133012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 448,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.133012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.383012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 449,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.383012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.633012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 450,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.633012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        5.883012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 451,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        5.883012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.133012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 452,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.133012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.383012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 453,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.383012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.633012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 454,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.633012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        6.883012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 455,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        6.883012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        7.133012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 456,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        7.133012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        7.383012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 457,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        7.383012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        7.633012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 458,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        7.633012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        7.883012701892221,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 459,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        7.883012701892221,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.13301270189222,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 460,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        8.13301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.38301270189222,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 461,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        8.38301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.63301270189222,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 462,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        8.63301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "yaw": 90,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 463,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 464,
+      "command": "turn_right",
+      "nominal_start": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 465,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.31698729810778,
+        8.88301270189222,
+        0
+      ],
+      "nominal_end": [
+        -9.10048094716167,
+        9.00801270189222,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 466,
+      "command": "move_forward",
+      "nominal_start": [
+        -9.10048094716167,
+        9.00801270189222,
+        0
+      ],
+      "nominal_end": [
+        -8.883974596215559,
+        9.13301270189222,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 467,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.883974596215559,
+        9.13301270189222,
+        0
+      ],
+      "nominal_end": [
+        -8.667468245269449,
+        9.25801270189222,
+        0
+      ],
+      "yaw": 30,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 468,
+      "command": "turn_left",
+      "nominal_start": [
+        -8.667468245269449,
+        9.25801270189222,
+        0
+      ],
+      "nominal_end": [
+        -8.667468245269449,
+        9.25801270189222,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    },
+    {
+      "action": 469,
+      "command": "move_forward",
+      "nominal_start": [
+        -8.667468245269449,
+        9.25801270189222,
+        0
+      ],
+      "nominal_end": [
+        -8.542468245269449,
+        9.47451905283833,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": false
+    },
+    {
+      "action": 470,
+      "command": "stop",
+      "nominal_start": [
+        -8.542468245269449,
+        9.47451905283833,
+        0
+      ],
+      "nominal_end": [
+        -8.542468245269449,
+        9.47451905283833,
+        0
+      ],
+      "yaw": 60,
+      "displacement_confirmed": null
+    }
+  ],
+  "observations": [
+    {
+      "action": 0,
+      "folder": "images/observe-t6sz2rrj",
+      "notes": "Bedroom start; rear opening leads toward robe wardrobe and bathroom arch."
+    },
+    {
+      "action": 9,
+      "folder": "images/observe-ikmgnxul",
+      "notes": "Translation visually supported: bed side and doorway enlarged. Clear aisle toward rear opening."
+    },
+    {
+      "action": 16,
+      "folder": "images/observe-1a6a06lv",
+      "notes": "Little translation despite six forward commands; bed blocks intended heading. Withdraw nominal 1.5 m displacement, estimated actual position about [-1,-0.5,0]."
+    },
+    {
+      "action": 31,
+      "folder": "images/observe-tqv5uh8h",
+      "notes": "Successful side-aisle travel confirmed by enlarged doorway and wardrobe. Another doorway beyond beds on right."
+    },
+    {
+      "action": 35,
+      "folder": "images/observe-m1y85p4m",
+      "notes": "Entered dressing-area threshold. Wardrobe, gray basin with wooden base, and exit doorway beyond small desk are clear."
+    },
+    {
+      "action": 40,
+      "folder": "images/observe-v4u4cnn3",
+      "notes": "Narrow aisle between wardrobe wall and desk toward exit; straight heading blocked by desk, choose diagonal left."
+    },
+    {
+      "action": 45,
+      "folder": "images/observe-1bx6his9",
+      "notes": "Moved past wardrobe into clear desk aisle; exit ~1.5-2 m ahead."
+    },
+    {
+      "action": 52,
+      "folder": "images/observe-1x0fxsdc",
+      "notes": "Exit scale unchanged after forward batch; collision with chair/desk at aisle edge. Six-step nominal travel withdrawn."
+    },
+    {
+      "action": 65,
+      "folder": "images/observe-5v81uf7u",
+      "notes": "Side shift cleared chair; translated successfully to exit threshold. Bathroom arch directly behind along aisle."
+    },
+    {
+      "action": 70,
+      "folder": "images/observe-xo_r57xd",
+      "notes": "Inside short narrow exit passage; view beyond bright and uncertain."
+    },
+    {
+      "action": 74,
+      "folder": "images/observe-xsos3l9h",
+      "notes": "Exit opens left into roofed corridor with arch openings and dark-framed glazing."
+    },
+    {
+      "action": 81,
+      "folder": "images/observe-pjoxn9ey",
+      "notes": "Corridor runs along garden left and living/kitchen glazing right; white counter visible indoors."
+    },
+    {
+      "action": 85,
+      "folder": "images/observe-ym1lid3l",
+      "notes": "Glazed panel beside white counter; probable open living-room entry further along corridor."
+    },
+    {
+      "action": 91,
+      "folder": "images/observe-2y01h792",
+      "notes": "Further along garden corridor. Living-room sunken seating and geometric decorative panels visible through glazing."
+    },
+    {
+      "action": 98,
+      "folder": "images/observe-hnkezswl",
+      "notes": "Clear view into living/kitchen: white and wood counter, two wooden stools, wall shelves, tall plant beside end window. Potential first and fifth targets; verify close."
+    },
+    {
+      "action": 102,
+      "folder": "images/observe-1artkwgu",
+      "notes": "Crossed open glazing into kitchen/living. Kitchen bar has wood top, pale working surface and two log stools, with shelves behind. Dining area visible beyond seating on left."
+    },
+    {
+      "action": 111,
+      "folder": "images/observe-c0fldzec",
+      "notes": "Close at near end of kitchen bar. Distinct black/white fabric on dining wall appears in rear view; beige kitchen macrame is not target 3."
+    },
+    {
+      "action": 117,
+      "folder": "images/observe-_1iey157",
+      "notes": "Traversed close accessible floor along kitchen counter front; counter within arm-length on right, front of stool/bar area reached. Preparing ordered return to bathroom."
+    },
+    {
+      "action": 132,
+      "folder": "images/observe-rwxmxvz1",
+      "notes": "Returned to open living entry; straight exit to corridor remains clear."
+    },
+    {
+      "action": 149,
+      "folder": "images/observe-8yb_k93h",
+      "notes": "Reached bedroom-side end of corridor. Open door ahead, return passage turns right."
+    },
+    {
+      "action": 153,
+      "folder": "images/observe-jx20oeg7",
+      "notes": "Bedroom desk visible through right-hand doorway; align a little farther forward to enter."
+    },
+    {
+      "action": 164,
+      "folder": "images/observe-4yjjrp39",
+      "notes": "Back inside desk aisle; bathroom arch straight ahead. Close wall on right, narrow but previously traversed."
+    },
+    {
+      "action": 172,
+      "folder": "images/observe-m1ol2dce",
+      "notes": "At robe wardrobe side; bathroom arch is slightly left of heading. Shift left into arch axis, avoiding wardrobe."
+    },
+    {
+      "action": 185,
+      "folder": "images/observe-b67ygrlc",
+      "notes": "Aligned in bathroom arch, gray vanity and wooden under-shelf ahead right; robe wardrobe immediately outside right."
+    },
+    {
+      "action": 192,
+      "folder": "images/observe-c2e_45h0",
+      "notes": "Inside bathroom on floor directly in front of gray basin, faucet and mirrors at close range. Ordered second approach supported."
+    },
+    {
+      "action": 204,
+      "folder": "images/observe-2jqy765o",
+      "notes": "Exited bathroom and passed wardrobe; clear narrow aisle to exit. Slight left correction aligns with doorway."
+    },
+    {
+      "action": 218,
+      "folder": "images/observe-_wzw6zyn",
+      "notes": "Back at corridor junction; move clear of door leaf then turn left along known corridor."
+    },
+    {
+      "action": 235,
+      "folder": "images/observe-y7n235_v",
+      "notes": "Traversed corridor back to near living entry; opaque panel on right ends ahead."
+    },
+    {
+      "action": 248,
+      "folder": "images/observe-b81_dmek",
+      "notes": "Re-entered living room. Left floor aisle leads alongside sunken sofa directly to black/white hanging and dining table."
+    },
+    {
+      "action": 259,
+      "folder": "images/observe-96at_tno",
+      "notes": "Approaching dining nook along continuous clear side aisle; patterned hanging on left wall beyond decorative partition."
+    },
+    {
+      "action": 267,
+      "folder": "images/observe-wkvdtsvc",
+      "notes": "Dining hanging now clearly black and white on rod, mounted left wall beside wood table. Clear floor remains ahead."
+    },
+    {
+      "action": 275,
+      "folder": "images/observe-6t9yfog9",
+      "notes": "Patterned textile remains ahead along wall, not yet directly opposite. Table and rod visually verified; continue a metre into nook."
+    },
+    {
+      "action": 285,
+      "folder": "images/observe-lfjeidsz",
+      "notes": "Black/white textile near at right oblique view; center still farther along wall. Approach the clear wall-side floor before dining chair."
+    },
+    {
+      "action": 294,
+      "folder": "images/observe-21s9c9ll",
+      "notes": "Reached floor at near edge of textile, within close wall distance. Advance half metre along wall for center approach before returning."
+    },
+    {
+      "action": 299,
+      "folder": "images/observe-ki30mgxj",
+      "notes": "Moved alongside center of hanging, on navigable strip between wall and dining chairs. Fabric fills left view at close range."
+    },
+    {
+      "action": 317,
+      "folder": "images/observe-z0tk5o98",
+      "notes": "Intermediate return observation during fixed action batch; continuing known clear aisle."
+    },
+    {
+      "action": 325,
+      "folder": "images/observe-y8p88ssd",
+      "notes": "Returned along dining aisle toward living entry; same kitchen and garden landmarks consistent."
+    },
+    {
+      "action": 343,
+      "folder": "images/observe-kuy1kbgy",
+      "notes": "Exited living entry into corridor; known bedroom-side end is left."
+    },
+    {
+      "action": 362,
+      "folder": "images/observe-8o4ui4g2",
+      "notes": "Bedroom doorway aligned directly right at corridor end."
+    },
+    {
+      "action": 377,
+      "folder": "images/observe-1uuy157w",
+      "notes": "Back at wardrobe-side end of desk aisle; robe frame just around wall ahead. Reuse shift into arch/front-of-wardrobe axis."
+    },
+    {
+      "action": 394,
+      "folder": "images/observe-r_6nyahe",
+      "notes": "Reached close floor directly in front of robe wardrobe after patterned-fabric visit; bathroom arch/gray vanity immediately to left."
+    },
+    {
+      "action": 417,
+      "folder": "images/observe-q5a6s93u",
+      "notes": "Exited robe area to corridor junction; familiar living entry route remains open."
+    },
+    {
+      "action": 446,
+      "folder": "images/observe-odsojr_r",
+      "notes": "Returned to kitchen for final target. Tall green palm at window beyond counter; clear path along bar front left of stools."
+    },
+    {
+      "action": 456,
+      "folder": "images/observe-iryx7f3t",
+      "notes": "Passed stools along bar. Palm in pale floor pot is at far end of white counter immediately by window; continue on clear floor around counter end."
+    },
+    {
+      "action": 462,
+      "folder": "images/observe-zg05ewq3",
+      "notes": "At counter far end, palm immediately diagonal right; navigate into clear floor beside pot between counter end and window."
+    },
+    {
+      "action": 467,
+      "folder": "images/observe-o_lgnykv",
+      "notes": "At counter end beside palm; green stems and fronds fill near front-left, window directly behind, counter right. One small final approach toward plant on clear floor."
+    },
+    {
+      "action": 469,
+      "folder": "images/observe-43enyzoo",
+      "notes": "Final close approach beside tall palm. Fronds/stems fill front, window behind, white kitchen counter immediately right; observed translation from previous view."
+    }
+  ],
+  "plan": {
+    "current_target": 5,
+    "unchecked_alternatives": [],
+    "retrieval": {
+      "action": 394,
+      "destination": "plant_1",
+      "reviewed_nodes": [
+        "wardrobe_1",
+        "exit_door",
+        "corridor",
+        "living_entry",
+        "kitchen_counter_1",
+        "plant_1"
+      ],
+      "reviewed_images": [
+        "images/observe-r_6nyahe/right.png",
+        "images/observe-_1iey157/front.png",
+        "images/observe-96at_tno/right.png"
+      ],
+      "route": "Return through corridor and living entry, follow clear front-of-counter aisle to tall palm at window; balcony/outdoor plants excluded"
+    },
+    "final_review": {
+      "action": 469,
+      "ordered_assessments": [
+        {
+          "target": 1,
+          "selected_id": "kitchen_counter_1",
+          "identity": "supported",
+          "arrival": "supported"
+        },
+        {
+          "target": 2,
+          "selected_id": "vanity_1",
+          "identity": "supported",
+          "arrival": "supported"
+        },
+        {
+          "target": 3,
+          "selected_id": "patterned_fabric",
+          "identity": "supported",
+          "arrival": "supported"
+        },
+        {
+          "target": 4,
+          "selected_id": "wardrobe_1",
+          "identity": "supported",
+          "arrival": "supported"
+        },
+        {
+          "target": 5,
+          "selected_id": "plant_1",
+          "identity": "supported",
+          "arrival": "supported"
+        }
+      ],
+      "reviewed_approach_actions": [
+        117,
+        192,
+        299,
+        394,
+        469
+      ],
+      "alternatives_reviewed": [
+        "Beige bedroom and kitchen macrame lack target black/white pattern",
+        "Balcony and garden plants lack indoor kitchen-counter context",
+        "White counter body and wooden ledge are components of same kitchen candidate"
+      ],
+      "limitations": "All identity, geometry and proximity states are fallible visual self-assessments; no evaluator feedback or exact approved viewpoints available",
+      "decision": "STOP after five ordered supported close approaches"
+    }
+  },
+  "motion_review": [
+    {
+      "through_action": 16,
+      "assessment": "Blocked by bed; nominal displacement withdrawn and position corrected"
+    },
+    {
+      "through_action": 52,
+      "assessment": "Desk/chair blockage; nominal displacement withdrawn and position corrected"
+    },
+    {
+      "through_action": 65,
+      "assessment": "Side shift cleared obstruction; doorway travel observed"
+    },
+    {
+      "through_action": 192,
+      "assessment": "Corridor return and bathroom entry matched saved landmarks"
+    },
+    {
+      "through_action": 299,
+      "assessment": "Continuous dining aisle approach and textile enlargement observed"
+    },
+    {
+      "through_action": 394,
+      "assessment": "Revisited wardrobe directly after dining approach"
+    },
+    {
+      "through_action": 469,
+      "assessment": "Revisited kitchen; observed travel past stools to plant on clear floor"
+    }
+  ]
+}

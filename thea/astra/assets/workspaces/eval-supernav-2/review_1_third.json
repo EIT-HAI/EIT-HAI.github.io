@@ -1,0 +1,37 @@
+{
+  "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+  "run_id": "supernav-sg-evaluator-186-20261025T172402507Z",
+  "episode_id": "multi_objectnav_17_000186",
+  "instruction": "First, find the black upright piano topped with purple flowers beside the white chaise lounge. Then, find a modern lounge chair with white fabric and sleek design near a side table and window. Then, find an accent chair with tan fabric, modern shape next to a glass cabinet. Then, find an armchair with white fabric, cushioned seating, next to a coffee table and shelves. Finally, find a decorative plant with green leaves and slender branches on a coffee table, near a sofa.",
+  "target_count": 5,
+  "actions": 120,
+  "action_limit": 500,
+  "policy_limit_seconds": 7200,
+  "begun": true,
+  "episode_over": false,
+  "stop_executed": false,
+  "evaluation_id": "supernav-sg-evaluator-186-20261025T172402507Z-review-0003",
+  "review_scope": {
+    "kind": "intermediate_target",
+    "target_index": 1
+  },
+  "evaluation": {
+    "identity": "supported",
+    "room_and_relations": "supported",
+    "approach": "unknown",
+    "decision": "fail",
+    "evidence": [
+      "Front: a modern white upholstered lounge chair is partially visible in the lower-right foreground.",
+      "Front: a small round side table sits beside the chair next to windows with horizontal blinds."
+    ],
+    "contradictions": [],
+    "missing_evidence": "The chair's lower portion and adjacent approach floor are cropped, leaving insufficient evidence of a strictly under-1m walkable arrival.",
+    "limitation": "RGB provides only a fallible distance estimate; exact geodesic distance and native benchmark success cannot be established."
+  },
+  "decision": "fail",
+  "evaluation_gate_passed": false,
+  "continue_required": true,
+  "review_reused": false,
+  "target_review_accepted": false,
+  "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+}

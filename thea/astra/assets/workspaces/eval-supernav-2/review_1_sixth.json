@@ -1,0 +1,38 @@
+{
+  "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+  "run_id": "supernav-sg-evaluator-186-20261025T172402507Z",
+  "episode_id": "multi_objectnav_17_000186",
+  "instruction": "First, find the black upright piano topped with purple flowers beside the white chaise lounge. Then, find a modern lounge chair with white fabric and sleek design near a side table and window. Then, find an accent chair with tan fabric, modern shape next to a glass cabinet. Then, find an armchair with white fabric, cushioned seating, next to a coffee table and shelves. Finally, find a decorative plant with green leaves and slender branches on a coffee table, near a sofa.",
+  "target_count": 5,
+  "actions": 149,
+  "action_limit": 500,
+  "policy_limit_seconds": 7200,
+  "begun": true,
+  "episode_over": false,
+  "stop_executed": false,
+  "evaluation_id": "supernav-sg-evaluator-186-20261025T172402507Z-review-0006",
+  "review_scope": {
+    "kind": "intermediate_target",
+    "target_index": 1
+  },
+  "evaluation": {
+    "identity": "supported",
+    "room_and_relations": "supported",
+    "approach": "supported",
+    "decision": "success",
+    "evidence": [
+      "Front: a sleek white upholstered lounge chair is immediately in the lower foreground.",
+      "Front: a small side table stands beside the chair, directly by the large window with blinds.",
+      "Left: the chair extends into the immediate foreground beside clear marble floor, supporting a visually estimated under-1m walkable approach."
+    ],
+    "contradictions": [],
+    "missing_evidence": "Exact geodesic distance and accepted viewpoint are unavailable.",
+    "limitation": "RGB supports a fallible proximity estimate, not measured distance, historical target order, or native benchmark success."
+  },
+  "decision": "success",
+  "evaluation_gate_passed": true,
+  "continue_required": false,
+  "review_reused": false,
+  "target_review_accepted": true,
+  "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+}

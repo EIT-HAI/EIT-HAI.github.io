@@ -1,0 +1,6324 @@
+{
+  "frame": {
+    "origin": "start",
+    "axes": "+x initially forward, +y initially left, +z up",
+    "units": "metres"
+  },
+  "updated_at_action": 499,
+  "agent_belief": {
+    "position": [
+      11.389101615137761,
+      -4.8825317547305485,
+      0
+    ],
+    "heading_degrees": 240,
+    "uncertainty_m": 2.3400000000000007,
+    "note": "Dead reckoning is provisional; validate displacement visually."
+  },
+  "nodes": [
+    {
+      "id": "main",
+      "category": "room",
+      "description": "Open children library and play space",
+      "position": [
+        3,
+        0,
+        null
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "category": "floor",
+      "description": "Continuous light wooden floor",
+      "position": [
+        null,
+        null,
+        0
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "house_a",
+      "category": "playhouse",
+      "description": "Red wooden structure with sloping roof, chalkboard dessert graphics and bench; immediately beside shelves",
+      "position": [
+        0.5,
+        0.7,
+        1.2
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/left.png",
+          "camera": "left",
+          "action": 0
+        },
+        {
+          "image": "images/observe-l5e5ov2m/back.png",
+          "camera": "back",
+          "action": 17,
+          "note": "Full red triangular roof beside tall shelves, with blue bench floor and dessert chalkboard."
+        }
+      ]
+    },
+    {
+      "id": "shelves_a",
+      "category": "shelves",
+      "description": "Tall cream cubbies above pink cubbies with green trim",
+      "position": [
+        -1,
+        -0.5,
+        1.4
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/back.png",
+          "camera": "back",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "reception",
+      "category": "desk",
+      "description": "Curved pale wooden reception counter with mint green illuminated strip",
+      "position": [
+        3.3,
+        -4,
+        0.6
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/right.png",
+          "camera": "right",
+          "action": 0
+        },
+        {
+          "image": "images/observe-5giyfgdb/front.png",
+          "camera": "front",
+          "action": 25,
+          "note": "Close reception counter"
+        },
+        {
+          "image": "images/observe-i7_vn1_j/front.png",
+          "camera": "front",
+          "action": 26,
+          "note": "Counter arm and mint strip at close left foreground; no intervening obstacle."
+        },
+        {
+          "image": "images/observe-7btcuc9l/left.png",
+          "camera": "left",
+          "action": 101,
+          "note": "Reception corner is immediately beside camera."
+        }
+      ]
+    },
+    {
+      "id": "partition",
+      "category": "wall",
+      "description": "Wood partition with green-trimmed arched interior window",
+      "position": [
+        0,
+        -2,
+        1.4
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "sofa_candidate",
+      "category": "sofa",
+      "description": "Dark green sofa seen through arch",
+      "position": [
+        1.3,
+        -8.3,
+        0.5
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-zg1vjn6_/right.png",
+          "camera": "right",
+          "action": 0
+        },
+        {
+          "image": "images/observe-5giyfgdb/right.png",
+          "camera": "right",
+          "action": 25,
+          "note": "Long curved green plush sofa below window."
+        },
+        {
+          "image": "images/observe-qz9dy7v7/right.png",
+          "camera": "right",
+          "action": 389,
+          "note": "Curved dark green sofa with cushion and low white table."
+        }
+      ]
+    },
+    {
+      "id": "plush_stool",
+      "category": "animal stool",
+      "description": "Dark green rounded animal with raised head beside green sofa, beyond reception",
+      "position": [
+        3.3,
+        -8.2,
+        0.4
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-cwg1vf07/front.png",
+          "camera": "front",
+          "action": 9
+        },
+        {
+          "image": "images/observe-5giyfgdb/right.png",
+          "camera": "right",
+          "action": 25,
+          "note": "Dark green animal floor stool beside left end of curved green sofa."
+        },
+        {
+          "image": "images/observe-qz9dy7v7/front.png",
+          "camera": "front",
+          "action": 389,
+          "note": "Dark green plush four-legged animal stool with rounded ears and head immediately beside curved sofa on wooden floor."
+        },
+        {
+          "image": "images/observe-61a5wk1x/back.png",
+          "camera": "back",
+          "action": 400,
+          "note": "Full stool including base and nearby open wooden floor visible after stepping back 0.75m from closest approach."
+        }
+      ]
+    },
+    {
+      "id": "lounge",
+      "category": "room",
+      "description": "Wood-walled lounge beyond broad reception opening",
+      "position": [
+        2,
+        -5,
+        null
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-cwg1vf07/front.png",
+          "camera": "front",
+          "action": 9
+        }
+      ]
+    },
+    {
+      "id": "house_b",
+      "category": "playhouse",
+      "description": "Second red peaked wooden house across TV wall; black side panel and blue interior floor",
+      "position": [
+        8.5,
+        0.7,
+        1.2
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-5giyfgdb/left.png",
+          "camera": "left",
+          "action": 25,
+          "note": "Two distinct red peaked alcoves flank TV and low shelves."
+        },
+        {
+          "image": "images/observe-0saouwla/left.png",
+          "camera": "left",
+          "action": 64,
+          "note": "Second house has Back to School chalkboard, separate from dessert house."
+        },
+        {
+          "image": "images/observe-li9255ks/back.png",
+          "camera": "back",
+          "action": 487,
+          "note": "Red wooden peaked playhouse against wall near room corner, with narrow display shelves immediately to its left and balloon wall on its right."
+        }
+      ]
+    },
+    {
+      "id": "table_area",
+      "category": "place",
+      "description": "Children white tables and chairs on red blue grey polygon carpet by moon-star patterned wall",
+      "position": [
+        9,
+        -3,
+        null
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "image": "images/observe-y9zdvrrh/front.png",
+          "camera": "front",
+          "action": 52,
+          "note": "Open activity area and far shelves"
+        }
+      ]
+    },
+    {
+      "id": "moon_wall",
+      "category": "decorated wall",
+      "description": "White wallpaper with crescents, stars and constellations; no hot air balloon or cloud stickers identified",
+      "position": [
+        10,
+        -7,
+        1.5
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "image": "images/observe-0saouwla/front.png",
+          "camera": "front",
+          "action": 64,
+          "note": "Star/moon activity area; distinct from requested balloon motif"
+        }
+      ]
+    },
+    {
+      "id": "mint_door",
+      "category": "doorway",
+      "description": "Open pale green door in lounge wall; background appears bright and uncertain",
+      "position": [
+        -1,
+        -5.5,
+        1.1
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-7btcuc9l/right.png",
+          "camera": "right",
+          "action": 101,
+          "note": "Possible continuation, not yet traversed"
+        },
+        {
+          "image": "images/observe-dfmlx5ah/front.png",
+          "camera": "front",
+          "action": 194,
+          "note": "Passage leads to blank exterior/sky; no additional furnished room visible."
+        }
+      ]
+    },
+    {
+      "id": "dessert_wall",
+      "category": "decorated wall",
+      "description": "Black wall with colored ice-cream-sundae outlines, SWEET DESSERT lettering, and hanging jellyfish/cloud-like lamp; hot air balloon identity uncertain",
+      "position": [
+        0.5,
+        1.8,
+        1.3
+      ],
+      "uncertainty_m": 0.6,
+      "observations": [
+        {
+          "image": "images/observe-sd6_71o2/front.png",
+          "camera": "front",
+          "action": 135,
+          "note": "Close inspection reveals dessert wording and bowl-like motifs, conflicting with literal hot air balloon sticker description"
+        },
+        {
+          "image": "images/observe-dg84gk35/front.png",
+          "camera": "front",
+          "action": 138,
+          "note": "Closest approach to dessert wall; motifs remain ambiguous for specified balloon/cloud target."
+        }
+      ]
+    },
+    {
+      "id": "train",
+      "category": "wooden toy train",
+      "description": "Low colorful linked wooden cars: orange wagon, green car and further colored pieces in open central play area",
+      "position": [
+        9.8,
+        -5.6,
+        0.2
+      ],
+      "uncertainty_m": 1.3,
+      "observations": [
+        {
+          "image": "images/observe-omi9i22n/front.png",
+          "camera": "front",
+          "action": 450,
+          "note": "Clear orange green and natural wood locomotive train on central floor; nearby table prevents direct approach."
+        },
+        {
+          "image": "images/observe-fnn_bxl_/front.png",
+          "camera": "front",
+          "action": 485,
+          "note": "Full orange wagon, green car and wooden blue-roof locomotive centered on open floor between tables."
+        },
+        {
+          "image": "images/observe-li9255ks/front.png",
+          "camera": "front",
+          "action": 487,
+          "note": "Train is now close foreground with all wheels and intervening wooden floor visible; direct unobstructed approach."
+        },
+        {
+          "image": "images/observe-_aw9_ppz/front.png",
+          "camera": "front",
+          "action": 489,
+          "note": "Further close approach places train immediately below camera foreground; appearance now mostly cropped."
+        },
+        {
+          "image": "images/observe-2n__f38n/front.png",
+          "camera": "front",
+          "action": 498,
+          "note": "Train locomotive chimney at immediate lower-left edge; side approach remains cropped by fixed camera."
+        }
+      ]
+    },
+    {
+      "id": "school_wall",
+      "category": "decorated wall",
+      "description": "Black chalkboard-style wall with Back to School letters, cloud/sun drawings and travel/science icons; possible balloon icon not resolved",
+      "position": [
+        7.5,
+        1.8,
+        1.3
+      ],
+      "uncertainty_m": 0.8,
+      "observations": [
+        {
+          "image": "images/observe-m8e1tih4/back.png",
+          "camera": "back",
+          "action": 265,
+          "note": "Second house wall has different pictograms and cloud drawings"
+        }
+      ]
+    },
+    {
+      "id": "balloon_wall",
+      "category": "decorated wall",
+      "description": "White wall with blue and pink hot air balloon and pale cloud decals glimpsed through right slatted side of school playhouse",
+      "position": [
+        10.8,
+        1.6,
+        1.5
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-ndteu08r/right.png",
+          "camera": "right",
+          "action": 286,
+          "note": "Blue balloon with basket and pink balloon visible through side window; wall partly occluded by house"
+        },
+        {
+          "image": "images/observe-ya5xrucx/front.png",
+          "camera": "front",
+          "action": 311,
+          "note": "Clear white wall with blue, pink, green, orange and yellow hot-air balloons above sculpted white clouds beside school playhouse."
+        },
+        {
+          "image": "images/observe-k4sp8dkm/front.png",
+          "camera": "front",
+          "action": 317,
+          "note": "Balloon and cloud wall fills close front RGB; unobstructed floor approach from action311 to317."
+        }
+      ]
+    },
+    {
+      "id": "shelves_b",
+      "category": "shelves",
+      "description": "Large cream bookcase with oversized green letters in far activity area",
+      "position": [
+        14,
+        -3,
+        1.5
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-ya5xrucx/back.png",
+          "camera": "back",
+          "action": 311,
+          "note": "Tall shelves along table-area side wall"
+        }
+      ]
+    },
+    {
+      "id": "table_train",
+      "category": "wooden toy railway",
+      "description": "Small colorful trains on wooden track layout on child-sized white activity table, distinct from large floor train",
+      "position": [
+        12,
+        -3.5,
+        0.65
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-_aw9_ppz/left.png",
+          "camera": "left",
+          "action": 489,
+          "note": "Small railway layout on foreground table; reviewer referred to this separate candidate."
+        },
+        {
+          "image": "images/observe-2n__f38n/back.png",
+          "camera": "back",
+          "action": 498,
+          "note": "Separate small wooden train on table track now clearly visible close behind camera."
+        }
+      ]
+    },
+    {
+      "id": "railway_table",
+      "category": "table",
+      "description": "White child-sized activity table supporting toy railway",
+      "position": [
+        12,
+        -3.5,
+        0.6
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-_aw9_ppz/left.png",
+          "camera": "left",
+          "action": 489,
+          "note": "Railway support table"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "house_a",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "shelves_a",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "reception",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "main",
+      "relation": "in",
+      "object": "floor"
+    },
+    {
+      "subject": "plush_stool",
+      "relation": "on",
+      "object": "floor"
+    },
+    {
+      "subject": "main",
+      "relation": "connected_to",
+      "object": "lounge",
+      "via": "broad opening beside arched partition"
+    },
+    {
+      "subject": "table_area",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "dessert_wall",
+      "relation": "part_of",
+      "object": "house_a"
+    },
+    {
+      "subject": "train",
+      "relation": "on",
+      "object": "floor"
+    },
+    {
+      "subject": "train",
+      "relation": "in",
+      "object": "table_area"
+    },
+    {
+      "subject": "school_wall",
+      "relation": "part_of",
+      "object": "house_b"
+    },
+    {
+      "subject": "balloon_wall",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "house_b",
+      "relation": "in",
+      "object": "main"
+    },
+    {
+      "subject": "table_train",
+      "relation": "on",
+      "object": "railway_table"
+    }
+  ],
+  "target_assessments": [
+    {
+      "index": 1,
+      "candidate_ids": [
+        "reception"
+      ],
+      "selected_id": "reception",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-5giyfgdb/front.png",
+            "camera": "front",
+            "action": 25,
+            "note": "Curved light wood counter and mint luminous base strip; reception computer and vase."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-5giyfgdb/front.png",
+            "camera": "front",
+            "action": 25,
+            "note": "Walked unobstructed to customer side, counter fills lower front view; estimated stand-off 0.5\u20130.8 m."
+          },
+          {
+            "image": "images/observe-i7_vn1_j/front.png",
+            "camera": "front",
+            "action": 26,
+            "note": "Close side view confirms standing at outer counter curve."
+          }
+        ]
+      },
+      "unchecked_alternatives": [],
+      "self_assessment_only": true
+    },
+    {
+      "index": 2,
+      "candidate_ids": [
+        "dessert_wall",
+        "school_wall",
+        "balloon_wall"
+      ],
+      "selected_id": "balloon_wall",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-k4sp8dkm/front.png",
+            "camera": "front",
+            "action": 317,
+            "note": "Multiple colored hot-air balloons and cloud decals on white wall beside second red playhouse. Distinct from black illustrated walls."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-k4sp8dkm/front.png",
+            "camera": "front",
+            "action": 317,
+            "note": "Six forward steps from clear ~2.3m approach place camera estimated 0.8m from wall, with no intervening furniture."
+          }
+        ]
+      },
+      "unchecked_alternatives": [],
+      "self_assessment_only": true
+    },
+    {
+      "index": 3,
+      "candidate_ids": [
+        "plush_stool"
+      ],
+      "selected_id": "plush_stool",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-qz9dy7v7/front.png",
+            "camera": "front",
+            "action": 389,
+            "note": "Green plush animal stool with four thick legs and rounded head beside the curved green sofa."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-qz9dy7v7/front.png",
+            "camera": "front",
+            "action": 389,
+            "note": "Unobstructed close approach on floor, then two further forward steps to action391 estimated 0.6\u20130.9m stand-off."
+          },
+          {
+            "image": "images/observe-yzgmn52c/front.png",
+            "camera": "front",
+            "action": 391,
+            "note": "Stool at immediate bottom foreground, camera now very close; sofa remains adjacent."
+          },
+          {
+            "image": "images/observe-61a5wk1x/back.png",
+            "camera": "back",
+            "action": 400,
+            "note": "Full stool including base and nearby open wooden floor visible after stepping back 0.75m from closest approach."
+          }
+        ]
+      },
+      "unchecked_alternatives": [],
+      "self_assessment_only": true
+    },
+    {
+      "index": 4,
+      "candidate_ids": [
+        "train",
+        "table_train"
+      ],
+      "selected_id": "train",
+      "identity": {
+        "status": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-fnn_bxl_/front.png",
+            "camera": "front",
+            "action": 485,
+            "note": "Full orange wagon, green car and wooden blue-roof locomotive centered on open floor between tables."
+          }
+        ],
+        "contradictions": [
+          "Two distinct colorful wooden train candidates observed; reviewer alternates between floor train and tabletop railway, and intended instance is not independently disambiguated."
+        ]
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-li9255ks/front.png",
+            "camera": "front",
+            "action": 487,
+            "note": "Close unobstructed approach to train; estimated within 1m of near-side navigable viewpoint, exact distance unknown."
+          },
+          {
+            "image": "images/observe-_aw9_ppz/front.png",
+            "camera": "front",
+            "action": 489,
+            "note": "Further close approach places train immediately below camera foreground; appearance now mostly cropped."
+          },
+          {
+            "image": "images/observe-_aw9_ppz/front.png",
+            "camera": "front",
+            "action": 489,
+            "note": "Close physical approach observed, but viewpoint localization and camera cropping leave exact approved-viewpoint proximity uncertain; review coverage still blocked."
+          }
+        ]
+      },
+      "unchecked_alternatives": [
+        "Small table railway is separate candidate; floor train remains strongest match to central play-area placement."
+      ],
+      "self_assessment_only": true
+    },
+    {
+      "index": 5,
+      "candidate_ids": [
+        "house_a",
+        "house_b"
+      ],
+      "selected_id": "house_b",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-li9255ks/back.png",
+            "camera": "back",
+            "action": 487,
+            "note": "Red wooden peaked playhouse against wall near room corner, with narrow display shelves immediately to its left and balloon wall on its right."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": []
+      },
+      "unchecked_alternatives": [
+        "house_a also matches red peaked form beside larger corner shelves; final instance distinction remains fallible."
+      ]
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "move_forward",
+      "nominal_position": [
+        0.25,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 2,
+      "command": "move_forward",
+      "nominal_position": [
+        0.5,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 3,
+      "command": "move_forward",
+      "nominal_position": [
+        0.75,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 4,
+      "command": "move_forward",
+      "nominal_position": [
+        1.0,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 5,
+      "command": "move_forward",
+      "nominal_position": [
+        1.25,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 6,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        0.0,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 7,
+      "command": "turn_right",
+      "nominal_position": [
+        1.5,
+        0.0,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 8,
+      "command": "turn_right",
+      "nominal_position": [
+        1.5,
+        0.0,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 9,
+      "command": "turn_right",
+      "nominal_position": [
+        1.5,
+        0.0,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 10,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -0.25,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 11,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -0.5,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 12,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -0.75,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -1.0,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -1.25,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 15,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -1.5,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -1.75,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 17,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -2.0,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 18,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -2.25,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 19,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -2.5,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 20,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5,
+        -2.75,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 21,
+      "command": "turn_left",
+      "nominal_position": [
+        1.5,
+        -2.75,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 22,
+      "command": "turn_left",
+      "nominal_position": [
+        1.5,
+        -2.75,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 23,
+      "command": "move_forward",
+      "nominal_position": [
+        1.7165063509461096,
+        -2.875,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 24,
+      "command": "move_forward",
+      "nominal_position": [
+        1.9330127018922192,
+        -3.0,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 25,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 26,
+      "command": "turn_right",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 27,
+      "command": "turn_left",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 28,
+      "command": "turn_left",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 29,
+      "command": "turn_left",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 30,
+      "command": "turn_left",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 31,
+      "command": "turn_left",
+      "nominal_position": [
+        2.149519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 32,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -2.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 33,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -2.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -2.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -2.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -1.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -1.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 38,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -1.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 39,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 40,
+      "command": "turn_right",
+      "nominal_position": [
+        2.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 41,
+      "command": "turn_right",
+      "nominal_position": [
+        2.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 42,
+      "command": "turn_right",
+      "nominal_position": [
+        2.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "nominal_position": [
+        2.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 46,
+      "command": "move_forward",
+      "nominal_position": [
+        3.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "nominal_position": [
+        3.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "nominal_position": [
+        3.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "nominal_position": [
+        3.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "nominal_position": [
+        4.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 51,
+      "command": "move_forward",
+      "nominal_position": [
+        4.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 52,
+      "command": "move_forward",
+      "nominal_position": [
+        4.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 53,
+      "command": "move_forward",
+      "nominal_position": [
+        4.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 54,
+      "command": "move_forward",
+      "nominal_position": [
+        5.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 55,
+      "command": "move_forward",
+      "nominal_position": [
+        5.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 56,
+      "command": "move_forward",
+      "nominal_position": [
+        5.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "nominal_position": [
+        5.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 58,
+      "command": "move_forward",
+      "nominal_position": [
+        6.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 59,
+      "command": "move_forward",
+      "nominal_position": [
+        6.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 60,
+      "command": "move_forward",
+      "nominal_position": [
+        6.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 61,
+      "command": "move_forward",
+      "nominal_position": [
+        6.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 63,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 64,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 65,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 66,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 67,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 68,
+      "command": "turn_right",
+      "nominal_position": [
+        7.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 69,
+      "command": "move_forward",
+      "nominal_position": [
+        6.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 70,
+      "command": "move_forward",
+      "nominal_position": [
+        6.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 71,
+      "command": "move_forward",
+      "nominal_position": [
+        6.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 72,
+      "command": "move_forward",
+      "nominal_position": [
+        6.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 73,
+      "command": "move_forward",
+      "nominal_position": [
+        5.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "nominal_position": [
+        5.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 75,
+      "command": "move_forward",
+      "nominal_position": [
+        5.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 76,
+      "command": "move_forward",
+      "nominal_position": [
+        5.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 77,
+      "command": "move_forward",
+      "nominal_position": [
+        4.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "nominal_position": [
+        4.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 79,
+      "command": "move_forward",
+      "nominal_position": [
+        4.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 80,
+      "command": "move_forward",
+      "nominal_position": [
+        4.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 81,
+      "command": "move_forward",
+      "nominal_position": [
+        3.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 82,
+      "command": "move_forward",
+      "nominal_position": [
+        3.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 83,
+      "command": "move_forward",
+      "nominal_position": [
+        3.399519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 84,
+      "command": "move_forward",
+      "nominal_position": [
+        3.149519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "nominal_position": [
+        2.899519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 87,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 88,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 89,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 90,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.375,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 91,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.625,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 92,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.875,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 93,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.125,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 94,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.375,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 95,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.625,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 96,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.875,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 97,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 98,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.375,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 99,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.625,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 100,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.875,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 101,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 102,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 103,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 104,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 105,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 106,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 107,
+      "command": "turn_right",
+      "nominal_position": [
+        2.649519052838329,
+        -4.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 108,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 109,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 111,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -3.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 112,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 113,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 114,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -2.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 118,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 119,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -1.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 120,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -0.875,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 121,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -0.625,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 122,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -0.375,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 123,
+      "command": "move_forward",
+      "nominal_position": [
+        2.649519052838329,
+        -0.125,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 124,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -0.125,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 125,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -0.125,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 126,
+      "command": "turn_left",
+      "nominal_position": [
+        2.649519052838329,
+        -0.125,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 127,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -0.12499999999999997,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 128,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        -0.12499999999999994,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 129,
+      "command": "move_forward",
+      "nominal_position": [
+        1.899519052838329,
+        -0.12499999999999992,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 130,
+      "command": "move_forward",
+      "nominal_position": [
+        1.649519052838329,
+        -0.12499999999999989,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 131,
+      "command": "move_forward",
+      "nominal_position": [
+        1.399519052838329,
+        -0.12499999999999986,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 132,
+      "command": "move_forward",
+      "nominal_position": [
+        1.149519052838329,
+        -0.12499999999999983,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 133,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        -0.12499999999999983,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 134,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        -0.12499999999999983,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 135,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        -0.12499999999999983,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 136,
+      "command": "move_forward",
+      "nominal_position": [
+        1.149519052838329,
+        0.12500000000000017,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 137,
+      "command": "move_forward",
+      "nominal_position": [
+        1.149519052838329,
+        0.37500000000000017,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 138,
+      "command": "move_forward",
+      "nominal_position": [
+        1.149519052838329,
+        0.6250000000000002,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 139,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        0.15,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 140,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        0.15,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 141,
+      "command": "turn_right",
+      "nominal_position": [
+        1.149519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 142,
+      "command": "move_forward",
+      "nominal_position": [
+        1.399519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 143,
+      "command": "move_forward",
+      "nominal_position": [
+        1.649519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 144,
+      "command": "move_forward",
+      "nominal_position": [
+        1.899519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 145,
+      "command": "move_forward",
+      "nominal_position": [
+        2.149519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 146,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        0.15,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 147,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        0.15,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 148,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        0.15,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 149,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        0.15,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 150,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -0.1,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 151,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -0.35,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 152,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -0.6,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 153,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -0.85,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 154,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -1.1,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 155,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -1.35,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 156,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -1.6,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 157,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -1.85,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 158,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -2.1,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 159,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -2.35,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -2.6,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 161,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -2.85,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 162,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -3.1,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 163,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -3.35,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 164,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -3.6,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 165,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -3.85,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 166,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -4.1,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 167,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -4.35,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 168,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -4.6,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "nominal_position": [
+        2.399519052838329,
+        -4.85,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 170,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        -4.85,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 171,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        -4.85,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 172,
+      "command": "turn_right",
+      "nominal_position": [
+        2.399519052838329,
+        -4.85,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 173,
+      "command": "turn_left",
+      "nominal_position": [
+        2.399519052838329,
+        -4.85,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 174,
+      "command": "move_forward",
+      "nominal_position": [
+        2.183012701892219,
+        -4.975,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 175,
+      "command": "move_forward",
+      "nominal_position": [
+        1.9665063509461096,
+        -5.1,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 176,
+      "command": "move_forward",
+      "nominal_position": [
+        1.75,
+        -5.225,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "nominal_position": [
+        1.5334936490538904,
+        -5.35,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 178,
+      "command": "move_forward",
+      "nominal_position": [
+        1.3169872981077808,
+        -5.475,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 179,
+      "command": "move_forward",
+      "nominal_position": [
+        1.1004809471616712,
+        -5.6,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 180,
+      "command": "move_forward",
+      "nominal_position": [
+        0.8839745962155616,
+        -5.725,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "nominal_position": [
+        0.667468245269452,
+        -5.85,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "nominal_position": [
+        0.4509618943233424,
+        -5.975,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 183,
+      "command": "move_forward",
+      "nominal_position": [
+        0.23445554337723273,
+        -6.1,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 184,
+      "command": "turn_right",
+      "nominal_position": [
+        0.23445554337723273,
+        -6.1,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 185,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.015544456622767266,
+        -6.1,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 186,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.26554445662276727,
+        -6.1,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 187,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.5155444566227673,
+        -6.1,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 188,
+      "command": "turn_left",
+      "nominal_position": [
+        -0.5155444566227673,
+        -6.1,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 189,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 190,
+      "command": "turn_right",
+      "nominal_position": [
+        -0.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 191,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.982050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 192,
+      "command": "move_forward",
+      "nominal_position": [
+        -1.232050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 193,
+      "command": "move_forward",
+      "nominal_position": [
+        -1.482050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 194,
+      "command": "move_forward",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 195,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 196,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 197,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 198,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 199,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 200,
+      "command": "turn_right",
+      "nominal_position": [
+        -1.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 201,
+      "command": "move_forward",
+      "nominal_position": [
+        -1.482050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 202,
+      "command": "move_forward",
+      "nominal_position": [
+        -1.232050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 203,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.982050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 204,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.732050807568877,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 205,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.48205080756887697,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 206,
+      "command": "move_forward",
+      "nominal_position": [
+        -0.23205080756887697,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 207,
+      "command": "move_forward",
+      "nominal_position": [
+        0.01794919243112303,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 208,
+      "command": "move_forward",
+      "nominal_position": [
+        0.26794919243112303,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 209,
+      "command": "move_forward",
+      "nominal_position": [
+        0.517949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 210,
+      "command": "move_forward",
+      "nominal_position": [
+        0.767949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 211,
+      "command": "move_forward",
+      "nominal_position": [
+        1.017949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 212,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 213,
+      "command": "turn_left",
+      "nominal_position": [
+        1.267949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 214,
+      "command": "turn_left",
+      "nominal_position": [
+        1.267949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 215,
+      "command": "turn_left",
+      "nominal_position": [
+        1.267949192431123,
+        -6.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 216,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -5.975,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -5.725,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 218,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -5.475,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 219,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -5.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 220,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -4.975,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 221,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -4.725,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 222,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -4.475,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 223,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -4.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 224,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -3.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 225,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -3.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 226,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -3.4749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -3.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -2.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -2.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -2.4749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -2.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 232,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -1.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 233,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 234,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -1.4749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 235,
+      "command": "move_forward",
+      "nominal_position": [
+        1.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 236,
+      "command": "turn_right",
+      "nominal_position": [
+        1.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 237,
+      "command": "turn_right",
+      "nominal_position": [
+        1.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 238,
+      "command": "turn_right",
+      "nominal_position": [
+        1.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 239,
+      "command": "move_forward",
+      "nominal_position": [
+        1.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 240,
+      "command": "move_forward",
+      "nominal_position": [
+        1.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 241,
+      "command": "move_forward",
+      "nominal_position": [
+        2.0179491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 242,
+      "command": "move_forward",
+      "nominal_position": [
+        2.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 243,
+      "command": "move_forward",
+      "nominal_position": [
+        2.5179491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 244,
+      "command": "move_forward",
+      "nominal_position": [
+        2.7679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 245,
+      "command": "move_forward",
+      "nominal_position": [
+        3.0179491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 246,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 247,
+      "command": "move_forward",
+      "nominal_position": [
+        3.5179491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 248,
+      "command": "move_forward",
+      "nominal_position": [
+        3.7679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 249,
+      "command": "move_forward",
+      "nominal_position": [
+        4.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 250,
+      "command": "move_forward",
+      "nominal_position": [
+        4.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 251,
+      "command": "move_forward",
+      "nominal_position": [
+        4.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "nominal_position": [
+        4.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "nominal_position": [
+        5.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "nominal_position": [
+        5.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 255,
+      "command": "move_forward",
+      "nominal_position": [
+        5.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 256,
+      "command": "move_forward",
+      "nominal_position": [
+        5.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 257,
+      "command": "move_forward",
+      "nominal_position": [
+        6.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 258,
+      "command": "move_forward",
+      "nominal_position": [
+        6.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 259,
+      "command": "move_forward",
+      "nominal_position": [
+        6.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 260,
+      "command": "move_forward",
+      "nominal_position": [
+        6.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "nominal_position": [
+        7.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 263,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 264,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 265,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 266,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 267,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 268,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 269,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 270,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 271,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 272,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -0.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 273,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 274,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -0.47499999999999964,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 275,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -0.22499999999999964,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 276,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 277,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 278,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 279,
+      "command": "turn_right",
+      "nominal_position": [
+        7.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 280,
+      "command": "move_forward",
+      "nominal_position": [
+        7.517949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 281,
+      "command": "move_forward",
+      "nominal_position": [
+        7.767949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 282,
+      "command": "move_forward",
+      "nominal_position": [
+        8.017949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 283,
+      "command": "move_forward",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 284,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 285,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 286,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 287,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 288,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 289,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 290,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 291,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 292,
+      "command": "turn_right",
+      "nominal_position": [
+        8.267949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 293,
+      "command": "move_forward",
+      "nominal_position": [
+        8.267949192431123,
+        -0.22499999999999964,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 294,
+      "command": "move_forward",
+      "nominal_position": [
+        8.267949192431123,
+        -0.47499999999999964,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 295,
+      "command": "move_forward",
+      "nominal_position": [
+        8.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 296,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 297,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 298,
+      "command": "turn_left",
+      "nominal_position": [
+        8.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 299,
+      "command": "move_forward",
+      "nominal_position": [
+        8.517949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 300,
+      "command": "move_forward",
+      "nominal_position": [
+        8.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 301,
+      "command": "move_forward",
+      "nominal_position": [
+        9.017949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 302,
+      "command": "move_forward",
+      "nominal_position": [
+        9.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 303,
+      "command": "move_forward",
+      "nominal_position": [
+        9.517949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 304,
+      "command": "move_forward",
+      "nominal_position": [
+        9.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 305,
+      "command": "move_forward",
+      "nominal_position": [
+        10.017949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 306,
+      "command": "move_forward",
+      "nominal_position": [
+        10.267949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 307,
+      "command": "move_forward",
+      "nominal_position": [
+        10.517949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 308,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 309,
+      "command": "turn_left",
+      "nominal_position": [
+        10.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 310,
+      "command": "turn_left",
+      "nominal_position": [
+        10.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 311,
+      "command": "turn_left",
+      "nominal_position": [
+        10.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 312,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.47499999999999964,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 313,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.22499999999999964,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 314,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 315,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.27500000000000036,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 316,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.5250000000000004,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 317,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 318,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 319,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 320,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 321,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 322,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 323,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        0.7750000000000004,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 324,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.5250000000000004,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 325,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.27500000000000036,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 326,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        0.025000000000000355,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 327,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.22499999999999964,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 328,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.47499999999999964,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 329,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.7249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 330,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -0.9749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 331,
+      "command": "move_forward",
+      "nominal_position": [
+        10.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 332,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 333,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 334,
+      "command": "turn_right",
+      "nominal_position": [
+        10.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 335,
+      "command": "move_forward",
+      "nominal_position": [
+        10.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 336,
+      "command": "move_forward",
+      "nominal_position": [
+        10.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 337,
+      "command": "move_forward",
+      "nominal_position": [
+        10.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 338,
+      "command": "move_forward",
+      "nominal_position": [
+        9.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 339,
+      "command": "move_forward",
+      "nominal_position": [
+        9.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 340,
+      "command": "move_forward",
+      "nominal_position": [
+        9.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 341,
+      "command": "move_forward",
+      "nominal_position": [
+        9.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 342,
+      "command": "move_forward",
+      "nominal_position": [
+        8.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 343,
+      "command": "move_forward",
+      "nominal_position": [
+        8.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 344,
+      "command": "move_forward",
+      "nominal_position": [
+        8.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 345,
+      "command": "move_forward",
+      "nominal_position": [
+        8.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 346,
+      "command": "move_forward",
+      "nominal_position": [
+        7.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 347,
+      "command": "move_forward",
+      "nominal_position": [
+        7.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 348,
+      "command": "move_forward",
+      "nominal_position": [
+        7.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 349,
+      "command": "move_forward",
+      "nominal_position": [
+        7.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 350,
+      "command": "move_forward",
+      "nominal_position": [
+        6.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 351,
+      "command": "move_forward",
+      "nominal_position": [
+        6.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 352,
+      "command": "move_forward",
+      "nominal_position": [
+        6.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 353,
+      "command": "move_forward",
+      "nominal_position": [
+        6.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 354,
+      "command": "move_forward",
+      "nominal_position": [
+        5.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 355,
+      "command": "move_forward",
+      "nominal_position": [
+        5.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 356,
+      "command": "move_forward",
+      "nominal_position": [
+        5.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 357,
+      "command": "move_forward",
+      "nominal_position": [
+        5.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 358,
+      "command": "move_forward",
+      "nominal_position": [
+        4.767949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 359,
+      "command": "move_forward",
+      "nominal_position": [
+        4.517949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 360,
+      "command": "move_forward",
+      "nominal_position": [
+        4.267949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 361,
+      "command": "move_forward",
+      "nominal_position": [
+        4.017949192431123,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 362,
+      "command": "move_forward",
+      "nominal_position": [
+        3.7679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 363,
+      "command": "move_forward",
+      "nominal_position": [
+        3.5179491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 364,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 365,
+      "command": "turn_left",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 366,
+      "command": "turn_left",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 367,
+      "command": "turn_left",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.2249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 368,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.4749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 369,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 370,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.9749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 371,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.2249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 372,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.4749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 373,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.7249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 374,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.9749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 375,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.2249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 376,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.4749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 377,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.7249999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 378,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.9749999999999996,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 379,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.225,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 380,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.475,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 381,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.725,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 382,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.975,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 383,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.225,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 384,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.475,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 385,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.725,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 386,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.975,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 387,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.225,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 388,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.475,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 389,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.725,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 390,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.975,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 391,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 392,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 393,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 394,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 180
+    },
+    {
+      "action": 395,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 150
+    },
+    {
+      "action": 396,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 120
+    },
+    {
+      "action": 397,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -7.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 398,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.975,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 399,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.725,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 400,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.475,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 401,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -6.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 402,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.975,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 403,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.725,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 404,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.475,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 405,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -5.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 406,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.975,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 407,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.725,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 408,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.475,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 409,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -4.225,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 410,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 411,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 412,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.4749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 413,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -3.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 414,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 415,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 416,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.4749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 417,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -2.2249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 418,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.9749999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 419,
+      "command": "move_forward",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 90
+    },
+    {
+      "action": 420,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 60
+    },
+    {
+      "action": 421,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 422,
+      "command": "turn_right",
+      "nominal_position": [
+        3.2679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 423,
+      "command": "move_forward",
+      "nominal_position": [
+        3.5179491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 424,
+      "command": "move_forward",
+      "nominal_position": [
+        3.7679491924311233,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 425,
+      "command": "move_forward",
+      "nominal_position": [
+        4.017949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 426,
+      "command": "move_forward",
+      "nominal_position": [
+        4.267949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 427,
+      "command": "move_forward",
+      "nominal_position": [
+        4.517949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 428,
+      "command": "move_forward",
+      "nominal_position": [
+        4.767949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 429,
+      "command": "move_forward",
+      "nominal_position": [
+        5.017949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 430,
+      "command": "move_forward",
+      "nominal_position": [
+        5.267949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 431,
+      "command": "move_forward",
+      "nominal_position": [
+        5.517949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 432,
+      "command": "turn_right",
+      "nominal_position": [
+        5.517949192431123,
+        -1.7249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 433,
+      "command": "move_forward",
+      "nominal_position": [
+        5.734455543377233,
+        -1.8499999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 434,
+      "command": "move_forward",
+      "nominal_position": [
+        5.950961894323342,
+        -1.9749999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 435,
+      "command": "move_forward",
+      "nominal_position": [
+        6.167468245269451,
+        -2.0999999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 436,
+      "command": "move_forward",
+      "nominal_position": [
+        6.383974596215561,
+        -2.2249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 437,
+      "command": "move_forward",
+      "nominal_position": [
+        6.60048094716167,
+        -2.3499999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 438,
+      "command": "move_forward",
+      "nominal_position": [
+        6.8169872981077795,
+        -2.4749999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 439,
+      "command": "move_forward",
+      "nominal_position": [
+        7.033493649053889,
+        -2.5999999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 440,
+      "command": "move_forward",
+      "nominal_position": [
+        7.249999999999998,
+        -2.7249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 441,
+      "command": "move_forward",
+      "nominal_position": [
+        7.466506350946108,
+        -2.8499999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 442,
+      "command": "move_forward",
+      "nominal_position": [
+        7.683012701892217,
+        -2.9749999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 443,
+      "command": "move_forward",
+      "nominal_position": [
+        7.899519052838326,
+        -3.0999999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 444,
+      "command": "move_forward",
+      "nominal_position": [
+        8.116025403784436,
+        -3.2249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 445,
+      "command": "move_forward",
+      "nominal_position": [
+        8.332531754730546,
+        -3.3499999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 446,
+      "command": "move_forward",
+      "nominal_position": [
+        8.549038105676656,
+        -3.4749999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 447,
+      "command": "move_forward",
+      "nominal_position": [
+        8.765544456622766,
+        -3.5999999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 448,
+      "command": "move_forward",
+      "nominal_position": [
+        8.982050807568877,
+        -3.7249999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 449,
+      "command": "move_forward",
+      "nominal_position": [
+        9.198557158514987,
+        -3.8499999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 450,
+      "command": "move_forward",
+      "nominal_position": [
+        9.415063509461097,
+        -3.9749999999999996,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 451,
+      "command": "turn_left",
+      "nominal_position": [
+        7.3,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 452,
+      "command": "move_forward",
+      "nominal_position": [
+        7.55,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 453,
+      "command": "move_forward",
+      "nominal_position": [
+        7.8,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 454,
+      "command": "move_forward",
+      "nominal_position": [
+        8.05,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 455,
+      "command": "move_forward",
+      "nominal_position": [
+        8.3,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 456,
+      "command": "move_forward",
+      "nominal_position": [
+        8.55,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 457,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 458,
+      "command": "turn_right",
+      "nominal_position": [
+        8.8,
+        -2.8,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 459,
+      "command": "turn_right",
+      "nominal_position": [
+        8.8,
+        -2.8,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 460,
+      "command": "turn_right",
+      "nominal_position": [
+        8.8,
+        -2.8,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 461,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -3.05,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 462,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -3.3,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 463,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -3.55,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 464,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -3.8,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 465,
+      "command": "move_forward",
+      "nominal_position": [
+        8.8,
+        -4.05,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 466,
+      "command": "turn_left",
+      "nominal_position": [
+        7.3,
+        -2.8,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 467,
+      "command": "turn_left",
+      "nominal_position": [
+        7.3,
+        -2.8,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 468,
+      "command": "turn_left",
+      "nominal_position": [
+        7.3,
+        -2.8,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 469,
+      "command": "turn_left",
+      "nominal_position": [
+        7.3,
+        -2.8,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 470,
+      "command": "move_forward",
+      "nominal_position": [
+        7.516506350946109,
+        -2.675,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 471,
+      "command": "move_forward",
+      "nominal_position": [
+        7.733012701892219,
+        -2.55,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 472,
+      "command": "move_forward",
+      "nominal_position": [
+        7.949519052838328,
+        -2.425,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 473,
+      "command": "move_forward",
+      "nominal_position": [
+        8.166025403784438,
+        -2.3,
+        0
+      ],
+      "heading": 30
+    },
+    {
+      "action": 474,
+      "command": "turn_right",
+      "nominal_position": [
+        8.166025403784438,
+        -2.3,
+        0
+      ],
+      "heading": 0
+    },
+    {
+      "action": 475,
+      "command": "turn_right",
+      "nominal_position": [
+        8.166025403784438,
+        -2.3,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 476,
+      "command": "move_forward",
+      "nominal_position": [
+        8.382531754730548,
+        -2.425,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 477,
+      "command": "move_forward",
+      "nominal_position": [
+        8.599038105676659,
+        -2.55,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 478,
+      "command": "move_forward",
+      "nominal_position": [
+        8.815544456622769,
+        -2.675,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 479,
+      "command": "move_forward",
+      "nominal_position": [
+        9.03205080756888,
+        -2.8,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 480,
+      "command": "move_forward",
+      "nominal_position": [
+        9.24855715851499,
+        -2.925,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 481,
+      "command": "move_forward",
+      "nominal_position": [
+        9.4650635094611,
+        -3.05,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 482,
+      "command": "move_forward",
+      "nominal_position": [
+        9.68156986040721,
+        -3.175,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 483,
+      "command": "move_forward",
+      "nominal_position": [
+        9.89807621135332,
+        -3.3,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 484,
+      "command": "turn_right",
+      "nominal_position": [
+        9.89807621135332,
+        -3.3,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 485,
+      "command": "move_forward",
+      "nominal_position": [
+        10.02307621135332,
+        -3.5165063509461096,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 486,
+      "command": "move_forward",
+      "nominal_position": [
+        10.14807621135332,
+        -3.7330127018922195,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 487,
+      "command": "move_forward",
+      "nominal_position": [
+        10.27307621135332,
+        -3.9495190528383293,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 488,
+      "command": "move_forward",
+      "nominal_position": [
+        10.39807621135332,
+        -4.166025403784439,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 489,
+      "command": "move_forward",
+      "nominal_position": [
+        10.52307621135332,
+        -4.3825317547305485,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 490,
+      "command": "turn_left",
+      "nominal_position": [
+        10.52307621135332,
+        -4.3825317547305485,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 491,
+      "command": "move_forward",
+      "nominal_position": [
+        10.73958256229943,
+        -4.5075317547305485,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 492,
+      "command": "move_forward",
+      "nominal_position": [
+        10.95608891324554,
+        -4.6325317547305485,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 493,
+      "command": "move_forward",
+      "nominal_position": [
+        11.172595264191651,
+        -4.7575317547305485,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 494,
+      "command": "move_forward",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 330
+    },
+    {
+      "action": 495,
+      "command": "turn_right",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 300
+    },
+    {
+      "action": 496,
+      "command": "turn_right",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 270
+    },
+    {
+      "action": 497,
+      "command": "turn_right",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 240
+    },
+    {
+      "action": 498,
+      "command": "turn_right",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 210
+    },
+    {
+      "action": 499,
+      "command": "turn_left",
+      "nominal_position": [
+        11.389101615137761,
+        -4.8825317547305485,
+        0
+      ],
+      "heading": 240
+    }
+  ],
+  "review_history": [
+    {
+      "target": 1,
+      "action": 25,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 25,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0001",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "unknown",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front shows the curved wooden reception desk with mint lighting; it does not establish the current balloon-and-cloud wall target.",
+            "Left and back show red playhouses and shelving, but no clearly identifiable wall with both hot air balloon and cloud stickers.",
+            "Right shows a green sofa and animal-shaped stool, without the required wall decoration."
+          ],
+          "contradictions": [],
+          "missing_evidence": "A clear view identifying the balloon-and-cloud wall and supporting a strictly under-1m walkable approach to it.",
+          "limitation": "RGB cannot measure exact geodesic distance or certify native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 26,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 26,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0002",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Back camera shows hot air balloon and cloud decorations on the wall inside the red playhouse.",
+            "Back camera shows intervening wooden floor and playhouse flooring before the decorated wall."
+          ],
+          "contradictions": [],
+          "missing_evidence": "No current view adequately supports a strictly under-1m walkable approach to the decorated wall.",
+          "limitation": "RGB provides only a fallible distance estimate; exact geodesic distance and native success cannot be verified."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 101,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 101,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0003",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "contradicted",
+          "decision": "fail",
+          "evidence": [
+            "Back: hot air balloon and cloud decorations are visible on the dark wall inside the red triangular playhouse.",
+            "Back: a substantial expanse of wooden floor and the playhouse interior separates the camera from the decorated wall."
+          ],
+          "contradictions": [
+            "The decorated wall appears well beyond a strictly under-1m nearby walkable approach."
+          ],
+          "missing_evidence": "A close current view supporting under-1m arrival at the decorated wall.",
+          "limitation": "RGB provides only a fallible visual distance estimate, not measured geodesic distance or native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 138,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 138,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0004",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "unknown",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front shows dessert illustrations and a hanging jellyfish-like decoration, without clearly identifiable hot air balloon and cloud stickers.",
+            "Right and left show nearby red playhouse walls and shelving; back shows the reception area. These views do not establish the required decorated wall."
+          ],
+          "contradictions": [],
+          "missing_evidence": "A clear view identifying the balloon-and-cloud wall and supporting a strictly under-1m walkable approach to it.",
+          "limitation": "RGB permits only a fallible distance estimate; no measured geodesic distance or native benchmark success is established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 317,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 317,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0005",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "supported",
+          "decision": "success",
+          "evidence": [
+            "Front: hot-air-balloon and cloud decorations clearly identify the target wall at close range.",
+            "Right: the decorated wall borders accessible wooden flooring beside an open doorway, supporting a nearby walkable approach visually estimated under 1 metre.",
+            "Back: children's tables, toys and shelving establish the surrounding play area."
+          ],
+          "contradictions": [],
+          "missing_evidence": "No essential visual evidence missing for this checkpoint.",
+          "limitation": "Proximity is a fallible RGB estimate, not a measured geodesic distance or certification of native success; historical target order is unverified."
+        },
+        "decision": "success",
+        "evaluation_gate_passed": true,
+        "continue_required": false,
+        "review_reused": false,
+        "target_review_accepted": true,
+        "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+      }
+    },
+    {
+      "target": 2,
+      "action": 317,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 317,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0006",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 2
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "supported",
+          "decision": "success",
+          "evidence": [
+            "Front: the wall clearly carries multiple hot-air-balloon and cloud decorations.",
+            "Right and back: the decorated wall borders an open classroom/play area with nearby doorways.",
+            "Front and right: close wall details and the adjacent unobstructed floor support a plausible strictly under-1m walkable approach to the decorated wall."
+          ],
+          "contradictions": [],
+          "missing_evidence": "No material visual evidence is missing for this checkpoint; historical target order is unverified.",
+          "limitation": "Proximity is a fallible RGB estimate, not a measured geodesic distance or native benchmark success."
+        },
+        "decision": "success",
+        "evaluation_gate_passed": true,
+        "continue_required": false,
+        "review_reused": false,
+        "target_review_accepted": true,
+        "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+      }
+    },
+    {
+      "target": 3,
+      "action": 391,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 391,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0007",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: a dark green plush animal-shaped stool is partially visible at the bottom, beside the curved green sofa on the wooden floor.",
+            "Right: the curved green sofa and wooden-floored seating area are visible."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The stool's base and intervening floor are cropped out, leaving insufficient evidence of a strictly under-1m walkable approach.",
+          "limitation": "RGB permits only a fallible distance estimate; no measured geodesic distance or native benchmark success is established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 400,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 400,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0008",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "unknown",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: small colorful toys are visible beyond the doorway, but a wooden toy train cannot be confidently identified or located at the play area's center.",
+            "Back: a dark green animal-shaped stool stands beside a curved green sofa; this does not establish arrival at the train checkpoint."
+          ],
+          "contradictions": [],
+          "missing_evidence": "A clear view of the target train, its central play-area placement, and a nearby walkable approach supporting strictly under 1 metre.",
+          "limitation": "RGB cannot measure geodesic distance or certify native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 485,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 485,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0009",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: a colorful wooden toy train is visible on the open wooden floor near the center of the play area, surrounded by child-sized tables and chairs."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The front view shows a visible floor gap to the train and does not adequately support a strictly under-1m walkable approach.",
+          "limitation": "RGB provides only a fallible visual distance estimate; exact geodesic distance and native benchmark success cannot be established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 487,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 487,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0010",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: a colorful wooden toy train with orange, green and blue sections sits on the wooden floor.",
+            "Front: the train occupies an open play area surrounded by child-sized tables, chairs and bookshelves."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The train is visible ahead, but the current views do not adequately establish a strictly under-1m walkable approach.",
+          "limitation": "RGB permits only a fallible distance estimate; no measured geodesic distance or native benchmark success is established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 488,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 488,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0011",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: a colorful wooden toy train is partially visible at the bottom foreground.",
+            "Front and right: surrounding child-sized tables, toys and open wooden flooring support the play-area setting."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The cropped train and visible floor do not adequately establish a strictly under-1m walkable approach to the target.",
+          "limitation": "RGB provides only a fallible distance estimate; no measured geodesic distance or native benchmark success is established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 489,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 489,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0012",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Left: small colorful toy trains sit on a wooden track layout on a central activity table.",
+            "Left and front: child-sized tables, chairs, toys and bookshelves support the play-area setting."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The images do not adequately establish a strictly under-1m walkable approach to the train itself; the nearby table edge and chairs do not establish arrival.",
+          "limitation": "RGB provides only a fallible visual distance estimate, not measured geodesic distance or native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 498,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-050-20261025T175112286Z",
+        "episode_id": "multi_objectnav_17_000050",
+        "instruction": "First, find the curved light wood reception desk with the mint green light strip. Then, find the wall decorated with the hot air balloon and cloud stickers. Then, find a dark green plush animal shaped stool on the wooden floor beside a curved green sofa. Then, find a colorful wooden toy train placed in the center of a play area. Finally, find a playhouse structure with red wooden walls and a triangular shape in a corner with shelves nearby.",
+        "target_count": 5,
+        "actions": 498,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-050-20261025T175112286Z-review-0013",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Back: a colorful wooden toy train sits on a track layout centered on a play table.",
+            "Back and left: child-sized tables, toys and bookshelves support the play-area setting."
+          ],
+          "contradictions": [],
+          "missing_evidence": "Adequate visual evidence that the train itself is strictly under 1 metre away along a nearby walkable approach; the foreground table edge does not establish this.",
+          "limitation": "RGB provides only a fallible distance estimate, not measured geodesic distance or native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    }
+  ],
+  "planning_note": "Two actions remain. Checkpoint3 still pending; target4 intended train and exact viewpoint uncertain, final target arrival unresolved. Preserve incomplete state if budget terminates.",
+  "localization_events": [
+    {
+      "action": 138,
+      "note": "Forward 136\u2013138 produced less visual displacement than nominal 0.75m at raised house floor. Retracted 0.475m of y estimate; possible collision with bench edge."
+    },
+    {
+      "action": 450,
+      "note": "Table/chair blocks diagonal route: observed house_b and moon-wall corner indicate less displacement than 18 nominal moves. Retracted unsupported end position [9.42,-3.98], revised to [7.3,-2.8] with uncertainty."
+    },
+    {
+      "action": 465,
+      "note": "Foreground table/chair again prevented the commanded forward progression. Do not retain nominal [8.8,-4.05]; landmarks indicate still near [7.3,-2.8]. Need pass north/east edge of table."
+    }
+  ]
+}

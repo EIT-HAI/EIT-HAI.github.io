@@ -1,0 +1,1307 @@
+{
+  "frame": {
+    "origin": "episode start",
+    "+x": "initially forward",
+    "+y": "initially left",
+    "+z": "up",
+    "units": "metres"
+  },
+  "updated_at_action": 226,
+  "agent_belief": {
+    "position": [
+      -6,
+      3.2,
+      0
+    ],
+    "heading_degrees": 270,
+    "uncertainty": "Global +/-1.5m; close local table-edge adjacency established visually"
+  },
+  "nodes": [
+    {
+      "id": "landing",
+      "category": "place",
+      "description": "Wood-floored landing beside white stair enclosure and dark railing",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "uncertainty": "extent unknown",
+      "observations": [
+        {
+          "image": "images/observe-0dpbs1c6/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "living_room",
+      "category": "room",
+      "description": "Vaulted wood ceiling, stone fireplace with TV, white sofa",
+      "position": [
+        -3,
+        2,
+        0
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-vzqwhl57/left.png",
+          "camera": "left",
+          "action": 16
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "category": "room",
+      "description": "Wood cabinets, hood, tile backsplash and island beyond broad opening",
+      "position": [
+        -2.5,
+        7,
+        0
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-g9iizyxe/front.png",
+          "camera": "front",
+          "action": 24
+        }
+      ]
+    },
+    {
+      "id": "kitchen_opening",
+      "category": "passage",
+      "description": "Broad open connection beside white half wall",
+      "position": [
+        -1,
+        5,
+        0
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-g9iizyxe/left.png",
+          "camera": "left",
+          "action": 24
+        }
+      ]
+    },
+    {
+      "id": "kitchen_island",
+      "category": "counter",
+      "description": "Wood island with cross-braced end and dark countertop",
+      "position": [
+        -2.6,
+        9.2,
+        1
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-g9iizyxe/left.png",
+          "camera": "left",
+          "action": 24
+        }
+      ]
+    },
+    {
+      "id": "plant_kitchen",
+      "category": "decorative_plant",
+      "description": "Yellow/orange foliage or floral arrangement in a light pot on kitchen counter",
+      "position": [
+        -2.9,
+        8.8,
+        1.3
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-g9iizyxe/left.png",
+          "camera": "left",
+          "action": 24
+        },
+        {
+          "image": "images/observe-6w_rcrak/front.png",
+          "camera": "front",
+          "action": 39,
+          "note": "Yellow decorative foliage in pot on kitchen island; surrounding sink/cabinets/range establish kitchen identity."
+        },
+        {
+          "image": "images/observe-qg08gd9h/front.png",
+          "camera": "front",
+          "action": 41,
+          "note": "Reached unobstructed floor directly beside island end under arrangement after visually confirmed forward approach; estimated within 0.5 m of adjacent navigable goal region. This is a belief, not evaluator distance."
+        }
+      ]
+    },
+    {
+      "id": "sofa_console",
+      "category": "table",
+      "description": "Narrow dark console behind the white sofa",
+      "position": [
+        -3,
+        2.7,
+        0.8
+      ],
+      "uncertainty": "Approximate RGB/action-history estimate; about 1 m positional uncertainty",
+      "observations": [
+        {
+          "image": "images/observe-vzqwhl57/left.png",
+          "camera": "left",
+          "action": 16
+        }
+      ]
+    },
+    {
+      "id": "coffee_table",
+      "category": "table",
+      "description": "Low dark rectangular table with lower shelf and model sailboat, in front of fireplace between white seats",
+      "position": [
+        -5.6,
+        2.3,
+        0.5
+      ],
+      "uncertainty": "Approximate +/-1.5 m due to blocked local approach",
+      "observations": [
+        {
+          "action": 75,
+          "camera": "front",
+          "image": "images/observe-fgu9g0w7/front.png"
+        },
+        {
+          "image": "images/observe-m7ado5t4/front.png",
+          "camera": "front",
+          "action": 157,
+          "note": "Reached open rug directly beside near-right coffee-table corner, after visually confirmed movement around side table and pouf. Estimated adjacent navigable goal region within 0.5m; no evaluator feedback."
+        },
+        {
+          "image": "images/observe-jv2jap8m/front.png",
+          "camera": "front",
+          "action": 200,
+          "note": "Opposite end view with model sailboat on central display."
+        }
+      ]
+    },
+    {
+      "id": "remote_candidate_1",
+      "category": "remote_control",
+      "description": "Probable slim black remote with pale button strip near base of sailboat display on coffee table",
+      "position": [
+        -6,
+        2.4,
+        0.55
+      ],
+      "uncertainty": "Moderate identity confidence due to fragmented RGB geometry; global position +/-1.5m",
+      "observations": [
+        {
+          "image": "images/observe-oow9bczb/front.png",
+          "camera": "front",
+          "action": 169,
+          "note": "Near lower edge of view, slim black handsetlike object with a strip of pale button marks on coffee-table surface; strongest appearance evidence for remote."
+        },
+        {
+          "image": "images/observe-_p4uepuf/front.png",
+          "camera": "front",
+          "action": 225,
+          "note": "From opposite table side, low black elongated object remains visible near display base. Context ties candidate to living-room coffee table; texture is distorted, so identity confidence is moderate."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "subject": "plant_kitchen",
+      "relation": "in",
+      "object": "kitchen"
+    },
+    {
+      "subject": "plant_kitchen",
+      "relation": "on",
+      "object": "kitchen_island"
+    },
+    {
+      "subject": "kitchen_island",
+      "relation": "in",
+      "object": "kitchen"
+    },
+    {
+      "subject": "sofa_console",
+      "relation": "in",
+      "object": "living_room"
+    },
+    {
+      "subject": "living_room",
+      "relation": "connected_to",
+      "object": "kitchen",
+      "via": "kitchen_opening"
+    },
+    {
+      "subject": "coffee_table",
+      "relation": "in",
+      "object": "living_room"
+    },
+    {
+      "subject": "remote_candidate_1",
+      "relation": "on",
+      "object": "coffee_table"
+    },
+    {
+      "subject": "remote_candidate_1",
+      "relation": "in",
+      "object": "living_room"
+    }
+  ],
+  "targets": [
+    {
+      "stage": 0,
+      "description": "decorative plant in kitchen",
+      "candidate_ids": [
+        "plant_kitchen"
+      ],
+      "selected_id": "plant_kitchen",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-6w_rcrak/front.png",
+            "camera": "front",
+            "action": 39,
+            "note": "Yellow decorative foliage in pot on kitchen island; surrounding sink/cabinets/range establish kitchen identity."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-qg08gd9h/front.png",
+            "camera": "front",
+            "action": 41,
+            "note": "Reached unobstructed floor directly beside island end under arrangement after visually confirmed forward approach; estimated within 0.5 m of adjacent navigable goal region. This is a belief, not evaluator distance."
+          }
+        ]
+      }
+    },
+    {
+      "stage": 1,
+      "description": "table in living room",
+      "candidate_ids": [
+        "sofa_console",
+        "coffee_table"
+      ],
+      "selected_id": "coffee_table",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 75,
+            "camera": "front",
+            "image": "images/observe-fgu9g0w7/front.png",
+            "note": "Clear tabletop and legs in seating area in front of living-room fireplace/TV."
+          },
+          {
+            "image": "images/observe-9r6cmvqt/front.png",
+            "camera": "front",
+            "action": 155,
+            "note": "Low rectangular table between living-room sofas, opposite fireplace; clear table identity."
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-m7ado5t4/front.png",
+            "camera": "front",
+            "action": 157,
+            "note": "Reached open rug directly beside near-right coffee-table corner, after visually confirmed movement around side table and pouf. Estimated adjacent navigable goal region within 0.5m; no evaluator feedback."
+          }
+        ]
+      }
+    },
+    {
+      "stage": 2,
+      "description": "remote control in living room",
+      "candidate_ids": [
+        "remote_candidate_1"
+      ],
+      "selected_id": "remote_candidate_1",
+      "identity": {
+        "status": "supported",
+        "confidence": "moderate",
+        "evidence": [
+          {
+            "image": "images/observe-oow9bczb/front.png",
+            "camera": "front",
+            "action": 169,
+            "note": "Near lower edge of view, slim black handsetlike object with a strip of pale button marks on coffee-table surface; strongest appearance evidence for remote."
+          },
+          {
+            "image": "images/observe-_p4uepuf/front.png",
+            "camera": "front",
+            "action": 225,
+            "note": "From opposite table side, low black elongated object remains visible near display base. Context ties candidate to living-room coffee table; texture is distorted, so identity confidence is moderate."
+          }
+        ],
+        "contradictions": [
+          {
+            "action": 184,
+            "image": "images/observe-u5zlo3wb/front.png",
+            "camera": "front",
+            "note": "Mesh fragmentation obscures top surface and prevents crisp button confirmation in this view. Retained limitation; appearance inference primarily rests on action169."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-_p4uepuf/front.png",
+            "camera": "front",
+            "action": 225,
+            "note": "Agent stands on clear rug immediately beside the candidate segment of the table, within an estimated 0.3-0.6m of adjacent navigable approach region. Table perimeter was reached by observed movement, not inferred through blocked sofa gap. Geodesic goal point remains unobserved."
+          }
+        ]
+      }
+    }
+  ],
+  "unchecked_alternatives": [
+    "Small window-side surfaces not exhaustively inspected; no visible competing remote candidate"
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 2,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 3,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 4,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 5,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 6,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 7,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 8,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 9,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 10,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 11,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 12,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 13,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 14,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 15,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 16,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 17,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 18,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 19,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 20,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 21,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 22,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 23,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 24,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 25,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 26,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 27,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 28,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 29,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 30,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 31,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 32,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 33,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 34,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 35,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 36,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 37,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 38,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 39,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 40,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 41,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 42,
+      "primitive": "stop"
+    },
+    {
+      "action": 43,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 44,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 45,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 46,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 47,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 48,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 49,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 50,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 51,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 52,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 53,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 54,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 55,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 56,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 57,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 58,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 59,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 60,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 61,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 62,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 63,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 64,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 65,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 66,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 67,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 68,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 69,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 70,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 71,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 72,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 73,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 74,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 75,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 76,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 77,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 78,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 79,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 80,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 81,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 82,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 83,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 84,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 85,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 86,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 87,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 88,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 89,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 90,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 91,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 92,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 93,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 94,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 95,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 96,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 97,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 98,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 99,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 100,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 101,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 102,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 103,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 104,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 105,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 106,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 107,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 108,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 109,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 110,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 111,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 112,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 113,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 114,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 115,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 116,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 117,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 118,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 119,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 120,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 121,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 122,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 123,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 124,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 125,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 126,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 127,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 128,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 129,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 130,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 131,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 132,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 133,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 134,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 135,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 136,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 137,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 138,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 139,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 140,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 141,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 142,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 143,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 144,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 145,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 146,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 147,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 148,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 149,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 150,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 151,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 152,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 153,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 154,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 155,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 156,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 157,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 158,
+      "primitive": "stop"
+    },
+    {
+      "action": 159,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 160,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 161,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 162,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 163,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 164,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 165,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 166,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 167,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 168,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 169,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 170,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 171,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 172,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 173,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 174,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 175,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 176,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 177,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 178,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 179,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 180,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 181,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 182,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 183,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 184,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 185,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 186,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 187,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 188,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 189,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 190,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 191,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 192,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 193,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 194,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 195,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 196,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 197,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 198,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 199,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 200,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 201,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 202,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 203,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 204,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 205,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 206,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 207,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 208,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 209,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 210,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 211,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 212,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 213,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 214,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 215,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 216,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 217,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 218,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 219,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 220,
+      "primitive": "turn_left"
+    },
+    {
+      "action": 221,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 222,
+      "primitive": "move_forward"
+    },
+    {
+      "action": 223,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 224,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 225,
+      "primitive": "turn_right"
+    },
+    {
+      "action": 226,
+      "primitive": "stop"
+    }
+  ],
+  "episode_over": true,
+  "pre_stop_review": {
+    "stage": 2,
+    "action": 225,
+    "decision": "Submit at best-supported remote candidate beside coffee-table display",
+    "alternatives_reviewed": "Viewed tabletop from both long sides and far end, plus exposed sofa seats. No stronger remote candidate identified. Scan texture ambiguity retained."
+  },
+  "localization_notes": [
+    {
+      "action": 78,
+      "image": "images/observe-hn4z9u2m/front.png",
+      "note": "Identical front/left/right to action75; three forward commands blocked by seating. Withdraw nominal motion for 76-78."
+    },
+    {
+      "action": 83,
+      "image": "images/observe-b7wesrop/front.png",
+      "note": "Identical RGB to action81; commands82-83 blocked, possibly80-81 also. Narrow seating gap is not established traversable. Retreat and route around sofa."
+    },
+    {
+      "action": 136,
+      "image": "images/observe-squzj9jr/front.png",
+      "note": "Actions134-136 blocked beside sofa/white side table; no displacement credited. Current local geometry clear but global positional estimate uncertain +/-1.5m."
+    }
+  ],
+  "submission_note": "All target assessments are RGB-based beliefs, not success feedback."
+}

@@ -1,0 +1,5362 @@
+{
+  "frame": {
+    "origin": "start",
+    "axes": "+x initially forward, +y initially left, +z up",
+    "units": "metres"
+  },
+  "pose_belief": {
+    "position": [
+      -11.79951905283833,
+      4.4250000000000025,
+      0
+    ],
+    "yaw_degrees": 120,
+    "uncertainty_m": 3.980000000000002
+  },
+  "updated_at_action": 500,
+  "nodes": [
+    {
+      "id": "study",
+      "category": "room",
+      "description": "Small white study with long desk and window alcove",
+      "position": [
+        -1,
+        -1,
+        1.25
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "desk",
+      "category": "table",
+      "description": "Long dark writing desk",
+      "position": [
+        -1,
+        -2,
+        0.75
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "desk_chair",
+      "category": "chair",
+      "description": "White fabric armchair, broad square cushioned arms and seat, beside long gray table and open shelves",
+      "position": [
+        -0.4,
+        -1.5,
+        0.55
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/right.png",
+          "camera": "right",
+          "action": 0
+        },
+        {
+          "image": "images/observe-om8bfozf/front.png",
+          "camera": "front",
+          "action": 410
+        },
+        {
+          "image": "images/observe-k67c63h5/front.png",
+          "camera": "front",
+          "action": 428
+        }
+      ]
+    },
+    {
+      "id": "study_window",
+      "category": "window",
+      "description": "Black framed window at starting position",
+      "position": [
+        0.6,
+        0,
+        1.5
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "study_door",
+      "category": "passage",
+      "description": "Open doorway into narrow white hallway",
+      "position": [
+        -3,
+        0.2,
+        1
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/back.png",
+          "camera": "back",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "hall",
+      "category": "hallway",
+      "description": "White narrow hallway extending beyond study",
+      "position": [
+        -5,
+        0.2,
+        1
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-putg9fq7/back.png",
+          "camera": "back",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "living",
+      "category": "room",
+      "description": "Open living room with piano, white sectional, tan chair and far window",
+      "position": [
+        -14,
+        4,
+        1.25
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "piano",
+      "category": "piano",
+      "description": "Black upright piano with purple flowers beside white chaise",
+      "position": [
+        -14.6,
+        1.4,
+        0.75
+      ],
+      "uncertainty_m": 0.6,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/front.png",
+          "camera": "front",
+          "action": 52
+        },
+        {
+          "image": "images/observe-lriguefd/front.png",
+          "camera": "front",
+          "action": 63
+        },
+        {
+          "image": "images/observe-hd4yory6/front.png",
+          "camera": "front",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "purple_flowers",
+      "category": "flowers",
+      "description": "Purple flowers on piano",
+      "position": [
+        -14,
+        1.7,
+        1.5
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/front.png",
+          "camera": "front",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "sofa",
+      "category": "sofa",
+      "description": "White sectional with chaise beside piano",
+      "position": [
+        -14.5,
+        4,
+        0.5
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "coffee_table",
+      "category": "table",
+      "description": "Long pale oval coffee table with plant",
+      "position": [
+        -13.6,
+        4,
+        0.45
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "table_plant",
+      "category": "plant",
+      "description": "Green leaves and slender branches in vase on coffee table",
+      "position": [
+        -13.8,
+        4.4,
+        1.1
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "tan_chair",
+      "category": "chair",
+      "description": "Tan upholstered accent chair with curved modern shell, cushioned arms and brass splayed base, next to glass cabinet",
+      "position": [
+        -12.8,
+        2.8,
+        0.6
+      ],
+      "uncertainty_m": 0.9,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        },
+        {
+          "image": "images/observe-jozoa41a/front.png",
+          "camera": "front",
+          "action": 171
+        }
+      ]
+    },
+    {
+      "id": "glass_cabinet",
+      "category": "cabinet",
+      "description": "Black-framed tall glass display cabinet beside tan chair",
+      "position": [
+        -11.1,
+        1.7,
+        1.3
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        },
+        {
+          "image": "images/observe-jozoa41a/left.png",
+          "camera": "left",
+          "action": 171
+        }
+      ]
+    },
+    {
+      "id": "window_lounge",
+      "category": "chair",
+      "description": "White modern lounge recliner beside gold table and window, approached from right side",
+      "position": [
+        -12.6,
+        7.8,
+        0.65
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        },
+        {
+          "image": "images/observe-11g4uw65/front.png",
+          "camera": "front",
+          "action": 120
+        },
+        {
+          "image": "images/observe-tlcuat3e/front.png",
+          "camera": "front",
+          "action": 131
+        },
+        {
+          "image": "images/observe-7viuzuq4/front.png",
+          "camera": "front",
+          "action": 144
+        },
+        {
+          "image": "images/observe-cgftpk0l/front.png",
+          "camera": "front",
+          "action": 149
+        }
+      ]
+    },
+    {
+      "id": "lounge_side_table",
+      "category": "table",
+      "description": "Slender gold pedestal side table with small glass beside recliner",
+      "position": [
+        -13.2,
+        8,
+        0.55
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        },
+        {
+          "image": "images/observe-11g4uw65/front.png",
+          "camera": "front",
+          "action": 120
+        }
+      ]
+    },
+    {
+      "id": "living_window",
+      "category": "window",
+      "description": "Broad far window with dark blinds",
+      "position": [
+        -13.4,
+        9,
+        1.5
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/right.png",
+          "camera": "right",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "dining",
+      "category": "room",
+      "description": "Open dining area with marble table",
+      "position": [
+        -12,
+        -3,
+        1.25
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-curaom6l/left.png",
+          "camera": "left",
+          "action": 52
+        }
+      ]
+    },
+    {
+      "id": "bedroom_left",
+      "category": "room",
+      "description": "Bedroom with bed, writing desk and white desk chair, seen through hallway doorway",
+      "position": [
+        -6.5,
+        -2,
+        1.25
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-tymfz_9j/left.png",
+          "camera": "left",
+          "action": 32
+        }
+      ]
+    },
+    {
+      "id": "bedroom_right",
+      "category": "room",
+      "description": "Bedroom glimpsed through right hallway doorway, bed and window",
+      "position": [
+        -4,
+        2.5,
+        1.25
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-_ia94bb7/right.png",
+          "camera": "right",
+          "action": 22
+        }
+      ]
+    },
+    {
+      "id": "bedroom_far_right",
+      "category": "room",
+      "description": "Bedroom with shelving and bed seen through doorway near hall junction",
+      "position": [
+        -8,
+        3,
+        1.25
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "image": "images/observe-yczexh_c/right.png",
+          "camera": "right",
+          "action": 42
+        }
+      ]
+    },
+    {
+      "id": "white_modular_seat",
+      "category": "chair",
+      "description": "Separate low white cushioned seat with white back cushion and tan adjoining padded unit, next to round table and recessed shelves",
+      "position": [
+        -13.7,
+        6.2,
+        0.45
+      ],
+      "uncertainty_m": 1.3,
+      "observations": [
+        {
+          "image": "images/observe-vst6ur5b/left.png",
+          "camera": "left",
+          "action": 104
+        },
+        {
+          "image": "images/observe-jozoa41a/right.png",
+          "camera": "right",
+          "action": 171
+        },
+        {
+          "image": "images/observe-wgjfmt0o/front.png",
+          "camera": "front",
+          "action": 499
+        }
+      ]
+    },
+    {
+      "id": "recessed_shelves",
+      "category": "shelves",
+      "description": "Narrow illuminated shelves near white sculptural figure and window",
+      "position": [
+        -15,
+        7.2,
+        1.3
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-11g4uw65/front.png",
+          "camera": "front",
+          "action": 120
+        }
+      ]
+    },
+    {
+      "id": "junction_bedroom",
+      "category": "room",
+      "description": "Small bedroom with gray duvet, TV and swivel desk chair, no coffee table",
+      "position": [
+        -8,
+        4,
+        1.25
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-wlf9oljm/front.png",
+          "camera": "front",
+          "action": 321
+        }
+      ]
+    },
+    {
+      "id": "junction_swivel",
+      "category": "chair",
+      "description": "Gray/brown rolling office chair at white writing desk, ruled out as white fabric armchair",
+      "position": [
+        -9,
+        6,
+        0.6
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-wlf9oljm/front.png",
+          "camera": "front",
+          "action": 321
+        }
+      ]
+    },
+    {
+      "id": "study_shelves",
+      "category": "shelves",
+      "description": "Open tall shelves immediately alongside white armchair",
+      "position": [
+        0.1,
+        -1.8,
+        1.2
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-om8bfozf/front.png",
+          "camera": "front",
+          "action": 410
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "desk",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "desk_chair",
+      "relation": "in",
+      "object": "study"
+    },
+    {
+      "subject": "study",
+      "relation": "connected_to",
+      "object": "hall",
+      "via": "study_door"
+    },
+    {
+      "subject": "piano",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "sofa",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "coffee_table",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "tan_chair",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "glass_cabinet",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "window_lounge",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "lounge_side_table",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "living_window",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "purple_flowers",
+      "relation": "on",
+      "object": "piano"
+    },
+    {
+      "subject": "table_plant",
+      "relation": "on",
+      "object": "coffee_table"
+    },
+    {
+      "subject": "hall",
+      "relation": "connected_to",
+      "object": "living",
+      "via": "open hall end"
+    },
+    {
+      "subject": "living",
+      "relation": "connected_to",
+      "object": "dining",
+      "via": "open plan entry"
+    },
+    {
+      "subject": "hall",
+      "relation": "connected_to",
+      "object": "bedroom_left",
+      "via": "visible open doorway"
+    },
+    {
+      "subject": "hall",
+      "relation": "connected_to",
+      "object": "bedroom_right",
+      "via": "visible open doorway"
+    },
+    {
+      "subject": "hall",
+      "relation": "connected_to",
+      "object": "bedroom_far_right",
+      "via": "visible open doorway"
+    },
+    {
+      "subject": "white_modular_seat",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "recessed_shelves",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "junction_swivel",
+      "relation": "in",
+      "object": "junction_bedroom"
+    },
+    {
+      "subject": "hall",
+      "relation": "connected_to",
+      "object": "junction_bedroom",
+      "via": "junction north doorway"
+    },
+    {
+      "subject": "study_shelves",
+      "relation": "in",
+      "object": "study"
+    }
+  ],
+  "targets": [
+    {
+      "index": 1,
+      "candidate_ids": [
+        "piano"
+      ],
+      "selected_id": "piano",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 67,
+            "image": "images/observe-hd4yory6/front.png",
+            "statement": "Close view of black upright keyboard with purple flowers, white chaise directly alongside"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 67,
+            "image": "images/observe-hd4yory6/front.png",
+            "statement": "Standing immediately beside piano keyboard at unobstructed near edge"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "candidate_ids": [
+        "window_lounge"
+      ],
+      "selected_id": "window_lounge",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 149,
+            "image": "images/observe-cgftpk0l/front.png",
+            "statement": "White sleek recliner next to gold side table and window"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 149,
+            "image": "images/observe-cgftpk0l/front.png",
+            "statement": "Immediate foreground along clear side aisle after several close approaches"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "candidate_ids": [
+        "tan_chair"
+      ],
+      "selected_id": "tan_chair",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 171,
+            "image": "images/observe-jozoa41a/front.png",
+            "statement": "Tan fabric curved modern shape and cushioned seat, glass cabinet directly alongside in left view"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 171,
+            "image": "images/observe-jozoa41a/front.png",
+            "statement": "Reached near side of tan chair via open aisle; chair fills immediate lower foreground"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "candidate_ids": [
+        "white_modular_seat",
+        "desk_chair"
+      ],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-om8bfozf/front.png",
+            "action": 410,
+            "statement": "White cushioned armchair beside gray table and open shelving, strongest current match"
+          },
+          {
+            "image": "images/observe-wgjfmt0o/front.png",
+            "action": 499,
+            "statement": "Separate cushioned seat visible beside table and shelves, but armchair identity versus chaise remains ambiguous"
+          }
+        ],
+        "contradictions": [
+          "Gray table appears writing-table height rather than conventional coffee table; inspect/review before final selection."
+        ]
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-wgjfmt0o/front.png",
+            "action": 499,
+            "statement": "Current floor gap does not establish under-1m approach to low seat; study close approach is a different unresolved candidate."
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "candidate_ids": [
+        "table_plant"
+      ],
+      "selected_id": "table_plant",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "action": 499,
+            "image": "images/observe-wgjfmt0o/left.png",
+            "statement": "Slender green-leafed branches in white vase on coffee table near white sofa"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      }
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 2,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 3,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 4,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 5,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 6,
+      "command": "turn_right",
+      "pose_nominal": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "action": 7,
+      "command": "move_forward",
+      "pose_nominal": [
+        -0.25,
+        3.061616997868383e-17,
+        0
+      ]
+    },
+    {
+      "action": 8,
+      "command": "move_forward",
+      "pose_nominal": [
+        -0.5,
+        6.123233995736766e-17,
+        0
+      ]
+    },
+    {
+      "action": 9,
+      "command": "move_forward",
+      "pose_nominal": [
+        -0.75,
+        9.184850993605148e-17,
+        0
+      ]
+    },
+    {
+      "action": 10,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0,
+        1.2246467991473532e-16,
+        0
+      ]
+    },
+    {
+      "action": 11,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.25,
+        1.5308084989341916e-16,
+        0
+      ]
+    },
+    {
+      "action": 12,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.5,
+        1.83697019872103e-16,
+        0
+      ]
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.75,
+        2.1431318985078683e-16,
+        0
+      ]
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.0,
+        2.4492935982947064e-16,
+        0
+      ]
+    },
+    {
+      "action": 15,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.25,
+        2.755455298081545e-16,
+        0
+      ]
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.5,
+        3.061616997868383e-16,
+        0
+      ]
+    },
+    {
+      "action": 17,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.75,
+        3.3677786976552215e-16,
+        0
+      ]
+    },
+    {
+      "action": 18,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.0,
+        3.67394039744206e-16,
+        0
+      ]
+    },
+    {
+      "action": 19,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.25,
+        3.980102097228898e-16,
+        0
+      ]
+    },
+    {
+      "action": 20,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.5,
+        4.2862637970157366e-16,
+        0
+      ]
+    },
+    {
+      "action": 21,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.75,
+        4.592425496802575e-16,
+        0
+      ]
+    },
+    {
+      "action": 22,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.0,
+        4.898587196589413e-16,
+        0
+      ]
+    },
+    {
+      "action": 23,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.25,
+        5.204748896376251e-16,
+        0
+      ]
+    },
+    {
+      "action": 24,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.5,
+        5.510910596163089e-16,
+        0
+      ]
+    },
+    {
+      "action": 25,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.75,
+        5.817072295949926e-16,
+        0
+      ]
+    },
+    {
+      "action": 26,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.0,
+        6.123233995736764e-16,
+        0
+      ]
+    },
+    {
+      "action": 27,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.25,
+        6.429395695523602e-16,
+        0
+      ]
+    },
+    {
+      "action": 28,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.5,
+        6.73555739531044e-16,
+        0
+      ]
+    },
+    {
+      "action": 29,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.75,
+        7.041719095097278e-16,
+        0
+      ]
+    },
+    {
+      "action": 30,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.0,
+        7.347880794884116e-16,
+        0
+      ]
+    },
+    {
+      "action": 31,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.25,
+        7.654042494670954e-16,
+        0
+      ]
+    },
+    {
+      "action": 32,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.5,
+        7.960204194457792e-16,
+        0
+      ]
+    },
+    {
+      "action": 33,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.75,
+        8.266365894244629e-16,
+        0
+      ]
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.0,
+        8.572527594031467e-16,
+        0
+      ]
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.25,
+        8.878689293818305e-16,
+        0
+      ]
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.5,
+        9.184850993605144e-16,
+        0
+      ]
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.75,
+        9.491012693391982e-16,
+        0
+      ]
+    },
+    {
+      "action": 38,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.0,
+        9.79717439317882e-16,
+        0
+      ]
+    },
+    {
+      "action": 39,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.25,
+        1.0103336092965658e-15,
+        0
+      ]
+    },
+    {
+      "action": 40,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.5,
+        1.0409497792752495e-15,
+        0
+      ]
+    },
+    {
+      "action": 41,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.75,
+        1.0715659492539333e-15,
+        0
+      ]
+    },
+    {
+      "action": 42,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.0,
+        1.1021821192326171e-15,
+        0
+      ]
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.25,
+        1.132798289211301e-15,
+        0
+      ]
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.5,
+        1.1634144591899847e-15,
+        0
+      ]
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.75,
+        1.1940306291686685e-15,
+        0
+      ]
+    },
+    {
+      "action": 46,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.0,
+        1.2246467991473523e-15,
+        0
+      ]
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.25,
+        1.255262969126036e-15,
+        0
+      ]
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.5,
+        1.2858791391047198e-15,
+        0
+      ]
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.75,
+        1.3164953090834036e-15,
+        0
+      ]
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.0,
+        1.3471114790620874e-15,
+        0
+      ]
+    },
+    {
+      "action": 51,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.25,
+        1.3777276490407712e-15,
+        0
+      ]
+    },
+    {
+      "action": 52,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        1.408343819019455e-15,
+        0
+      ]
+    },
+    {
+      "action": 53,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.5,
+        1.408343819019455e-15,
+        0
+      ]
+    },
+    {
+      "action": 54,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.71650635094611,
+        0.1250000000000014,
+        0
+      ]
+    },
+    {
+      "action": 55,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.93301270189222,
+        0.2500000000000014,
+        0
+      ]
+    },
+    {
+      "action": 56,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.14951905283833,
+        0.3750000000000014,
+        0
+      ]
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.366025403784441,
+        0.5000000000000013,
+        0
+      ]
+    },
+    {
+      "action": 58,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.582531754730551,
+        0.6250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 59,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.799038105676662,
+        0.7500000000000013,
+        0
+      ]
+    },
+    {
+      "action": 60,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.015544456622772,
+        0.8750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 61,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.232050807568882,
+        1.0000000000000013,
+        0
+      ]
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 63,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 64,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.448557158514992,
+        1.1250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 65,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.665063509461103,
+        1.2500000000000013,
+        0
+      ]
+    },
+    {
+      "action": 66,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 67,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 68,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 69,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 70,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 71,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.6250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 72,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        1.8750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 73,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        2.1250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        2.3750000000000013,
+        0
+      ]
+    },
+    {
+      "action": 75,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.881569860407213,
+        2.6250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 76,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.881569860407213,
+        2.6250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 77,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.756569860407213,
+        2.841506350946111,
+        0
+      ]
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.631569860407213,
+        3.058012701892221,
+        0
+      ]
+    },
+    {
+      "action": 79,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.506569860407213,
+        3.274519052838331,
+        0
+      ]
+    },
+    {
+      "action": 80,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.381569860407213,
+        3.4910254037844406,
+        0
+      ]
+    },
+    {
+      "action": 81,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        3.7075317547305504,
+        0
+      ]
+    },
+    {
+      "action": 82,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.256569860407213,
+        3.7075317547305504,
+        0
+      ]
+    },
+    {
+      "action": 83,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        3.9575317547305504,
+        0
+      ]
+    },
+    {
+      "action": 84,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        4.20753175473055,
+        0
+      ]
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        4.45753175473055,
+        0
+      ]
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        4.70753175473055,
+        0
+      ]
+    },
+    {
+      "action": 87,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        4.95753175473055,
+        0
+      ]
+    },
+    {
+      "action": 88,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        5.20753175473055,
+        0
+      ]
+    },
+    {
+      "action": 89,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.256569860407213,
+        5.45753175473055,
+        0
+      ]
+    },
+    {
+      "action": 90,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.256569860407213,
+        5.45753175473055,
+        0
+      ]
+    },
+    {
+      "action": 91,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.131569860407213,
+        5.67403810567666,
+        0
+      ]
+    },
+    {
+      "action": 92,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.006569860407213,
+        5.890544456622769,
+        0
+      ]
+    },
+    {
+      "action": 93,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.1070508075688785,
+        0
+      ]
+    },
+    {
+      "action": 94,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.1070508075688785,
+        0
+      ]
+    },
+    {
+      "action": 95,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.3570508075688785,
+        0
+      ]
+    },
+    {
+      "action": 96,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.6070508075688785,
+        0
+      ]
+    },
+    {
+      "action": 97,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.8570508075688785,
+        0
+      ]
+    },
+    {
+      "action": 98,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.881569860407213,
+        6.8570508075688785,
+        0
+      ]
+    },
+    {
+      "action": 99,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.756569860407213,
+        7.073557158514988,
+        0
+      ]
+    },
+    {
+      "action": 100,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.631569860407213,
+        7.290063509461097,
+        0
+      ]
+    },
+    {
+      "action": 101,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.631569860407213,
+        7.290063509461097,
+        0
+      ]
+    },
+    {
+      "action": 102,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.631569860407213,
+        7.540063509461097,
+        0
+      ]
+    },
+    {
+      "action": 103,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.631569860407213,
+        7.790063509461097,
+        0
+      ]
+    },
+    {
+      "action": 104,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.631569860407213,
+        8.040063509461097,
+        0
+      ]
+    },
+    {
+      "action": 105,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 106,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 107,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 108,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.35,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 109,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.1,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 111,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 112,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 113,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 114,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.25,
+        0
+      ]
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.5,
+        0
+      ]
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        7.0,
+        0
+      ]
+    },
+    {
+      "action": 118,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 119,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 120,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 121,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 122,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 123,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 124,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        7.25,
+        0
+      ]
+    },
+    {
+      "action": 125,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        7.0,
+        0
+      ]
+    },
+    {
+      "action": 126,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 127,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 128,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 129,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 130,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 131,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 132,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 133,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 134,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 135,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 136,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.85,
+        6.75,
+        0
+      ]
+    },
+    {
+      "action": 137,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.5,
+        0
+      ]
+    },
+    {
+      "action": 138,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.25,
+        0
+      ]
+    },
+    {
+      "action": 139,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 140,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 141,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 142,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 143,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 144,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.85,
+        6.0,
+        0
+      ]
+    },
+    {
+      "action": 145,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.975,
+        6.216506350946109,
+        0
+      ]
+    },
+    {
+      "action": 146,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.1,
+        6.433012701892219,
+        0
+      ]
+    },
+    {
+      "action": 147,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.1,
+        6.433012701892219,
+        0
+      ]
+    },
+    {
+      "action": 148,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.1,
+        6.683012701892219,
+        0
+      ]
+    },
+    {
+      "action": 149,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.1,
+        6.933012701892219,
+        0
+      ]
+    },
+    {
+      "action": 150,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.1,
+        6.933012701892219,
+        0
+      ]
+    },
+    {
+      "action": 151,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 152,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 153,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 154,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 155,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 156,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.225,
+        7.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 157,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 158,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        6.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 159,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        6.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        6.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 161,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 162,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        5.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 163,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        5.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 164,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        5.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 165,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        4.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 166,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        4.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 167,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        4.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 168,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.225,
+        4.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.35,
+        4.183012701892219,
+        0
+      ]
+    },
+    {
+      "action": 170,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.475,
+        3.9665063509461094,
+        0
+      ]
+    },
+    {
+      "action": 171,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 172,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 173,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 174,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 175,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 176,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.6,
+        3.75,
+        0
+      ]
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        4.0,
+        0
+      ]
+    },
+    {
+      "action": 178,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        4.25,
+        0
+      ]
+    },
+    {
+      "action": 179,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        4.5,
+        0
+      ]
+    },
+    {
+      "action": 180,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        4.75,
+        0
+      ]
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        5.0,
+        0
+      ]
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.6,
+        5.25,
+        0
+      ]
+    },
+    {
+      "action": 183,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.6,
+        5.25,
+        0
+      ]
+    },
+    {
+      "action": 184,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        5.466506350946109,
+        0
+      ]
+    },
+    {
+      "action": 185,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.85,
+        5.683012701892219,
+        0
+      ]
+    },
+    {
+      "action": 186,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 187,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 188,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 189,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.225,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 190,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.475,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 191,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 192,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 193,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 194,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 195,
+      "command": "turn_right",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 196,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.975,
+        6.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 197,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.975,
+        6.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 198,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.975,
+        6.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 199,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.975,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 200,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 201,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 202,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 203,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        6.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 204,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 205,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 206,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 207,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 208,
+      "command": "turn_left",
+      "pose_nominal": [
+        -13.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 209,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 210,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.475,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 211,
+      "command": "move_forward",
+      "pose_nominal": [
+        -13.225,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 212,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.975,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 213,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 214,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 215,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 216,
+      "command": "turn_right",
+      "pose_nominal": [
+        -12.725,
+        5.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        5.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 218,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        5.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 219,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        5.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 220,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        4.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 221,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        4.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 222,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        4.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 223,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        4.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 224,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        3.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 225,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        3.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 226,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        3.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        3.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        2.899519052838328,
+        0
+      ]
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        2.649519052838328,
+        0
+      ]
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        2.399519052838328,
+        0
+      ]
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        2.149519052838328,
+        0
+      ]
+    },
+    {
+      "action": 232,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 233,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 234,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 235,
+      "command": "turn_left",
+      "pose_nominal": [
+        -12.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 236,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.475,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 237,
+      "command": "move_forward",
+      "pose_nominal": [
+        -12.225,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 238,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.975,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 239,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 240,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.475,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 241,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.225,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 242,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.975,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 243,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 244,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.475,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 245,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.225,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 246,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.975,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 247,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.725,
+        1.8995190528383281,
+        0
+      ]
+    },
+    {
+      "action": 248,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.5,
+        1.5,
+        0
+      ]
+    },
+    {
+      "action": 249,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.5,
+        1.5,
+        0
+      ]
+    },
+    {
+      "action": 250,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.5,
+        1.5,
+        0
+      ]
+    },
+    {
+      "action": 251,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        1.25,
+        0
+      ]
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        1.0,
+        0
+      ]
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        0.75,
+        0
+      ]
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        0.5,
+        0
+      ]
+    },
+    {
+      "action": 255,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 256,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 257,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 258,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 259,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.25,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 260,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.0,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.75,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 263,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.25,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 264,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.0,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 265,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.75,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 266,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 267,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.25,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 268,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.0,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 269,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.75,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 270,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 271,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.25,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 272,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.0,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 273,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.75,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 274,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.5,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 275,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.25,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 276,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.0,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 277,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.75,
+        0.25,
+        0
+      ]
+    },
+    {
+      "action": 278,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.2,
+        0.4,
+        0
+      ]
+    },
+    {
+      "action": 279,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.2,
+        0.4,
+        0
+      ]
+    },
+    {
+      "action": 280,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.2,
+        0.4,
+        0
+      ]
+    },
+    {
+      "action": 281,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.2,
+        0.15000000000000002,
+        0
+      ]
+    },
+    {
+      "action": 282,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 283,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 284,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 285,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 286,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.95,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 287,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.7,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 288,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.45,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 289,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 290,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.95,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 291,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.7,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 292,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.45,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 293,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.2,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 294,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.95,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 295,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.7,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 296,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.7,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 297,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.7,
+        -0.09999999999999998,
+        0
+      ]
+    },
+    {
+      "action": 298,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.575,
+        0.11650635094610967,
+        0
+      ]
+    },
+    {
+      "action": 299,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.45,
+        0.3330127018922193,
+        0
+      ]
+    },
+    {
+      "action": 300,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.325,
+        0.5495190528383289,
+        0
+      ]
+    },
+    {
+      "action": 301,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.2,
+        0.7660254037844385,
+        0
+      ]
+    },
+    {
+      "action": 302,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        0.9825317547305481,
+        0
+      ]
+    },
+    {
+      "action": 303,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.949999999999999,
+        1.1990381056766577,
+        0
+      ]
+    },
+    {
+      "action": 304,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.824999999999999,
+        1.4155444566227673,
+        0
+      ]
+    },
+    {
+      "action": 305,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.699999999999999,
+        1.6320508075688769,
+        0
+      ]
+    },
+    {
+      "action": 306,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.574999999999999,
+        1.8485571585149865,
+        0
+      ]
+    },
+    {
+      "action": 307,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.449999999999999,
+        2.0650635094610963,
+        0
+      ]
+    },
+    {
+      "action": 308,
+      "command": "turn_left",
+      "pose_nominal": [
+        -7.449999999999999,
+        2.0650635094610963,
+        0
+      ]
+    },
+    {
+      "action": 309,
+      "command": "turn_left",
+      "pose_nominal": [
+        -7.449999999999999,
+        2.0650635094610963,
+        0
+      ]
+    },
+    {
+      "action": 310,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.574999999999999,
+        2.281569860407206,
+        0
+      ]
+    },
+    {
+      "action": 311,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.699999999999999,
+        2.498076211353316,
+        0
+      ]
+    },
+    {
+      "action": 312,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.824999999999999,
+        2.7145825622994257,
+        0
+      ]
+    },
+    {
+      "action": 313,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.949999999999999,
+        2.9310889132455356,
+        0
+      ]
+    },
+    {
+      "action": 314,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 315,
+      "command": "turn_right",
+      "pose_nominal": [
+        -8.075,
+        3.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 316,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.3975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 317,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.6475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 318,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.8975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 319,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        4.147595264191645,
+        0
+      ]
+    },
+    {
+      "action": 320,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        4.397595264191645,
+        0
+      ]
+    },
+    {
+      "action": 321,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 322,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 323,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 324,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 325,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 326,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 327,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        4.647595264191645,
+        0
+      ]
+    },
+    {
+      "action": 328,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        4.397595264191645,
+        0
+      ]
+    },
+    {
+      "action": 329,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        4.147595264191645,
+        0
+      ]
+    },
+    {
+      "action": 330,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.8975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 331,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.6475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 332,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.3975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 333,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        3.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 334,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        2.8975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 335,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        2.6475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 336,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        2.3975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 337,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        2.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 338,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        1.8975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 339,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        1.6475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 340,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        1.3975952641916454,
+        0
+      ]
+    },
+    {
+      "action": 341,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.075,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 342,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 343,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 344,
+      "command": "turn_left",
+      "pose_nominal": [
+        -8.075,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 345,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.824999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 346,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.574999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 347,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.324999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 348,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.074999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 349,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.824999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 350,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.574999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 351,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.324999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 352,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.074999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 353,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.824999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 354,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.574999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 355,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.324999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 356,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.074999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 357,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.824999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 358,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.574999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 359,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.324999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 360,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.074999999999999,
+        1.1475952641916454,
+        0
+      ]
+    },
+    {
+      "action": 361,
+      "command": "turn_right",
+      "pose_nominal": [
+        -7.8,
+        1.3,
+        0
+      ]
+    },
+    {
+      "action": 362,
+      "command": "turn_right",
+      "pose_nominal": [
+        -7.8,
+        1.3,
+        0
+      ]
+    },
+    {
+      "action": 363,
+      "command": "turn_right",
+      "pose_nominal": [
+        -7.8,
+        1.3,
+        0
+      ]
+    },
+    {
+      "action": 364,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.8,
+        1.05,
+        0
+      ]
+    },
+    {
+      "action": 365,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.8,
+        0.8,
+        0
+      ]
+    },
+    {
+      "action": 366,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.8,
+        0.55,
+        0
+      ]
+    },
+    {
+      "action": 367,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.8,
+        0.30000000000000004,
+        0
+      ]
+    },
+    {
+      "action": 368,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 369,
+      "command": "turn_left",
+      "pose_nominal": [
+        -7.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 370,
+      "command": "turn_left",
+      "pose_nominal": [
+        -7.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 371,
+      "command": "turn_left",
+      "pose_nominal": [
+        -7.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 372,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 373,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 374,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 375,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 376,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 377,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 378,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 379,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 380,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 381,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 382,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 383,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 384,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 385,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 386,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 387,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 388,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 389,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 390,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 391,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.8,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 392,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.55,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 393,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.3,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 394,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.05,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 395,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.7999999999999998,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 396,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.7999999999999998,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 397,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.7999999999999998,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 398,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.7999999999999998,
+        0.050000000000000044,
+        0
+      ]
+    },
+    {
+      "action": 399,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 400,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.44999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 401,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 402,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 403,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 404,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.7999999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 405,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.5499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 406,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.2999999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 407,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 408,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 409,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 410,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 411,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.95,
+        0
+      ]
+    },
+    {
+      "action": 412,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 413,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 414,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 415,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 416,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 417,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 418,
+      "command": "turn_left",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -1.2,
+        0
+      ]
+    },
+    {
+      "action": 419,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.95,
+        0
+      ]
+    },
+    {
+      "action": 420,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "action": 421,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.44999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 422,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 423,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 424,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 425,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 426,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 427,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 428,
+      "command": "turn_right",
+      "pose_nominal": [
+        -1.0499999999999998,
+        -0.19999999999999996,
+        0
+      ]
+    },
+    {
+      "action": 429,
+      "command": "turn_right",
+      "pose_nominal": [
+        -0.4,
+        0.05,
+        0
+      ]
+    },
+    {
+      "action": 430,
+      "command": "turn_right",
+      "pose_nominal": [
+        -0.4,
+        0.05,
+        0
+      ]
+    },
+    {
+      "action": 431,
+      "command": "turn_right",
+      "pose_nominal": [
+        -0.4,
+        0.05,
+        0
+      ]
+    },
+    {
+      "action": 432,
+      "command": "move_forward",
+      "pose_nominal": [
+        -0.65,
+        0.05000000000000003,
+        0
+      ]
+    },
+    {
+      "action": 433,
+      "command": "move_forward",
+      "pose_nominal": [
+        -0.9,
+        0.05000000000000006,
+        0
+      ]
+    },
+    {
+      "action": 434,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.15,
+        0.050000000000000086,
+        0
+      ]
+    },
+    {
+      "action": 435,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.4,
+        0.050000000000000114,
+        0
+      ]
+    },
+    {
+      "action": 436,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.65,
+        0.05000000000000014,
+        0
+      ]
+    },
+    {
+      "action": 437,
+      "command": "move_forward",
+      "pose_nominal": [
+        -1.9,
+        0.05000000000000017,
+        0
+      ]
+    },
+    {
+      "action": 438,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.15,
+        0.0500000000000002,
+        0
+      ]
+    },
+    {
+      "action": 439,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.4,
+        0.050000000000000225,
+        0
+      ]
+    },
+    {
+      "action": 440,
+      "command": "turn_right",
+      "pose_nominal": [
+        -2.4,
+        0.050000000000000225,
+        0
+      ]
+    },
+    {
+      "action": 441,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.6165063509461097,
+        0.1750000000000002,
+        0
+      ]
+    },
+    {
+      "action": 442,
+      "command": "move_forward",
+      "pose_nominal": [
+        -2.8330127018922195,
+        0.3000000000000002,
+        0
+      ]
+    },
+    {
+      "action": 443,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.0495190528383294,
+        0.4250000000000002,
+        0
+      ]
+    },
+    {
+      "action": 444,
+      "command": "turn_left",
+      "pose_nominal": [
+        -3.0495190528383294,
+        0.4250000000000002,
+        0
+      ]
+    },
+    {
+      "action": 445,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.2995190528383294,
+        0.42500000000000027,
+        0
+      ]
+    },
+    {
+      "action": 446,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.5495190528383294,
+        0.4250000000000003,
+        0
+      ]
+    },
+    {
+      "action": 447,
+      "command": "move_forward",
+      "pose_nominal": [
+        -3.7995190528383294,
+        0.4250000000000004,
+        0
+      ]
+    },
+    {
+      "action": 448,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.049519052838329,
+        0.42500000000000043,
+        0
+      ]
+    },
+    {
+      "action": 449,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.299519052838329,
+        0.4250000000000005,
+        0
+      ]
+    },
+    {
+      "action": 450,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.549519052838329,
+        0.42500000000000054,
+        0
+      ]
+    },
+    {
+      "action": 451,
+      "command": "move_forward",
+      "pose_nominal": [
+        -4.799519052838329,
+        0.4250000000000006,
+        0
+      ]
+    },
+    {
+      "action": 452,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.049519052838329,
+        0.42500000000000066,
+        0
+      ]
+    },
+    {
+      "action": 453,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.299519052838329,
+        0.4250000000000007,
+        0
+      ]
+    },
+    {
+      "action": 454,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.549519052838329,
+        0.42500000000000077,
+        0
+      ]
+    },
+    {
+      "action": 455,
+      "command": "move_forward",
+      "pose_nominal": [
+        -5.799519052838329,
+        0.4250000000000008,
+        0
+      ]
+    },
+    {
+      "action": 456,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.049519052838329,
+        0.4250000000000009,
+        0
+      ]
+    },
+    {
+      "action": 457,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.299519052838329,
+        0.42500000000000093,
+        0
+      ]
+    },
+    {
+      "action": 458,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.549519052838329,
+        0.425000000000001,
+        0
+      ]
+    },
+    {
+      "action": 459,
+      "command": "move_forward",
+      "pose_nominal": [
+        -6.799519052838329,
+        0.42500000000000104,
+        0
+      ]
+    },
+    {
+      "action": 460,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.049519052838329,
+        0.4250000000000011,
+        0
+      ]
+    },
+    {
+      "action": 461,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.299519052838329,
+        0.42500000000000115,
+        0
+      ]
+    },
+    {
+      "action": 462,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.549519052838329,
+        0.4250000000000012,
+        0
+      ]
+    },
+    {
+      "action": 463,
+      "command": "move_forward",
+      "pose_nominal": [
+        -7.799519052838329,
+        0.42500000000000127,
+        0
+      ]
+    },
+    {
+      "action": 464,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.04951905283833,
+        0.4250000000000013,
+        0
+      ]
+    },
+    {
+      "action": 465,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.29951905283833,
+        0.4250000000000014,
+        0
+      ]
+    },
+    {
+      "action": 466,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.54951905283833,
+        0.42500000000000143,
+        0
+      ]
+    },
+    {
+      "action": 467,
+      "command": "move_forward",
+      "pose_nominal": [
+        -8.79951905283833,
+        0.4250000000000015,
+        0
+      ]
+    },
+    {
+      "action": 468,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.04951905283833,
+        0.42500000000000154,
+        0
+      ]
+    },
+    {
+      "action": 469,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.29951905283833,
+        0.4250000000000016,
+        0
+      ]
+    },
+    {
+      "action": 470,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.54951905283833,
+        0.42500000000000165,
+        0
+      ]
+    },
+    {
+      "action": 471,
+      "command": "move_forward",
+      "pose_nominal": [
+        -9.79951905283833,
+        0.4250000000000017,
+        0
+      ]
+    },
+    {
+      "action": 472,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.04951905283833,
+        0.42500000000000177,
+        0
+      ]
+    },
+    {
+      "action": 473,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.29951905283833,
+        0.4250000000000018,
+        0
+      ]
+    },
+    {
+      "action": 474,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.54951905283833,
+        0.4250000000000019,
+        0
+      ]
+    },
+    {
+      "action": 475,
+      "command": "move_forward",
+      "pose_nominal": [
+        -10.79951905283833,
+        0.42500000000000193,
+        0
+      ]
+    },
+    {
+      "action": 476,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.04951905283833,
+        0.425000000000002,
+        0
+      ]
+    },
+    {
+      "action": 477,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.29951905283833,
+        0.42500000000000204,
+        0
+      ]
+    },
+    {
+      "action": 478,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.54951905283833,
+        0.4250000000000021,
+        0
+      ]
+    },
+    {
+      "action": 479,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.42500000000000215,
+        0
+      ]
+    },
+    {
+      "action": 480,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.42500000000000215,
+        0
+      ]
+    },
+    {
+      "action": 481,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.42500000000000215,
+        0
+      ]
+    },
+    {
+      "action": 482,
+      "command": "turn_right",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.42500000000000215,
+        0
+      ]
+    },
+    {
+      "action": 483,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.6750000000000022,
+        0
+      ]
+    },
+    {
+      "action": 484,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        0.9250000000000022,
+        0
+      ]
+    },
+    {
+      "action": 485,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        1.175000000000002,
+        0
+      ]
+    },
+    {
+      "action": 486,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        1.425000000000002,
+        0
+      ]
+    },
+    {
+      "action": 487,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        1.675000000000002,
+        0
+      ]
+    },
+    {
+      "action": 488,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        1.925000000000002,
+        0
+      ]
+    },
+    {
+      "action": 489,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        2.175000000000002,
+        0
+      ]
+    },
+    {
+      "action": 490,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        2.425000000000002,
+        0
+      ]
+    },
+    {
+      "action": 491,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        2.675000000000002,
+        0
+      ]
+    },
+    {
+      "action": 492,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        2.925000000000002,
+        0
+      ]
+    },
+    {
+      "action": 493,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        3.175000000000002,
+        0
+      ]
+    },
+    {
+      "action": 494,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        3.425000000000002,
+        0
+      ]
+    },
+    {
+      "action": 495,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        3.675000000000002,
+        0
+      ]
+    },
+    {
+      "action": 496,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        3.925000000000002,
+        0
+      ]
+    },
+    {
+      "action": 497,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        4.1750000000000025,
+        0
+      ]
+    },
+    {
+      "action": 498,
+      "command": "move_forward",
+      "pose_nominal": [
+        -11.79951905283833,
+        4.4250000000000025,
+        0
+      ]
+    },
+    {
+      "action": 499,
+      "command": "turn_left",
+      "pose_nominal": [
+        -11.79951905283833,
+        4.4250000000000025,
+        0
+      ]
+    },
+    {
+      "action": 500,
+      "command": "move_forward",
+      "note": "Final approach attempt; displacement not yet visually verified"
+    }
+  ],
+  "notes": [
+    "Action 52: retrieved target 1 evidence; piano approach via open floor before chaise. Other candidates remain unchecked until sequence permits.",
+    "Review at 63 declined with explanation about distant lounge chair, inconsistent with requested piano checkpoint. Retain independent piano evidence and retry closer.",
+    "Forward hallway motion visually confirmed by successive doorway parallax; coordinates remain dead-reckoning estimates with accumulated uncertainty. No collision detected through action 67. Target 4 remains unlocated; desk chairs do not match coffee-table relation.",
+    "Action 67 second checkpoint-1 review again evaluates lounge chair rather than piano. Piano physically approached first; will inspect window lounge along open living-room route to resolve reviewer concern, without rewriting piano identity or claiming review coverage. Retrieved lounge, side table, coffee table and cabinet evidence from actions52/63/67.",
+    "Actions 90-104: little forward parallax despite commands; likely blocked by round side table near ottoman. Withdraw nominal y advance after action89. Reanchor approximately y=6.0 from chair/window scale; increase uncertainty.",
+    "Target4 alternative: low white cushioned seat near recessed shelves at window side of coffee table. Must inspect its arm/back structure after tan chair; not yet identified.",
+    "At action120 reviewer recognized lounge identity and side-table/window context but found cropped floor insufficient for approach. At131 backed 0.5m along wall aisle to expose chair and surrounding floor. Self-estimated physical approach at120 retained, reviewer uncertainty recorded separately.",
+    "Actions144-149: full chair at144 deemed approach unknown; moved toward chair 1m nominal with visible enlargement. Chair top now close foreground. Review remains checkpoint1 because coverage not granted; original target identities remain unchanged.",
+    "Retrieved tan chair and glass cabinet appearance from52 and149 back; return by wall-side clear aisle, avoiding coffee table.",
+    "Checkpoint3 review at171 referred to target4 white armchair rather than tan chair. Tan chair close approach preserved; investigate white seating to resolve next-instance ambiguity, retaining checkpoint3 pending.",
+    "Actions196-199 likely blocked by low modular seat: minimal translation against window/shelf. Withdraw nominal +1m y, increase uncertainty; no arrival was assigned for target4. Inspect hallway rooms as remaining alternatives.",
+    "Action247: eastward exit attempt hit wall at glass cabinet, not hall opening. Withdraw 12-step nominal east translation; visually reanchor at living-room cabinet approximately[-11.5,1.5]. Must continue south around cabinet before turning east.",
+    "Action267 and277 images unchanged: entry alignment blocked at cabinet edge. Withdraw all nominal east progress since247; current estimated[-11.2,0.4]. Shift south to centre hallway before moving east.",
+    "Junction bedroom excluded: swivel office chair and writing desk. Retrieve starting study upholstered armchair and shelving as a remaining alternative.",
+    "Action360 east traverse blocked by junction wall; withdraw nominal 16-step east translation. Still north of main hall, need south to actual intersection.",
+    "Action428: withdrew from very close chair to show full padded shape and adjacent floor; gray table remains possible coffee-table terminology mismatch.",
+    "Action428 review supports white armchair appearance but not coffee-table relation. Study remains an unresolved alternative. Return via known hallway to living-room separate low white seating, closest match for coffee-table/shelves context.",
+    "Action499: only one action remains. Checkpoint3 and4 coverage missing. Preserve target4 ambiguity and final plant arrival unresolved; no authorized final STOP.",
+    "Final checkpoint3 review at499 failed; no final STOP requested or authorized. Native outcome not known."
+  ],
+  "review_coverage": {
+    "1": {
+      "accepted": true,
+      "action": 149,
+      "file": "review_1_sixth.json",
+      "note": "Reviewer judged lounge chair despite checkpoint1; not native arrival evidence."
+    },
+    "2": {
+      "accepted": true,
+      "action": 151,
+      "file": "review_2_retry.json"
+    }
+  },
+  "episode_over": true,
+  "termination": {
+    "reason": "action budget exhausted",
+    "actual_stop_executed": false,
+    "remaining_uncertainties": [
+      "Target4 instance and close approach unresolved",
+      "Target5 final arrival unresolved",
+      "Checkpoint3 and4 review coverage not accepted"
+    ]
+  }
+}

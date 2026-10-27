@@ -1,0 +1,3043 @@
+{
+  "frame": {
+    "origin": "start",
+    "axes": {
+      "+x": "initially forward",
+      "+y": "initially left",
+      "+z": "up"
+    }
+  },
+  "updated_at_action": 500,
+  "pose_estimate": {
+    "position": [
+      3.2160254037844362,
+      -5.333012701892217,
+      2.8
+    ],
+    "heading_degrees": 270,
+    "uncertainty_m": 3.4000000000000004
+  },
+  "nodes": [
+    {
+      "id": "hall1",
+      "category": "hallway",
+      "description": "Narrow wood-floor corridor at initial position",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-a1_y1iaz/right.png",
+          "camera": "right",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "bedroom1",
+      "category": "bedroom",
+      "description": "Wooden bed with white bedding, glass doors and white chair",
+      "position": [
+        -1,
+        1.5,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-dg3uk385/left.png",
+          "camera": "left",
+          "action": 3
+        },
+        {
+          "image": "images/observe-dg3uk385/front.png",
+          "camera": "front",
+          "action": 3
+        }
+      ]
+    },
+    {
+      "id": "closet1",
+      "category": "walk-in closet",
+      "description": "Open wooden shelving, hanging garments, folded colored clothing and small end window",
+      "position": [
+        -2,
+        -1,
+        0
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-qwpaqgce/front.png",
+          "camera": "front",
+          "action": 28
+        }
+      ]
+    },
+    {
+      "id": "dining1",
+      "category": "dining room",
+      "description": "Table with tan woven chairs, tall glass wine cabinets, stone walls",
+      "position": [
+        2,
+        -4.8,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-789lyfyx/front.png",
+          "camera": "front",
+          "action": 60
+        },
+        {
+          "image": "images/observe-7u58qtfx/left.png",
+          "camera": "left",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "door2",
+      "category": "doorway",
+      "description": "Open doorway in stone wall beside dining table, room not yet classified",
+      "position": [
+        2,
+        -3,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-7u58qtfx/left.png",
+          "camera": "left",
+          "action": 67
+        }
+      ]
+    },
+    {
+      "id": "storage1",
+      "category": "storage room",
+      "description": "Boxes and stored items behind damaged-looking white door in stone wall",
+      "position": [
+        2,
+        -2.5,
+        0
+      ],
+      "uncertainty_m": 1.3,
+      "observations": [
+        {
+          "image": "images/observe-humnfkxd/front.png",
+          "camera": "front",
+          "action": 78
+        }
+      ]
+    },
+    {
+      "id": "bed1",
+      "category": "bed",
+      "description": "Dark wooden frame, white duvet, pale folded fabric and tan item near head",
+      "position": [
+        -1.7,
+        1.5,
+        0.6
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-_b_9b8nn/front.png",
+          "camera": "front",
+          "action": 147
+        },
+        {
+          "image": "images/observe-nyvpz76f/left.png",
+          "camera": "left",
+          "action": 161
+        }
+      ]
+    },
+    {
+      "id": "fabric1",
+      "category": "fabric candidate",
+      "description": "Separate pale folded/draped fabric near bed head beside tan item; towel versus bedding unresolved",
+      "position": [
+        -2,
+        0.8,
+        0.7
+      ],
+      "uncertainty_m": 0.8,
+      "observations": [
+        {
+          "image": "images/observe-7_pex82u/left.png",
+          "camera": "left",
+          "action": 204
+        },
+        {
+          "image": "images/observe-k7etku63/left.png",
+          "camera": "left",
+          "action": 208
+        }
+      ]
+    },
+    {
+      "id": "bathroom1",
+      "category": "bathroom",
+      "description": "Ensuite with bronze tiled shower, floating mauve vanity, radiator and toilet behind partition; no laundry basket seen",
+      "position": [
+        2.5,
+        1.5,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-uya9jch9/front.png",
+          "camera": "front",
+          "action": 231
+        },
+        {
+          "image": "images/observe-67ooqoxo/right.png",
+          "camera": "right",
+          "action": 245
+        },
+        {
+          "image": "images/observe-6hymgvsg/front.png",
+          "camera": "front",
+          "action": 251
+        }
+      ]
+    },
+    {
+      "id": "living1",
+      "category": "living room",
+      "description": "Double-height room with sofa, TV and open staircase rising above left wall",
+      "position": [
+        5,
+        -1.5,
+        0
+      ],
+      "uncertainty_m": 1.5,
+      "observations": [
+        {
+          "image": "images/observe-15l5pxpw/front.png",
+          "camera": "front",
+          "action": 349
+        }
+      ]
+    },
+    {
+      "id": "landing2",
+      "category": "upstairs landing",
+      "description": "Wood floor, several white doorways at top of straight staircase",
+      "position": [
+        4,
+        -2,
+        2.8
+      ],
+      "uncertainty_m": 1.8,
+      "observations": [
+        {
+          "image": "images/observe-do9mintf/left.png",
+          "camera": "left",
+          "action": 405
+        }
+      ]
+    },
+    {
+      "id": "bedroom2",
+      "category": "bedroom",
+      "description": "Upstairs room with purple patterned duvet, white headboard/nightstand, TV, wardrobe and turquoise folded item",
+      "position": [
+        6,
+        0,
+        2.8
+      ],
+      "uncertainty_m": 2,
+      "observations": [
+        {
+          "image": "images/observe-5_81j_ye/left.png",
+          "camera": "left",
+          "action": 427
+        },
+        {
+          "image": "images/observe-iqwhs2tg/left.png",
+          "camera": "left",
+          "action": 440
+        }
+      ]
+    },
+    {
+      "id": "towel2",
+      "category": "bath towel",
+      "description": "Turquoise folded/draped textured fabric on white bedside cabinet, separate from purple bedding",
+      "position": [
+        5.3,
+        0.4,
+        3.5
+      ],
+      "uncertainty_m": 1.6,
+      "observations": [
+        {
+          "image": "images/observe-iqwhs2tg/left.png",
+          "camera": "left",
+          "action": 440
+        },
+        {
+          "image": "images/observe-8284kkv_/front.png",
+          "camera": "front",
+          "action": 449
+        }
+      ]
+    },
+    {
+      "id": "bathroom2",
+      "category": "bathroom candidate",
+      "description": "Upstairs washroom with white basket beneath narrow window; adjacent separate toilet visible",
+      "position": [
+        4,
+        -5,
+        2.8
+      ],
+      "uncertainty_m": 3,
+      "observations": [
+        {
+          "image": "images/observe-awpevvbm/front.png",
+          "camera": "front",
+          "action": 495
+        },
+        {
+          "image": "images/observe-awpevvbm/right.png",
+          "camera": "right",
+          "action": 495
+        }
+      ]
+    },
+    {
+      "id": "basket2",
+      "category": "laundry basket",
+      "description": "White rectangular woven basket containing pale linens beneath narrow window",
+      "position": [
+        4,
+        -6,
+        3.1
+      ],
+      "uncertainty_m": 3,
+      "observations": [
+        {
+          "image": "images/observe-g7u20qdl/right.png",
+          "camera": "right",
+          "action": 410
+        },
+        {
+          "image": "images/observe-awpevvbm/front.png",
+          "camera": "front",
+          "action": 495
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "hall1",
+      "relation": "connected_to",
+      "object": "bedroom1",
+      "via": "open passage at start"
+    },
+    {
+      "subject": "closet1",
+      "relation": "connected_to",
+      "object": "hall1",
+      "via": "open doorway near bedroom1"
+    },
+    {
+      "subject": "hall1",
+      "relation": "connected_to",
+      "object": "dining1",
+      "via": "stone opening near black entrance door"
+    },
+    {
+      "subject": "storage1",
+      "relation": "connected_to",
+      "object": "dining1",
+      "via": "door2"
+    },
+    {
+      "subject": "bed1",
+      "relation": "in",
+      "object": "bedroom1"
+    },
+    {
+      "subject": "fabric1",
+      "relation": "on",
+      "object": "bed1"
+    },
+    {
+      "subject": "fabric1",
+      "relation": "in",
+      "object": "bedroom1"
+    },
+    {
+      "subject": "bedroom1",
+      "relation": "connected_to",
+      "object": "bathroom1",
+      "via": "door beside white chair"
+    },
+    {
+      "subject": "dining1",
+      "relation": "connected_to",
+      "object": "living1",
+      "via": "stone doorway after storage room"
+    },
+    {
+      "subject": "living1",
+      "relation": "connected_to",
+      "object": "landing2",
+      "via": "straight staircase, bottom near tall window"
+    },
+    {
+      "subject": "landing2",
+      "relation": "connected_to",
+      "object": "bedroom2",
+      "via": "door beside stair railing"
+    },
+    {
+      "subject": "towel2",
+      "relation": "in",
+      "object": "bedroom2"
+    },
+    {
+      "subject": "landing2",
+      "relation": "connected_to",
+      "object": "bathroom2",
+      "via": "door opposite upstairs bedroom passage"
+    },
+    {
+      "subject": "basket2",
+      "relation": "in",
+      "object": "bathroom2"
+    }
+  ],
+  "targets": [
+    {
+      "stage": 0,
+      "requested": "bath towel in bedroom",
+      "candidate_ids": [
+        "fabric1",
+        "towel2"
+      ],
+      "selected_id": "towel2",
+      "identity": {
+        "state": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-8284kkv_/front.png",
+            "camera": "front",
+            "action": 449,
+            "supports": "Distinct turquoise folded textured towel on bedside surface in purple-bed bedroom"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "supported",
+        "evidence": [
+          {
+            "image": "images/observe-8284kkv_/front.png",
+            "camera": "front",
+            "action": 449,
+            "supports": "Reached unobstructed bedside floor immediately next to towel cabinet, visually about 0.4 m from nearest accessible point"
+          }
+        ]
+      },
+      "unchecked_alternatives": [
+        "upstairs bedrooms via living staircase",
+        "fabric1 ambiguous"
+      ],
+      "review": "Compared downstairs ambiguous white bedding; distinct turquoise towel is stronger candidate. No evaluator success known."
+    },
+    {
+      "stage": 1,
+      "requested": "laundry basket in bathroom",
+      "candidate_ids": [
+        "basket2"
+      ],
+      "selected_id": "basket2",
+      "identity": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-awpevvbm/front.png",
+            "camera": "front",
+            "action": 495,
+            "supports": "White laundry basket visible; bathroom room identification awaits fuller interior view"
+          }
+        ],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": [
+          {
+            "image": "images/observe-awpevvbm/front.png",
+            "camera": "front",
+            "action": 495,
+            "supports": "Basket still several steps beyond doorway, no close arrival established"
+          },
+          {
+            "action": 500,
+            "image": "images/observe-awpevvbm/front.png",
+            "supports": "Final five forward commands after this image exhausted action budget. No final close-range observation or STOP; arrival not established."
+          }
+        ]
+      },
+      "unchecked_alternatives": [
+        "other bathrooms in unexplored home"
+      ]
+    },
+    {
+      "stage": 2,
+      "requested": "bag in kitchen",
+      "candidate_ids": [],
+      "selected_id": null,
+      "identity": {
+        "state": "unresolved",
+        "evidence": [],
+        "contradictions": []
+      },
+      "arrival": {
+        "state": "unresolved",
+        "evidence": []
+      },
+      "unchecked_alternatives": [
+        "Kitchen bag not searched or approached; ordered task incomplete"
+      ]
+    }
+  ],
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 2,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 3,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 4,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 5,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 6,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 7,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 8,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 9,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 10,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 11,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 12,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 13,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 14,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 15,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 16,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 17,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 18,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 19,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 20,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 21,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 22,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 23,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 24,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 25,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 26,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 27,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 28,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 29,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 30,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 31,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 32,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 33,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 34,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 35,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 36,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 37,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 38,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 39,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 40,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 41,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 42,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 43,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 44,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 45,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 46,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 47,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 48,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 49,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 50,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 51,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 52,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 53,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 54,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 55,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 56,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 57,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 58,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 59,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 60,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 61,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 62,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 63,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 64,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 65,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 66,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 67,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 68,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 69,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 70,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 71,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 72,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 73,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 74,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 75,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 76,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 77,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 78,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 79,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 80,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 81,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 82,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 83,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 84,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 85,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 86,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 87,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 88,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 89,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 90,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 91,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 92,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 93,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 94,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 95,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 96,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 97,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 98,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 99,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 100,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 101,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 102,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 103,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 104,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 105,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 106,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 107,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 108,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 109,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 110,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 111,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 112,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 113,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 114,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 115,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 116,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 117,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 118,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 119,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 120,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 121,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 122,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 123,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 124,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 125,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 126,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 127,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 128,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 129,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 130,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 131,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 132,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 133,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 134,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 135,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 136,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 137,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 138,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 139,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 140,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 141,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 142,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 143,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 144,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 145,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 146,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 147,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 148,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 149,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 150,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 151,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 152,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 153,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 154,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 155,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 156,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 157,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 158,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 159,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 160,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 161,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 162,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 163,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 164,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 165,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 166,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 167,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 168,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 169,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 170,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 171,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 172,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 173,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 174,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 175,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 176,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 177,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 178,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 179,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 180,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 181,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 182,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 183,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 184,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 185,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 186,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 187,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 188,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 189,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 190,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 191,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 192,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 193,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 194,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 195,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 196,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 197,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 198,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 199,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 200,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 201,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 202,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 203,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 204,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 205,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 206,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 207,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 208,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 209,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 210,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 211,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 212,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 213,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 214,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 215,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 216,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 217,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 218,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 219,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 220,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 221,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 222,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 223,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 224,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 225,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 226,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 227,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 228,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 229,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 230,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 231,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 232,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 233,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 234,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 235,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 236,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 237,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 238,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 239,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 240,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 241,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 242,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 243,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 244,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 245,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 246,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 247,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 248,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 249,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 250,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 251,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 252,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 253,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 254,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 255,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 256,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 257,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 258,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 259,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 260,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 261,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 262,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 263,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 264,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 265,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 266,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 267,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 268,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 269,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 270,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 271,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 272,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 273,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 274,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 275,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 276,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 277,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 278,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 279,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 280,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 281,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 282,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 283,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 284,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 285,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 286,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 287,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 288,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 289,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 290,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 291,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 292,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 293,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 294,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 295,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 296,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 297,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 298,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 299,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 300,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 301,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 302,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 303,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 304,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 305,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 306,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 307,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 308,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 309,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 310,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 311,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 312,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 313,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 314,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 315,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 316,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 317,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 318,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 319,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 320,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 321,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 322,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 323,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 324,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 325,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 326,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 327,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 328,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 329,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 330,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 331,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 332,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 333,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 334,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 335,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 336,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 337,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 338,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 339,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 340,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 341,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 342,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 343,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 344,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 345,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 346,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 347,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 348,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 349,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 350,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 351,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 352,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 353,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 354,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 355,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 356,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 357,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 358,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 359,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 360,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 361,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 362,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 363,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 364,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 365,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 366,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 367,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 368,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 369,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 370,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 371,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 372,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 373,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 374,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 375,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 376,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 377,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 378,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 379,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 380,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 381,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 382,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 383,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 384,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 385,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 386,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 387,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 388,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 389,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 390,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 391,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 392,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 393,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 394,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 395,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 396,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 397,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 398,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 399,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 400,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 401,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 402,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 403,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 404,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 405,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 406,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 407,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 408,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 409,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 410,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 411,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 412,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 413,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 414,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 415,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 416,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 417,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 418,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 419,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 420,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 421,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 422,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 423,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 424,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 425,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 426,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 427,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 428,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 429,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 430,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 431,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 432,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 433,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 434,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 435,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 436,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 437,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 438,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 439,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 440,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 441,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 442,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 443,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 444,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 445,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 446,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 447,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 448,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 449,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 450,
+      "command": "stop",
+      "position_is_nominal": true
+    },
+    {
+      "action": 451,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 452,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 453,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 454,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 455,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 456,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 457,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 458,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 459,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 460,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 461,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 462,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 463,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 464,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 465,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 466,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 467,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 468,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 469,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 470,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 471,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 472,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 473,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 474,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 475,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 476,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 477,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 478,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 479,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 480,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 481,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 482,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 483,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 484,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 485,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 486,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 487,
+      "command": "turn_right",
+      "position_is_nominal": true
+    },
+    {
+      "action": 488,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 489,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 490,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 491,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 492,
+      "command": "turn_left",
+      "position_is_nominal": true
+    },
+    {
+      "action": 493,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 494,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 495,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 496,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 497,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 498,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 499,
+      "command": "move_forward",
+      "position_is_nominal": true
+    },
+    {
+      "action": 500,
+      "command": "move_forward",
+      "position_is_nominal": true
+    }
+  ],
+  "localization_notes": [
+    "Action 67 view is against dining chair; forward displacement for actions 62-67 is only approximate and final nominal steps may be blocked.",
+    "Action 97 stone wall reveals westward travel obstructed at corner; withdrawn nominal west displacement 93-98; estimate anchored to dining stone corner.",
+    "Action 114 corridor/window alignment restores hall1 localization; nominal travel discarded where corner obstructed.",
+    "Actions 332-336 blocked by stone wall before living doorway; withdrawn unsupported north displacement. Doorway is east of attempted crossing.",
+    "Action 440 bed blocks northward motion; removed unsupported north motion from 436-440.",
+    "Action 460 west approach blocked by bedroom head wall; nominal 458-460 translation withdrawn; exit requires south around partition.",
+    "Actions 479-484 blocked by partition before bathroom; removed nominal 1.5 m south displacement."
+  ],
+  "episode_end": {
+    "episode_over": true,
+    "action": 500,
+    "reason": "action_limit",
+    "submitted_stages": [
+      0
+    ],
+    "success_feedback_available": false,
+    "incomplete_stages": [
+      1,
+      2
+    ]
+  }
+}

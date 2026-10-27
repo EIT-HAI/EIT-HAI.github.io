@@ -1,0 +1,389 @@
+{
+  "schema_version": 2,
+  "frame": {
+    "origin": "episode start",
+    "axes": "+x initially forward, +y initially left, +z up",
+    "units": "metres"
+  },
+  "updated_at_action": 500,
+  "agent_belief": {
+    "position": [
+      -2.54,
+      7.1,
+      0
+    ],
+    "heading_degrees": 300,
+    "uncertainty": "~1.8m; last forward approached peninsula corner, exact displacement not verified"
+  },
+  "nodes": [
+    {
+      "id": "landing",
+      "category": "place",
+      "description": "Wood floor landing beside white walls and dark wooden staircase rail",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "uncertainty": "extent unknown",
+      "observations": [
+        {
+          "image": "images/observe-i_9456dc/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "open_area_left",
+      "category": "place",
+      "description": "Open wood floored interior to initial left",
+      "position": [
+        0,
+        2,
+        null
+      ],
+      "uncertainty": "room function and distance unknown",
+      "observations": [
+        {
+          "image": "images/observe-i_9456dc/left.png",
+          "camera": "left",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "living_room",
+      "category": "room",
+      "description": "Vaulted wood ceiling, stone fireplace, white sofa",
+      "position": [
+        -3,
+        2,
+        0
+      ],
+      "uncertainty": "estimated room centre \u00b12m",
+      "observations": [
+        {
+          "image": "images/observe-146pa056/left.png",
+          "camera": "left",
+          "action": 9
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "category": "room",
+      "description": "Wood cabinetry and range hood through wide dark-beamed opening",
+      "position": [
+        -3,
+        9,
+        0
+      ],
+      "uncertainty": "approximate room centre \u00b12m, revised after entering",
+      "observations": [
+        {
+          "image": "images/observe-146pa056/front.png",
+          "camera": "front",
+          "action": 9
+        },
+        {
+          "image": "images/observe-4x0g_u6o/left.png",
+          "camera": "left",
+          "action": 97
+        }
+      ]
+    },
+    {
+      "id": "kitchen_island",
+      "category": "counter",
+      "description": "Dark top wood kitchen island with X panels and bar stools",
+      "position": [
+        -3,
+        9.5,
+        0.9
+      ],
+      "uncertainty": "~1m globally, extent known from walking two sides",
+      "observations": [
+        {
+          "image": "images/observe-7jokivby/left.png",
+          "camera": "left",
+          "action": 23
+        }
+      ]
+    },
+    {
+      "id": "kitchen_plant",
+      "category": "decorative plant",
+      "description": "Yellow orange foliage or flowers in container on kitchen island",
+      "position": [
+        -3.7,
+        9.1,
+        1.1
+      ],
+      "uncertainty": "~1.5m globally; revised bearing from action451; local plant-to-cabinet relation clear",
+      "observations": [
+        {
+          "image": "images/observe-w228ec3e/front.png",
+          "camera": "front",
+          "action": 426
+        },
+        {
+          "image": "images/observe-603iooti/front.png",
+          "camera": "front",
+          "action": 447
+        },
+        {
+          "image": "images/observe-dj5nh8xq/front.png",
+          "camera": "front",
+          "action": 451
+        },
+        {
+          "image": "images/observe-m9sezsvb/front.png",
+          "camera": "front",
+          "action": 467
+        },
+        {
+          "image": "images/observe-pef16fk2/front.png",
+          "camera": "front",
+          "action": 477
+        }
+      ]
+    },
+    {
+      "id": "dining_alcove",
+      "category": "room",
+      "description": "Dining table with white slipcovered high back chairs beside large windows, directly open to kitchen",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "uncertainty": "semantic boundary with kitchen uncertain; ~2m centre",
+      "observations": [
+        {
+          "image": "images/observe-ts8upunw/left.png",
+          "camera": "left",
+          "action": 245
+        }
+      ]
+    },
+    {
+      "id": "console_gold_objects",
+      "category": "bottles/decor",
+      "description": "Gold and clear bottles/vessels on narrow white console; no visible leaves or stems",
+      "position": [
+        0.3,
+        7.9,
+        1
+      ],
+      "uncertainty": "~1m; rejected as plant",
+      "observations": [
+        {
+          "image": "images/observe-ts8upunw/front.png",
+          "camera": "front",
+          "action": 245
+        }
+      ]
+    },
+    {
+      "id": "range_end_aisle",
+      "category": "place",
+      "description": "Navigable passage between range and far X-panel end of island",
+      "position": [
+        -3.4,
+        12.3,
+        0
+      ],
+      "uncertainty": "~1.5m",
+      "observations": [
+        {
+          "image": "images/observe-7tlawrlr/front.png",
+          "camera": "front",
+          "action": 302
+        }
+      ]
+    },
+    {
+      "id": "living_console",
+      "category": "table",
+      "description": "Long narrow dark table behind white living-room sofa, visible spindly legs and ornaments",
+      "position": [
+        -3,
+        2.5,
+        0.8
+      ],
+      "uncertainty": "~2m; preliminary table candidate from earlier living-room observation",
+      "observations": [
+        {
+          "image": "images/observe-m96taegm/left.png",
+          "camera": "left",
+          "action": 14
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "landing",
+      "relation": "connected_to",
+      "object": "open_area_left",
+      "via": "open side of landing; tentative"
+    },
+    {
+      "subject": "open_area_left",
+      "relation": "connected_to",
+      "object": "living_room",
+      "via": "open floor beside sofa"
+    },
+    {
+      "subject": "open_area_left",
+      "relation": "connected_to",
+      "object": "kitchen",
+      "via": "wide dark-beamed opening"
+    },
+    {
+      "subject": "kitchen_island",
+      "relation": "in",
+      "object": "kitchen"
+    },
+    {
+      "subject": "kitchen_plant",
+      "relation": "on",
+      "object": "kitchen_island"
+    },
+    {
+      "subject": "kitchen_plant",
+      "relation": "in",
+      "object": "kitchen"
+    },
+    {
+      "subject": "kitchen",
+      "relation": "connected_to",
+      "object": "dining_alcove",
+      "via": "open floor beside island bar stools"
+    },
+    {
+      "subject": "range_end_aisle",
+      "relation": "in",
+      "object": "kitchen"
+    },
+    {
+      "subject": "living_console",
+      "relation": "in",
+      "object": "living_room"
+    }
+  ],
+  "targets": [
+    {
+      "stage": 0,
+      "description": "decorative plant in kitchen",
+      "candidate_ids": [
+        "kitchen_plant"
+      ],
+      "selected_id": "kitchen_plant",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 36,
+            "image": "images/observe-e35xilk1/front.png",
+            "description": "Orange ornamental potted foliage on island in kitchen with sink, cabinetry and range hood"
+          },
+          {
+            "action": 69,
+            "image": "images/observe-t8wut6ed/front.png",
+            "description": "Close view shows golden leaves and dark container on kitchen island; sink, microwave and range establish kitchen"
+          },
+          {
+            "action": 413,
+            "image": "images/observe-xe1kbjk0/front.png",
+            "description": "Golden ornamental foliage and dark tall container clearly visible on island above microwave in kitchen"
+          }
+        ],
+        "contradictions": [
+          {
+            "candidate_id": "console_gold_objects",
+            "action": 245,
+            "image": "images/observe-ts8upunw/front.png",
+            "description": "Inspected alternative gold objects are bottles, rejected as decorative plant"
+          }
+        ]
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 477,
+            "image": "images/observe-pef16fk2/front.png",
+            "description": "Plant visible above immediately adjacent microwave; unobstructed aisle floor shown along support, estimated under1m to nearby target approach point"
+          }
+        ]
+      },
+      "unchecked_alternatives": []
+    },
+    {
+      "stage": 1,
+      "description": "table in living room",
+      "candidate_ids": [
+        "living_console"
+      ],
+      "selected_id": null,
+      "identity": {
+        "status": "unresolved",
+        "evidence": [],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": [
+          {
+            "action": 499,
+            "image": "images/observe-jh9rq2ip/front.png",
+            "description": "At kitchen peninsula corner facing passage toward living room; requested living-room table remains unreached"
+          }
+        ]
+      },
+      "unchecked_alternatives": [
+        "reinspect console and coffee/side tables near living-room sofa"
+      ]
+    },
+    {
+      "stage": 2,
+      "description": "remote control in living room",
+      "candidate_ids": [],
+      "selected_id": null,
+      "identity": {
+        "status": "unresolved",
+        "evidence": [],
+        "contradictions": []
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": []
+      },
+      "unchecked_alternatives": [
+        "inspect living room surfaces"
+      ]
+    }
+  ],
+  "public_stage_index": 1,
+  "submissions": [
+    {
+      "stage": 0,
+      "action": 478,
+      "selected_id": "kitchen_plant",
+      "native_success": "unknown"
+    }
+  ],
+  "execution_status": {
+    "episode_over": true,
+    "actions": 500,
+    "action_limit": 500,
+    "reason": "action budget exhausted while heading toward living-room table",
+    "task_complete": false,
+    "submitted_stages": [
+      0
+    ],
+    "native_submission_success": "not provided"
+  }
+}

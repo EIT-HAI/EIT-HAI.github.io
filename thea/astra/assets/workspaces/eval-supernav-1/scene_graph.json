@@ -1,0 +1,2914 @@
+{
+  "frame": {
+    "origin": "initial agent ground position",
+    "axes": "+x initially forward, +y initially left, +z up"
+  },
+  "updated_at_action": 499,
+  "agent_belief": {
+    "position": [
+      -5.0,
+      0.8,
+      0
+    ],
+    "yaw_degrees": -780,
+    "uncertainty_m": 0.7,
+    "motion_status": "Reanchored at bedroom desk passage from currentRGB; wardrobe nearby but occluded"
+  },
+  "action_history": [
+    {
+      "action": 1,
+      "command": "turn_right"
+    },
+    {
+      "action": 2,
+      "command": "turn_right"
+    },
+    {
+      "action": 3,
+      "command": "turn_right"
+    },
+    {
+      "action": 4,
+      "command": "turn_right"
+    },
+    {
+      "action": 5,
+      "command": "turn_right"
+    },
+    {
+      "action": 6,
+      "command": "turn_right"
+    },
+    {
+      "action": 7,
+      "command": "turn_left"
+    },
+    {
+      "action": 8,
+      "command": "move_forward"
+    },
+    {
+      "action": 9,
+      "command": "move_forward"
+    },
+    {
+      "action": 10,
+      "command": "move_forward"
+    },
+    {
+      "action": 11,
+      "command": "move_forward"
+    },
+    {
+      "action": 12,
+      "command": "turn_right"
+    },
+    {
+      "action": 13,
+      "command": "move_forward"
+    },
+    {
+      "action": 14,
+      "command": "move_forward"
+    },
+    {
+      "action": 15,
+      "command": "move_forward"
+    },
+    {
+      "action": 16,
+      "command": "move_forward"
+    },
+    {
+      "action": 17,
+      "command": "move_forward"
+    },
+    {
+      "action": 18,
+      "command": "move_forward"
+    },
+    {
+      "action": 19,
+      "command": "move_forward"
+    },
+    {
+      "action": 20,
+      "command": "move_forward"
+    },
+    {
+      "action": 21,
+      "command": "turn_left"
+    },
+    {
+      "action": 22,
+      "command": "move_forward"
+    },
+    {
+      "action": 23,
+      "command": "move_forward"
+    },
+    {
+      "action": 24,
+      "command": "turn_right"
+    },
+    {
+      "action": 25,
+      "command": "move_forward"
+    },
+    {
+      "action": 26,
+      "command": "move_forward"
+    },
+    {
+      "action": 27,
+      "command": "move_forward"
+    },
+    {
+      "action": 28,
+      "command": "move_forward"
+    },
+    {
+      "action": 29,
+      "command": "move_forward"
+    },
+    {
+      "action": 30,
+      "command": "move_forward"
+    },
+    {
+      "action": 31,
+      "command": "move_forward"
+    },
+    {
+      "action": 32,
+      "command": "move_forward"
+    },
+    {
+      "action": 33,
+      "command": "turn_right"
+    },
+    {
+      "action": 34,
+      "command": "turn_right"
+    },
+    {
+      "action": 35,
+      "command": "turn_right"
+    },
+    {
+      "action": 36,
+      "command": "turn_left"
+    },
+    {
+      "action": 37,
+      "command": "turn_left"
+    },
+    {
+      "action": 38,
+      "command": "turn_left"
+    },
+    {
+      "action": 39,
+      "command": "move_forward"
+    },
+    {
+      "action": 40,
+      "command": "move_forward"
+    },
+    {
+      "action": 41,
+      "command": "move_forward"
+    },
+    {
+      "action": 42,
+      "command": "turn_right"
+    },
+    {
+      "action": 43,
+      "command": "turn_right"
+    },
+    {
+      "action": 44,
+      "command": "turn_right"
+    },
+    {
+      "action": 45,
+      "command": "turn_left"
+    },
+    {
+      "action": 46,
+      "command": "move_forward"
+    },
+    {
+      "action": 47,
+      "command": "move_forward"
+    },
+    {
+      "action": 48,
+      "command": "move_forward"
+    },
+    {
+      "action": 49,
+      "command": "turn_right"
+    },
+    {
+      "action": 50,
+      "command": "move_forward"
+    },
+    {
+      "action": 51,
+      "command": "move_forward"
+    },
+    {
+      "action": 52,
+      "command": "move_forward"
+    },
+    {
+      "action": 53,
+      "command": "move_forward"
+    },
+    {
+      "action": 54,
+      "command": "move_forward"
+    },
+    {
+      "action": 55,
+      "command": "move_forward"
+    },
+    {
+      "action": 56,
+      "command": "turn_left"
+    },
+    {
+      "action": 57,
+      "command": "turn_left"
+    },
+    {
+      "action": 58,
+      "command": "move_forward"
+    },
+    {
+      "action": 59,
+      "command": "move_forward"
+    },
+    {
+      "action": 60,
+      "command": "turn_right"
+    },
+    {
+      "action": 61,
+      "command": "turn_right"
+    },
+    {
+      "action": 62,
+      "command": "move_forward"
+    },
+    {
+      "action": 63,
+      "command": "move_forward"
+    },
+    {
+      "action": 64,
+      "command": "move_forward"
+    },
+    {
+      "action": 65,
+      "command": "move_forward"
+    },
+    {
+      "action": 66,
+      "command": "move_forward"
+    },
+    {
+      "action": 67,
+      "command": "move_forward"
+    },
+    {
+      "action": 68,
+      "command": "move_forward"
+    },
+    {
+      "action": 69,
+      "command": "move_forward"
+    },
+    {
+      "action": 70,
+      "command": "move_forward"
+    },
+    {
+      "action": 71,
+      "command": "move_forward"
+    },
+    {
+      "action": 72,
+      "command": "move_forward"
+    },
+    {
+      "action": 73,
+      "command": "move_forward"
+    },
+    {
+      "action": 74,
+      "command": "turn_left"
+    },
+    {
+      "action": 75,
+      "command": "turn_left"
+    },
+    {
+      "action": 76,
+      "command": "turn_left"
+    },
+    {
+      "action": 77,
+      "command": "turn_right"
+    },
+    {
+      "action": 78,
+      "command": "move_forward"
+    },
+    {
+      "action": 79,
+      "command": "move_forward"
+    },
+    {
+      "action": 80,
+      "command": "turn_left"
+    },
+    {
+      "action": 81,
+      "command": "move_forward"
+    },
+    {
+      "action": 82,
+      "command": "move_forward"
+    },
+    {
+      "action": 83,
+      "command": "move_forward"
+    },
+    {
+      "action": 84,
+      "command": "move_forward"
+    },
+    {
+      "action": 85,
+      "command": "move_forward"
+    },
+    {
+      "action": 86,
+      "command": "move_forward"
+    },
+    {
+      "action": 87,
+      "command": "move_forward"
+    },
+    {
+      "action": 88,
+      "command": "move_forward"
+    },
+    {
+      "action": 89,
+      "command": "turn_right"
+    },
+    {
+      "action": 90,
+      "command": "turn_right"
+    },
+    {
+      "action": 91,
+      "command": "turn_right"
+    },
+    {
+      "action": 92,
+      "command": "move_forward"
+    },
+    {
+      "action": 93,
+      "command": "move_forward"
+    },
+    {
+      "action": 94,
+      "command": "move_forward"
+    },
+    {
+      "action": 95,
+      "command": "move_forward"
+    },
+    {
+      "action": 96,
+      "command": "move_forward"
+    },
+    {
+      "action": 97,
+      "command": "move_forward"
+    },
+    {
+      "action": 98,
+      "command": "turn_left"
+    },
+    {
+      "action": 99,
+      "command": "turn_left"
+    },
+    {
+      "action": 100,
+      "command": "turn_left"
+    },
+    {
+      "action": 101,
+      "command": "move_forward"
+    },
+    {
+      "action": 102,
+      "command": "move_forward"
+    },
+    {
+      "action": 103,
+      "command": "move_forward"
+    },
+    {
+      "action": 104,
+      "command": "move_forward"
+    },
+    {
+      "action": 105,
+      "command": "move_forward"
+    },
+    {
+      "action": 106,
+      "command": "move_forward"
+    },
+    {
+      "action": 107,
+      "command": "move_forward"
+    },
+    {
+      "action": 108,
+      "command": "move_forward"
+    },
+    {
+      "action": 109,
+      "command": "turn_right"
+    },
+    {
+      "action": 110,
+      "command": "turn_right"
+    },
+    {
+      "action": 111,
+      "command": "turn_right"
+    },
+    {
+      "action": 112,
+      "command": "move_forward"
+    },
+    {
+      "action": 113,
+      "command": "move_forward"
+    },
+    {
+      "action": 114,
+      "command": "move_forward"
+    },
+    {
+      "action": 115,
+      "command": "move_forward"
+    },
+    {
+      "action": 116,
+      "command": "move_forward"
+    },
+    {
+      "action": 117,
+      "command": "move_forward"
+    },
+    {
+      "action": 118,
+      "command": "move_forward"
+    },
+    {
+      "action": 119,
+      "command": "move_forward"
+    },
+    {
+      "action": 120,
+      "command": "turn_right"
+    },
+    {
+      "action": 121,
+      "command": "turn_right"
+    },
+    {
+      "action": 122,
+      "command": "turn_right"
+    },
+    {
+      "action": 123,
+      "command": "turn_left"
+    },
+    {
+      "action": 124,
+      "command": "turn_left"
+    },
+    {
+      "action": 125,
+      "command": "move_forward"
+    },
+    {
+      "action": 126,
+      "command": "move_forward"
+    },
+    {
+      "action": 127,
+      "command": "move_forward"
+    },
+    {
+      "action": 128,
+      "command": "turn_right"
+    },
+    {
+      "action": 129,
+      "command": "turn_right"
+    },
+    {
+      "action": 130,
+      "command": "turn_left"
+    },
+    {
+      "action": 131,
+      "command": "turn_left"
+    },
+    {
+      "action": 132,
+      "command": "turn_left"
+    },
+    {
+      "action": 133,
+      "command": "move_forward"
+    },
+    {
+      "action": 134,
+      "command": "move_forward"
+    },
+    {
+      "action": 135,
+      "command": "move_forward"
+    },
+    {
+      "action": 136,
+      "command": "turn_right"
+    },
+    {
+      "action": 137,
+      "command": "turn_right"
+    },
+    {
+      "action": 138,
+      "command": "turn_right"
+    },
+    {
+      "action": 139,
+      "command": "turn_right"
+    },
+    {
+      "action": 140,
+      "command": "turn_right"
+    },
+    {
+      "action": 141,
+      "command": "turn_right"
+    },
+    {
+      "action": 142,
+      "command": "turn_right"
+    },
+    {
+      "action": 143,
+      "command": "move_forward"
+    },
+    {
+      "action": 144,
+      "command": "move_forward"
+    },
+    {
+      "action": 145,
+      "command": "turn_right"
+    },
+    {
+      "action": 146,
+      "command": "turn_right"
+    },
+    {
+      "action": 147,
+      "command": "move_forward"
+    },
+    {
+      "action": 148,
+      "command": "move_forward"
+    },
+    {
+      "action": 149,
+      "command": "turn_left"
+    },
+    {
+      "action": 150,
+      "command": "turn_left"
+    },
+    {
+      "action": 151,
+      "command": "turn_left"
+    },
+    {
+      "action": 152,
+      "command": "move_forward"
+    },
+    {
+      "action": 153,
+      "command": "move_forward"
+    },
+    {
+      "action": 154,
+      "command": "move_forward"
+    },
+    {
+      "action": 155,
+      "command": "move_forward"
+    },
+    {
+      "action": 156,
+      "command": "move_forward"
+    },
+    {
+      "action": 157,
+      "command": "move_forward"
+    },
+    {
+      "action": 158,
+      "command": "move_forward"
+    },
+    {
+      "action": 159,
+      "command": "move_forward"
+    },
+    {
+      "action": 160,
+      "command": "move_forward"
+    },
+    {
+      "action": 161,
+      "command": "move_forward"
+    },
+    {
+      "action": 162,
+      "command": "move_forward"
+    },
+    {
+      "action": 163,
+      "command": "turn_left"
+    },
+    {
+      "action": 164,
+      "command": "turn_left"
+    },
+    {
+      "action": 165,
+      "command": "turn_left"
+    },
+    {
+      "action": 166,
+      "command": "move_forward"
+    },
+    {
+      "action": 167,
+      "command": "move_forward"
+    },
+    {
+      "action": 168,
+      "command": "move_forward"
+    },
+    {
+      "action": 169,
+      "command": "move_forward"
+    },
+    {
+      "action": 170,
+      "command": "move_forward"
+    },
+    {
+      "action": 171,
+      "command": "move_forward"
+    },
+    {
+      "action": 172,
+      "command": "move_forward"
+    },
+    {
+      "action": 173,
+      "command": "move_forward"
+    },
+    {
+      "action": 174,
+      "command": "turn_right"
+    },
+    {
+      "action": 175,
+      "command": "move_forward"
+    },
+    {
+      "action": 176,
+      "command": "move_forward"
+    },
+    {
+      "action": 177,
+      "command": "move_forward"
+    },
+    {
+      "action": 178,
+      "command": "turn_left"
+    },
+    {
+      "action": 179,
+      "command": "move_forward"
+    },
+    {
+      "action": 180,
+      "command": "move_forward"
+    },
+    {
+      "action": 181,
+      "command": "move_forward"
+    },
+    {
+      "action": 182,
+      "command": "move_forward"
+    },
+    {
+      "action": 183,
+      "command": "move_forward"
+    },
+    {
+      "action": 184,
+      "command": "move_forward"
+    },
+    {
+      "action": 185,
+      "command": "move_forward"
+    },
+    {
+      "action": 186,
+      "command": "move_forward"
+    },
+    {
+      "action": 187,
+      "command": "move_forward"
+    },
+    {
+      "action": 188,
+      "command": "move_forward"
+    },
+    {
+      "action": 189,
+      "command": "move_forward"
+    },
+    {
+      "action": 190,
+      "command": "move_forward"
+    },
+    {
+      "action": 191,
+      "command": "turn_right"
+    },
+    {
+      "action": 192,
+      "command": "turn_right"
+    },
+    {
+      "action": 193,
+      "command": "turn_right"
+    },
+    {
+      "action": 194,
+      "command": "turn_left"
+    },
+    {
+      "action": 195,
+      "command": "move_forward"
+    },
+    {
+      "action": 196,
+      "command": "move_forward"
+    },
+    {
+      "action": 197,
+      "command": "turn_right"
+    },
+    {
+      "action": 198,
+      "command": "move_forward"
+    },
+    {
+      "action": 199,
+      "command": "move_forward"
+    },
+    {
+      "action": 200,
+      "command": "move_forward"
+    },
+    {
+      "action": 201,
+      "command": "move_forward"
+    },
+    {
+      "action": 202,
+      "command": "move_forward"
+    },
+    {
+      "action": 203,
+      "command": "move_forward"
+    },
+    {
+      "action": 204,
+      "command": "move_forward"
+    },
+    {
+      "action": 205,
+      "command": "move_forward"
+    },
+    {
+      "action": 206,
+      "command": "turn_left"
+    },
+    {
+      "action": 207,
+      "command": "move_forward"
+    },
+    {
+      "action": 208,
+      "command": "move_forward"
+    },
+    {
+      "action": 209,
+      "command": "turn_right"
+    },
+    {
+      "action": 210,
+      "command": "move_forward"
+    },
+    {
+      "action": 211,
+      "command": "move_forward"
+    },
+    {
+      "action": 212,
+      "command": "move_forward"
+    },
+    {
+      "action": 213,
+      "command": "move_forward"
+    },
+    {
+      "action": 214,
+      "command": "move_forward"
+    },
+    {
+      "action": 215,
+      "command": "move_forward"
+    },
+    {
+      "action": 216,
+      "command": "turn_left"
+    },
+    {
+      "action": 217,
+      "command": "move_forward"
+    },
+    {
+      "action": 218,
+      "command": "move_forward"
+    },
+    {
+      "action": 219,
+      "command": "turn_right"
+    },
+    {
+      "action": 220,
+      "command": "move_forward"
+    },
+    {
+      "action": 221,
+      "command": "move_forward"
+    },
+    {
+      "action": 222,
+      "command": "move_forward"
+    },
+    {
+      "action": 223,
+      "command": "turn_right"
+    },
+    {
+      "action": 224,
+      "command": "turn_right"
+    },
+    {
+      "action": 225,
+      "command": "turn_right"
+    },
+    {
+      "action": 226,
+      "command": "turn_right"
+    },
+    {
+      "action": 227,
+      "command": "turn_right"
+    },
+    {
+      "action": 228,
+      "command": "turn_right"
+    },
+    {
+      "action": 229,
+      "command": "move_forward"
+    },
+    {
+      "action": 230,
+      "command": "move_forward"
+    },
+    {
+      "action": 231,
+      "command": "turn_right"
+    },
+    {
+      "action": 232,
+      "command": "turn_right"
+    },
+    {
+      "action": 233,
+      "command": "turn_right"
+    },
+    {
+      "action": 234,
+      "command": "move_forward"
+    },
+    {
+      "action": 235,
+      "command": "move_forward"
+    },
+    {
+      "action": 236,
+      "command": "turn_right"
+    },
+    {
+      "action": 237,
+      "command": "turn_right"
+    },
+    {
+      "action": 238,
+      "command": "turn_right"
+    },
+    {
+      "action": 239,
+      "command": "turn_right"
+    },
+    {
+      "action": 240,
+      "command": "turn_right"
+    },
+    {
+      "action": 241,
+      "command": "turn_right"
+    },
+    {
+      "action": 242,
+      "command": "turn_right"
+    },
+    {
+      "action": 243,
+      "command": "turn_right"
+    },
+    {
+      "action": 244,
+      "command": "move_forward"
+    },
+    {
+      "action": 245,
+      "command": "move_forward"
+    },
+    {
+      "action": 246,
+      "command": "move_forward"
+    },
+    {
+      "action": 247,
+      "command": "turn_right"
+    },
+    {
+      "action": 248,
+      "command": "move_forward"
+    },
+    {
+      "action": 249,
+      "command": "move_forward"
+    },
+    {
+      "action": 250,
+      "command": "move_forward"
+    },
+    {
+      "action": 251,
+      "command": "move_forward"
+    },
+    {
+      "action": 252,
+      "command": "move_forward"
+    },
+    {
+      "action": 253,
+      "command": "move_forward"
+    },
+    {
+      "action": 254,
+      "command": "move_forward"
+    },
+    {
+      "action": 255,
+      "command": "move_forward"
+    },
+    {
+      "action": 256,
+      "command": "move_forward"
+    },
+    {
+      "action": 257,
+      "command": "move_forward"
+    },
+    {
+      "action": 258,
+      "command": "move_forward"
+    },
+    {
+      "action": 259,
+      "command": "move_forward"
+    },
+    {
+      "action": 260,
+      "command": "move_forward"
+    },
+    {
+      "action": 261,
+      "command": "move_forward"
+    },
+    {
+      "action": 262,
+      "command": "turn_left"
+    },
+    {
+      "action": 263,
+      "command": "turn_left"
+    },
+    {
+      "action": 264,
+      "command": "turn_left"
+    },
+    {
+      "action": 265,
+      "command": "turn_right"
+    },
+    {
+      "action": 266,
+      "command": "turn_right"
+    },
+    {
+      "action": 267,
+      "command": "turn_right"
+    },
+    {
+      "action": 268,
+      "command": "move_forward"
+    },
+    {
+      "action": 269,
+      "command": "move_forward"
+    },
+    {
+      "action": 270,
+      "command": "move_forward"
+    },
+    {
+      "action": 271,
+      "command": "turn_left"
+    },
+    {
+      "action": 272,
+      "command": "turn_left"
+    },
+    {
+      "action": 273,
+      "command": "turn_left"
+    },
+    {
+      "action": 274,
+      "command": "move_forward"
+    },
+    {
+      "action": 275,
+      "command": "move_forward"
+    },
+    {
+      "action": 276,
+      "command": "move_forward"
+    },
+    {
+      "action": 277,
+      "command": "move_forward"
+    },
+    {
+      "action": 278,
+      "command": "move_forward"
+    },
+    {
+      "action": 279,
+      "command": "move_forward"
+    },
+    {
+      "action": 280,
+      "command": "move_forward"
+    },
+    {
+      "action": 281,
+      "command": "move_forward"
+    },
+    {
+      "action": 282,
+      "command": "move_forward"
+    },
+    {
+      "action": 283,
+      "command": "move_forward"
+    },
+    {
+      "action": 284,
+      "command": "move_forward"
+    },
+    {
+      "action": 285,
+      "command": "move_forward"
+    },
+    {
+      "action": 286,
+      "command": "move_forward"
+    },
+    {
+      "action": 287,
+      "command": "move_forward"
+    },
+    {
+      "action": 288,
+      "command": "move_forward"
+    },
+    {
+      "action": 289,
+      "command": "move_forward"
+    },
+    {
+      "action": 290,
+      "command": "move_forward"
+    },
+    {
+      "action": 291,
+      "command": "move_forward"
+    },
+    {
+      "action": 292,
+      "command": "turn_right"
+    },
+    {
+      "action": 293,
+      "command": "turn_right"
+    },
+    {
+      "action": 294,
+      "command": "turn_right"
+    },
+    {
+      "action": 295,
+      "command": "move_forward"
+    },
+    {
+      "action": 296,
+      "command": "move_forward"
+    },
+    {
+      "action": 297,
+      "command": "move_forward"
+    },
+    {
+      "action": 298,
+      "command": "move_forward"
+    },
+    {
+      "action": 299,
+      "command": "move_forward"
+    },
+    {
+      "action": 300,
+      "command": "turn_left"
+    },
+    {
+      "action": 301,
+      "command": "turn_left"
+    },
+    {
+      "action": 302,
+      "command": "turn_left"
+    },
+    {
+      "action": 303,
+      "command": "move_forward"
+    },
+    {
+      "action": 304,
+      "command": "move_forward"
+    },
+    {
+      "action": 305,
+      "command": "move_forward"
+    },
+    {
+      "action": 306,
+      "command": "move_forward"
+    },
+    {
+      "action": 307,
+      "command": "move_forward"
+    },
+    {
+      "action": 308,
+      "command": "move_forward"
+    },
+    {
+      "action": 309,
+      "command": "move_forward"
+    },
+    {
+      "action": 310,
+      "command": "move_forward"
+    },
+    {
+      "action": 311,
+      "command": "move_forward"
+    },
+    {
+      "action": 312,
+      "command": "move_forward"
+    },
+    {
+      "action": 313,
+      "command": "move_forward"
+    },
+    {
+      "action": 314,
+      "command": "move_forward"
+    },
+    {
+      "action": 315,
+      "command": "move_forward"
+    },
+    {
+      "action": 316,
+      "command": "move_forward"
+    },
+    {
+      "action": 317,
+      "command": "move_forward"
+    },
+    {
+      "action": 318,
+      "command": "move_forward"
+    },
+    {
+      "action": 319,
+      "command": "turn_right"
+    },
+    {
+      "action": 320,
+      "command": "move_forward"
+    },
+    {
+      "action": 321,
+      "command": "move_forward"
+    },
+    {
+      "action": 322,
+      "command": "move_forward"
+    },
+    {
+      "action": 323,
+      "command": "turn_left"
+    },
+    {
+      "action": 324,
+      "command": "move_forward"
+    },
+    {
+      "action": 325,
+      "command": "move_forward"
+    },
+    {
+      "action": 326,
+      "command": "move_forward"
+    },
+    {
+      "action": 327,
+      "command": "move_forward"
+    },
+    {
+      "action": 328,
+      "command": "move_forward"
+    },
+    {
+      "action": 329,
+      "command": "turn_left"
+    },
+    {
+      "action": 330,
+      "command": "turn_left"
+    },
+    {
+      "action": 331,
+      "command": "turn_right"
+    },
+    {
+      "action": 332,
+      "command": "turn_right"
+    },
+    {
+      "action": 333,
+      "command": "move_forward"
+    },
+    {
+      "action": 334,
+      "command": "move_forward"
+    },
+    {
+      "action": 335,
+      "command": "turn_left"
+    },
+    {
+      "action": 336,
+      "command": "turn_left"
+    },
+    {
+      "action": 337,
+      "command": "turn_left"
+    },
+    {
+      "action": 338,
+      "command": "turn_right"
+    },
+    {
+      "action": 339,
+      "command": "turn_left"
+    },
+    {
+      "action": 340,
+      "command": "turn_left"
+    },
+    {
+      "action": 341,
+      "command": "turn_left"
+    },
+    {
+      "action": 342,
+      "command": "turn_left"
+    },
+    {
+      "action": 343,
+      "command": "move_forward"
+    },
+    {
+      "action": 344,
+      "command": "move_forward"
+    },
+    {
+      "action": 345,
+      "command": "move_forward"
+    },
+    {
+      "action": 346,
+      "command": "move_forward"
+    },
+    {
+      "action": 347,
+      "command": "move_forward"
+    },
+    {
+      "action": 348,
+      "command": "move_forward"
+    },
+    {
+      "action": 349,
+      "command": "move_forward"
+    },
+    {
+      "action": 350,
+      "command": "move_forward"
+    },
+    {
+      "action": 351,
+      "command": "move_forward"
+    },
+    {
+      "action": 352,
+      "command": "move_forward"
+    },
+    {
+      "action": 353,
+      "command": "move_forward"
+    },
+    {
+      "action": 354,
+      "command": "move_forward"
+    },
+    {
+      "action": 355,
+      "command": "move_forward"
+    },
+    {
+      "action": 356,
+      "command": "move_forward"
+    },
+    {
+      "action": 357,
+      "command": "move_forward"
+    },
+    {
+      "action": 358,
+      "command": "move_forward"
+    },
+    {
+      "action": 359,
+      "command": "move_forward"
+    },
+    {
+      "action": 360,
+      "command": "move_forward"
+    },
+    {
+      "action": 361,
+      "command": "move_forward"
+    },
+    {
+      "action": 362,
+      "command": "move_forward"
+    },
+    {
+      "action": 363,
+      "command": "turn_right"
+    },
+    {
+      "action": 364,
+      "command": "turn_right"
+    },
+    {
+      "action": 365,
+      "command": "turn_right"
+    },
+    {
+      "action": 366,
+      "command": "move_forward"
+    },
+    {
+      "action": 367,
+      "command": "move_forward"
+    },
+    {
+      "action": 368,
+      "command": "move_forward"
+    },
+    {
+      "action": 369,
+      "command": "move_forward"
+    },
+    {
+      "action": 370,
+      "command": "move_forward"
+    },
+    {
+      "action": 371,
+      "command": "turn_left"
+    },
+    {
+      "action": 372,
+      "command": "turn_left"
+    },
+    {
+      "action": 373,
+      "command": "turn_left"
+    },
+    {
+      "action": 374,
+      "command": "move_forward"
+    },
+    {
+      "action": 375,
+      "command": "move_forward"
+    },
+    {
+      "action": 376,
+      "command": "move_forward"
+    },
+    {
+      "action": 377,
+      "command": "move_forward"
+    },
+    {
+      "action": 378,
+      "command": "move_forward"
+    },
+    {
+      "action": 379,
+      "command": "move_forward"
+    },
+    {
+      "action": 380,
+      "command": "move_forward"
+    },
+    {
+      "action": 381,
+      "command": "move_forward"
+    },
+    {
+      "action": 382,
+      "command": "move_forward"
+    },
+    {
+      "action": 383,
+      "command": "move_forward"
+    },
+    {
+      "action": 384,
+      "command": "move_forward"
+    },
+    {
+      "action": 385,
+      "command": "move_forward"
+    },
+    {
+      "action": 386,
+      "command": "turn_right"
+    },
+    {
+      "action": 387,
+      "command": "move_forward"
+    },
+    {
+      "action": 388,
+      "command": "move_forward"
+    },
+    {
+      "action": 389,
+      "command": "move_forward"
+    },
+    {
+      "action": 390,
+      "command": "turn_left"
+    },
+    {
+      "action": 391,
+      "command": "move_forward"
+    },
+    {
+      "action": 392,
+      "command": "move_forward"
+    },
+    {
+      "action": 393,
+      "command": "move_forward"
+    },
+    {
+      "action": 394,
+      "command": "move_forward"
+    },
+    {
+      "action": 395,
+      "command": "turn_right"
+    },
+    {
+      "action": 396,
+      "command": "turn_right"
+    },
+    {
+      "action": 397,
+      "command": "turn_right"
+    },
+    {
+      "action": 398,
+      "command": "turn_right"
+    },
+    {
+      "action": 399,
+      "command": "turn_right"
+    },
+    {
+      "action": 400,
+      "command": "turn_right"
+    },
+    {
+      "action": 401,
+      "command": "move_forward"
+    },
+    {
+      "action": 402,
+      "command": "move_forward"
+    },
+    {
+      "action": 403,
+      "command": "move_forward"
+    },
+    {
+      "action": 404,
+      "command": "move_forward"
+    },
+    {
+      "action": 405,
+      "command": "move_forward"
+    },
+    {
+      "action": 406,
+      "command": "move_forward"
+    },
+    {
+      "action": 407,
+      "command": "move_forward"
+    },
+    {
+      "action": 408,
+      "command": "move_forward"
+    },
+    {
+      "action": 409,
+      "command": "move_forward"
+    },
+    {
+      "action": 410,
+      "command": "move_forward"
+    },
+    {
+      "action": 411,
+      "command": "move_forward"
+    },
+    {
+      "action": 412,
+      "command": "move_forward"
+    },
+    {
+      "action": 413,
+      "command": "turn_left"
+    },
+    {
+      "action": 414,
+      "command": "turn_left"
+    },
+    {
+      "action": 415,
+      "command": "move_forward"
+    },
+    {
+      "action": 416,
+      "command": "move_forward"
+    },
+    {
+      "action": 417,
+      "command": "move_forward"
+    },
+    {
+      "action": 418,
+      "command": "move_forward"
+    },
+    {
+      "action": 419,
+      "command": "turn_left"
+    },
+    {
+      "action": 420,
+      "command": "turn_left"
+    },
+    {
+      "action": 421,
+      "command": "turn_left"
+    },
+    {
+      "action": 422,
+      "command": "turn_left"
+    },
+    {
+      "action": 423,
+      "command": "move_forward"
+    },
+    {
+      "action": 424,
+      "command": "move_forward"
+    },
+    {
+      "action": 425,
+      "command": "move_forward"
+    },
+    {
+      "action": 426,
+      "command": "move_forward"
+    },
+    {
+      "action": 427,
+      "command": "move_forward"
+    },
+    {
+      "action": 428,
+      "command": "move_forward"
+    },
+    {
+      "action": 429,
+      "command": "move_forward"
+    },
+    {
+      "action": 430,
+      "command": "move_forward"
+    },
+    {
+      "action": 431,
+      "command": "move_forward"
+    },
+    {
+      "action": 432,
+      "command": "move_forward"
+    },
+    {
+      "action": 433,
+      "command": "move_forward"
+    },
+    {
+      "action": 434,
+      "command": "move_forward"
+    },
+    {
+      "action": 435,
+      "command": "move_forward"
+    },
+    {
+      "action": 436,
+      "command": "move_forward"
+    },
+    {
+      "action": 437,
+      "command": "move_forward"
+    },
+    {
+      "action": 438,
+      "command": "move_forward"
+    },
+    {
+      "action": 439,
+      "command": "move_forward"
+    },
+    {
+      "action": 440,
+      "command": "turn_right"
+    },
+    {
+      "action": 441,
+      "command": "turn_right"
+    },
+    {
+      "action": 442,
+      "command": "turn_right"
+    },
+    {
+      "action": 443,
+      "command": "move_forward"
+    },
+    {
+      "action": 444,
+      "command": "move_forward"
+    },
+    {
+      "action": 445,
+      "command": "move_forward"
+    },
+    {
+      "action": 446,
+      "command": "move_forward"
+    },
+    {
+      "action": 447,
+      "command": "move_forward"
+    },
+    {
+      "action": 448,
+      "command": "move_forward"
+    },
+    {
+      "action": 449,
+      "command": "move_forward"
+    },
+    {
+      "action": 450,
+      "command": "move_forward"
+    },
+    {
+      "action": 451,
+      "command": "turn_left"
+    },
+    {
+      "action": 452,
+      "command": "move_forward"
+    },
+    {
+      "action": 453,
+      "command": "move_forward"
+    },
+    {
+      "action": 454,
+      "command": "move_forward"
+    },
+    {
+      "action": 455,
+      "command": "turn_right"
+    },
+    {
+      "action": 456,
+      "command": "move_forward"
+    },
+    {
+      "action": 457,
+      "command": "move_forward"
+    },
+    {
+      "action": 458,
+      "command": "move_forward"
+    },
+    {
+      "action": 459,
+      "command": "move_forward"
+    },
+    {
+      "action": 460,
+      "command": "move_forward"
+    },
+    {
+      "action": 461,
+      "command": "move_forward"
+    },
+    {
+      "action": 462,
+      "command": "move_forward"
+    },
+    {
+      "action": 463,
+      "command": "move_forward"
+    },
+    {
+      "action": 464,
+      "command": "turn_left"
+    },
+    {
+      "action": 465,
+      "command": "turn_left"
+    },
+    {
+      "action": 466,
+      "command": "turn_left"
+    },
+    {
+      "action": 467,
+      "command": "turn_left"
+    },
+    {
+      "action": 468,
+      "command": "move_forward"
+    },
+    {
+      "action": 469,
+      "command": "move_forward"
+    },
+    {
+      "action": 470,
+      "command": "move_forward"
+    },
+    {
+      "action": 471,
+      "command": "turn_right"
+    },
+    {
+      "action": 472,
+      "command": "turn_right"
+    },
+    {
+      "action": 473,
+      "command": "turn_right"
+    },
+    {
+      "action": 474,
+      "command": "turn_right"
+    },
+    {
+      "action": 475,
+      "command": "turn_left"
+    },
+    {
+      "action": 476,
+      "command": "turn_left"
+    },
+    {
+      "action": 477,
+      "command": "turn_left"
+    },
+    {
+      "action": 478,
+      "command": "turn_left"
+    },
+    {
+      "action": 479,
+      "command": "turn_left"
+    },
+    {
+      "action": 480,
+      "command": "move_forward"
+    },
+    {
+      "action": 481,
+      "command": "move_forward"
+    },
+    {
+      "action": 482,
+      "command": "turn_right"
+    },
+    {
+      "action": 483,
+      "command": "turn_right"
+    },
+    {
+      "action": 484,
+      "command": "move_forward"
+    },
+    {
+      "action": 485,
+      "command": "move_forward"
+    },
+    {
+      "action": 486,
+      "command": "turn_right"
+    },
+    {
+      "action": 487,
+      "command": "turn_right"
+    },
+    {
+      "action": 488,
+      "command": "turn_right"
+    },
+    {
+      "action": 489,
+      "command": "move_forward"
+    },
+    {
+      "action": 490,
+      "command": "move_forward"
+    },
+    {
+      "action": 491,
+      "command": "move_forward"
+    },
+    {
+      "action": 492,
+      "command": "move_forward"
+    },
+    {
+      "action": 493,
+      "command": "move_forward"
+    },
+    {
+      "action": 494,
+      "command": "move_forward"
+    },
+    {
+      "action": 495,
+      "command": "move_forward"
+    },
+    {
+      "action": 496,
+      "command": "move_forward"
+    },
+    {
+      "action": 497,
+      "command": "move_forward"
+    },
+    {
+      "action": 498,
+      "command": "move_forward"
+    },
+    {
+      "action": 499,
+      "command": "turn_left"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bedroom",
+      "category": "room",
+      "description": "Bedroom with twin beds, sofa and balcony glazing",
+      "position": [
+        -1,
+        0,
+        1
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/back.png",
+          "camera": "back",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "wardrobe1",
+      "category": "wardrobe",
+      "description": "Tall open wood frame with hanging white robes beside archway",
+      "position": [
+        -5.1,
+        -0.7,
+        1.3
+      ],
+      "uncertainty_m": 0.6,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/back.png",
+          "camera": "back",
+          "action": 0
+        },
+        {
+          "image": "images/observe-grhb5vgd/left.png",
+          "camera": "left",
+          "action": 44
+        }
+      ]
+    },
+    {
+      "id": "arch1",
+      "category": "passage",
+      "description": "White bathroom arch left of wardrobe",
+      "position": [
+        -4.4,
+        -1.5,
+        1.2
+      ],
+      "uncertainty_m": 0.6,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/back.png",
+          "camera": "back",
+          "action": 0
+        },
+        {
+          "image": "images/observe-grhb5vgd/back.png",
+          "camera": "back",
+          "action": 44
+        }
+      ]
+    },
+    {
+      "id": "vanity1",
+      "category": "vanity",
+      "description": "Partly visible gray basin/counter through white arch",
+      "position": [
+        -5.1,
+        -2.5,
+        0.7
+      ],
+      "uncertainty_m": 0.6,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/back.png",
+          "camera": "back",
+          "action": 0
+        },
+        {
+          "image": "images/observe-grhb5vgd/back.png",
+          "camera": "back",
+          "action": 44
+        },
+        {
+          "image": "images/observe-lb4x20sq/back.png",
+          "camera": "back",
+          "action": 230
+        },
+        {
+          "image": "images/observe-pwhnfx3v/right.png",
+          "camera": "right",
+          "action": 222
+        }
+      ]
+    },
+    {
+      "id": "hanging_beige",
+      "category": "wall_hanging",
+      "description": "Beige macrame hanging above sofa; lacks black/white pattern",
+      "position": [
+        0,
+        2,
+        1.8
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/left.png",
+          "camera": "left",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "balcony",
+      "category": "place",
+      "description": "Outdoor chairs visible through glazing",
+      "position": [
+        2,
+        0,
+        1
+      ],
+      "uncertainty_m": 1.0,
+      "observations": [
+        {
+          "image": "images/observe-hd_yyst7/front.png",
+          "camera": "front",
+          "action": 0
+        }
+      ]
+    },
+    {
+      "id": "hall1",
+      "category": "passage",
+      "description": "Narrow passage behind twin bed headboards and desk, leads through wooden doorway",
+      "position": [
+        -4.7,
+        1.2,
+        0
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-grhb5vgd/front.png",
+          "camera": "front",
+          "action": 44
+        }
+      ]
+    },
+    {
+      "id": "courtyard_hall",
+      "category": "passage",
+      "description": "Covered corridor with garden arches on one side and living room glazing on other",
+      "position": [
+        -8,
+        2.7,
+        0
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-jkc8ty13/front.png",
+          "camera": "front",
+          "action": 84
+        }
+      ]
+    },
+    {
+      "id": "living",
+      "category": "room",
+      "description": "Large sitting room with white counter and wood ceiling",
+      "position": [
+        -8,
+        5,
+        1
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-jkc8ty13/right.png",
+          "camera": "right",
+          "action": 84
+        }
+      ]
+    },
+    {
+      "id": "plant1",
+      "category": "plant",
+      "description": "Tall green leafy plant beside large window and white counter",
+      "position": [
+        -6.8,
+        7.8,
+        1.5
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-jkc8ty13/right.png",
+          "camera": "right",
+          "action": 84
+        }
+      ]
+    },
+    {
+      "id": "white_counter",
+      "category": "counter",
+      "description": "Kitchen/bar counter: light white body and light gray elevated surface, wood serving ledge, two wooden stools in front, wood shelves behind",
+      "position": [
+        -8.1,
+        5.6,
+        0.9
+      ],
+      "uncertainty_m": 1,
+      "observations": [
+        {
+          "image": "images/observe-jkc8ty13/right.png",
+          "camera": "right",
+          "action": 84
+        },
+        {
+          "image": "images/observe-7j60qsq3/front.png",
+          "camera": "front",
+          "action": 115
+        },
+        {
+          "image": "images/observe-8i9jpxl5/front.png",
+          "camera": "front",
+          "action": 129
+        },
+        {
+          "image": "images/observe-8i9jpxl5/left.png",
+          "camera": "left",
+          "action": 129
+        }
+      ]
+    },
+    {
+      "id": "bathroom",
+      "category": "room",
+      "description": "Narrow white bathroom with gray vanity, oval mirror, shower and far window",
+      "position": [
+        -4.7,
+        -2.6,
+        1
+      ],
+      "uncertainty_m": 0.8,
+      "observations": [
+        {
+          "image": "images/observe-lb4x20sq/back.png",
+          "camera": "back",
+          "action": 230
+        }
+      ]
+    },
+    {
+      "id": "fabric1",
+      "category": "fabric",
+      "description": "Black and white patterned rectangular hanging on wall near dining table",
+      "position": [
+        -15.1,
+        4.1,
+        1.6
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-ux1ixhp6/front.png",
+          "camera": "front",
+          "action": 148
+        },
+        {
+          "image": "images/observe-0ejcx2ns/front.png",
+          "camera": "front",
+          "action": 326
+        },
+        {
+          "image": "images/observe-7ebknwzs/front.png",
+          "camera": "front",
+          "action": 330
+        },
+        {
+          "image": "images/observe-jm23r3lr/front.png",
+          "camera": "front",
+          "action": 338
+        }
+      ]
+    },
+    {
+      "id": "dining_table",
+      "category": "table",
+      "description": "Wooden dining table beyond woven room divider",
+      "position": [
+        -14.7,
+        5.2,
+        0.8
+      ],
+      "uncertainty_m": 1.2,
+      "observations": [
+        {
+          "image": "images/observe-ux1ixhp6/front.png",
+          "camera": "front",
+          "action": 148
+        }
+      ]
+    },
+    {
+      "id": "stools_pair",
+      "category": "stools",
+      "description": "Two solid wood stools in front of light kitchen counter",
+      "position": [
+        -8.8,
+        6,
+        0.6
+      ],
+      "uncertainty_m": 1.2,
+      "observations": [
+        {
+          "image": "images/observe-ux1ixhp6/back.png",
+          "camera": "back",
+          "action": 148
+        }
+      ]
+    },
+    {
+      "id": "kitchen_shelf",
+      "category": "shelf",
+      "description": "Wall-mounted wooden shelves behind kitchen counter",
+      "position": [
+        -6.8,
+        7,
+        1.5
+      ],
+      "uncertainty_m": 1.2,
+      "observations": [
+        {
+          "image": "images/observe-ux1ixhp6/back.png",
+          "camera": "back",
+          "action": 148
+        }
+      ]
+    },
+    {
+      "id": "fabric_rod",
+      "category": "rod",
+      "description": "Light wood rod supporting black white geometric textile",
+      "position": [
+        -15.1,
+        4.1,
+        2.1
+      ],
+      "uncertainty_m": 0.7,
+      "observations": [
+        {
+          "image": "images/observe-7ebknwzs/front.png",
+          "camera": "front",
+          "action": 330
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "wardrobe1",
+      "relation": "in",
+      "object": "bedroom"
+    },
+    {
+      "subject": "hanging_beige",
+      "relation": "in",
+      "object": "bedroom"
+    },
+    {
+      "subject": "bedroom",
+      "relation": "connected_to",
+      "object": "hall1",
+      "via": "open space behind headboard"
+    },
+    {
+      "subject": "hall1",
+      "relation": "connected_to",
+      "object": "courtyard_hall",
+      "via": "wood door and left turn"
+    },
+    {
+      "subject": "plant1",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "white_counter",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "courtyard_hall",
+      "relation": "connected_to",
+      "object": "living",
+      "via": "opening near x=-9.5, y=3.2; traversed at actions112-115"
+    },
+    {
+      "subject": "vanity1",
+      "relation": "in",
+      "object": "bathroom"
+    },
+    {
+      "subject": "bedroom",
+      "relation": "connected_to",
+      "object": "bathroom",
+      "via": "arch1"
+    },
+    {
+      "subject": "fabric1",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "dining_table",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "stools_pair",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "kitchen_shelf",
+      "relation": "in",
+      "object": "living"
+    },
+    {
+      "subject": "fabric1",
+      "relation": "attached_to",
+      "object": "fabric_rod"
+    }
+  ],
+  "targets": [
+    {
+      "index": 1,
+      "candidate_ids": [
+        "white_counter"
+      ],
+      "selected_id": "white_counter",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 129,
+            "image": "images/observe-8i9jpxl5/left.png",
+            "statement": "Counter combines wood ledge and light surface; two wood stools seen at115 and129 with wooden shelf behind. No better counter candidate observed."
+          },
+          {
+            "action": 148,
+            "image": "images/observe-ux1ixhp6/back.png",
+            "statement": "Both wooden stool tops visible before wood-ledged light counter, shelf behind left."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 148,
+            "image": "images/observe-ux1ixhp6/back.png",
+            "statement": "Standing just behind pair of stools, with open approach to counter frontage; counter about1m and accessible viewpoint immediately beside agent."
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "candidate_ids": [
+        "vanity1"
+      ],
+      "selected_id": "vanity1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 230,
+            "image": "images/observe-lb4x20sq/back.png",
+            "statement": "Gray basin/counter with lower wood shelf seen through bathroom doorway; adjacent white robes visible in front/left view."
+          },
+          {
+            "action": 236,
+            "image": "images/observe-orxr15ow/right.png",
+            "statement": "Sideways reposition exposes wooden lower base beneath gray basin while robe wardrobe appears in back view."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 222,
+            "image": "images/observe-pwhnfx3v/right.png",
+            "statement": "Walked through arch into clear aisle immediately beside vanity, then returned0.5m to doorway."
+          },
+          {
+            "action": 236,
+            "image": "images/observe-orxr15ow/right.png",
+            "statement": "Standing in clear aisle at vanity entrance, near edge and base visible; approximate accessible distance0.6m."
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "candidate_ids": [
+        "fabric1"
+      ],
+      "selected_id": "fabric1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 330,
+            "image": "images/observe-7ebknwzs/front.png",
+            "statement": "Black and white geometric fabric hangs from wood rod on wall; dining table immediately to right in right view. Distinct from beige macrame alternatives."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 330,
+            "image": "images/observe-7ebknwzs/front.png",
+            "statement": "Reached clear walkway beside hanging, estimated0.6-0.9m from wall and adjacent viewing position."
+          },
+          {
+            "action": 338,
+            "image": "images/observe-jm23r3lr/front.png",
+            "statement": "Advanced0.5m along clear walkway from action330 to stand immediately beside textile; large close view and table-side floor confirm approach."
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "candidate_ids": [
+        "wardrobe1"
+      ],
+      "selected_id": "wardrobe1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 44,
+            "image": "images/observe-grhb5vgd/left.png",
+            "statement": "Tall open wood wardrobe with white bathrobes adjacent to bathroom arch; stable appearance confirmed in incidental bathroom visit."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": [
+          {
+            "action": 463,
+            "image": "images/observe-jnn5kh1m/front.png",
+            "statement": "Blocked at bedroom entry; prior incidental wardrobe proximity occurred before target3 and does not establish current ordered approach."
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "candidate_ids": [
+        "plant1"
+      ],
+      "selected_id": "plant1",
+      "identity": {
+        "status": "supported",
+        "evidence": [
+          {
+            "action": 330,
+            "image": "images/observe-7ebknwzs/back.png",
+            "statement": "Tall green indoor plant beside white counter and large window, observed from living room."
+          }
+        ]
+      },
+      "arrival": {
+        "status": "unresolved",
+        "evidence": [
+          {
+            "action": 498,
+            "image": "images/observe-k1qvv1jh/front.png",
+            "statement": "Current location is bedroom passage; final plant close approach has not been made after target4."
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "Beige hanging rejected as target3 due to absent black and white pattern. Bathroom candidates visible but not yet approached.",
+    "Action12-20 likely bed-edge blockage. Need move toward window wall to pass bed.",
+    "Desk narrows hall; passage requires alignment closer to left wall.",
+    "At action97 living area visible through glazing; no traversable connection established. Continue corridor.",
+    "Target1 candidate counter has exact two-stool/shelf context; verify close view for material/surface. Black/white hanging partly visible near table farther left, not beige bar macrame.",
+    "Reviews1 and2 requested index1 but evaluation text asks for target2 vanity. Counter self-assessment retained; review coverage remains absent. Inspect bathroom without treating review as native result.",
+    "Action173 frame directly ahead; nominal +x motion overestimated by about0.8m.",
+    "Index1 accepted at bathroom despite counter-specific request. Stored raw review separately; never reinterpret this as native counter arrival feedback.",
+    "Action394 reveals glass crossing at362-370 was incomplete. Do not infer traversability from garden visibility."
+  ],
+  "controller_reviews": [
+    {
+      "target": 1,
+      "action": 129,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 129,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0001",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "unknown",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front and left show a light-colored counter, wooden shelving, and a partially visible wooden stool.",
+            "Back shows lounge seating; right shows glazed doors and courtyard arches. No gray bathroom vanity or robe wardrobe is identifiable."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The checkpoint target and its complete required spatial relations are not established, nor is a strictly under-1m walkable approach.",
+          "limitation": "RGB provides only a fallible distance estimate; no measured geodesic distance or native benchmark success is established."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 148,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 148,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0002",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "unknown",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Back shows a kitchen/bar counter with stools, shelves and pendant lights; it does not establish the gray bathroom vanity with wooden base.",
+            "Left shows glass doors and courtyard arches, without a clearly identifiable vanity or adjacent wardrobe with robes."
+          ],
+          "contradictions": [],
+          "missing_evidence": "A clear view of the target vanity, its doorway and wardrobe relationship, and a nearby walkable approach supporting arrival strictly within 1 metre.",
+          "limitation": "RGB alone cannot measure geodesic distance or certify native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 230,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 230,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0003",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "unknown",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Back shows a gray bathroom vanity with a basin and mirror, but its wooden base is not clearly visible.",
+            "Front and left show hanging white robes in a wooden wardrobe beside the bathroom opening."
+          ],
+          "contradictions": [],
+          "missing_evidence": "Clear confirmation of the vanity\u2019s wooden base and sufficient visual evidence of an under-1m walkable approach to that target.",
+          "limitation": "Foreground vanity surfaces suggest proximity, but RGB cannot measure geodesic distance or certify native success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 1,
+      "action": 238,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 238,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0004",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 1
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "supported",
+          "decision": "success",
+          "evidence": [
+            "Right shows a gray bathroom vanity with basin and faucet; front shows part of its wooden base beneath the counter.",
+            "Right shows the vanity beside a doorway frame and an open wardrobe containing white robes; front shows bathroom fixtures.",
+            "Front and right place the vanity immediately beside the camera, with adjacent floor space supporting a plausible under-1m walkable approach."
+          ],
+          "contradictions": [],
+          "missing_evidence": "No essential visual evidence missing for this checkpoint.",
+          "limitation": "RGB supports only an estimated proximity; exact geodesic distance and native benchmark success remain unverified."
+        },
+        "decision": "success",
+        "evaluation_gate_passed": true,
+        "continue_required": false,
+        "review_reused": false,
+        "target_review_accepted": true,
+        "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+      }
+    },
+    {
+      "target": 2,
+      "action": 238,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 238,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0005",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 2
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "supported",
+          "decision": "success",
+          "evidence": [
+            "Front and right show a gray bathroom vanity with basin and a partially visible wooden lower base.",
+            "Right shows the vanity beside a doorway partition adjoining an open wardrobe containing white robes.",
+            "Front and right place the vanity immediately alongside the camera, with nearby clear floor supporting a visually estimated under-1m approach."
+          ],
+          "contradictions": [],
+          "missing_evidence": "Exact geodesic distance and accepted viewpoint are unavailable.",
+          "limitation": "This is a fallible RGB arrival estimate, not measured distance or native benchmark success; prior target order is unverified."
+        },
+        "decision": "success",
+        "evaluation_gate_passed": true,
+        "continue_required": false,
+        "review_reused": false,
+        "target_review_accepted": true,
+        "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+      }
+    },
+    {
+      "target": 3,
+      "action": 330,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 330,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0006",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "unknown",
+          "decision": "fail",
+          "evidence": [
+            "Front: black-and-white patterned fabric hangs from a wooden rod.",
+            "Right: wooden dining tables and chairs support the required nearby-table relation."
+          ],
+          "contradictions": [],
+          "missing_evidence": "The oblique front view does not clearly establish a strictly under-1m walkable approach to the fabric; the floor immediately beneath it is largely outside the frame.",
+          "limitation": "RGB provides only a fallible distance estimate, not measured geodesic distance or native benchmark success."
+        },
+        "decision": "fail",
+        "evaluation_gate_passed": false,
+        "continue_required": true,
+        "review_reused": false,
+        "target_review_accepted": false,
+        "evaluation_notice": "Review fail: no STOP, action, submission or intermediate coverage was granted. Continue inspecting and approaching the current target. Repeating this checkpoint at the same action/stage reuses this fail without another model call; move before requesting a fresh review."
+      }
+    },
+    {
+      "target": 3,
+      "action": 338,
+      "result": {
+        "benchmark": "HabitatGS-Multi-ObjectNav-paper1m-stop-sync-v01",
+        "run_id": "supernav-sg-evaluator-107-20261025T164602548Z",
+        "episode_id": "multi_objectnav_17_000107",
+        "instruction": "First, find a wooden kitchen counter with a light-colored surface between two wooden stools and a shelf. Then, find a gray bathroom vanity with wooden base visible through the doorway beside a wardrobe with robes. Then, find a hanging fabric with black and white patterns mounted on a rod near a table. Then, find a tall wooden open wardrobe with hanging white bathrobes positioned beside the bathroom archway. Finally, find the indoor plant has green leaves, a tall shape, and is located near a white counter, beside a window.",
+        "target_count": 5,
+        "actions": 338,
+        "action_limit": 500,
+        "policy_limit_seconds": 7200,
+        "begun": true,
+        "episode_over": false,
+        "stop_executed": false,
+        "evaluation_id": "supernav-sg-evaluator-107-20261025T164602548Z-review-0007",
+        "review_scope": {
+          "kind": "intermediate_target",
+          "target_index": 3
+        },
+        "evaluation": {
+          "identity": "supported",
+          "room_and_relations": "supported",
+          "approach": "supported",
+          "decision": "success",
+          "evidence": [
+            "Front: a hanging fabric with black-and-white geometric patterns is mounted on a wooden rod.",
+            "Right: wooden dining tables stand nearby in the same room.",
+            "Front and left: the hanging is immediately beside the apparent walkable viewing position, with no visible intervening obstacle, supporting a visually estimated under-1m approach."
+          ],
+          "contradictions": [],
+          "missing_evidence": "No essential visual evidence is missing for this checkpoint.",
+          "limitation": "RGB supports only a fallible distance estimate; exact geodesic distance, accepted viewpoint proximity, historical target order and native success remain unverified."
+        },
+        "decision": "success",
+        "evaluation_gate_passed": true,
+        "continue_required": false,
+        "review_reused": false,
+        "target_review_accepted": true,
+        "evaluation_notice": "Review success: this intermediate checkpoint is accepted for review coverage only. No action, native arrival submission or score feedback occurred. Continue to the next target in order."
+      }
+    }
+  ]
+}
