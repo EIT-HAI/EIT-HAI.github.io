@@ -170,3 +170,4 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .trace-events{display:flex;flex-direction:column;justify-content:flex-end;height:54px;padding:4px 8px}
 .trace-event{flex:none;grid-template-columns:10px minmax(0,1fr);column-gap:6px;line-height:22px}
 @media(max-width:640px){.trace-engine{width:62cqw;height:56px;bottom:48px}.trace-hud-head{height:22px;padding:0 6px}.trace-events{height:34px;padding:4px 6px}}
+@media(max-width:359px){.trace-video-wrap{min-height:106px}}
