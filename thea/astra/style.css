@@ -144,7 +144,7 @@ body,button,input,select,textarea,pre,code,kbd,samp,h1,h2,h3,.sc,.affiliation,.t
 
 /* Prose matches the main-site paragraph reference; navigation stays sans-serif. */
 .abstract,.experiment-copy,.evidence-heading p,.mechanism-heading p,.section-lede{max-width:43rem;font-size:1rem;line-height:1.65;color:var(--ink)}
-.abstract,.experiment-copy,.evidence-heading p,.mechanism-heading p,.section-lede,.task,.result,.conclusion-grid p,.run-details p,.media-note{font-family:'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,'Songti SC','SimSun',serif}
+.abstract,.experiment-copy,.evidence-heading p,.mechanism-heading p,.section-lede,.task,.result,.conclusion-grid p,.run-details p,.media-note,.trace-note{font-family:'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,'Songti SC','SimSun',serif}
 .experiment-copy{margin:0 0 1rem}
 .evidence-heading,.mechanism-heading{margin-bottom:1rem}
 .evidence-heading p,.mechanism-heading p{margin-top:.45rem}
@@ -153,3 +153,20 @@ body,button,input,select,textarea,pre,code,kbd,samp,h1,h2,h3,.sc,.affiliation,.t
 .masthead{padding-bottom:1.8rem}
 .conclusion-grid p{font-size:.9rem;line-height:1.65;color:var(--ink)}
 @media(max-width:640px){.paper-nav{gap:.6rem 1.25rem;margin-top:1.35rem}.paper-nav a{font-size:1.05rem}.paper-nav svg{width:1.1rem;height:1.1rem}.site-pager{margin:2.5rem 0;font-size:1rem}}
+
+/* Four readable sizes across the page, including the replay annotations. */
+:root{--type-title:36px;--type-section:26px;--type-body:18px;--type-note:16px}
+h1{font-size:var(--type-title)}
+h2,.section-heading h2,.subtitle{font-size:var(--type-section)}
+body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.mechanism-heading h3,.conclusion-grid h3,.abstract,.experiment-copy,.section-lede,.evidence-heading p,.mechanism-heading p,.task,.result,.conclusion-grid p,.paper-nav a,.paper-nav span,.site-pager,.trace-current strong{font-size:var(--type-body)}
+.sc,.language,.language button,.affiliation,.track,.section-number,.setup,.experiment-head .trial-id,.media-caption,.media-note,.muted,.nav-head,.run-number,.native-result,.status,.metrics,.episode,.run-details,.run-details p,.stop-reason,footer,dialog p,.final-image,.source-image,.workspace,.workspace-tree,.workspace-state,.workspace-file-title,.workspace-file-body pre,.workspace-original,.paper-figure figcaption,.paper-nav>span,.gap-list>div>span,.evidence-heading>span,.mechanism-heading>span,.conclusion-grid article>span,.trace-current,.trace-picker,.trace-picker select,.trace-hud-title,.trace-hud-subtitle,.trace-event,.trace-note{font-size:var(--type-note)}
+.workspace-close,#close-image{font-size:var(--type-section)}
+.trace-current,.trace-note,.media-caption,.metrics,.episode,.run-details,.run-details p,.stop-reason,.workspace,.workspace-tree,.workspace-state,.workspace-file-title,.workspace-file-body pre{line-height:1.5}
+.trace-note{margin-top:.7rem}
+.trace-engine{width:52cqw;height:78px;bottom:clamp(48px,9cqw,96px)}
+.trace-hud-head{height:24px;padding:0 8px;gap:6px}
+.trace-hud-head::after{left:8px;right:8px}
+.trace-hud-dot{width:6px;height:6px}
+.trace-events{display:flex;flex-direction:column;justify-content:flex-end;height:54px;padding:4px 8px}
+.trace-event{flex:none;grid-template-columns:10px minmax(0,1fr);column-gap:6px;line-height:22px}
+@media(max-width:640px){.trace-engine{width:62cqw;height:56px;bottom:48px}.trace-hud-head{height:22px;padding:0 6px}.trace-events{height:34px;padding:4px 6px}}

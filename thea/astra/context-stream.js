@@ -14,7 +14,7 @@
       agent: 'AGENT', context: 'context stream', run: 'Run',
       completed: 'complete', incomplete: 'incomplete', frame: 'observation', action: 'action',
       idle: 'waiting for the next recorded event…',
-      note: '1 s per saved observation · left / front / right views · no interpolation · sanitized observable events, not hidden reasoning',
+      note: '1s per saved observation · left/front/right · no interpolation · sanitized public events, not hidden reasoning',
       noEvaluator: 'No evaluator review was captured for this evaluator-condition run.',
       afterFinal: count => `${count} event${count === 1 ? '' : 's'} after the last saved observation remain attached to it.`
     },
@@ -22,7 +22,7 @@
       agent: 'AGENT', context: '上下文流', run: '运行',
       completed: '完成', incomplete: '未完成', frame: '观测', action: '动作',
       idle: '等待下一条已记录事件…',
-      note: '每个已保存 observation 保持 1 秒 · 左 / 前 / 右三视图 · 不插帧 · 经清理的可观测事件，不是隐藏推理',
+      note: '每个保存观测显示1s · 左/前/右三视图 · 不插帧 · 经清理的公开事件，不含隐藏推理',
       noEvaluator: '这次评估条件运行没有捕获到 evaluator review。',
       afterFinal: count => `有 ${count} 条事件发生在最后一个已保存 observation 之后，仍附在该观测上。`
     }
