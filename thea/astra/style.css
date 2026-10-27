@@ -174,3 +174,7 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .thea-return::before{content:'\2190';margin-right:.34em;color:#a9aaa5;transition:color .15s}
 .thea-return .sc{font-family:inherit;font-size:inherit;font-variant-caps:small-caps;letter-spacing:.03em}
 .thea-return:hover,.thea-return:hover::before{color:#bc6448}
+
+/* Center the reading column; keep paragraph lines left-aligned. */
+.paper-section>.section-heading,.experiment-copy,.section-lede,.evidence-heading,.mechanism-heading,.supplementary .revo-setup{max-width:43rem;margin-inline:auto;text-align:left}
+.evidence-heading,.mechanism-heading{grid-template-columns:minmax(0,1fr);gap:.35rem}
