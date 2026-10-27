@@ -153,7 +153,7 @@ body,button,input,select,textarea,pre,code,kbd,samp,h1,h2,h3,.sc,.affiliation,.t
 .conclusion-grid p{font-size:.9rem;line-height:1.65;color:var(--ink)}
 @media(max-width:640px){.paper-nav{gap:.6rem 1.25rem;margin-top:1.35rem}.paper-nav a{font-size:1.05rem}.paper-nav svg{width:1.1rem;height:1.1rem}.site-pager{margin:2.5rem 0;font-size:1rem}}
 
-/* Four readable sizes across the page, including the replay annotations. */
+/* Four readable sizes for webpage text. In-video annotations scale with the MP4. */
 :root{--type-title:36px;--type-section:26px;--type-body:18px;--type-note:16px}
 h1{font-size:var(--type-title)}
 h2,.section-heading h2,.subtitle{font-size:var(--type-section)}
@@ -169,7 +169,6 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .trace-events{display:flex;flex-direction:column;justify-content:flex-end;height:54px;padding:4px 8px}
 .trace-event{flex:none;grid-template-columns:10px minmax(0,1fr);column-gap:6px;line-height:22px}
 @media(max-width:640px){.trace-engine{width:62cqw;height:56px;bottom:48px}.trace-hud-head{height:22px;padding:0 6px}.trace-events{height:34px;padding:4px 6px}}
-@media(max-width:359px){.trace-video-wrap{min-height:106px}}
 .thea-return{display:inline-block;font:400 var(--type-body)/1.5 'TeX Gyre Pagella',Palatino,'Palatino Linotype',Georgia,serif;color:var(--ink);text-decoration:none}
 .thea-return::before{content:'\2190';margin-right:.34em;color:#a9aaa5;transition:color .15s}
 .thea-return .sc{font-family:inherit;font-size:inherit;font-variant-caps:small-caps;letter-spacing:.03em}
@@ -178,3 +177,4 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 /* Center the reading column; keep paragraph lines left-aligned. */
 .paper-section>.section-heading,.experiment-copy,.section-lede,.evidence-heading,.mechanism-heading,.supplementary .revo-setup{max-width:43rem;margin-inline:auto;text-align:left}
 .evidence-heading,.mechanism-heading{grid-template-columns:minmax(0,1fr);gap:.35rem}
+.paper-nav .nav-index{color:var(--muted);font-variant-numeric:tabular-nums}
