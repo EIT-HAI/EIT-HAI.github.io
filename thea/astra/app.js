@@ -5,7 +5,6 @@
       "track": "CoRL 2026 Late-Breaking Results",
       "title": "Thea: Towards the Harness of Embodied Agents",
       "subtitle": "Revisited after GPT-6 Astra",
-      "affiliation": "HAI Lab · Eastern Institute of Technology, Ningbo",
       "abstractLabel": "Abstract.",
       "abstract": "Thea carried the harness paradigm of coding agents into the physical world, adding a persistent readable world state (Scene Graph as Context) and verifiable action-outcome judgments (Evaluation as Exit Codes). With GPT-6 Astra given a robot SDK inside Codex, we revisit tool granularity, which components come from the model or coding harness, and which still need to be built for the physical world.",
       "shortTools": "Tools",
@@ -54,7 +53,6 @@
       "revoNote": "5B shows two views of one hold. Stage 06 uses label-free derivatives of the same transfer; the complete clean playback removes 13 editorial placeholder cards and jumps directly across those unrecorded intervals. No motion is synthesized.",
       "navigationNote": "The multi-view replay includes every saved observation in order. Each observation is held for one second; no intermediate motion is interpolated, and playback is not execution time.",
       "lhprNote": "LHPR saved front, left and right views; no rear view was recorded. This is ordered-navigation execution, and the original instruction is retained above.",
-      "footer": "HAI Lab · Eastern Institute of Technology, Ningbo",
       "backTop": "Back to top ↑",
       "backHome": "Back to Thea main site →",
       "shareNote": "Offline sharing copy. Workspace observation images are not included.",
@@ -98,7 +96,6 @@
       "track": "CoRL 2026 Late-Breaking Results",
       "title": "Thea：面向具身智能体的 Harness",
       "subtitle": "在 GPT-6 Astra 之后重新审视",
-      "affiliation": "HAI Lab · 宁波东方理工大学",
       "abstractLabel": "摘要。",
       "abstract": "Thea 将 coding agent 的 harness 范式带入物理世界，通过 Scene Graph as Context 提供持续可读的世界状态，通过 Evaluation as Exit Codes 核验动作结果。现在，我们将机器人 SDK 交给 Codex 中的 GPT-6 Astra，重新审视控制粒度，以及哪些机制来自模型、哪些来自 coding harness、哪些仍有待为物理世界构建。",
       "shortTools": "工具",
@@ -147,7 +144,6 @@
       "revoNote": "5B 两个视角来自同一次保持。06 使用同一次搬运的无烧字派生版；完整 clean 版直接剪去 13 个缺录占位卡，在缺录处跳切，不补帧或合成动作。",
       "navigationNote": "多视角回放按顺序包含这次运行的全部已保存 observation。每个 observation 保持一秒，不插入中间运动，播放时长也不等于执行时长。",
       "lhprNote": "LHPR 只保存了前、左、右视角，没有后视角。这里执行的是顺序导航，并保留原始任务指令。",
-      "footer": "HAI Lab · 宁波东方理工大学",
       "backTop": "返回顶部 ↑",
       "backHome": "返回 Thea 主站 →",
       "shareNote": "离线分享版不包含 Workspace 观测原图。",
@@ -245,6 +241,5 @@
   }
   document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.lang)));
   const dialog=document.getElementById('image-viewer');document.getElementById('close-image').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
-  document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();})));
   applyLanguage(lang);
 })();

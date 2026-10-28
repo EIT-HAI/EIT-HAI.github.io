@@ -71,9 +71,6 @@
     if (typeof window.prepareEmbeddedVideo === 'function') window.prepareEmbeddedVideo(video, experiment.video);
     else video.src = experiment.video;
     for (const event of ['loadedmetadata', 'timeupdate', 'seeking', 'seeked', 'ratechange', 'ended']) video.addEventListener(event, updateMeta);
-    video.addEventListener('play', () => {
-      document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
-    });
     document.addEventListener('languagechange', applyCopy);
     applyCopy();
   });

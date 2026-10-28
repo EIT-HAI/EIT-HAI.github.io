@@ -33,6 +33,15 @@
     return minutes < 60 ? `${minutes}:${tail}` : `${Math.floor(minutes / 60)}:${String(minutes % 60).padStart(2, '0')}:${tail}`;
   };
   const fullscreenElement = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+  const visibilityObserver = typeof IntersectionObserver === 'function' ? new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const state = players.get(entry.target);
+      if (!state) return;
+      state.inView = entry.isIntersecting && entry.intersectionRatio >= .1;
+      state.syncPlayback();
+    });
+  }, { threshold: [0, .1] }) : null;
+  const syncAll = () => active.forEach(state => state.syncPlayback());
 
   function exitExpanded() {
     if (!expanded) return;
@@ -42,6 +51,7 @@
     document.body.style.overflow = previousOverflow;
     state.paint();
     state.full.focus();
+    syncAll();
   }
 
   function enterExpanded(state) {
@@ -53,6 +63,7 @@
     document.body.style.overflow = 'hidden';
     state.paint();
     state.full.focus();
+    syncAll();
   }
 
   async function toggleFullscreen(state) {
@@ -138,7 +149,11 @@
       viewport.append(big);
       shell.append(bar);
 
-      const state = { video, shell, full, paint, tick };
+      const state = { video, shell, full, paint, tick, syncPlayback, inView: false, userPaused: false, playPending: false };
+      video.defaultMuted = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
       const c = key => copy[language()][key];
       const label = (button, key, name) => {
         button.setAttribute('aria-label', c(key));
@@ -178,16 +193,53 @@
         tick();
       }
 
+      function shouldPlay() {
+        const focused = expanded?.shell || fullscreenElement();
+        if (document.hidden || state.userPaused || !video.isConnected) return false;
+        if (focused) return focused === shell || focused === video;
+        return state.inView;
+      }
+
+      function syncPlayback() {
+        const requested = shouldPlay();
+        video.autoplay = requested;
+        if (!requested) {
+          if (!video.paused) video.pause();
+          return;
+        }
+        if (!video.paused || state.playPending) return;
+        try {
+          state.playPending = true;
+          Promise.resolve(video.play()).then(() => {
+            state.playPending = false;
+            // Scrolling or a manual pause may occur while play() is pending.
+            if (!shouldPlay()) video.pause();
+          }).catch(error => {
+            state.playPending = false;
+            paint();
+            tick();
+            // A quick scroll back can race with an interrupted play request.
+            // Retry only interruptions, never an autoplay permission denial.
+            if (error?.name === 'AbortError' && shouldPlay()) syncPlayback();
+          });
+        } catch (_) {
+          state.playPending = false;
+          paint();
+          tick();
+        }
+      }
+
       function togglePlayback() {
         if (!video.paused && !video.ended) {
+          state.userPaused = true;
+          video.autoplay = false;
           video.pause();
           return;
         }
+        state.userPaused = false;
+        state.inView = true;
         if (video.ended) seekTo(0);
-        try {
-          const pending = video.play();
-          if (pending && typeof pending.catch === 'function') pending.catch(() => { paint(); tick(); });
-        } catch (_) { paint(); tick(); }
+        syncPlayback();
       }
 
       play.addEventListener('click', togglePlayback);
@@ -233,12 +285,10 @@
           mute.click();
         }
       });
-      video.addEventListener('play', () => {
-        document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
-        paint();
-      });
+      video.addEventListener('play', paint);
       ['pause', 'ended', 'volumechange', 'emptied', 'error'].forEach(event => video.addEventListener(event, () => { paint(); tick(); }));
       ['loadedmetadata', 'durationchange', 'timeupdate', 'seeking', 'seeked', 'ratechange'].forEach(event => video.addEventListener(event, tick));
+      video.addEventListener('canplay', syncPlayback);
       if (!existingViewport) video.addEventListener('loadedmetadata', () => {
         if (video.videoWidth && video.videoHeight) viewport.style.aspectRatio = `${video.videoWidth} / ${video.videoHeight}`;
       });
@@ -248,6 +298,8 @@
       active.add(state);
       video.controls = false;
       video.dataset.theaEnhanced = 'true';
+      if (visibilityObserver) visibilityObserver.observe(video);
+      else updateVisibility();
       return state;
     } catch (error) {
       // An enhancement failure must not strand a video without usable controls.
@@ -269,7 +321,30 @@
     root.querySelectorAll?.('video').forEach(enhance);
   }
 
-  ['fullscreenchange', 'webkitfullscreenchange'].forEach(event => document.addEventListener(event, () => active.forEach(state => state.paint())));
+  function updateVisibility() {
+    active.forEach(state => {
+      const bounds = state.video.getBoundingClientRect();
+      const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0));
+      state.inView = bounds.width > 0 && bounds.height > 0 && bounds.right > 0 && bounds.left < window.innerWidth && visibleHeight / bounds.height >= .1;
+    });
+    syncAll();
+  }
+
+  if (!visibilityObserver) {
+    let visibilityPending = false;
+    const scheduleVisibility = () => {
+      if (visibilityPending) return;
+      visibilityPending = true;
+      requestAnimationFrame(() => { visibilityPending = false; updateVisibility(); });
+    };
+    window.addEventListener('scroll', scheduleVisibility, { passive: true });
+    window.addEventListener('resize', scheduleVisibility);
+  }
+  document.addEventListener('visibilitychange', syncAll);
+  ['fullscreenchange', 'webkitfullscreenchange'].forEach(event => document.addEventListener(event, () => {
+    active.forEach(state => state.paint());
+    syncAll();
+  }));
   document.addEventListener('languagechange', () => active.forEach(state => { state.paint(); state.tick(); }));
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;

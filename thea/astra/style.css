@@ -217,3 +217,4 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 @media(max-width:720px){.memory-compare-grid{grid-template-columns:minmax(0,1fr);gap:1.4rem}.memory-chart-panel .memory-chart-title{min-height:0}.memory-compare svg{max-width:440px;margin-inline:auto}.memory-compare svg text{font-size:24px}.memory-chart-note{min-height:0}}
 @media(max-width:400px){.memory-compare svg text{font-size:28px}}
 /* memory-comparison:end */
+footer.wrap{justify-content:flex-end;border-top:0}
