@@ -13,7 +13,7 @@
   <script src="data.js?v=88c2d6be1963" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=89162d971bf1" defer></script>
+  <script src="app.js?v=7bcfd2e7ed58" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js?v=985d1595ff0b" defer></script>
   <script src="video-player.js?v=bcaddaae3870" defer></script>
@@ -157,7 +157,7 @@
             </section>
           </div>
           <div class="memory-result-analysis">
-            <p class="experiment-copy" data-i18n="worldStateObservation">With instructed graph memory, completion rose from 2/3 to 3/3 and mean SPL from 0.485 to 0.690 (+42.3%). Total turns fell from 358 to 308 (−14.0%), while the share of forward actions moving less than 1cm fell from 7.34% to 2.88%. The four charts show more complete goal coverage with less turning and fewer near-stationary forward attempts. SPL weights success by path efficiency, with failures scored zero.</p>
+            <p class="experiment-copy" data-i18n="worldStateObservation">Completed tasks counts runs that reached all five targets in order and issued STOP (2/3 → 3/3). Mean SPL weights task success by shortest-to-actual path efficiency, with failed runs scored zero (0.485 → 0.690). Turns totals 30° left/right actions across the three runs (358 → 308). Low-displacement forward rate is the fraction of forward actions moving less than 1cm (7.34% → 2.88%).</p>
             <p class="experiment-copy" data-i18n="worldStateMethod">Without prescribed graph memory, targets were re-localized from images and earlier sightings retained in conversation. With instructed graph memory, room and route records were stored and later reused. The videos, context streams and Workspaces show how these model-estimated records informed route choices and revisits.</p>
           </div>
           <details class="memory-details">
