@@ -185,6 +185,7 @@
     }
   };
 
+  for(const language of ['en','zh'])Object.assign(ui[language],window.PAPER_COPY?.[language]||{},window.METRIC_COPY?.[language]||{});
   let lang='en';
   const bindings=[];
   const assetURL=source=>typeof window.embeddedAssetURL==='function'?window.embeddedAssetURL(source):source;
@@ -207,8 +208,8 @@
     figure.append(frame);const caption=node('figcaption','media-caption');caption.append(text(node('span'),item.en,item.zh));figure.append(caption);return figure;
   }
   function experiment(item,family){
-    const article=node('article','experiment');article.dataset.experiment=`${family}-${item.id}`;
-    const head=node('div','experiment-head'),number=node('span','trial-id');number.textContent=item.id;head.append(number,text(node('h3'),item.title.en,item.title.zh));article.append(head);
+    const article=node('article','experiment');article.dataset.experiment=`${family}-${item.id}`;article.id=`${family}-${item.id}`;
+    const head=node('div','experiment-head');head.append(text(node('h4'),item.title.en,item.title.zh));article.append(head);
     if(item.task)article.append(text(node('p','task'),item.task.en,item.task.zh));
     const set=node('div','media-set'+(item.media.length>1?' multiple':''));item.media.forEach(entry=>set.append(media(entry)));article.append(set);
     const result=node('p','result');result.append(text(node('span'),item.result.en,item.result.zh));article.append(result);
@@ -218,29 +219,41 @@
   }
 
   window.EXPERIMENTS.robot.forEach(item=>document.getElementById('robot-grid').append(experiment(item,'robot')));
+  const skillEvidence=document.getElementById('skills-evidence');
+  window.EXPERIMENTS.robot.forEach(item=>{
+    const link=node('a','skill-task');link.href=`#robot-${item.id}`;
+    const image=node('img');image.src=assetURL(item.media[0].poster);image.alt=item.title.en;image.loading='lazy';
+    link.append(image,text(node('span'),item.title.en,item.title.zh));skillEvidence.append(link);
+  });
   window.EXPERIMENTS.revo.forEach(item=>{
     const target=item.id==='02'?'revo-outcome-grid':item.id==='04'?'revo-body-grid':'revo-supp-grid';
     document.getElementById(target).append(experiment(item,'revo'));
   });
 
   const order={astra:0,graph:1,eval:2};
-  [...window.EXPERIMENTS.navigation].sort((a,b)=>order[a.condition]-order[b.condition]||a.rank-b.rank).forEach(run=>{
+  [...window.EXPERIMENTS.navigation].sort((a,b)=>a.family.localeCompare(b.family)||a.rank-b.rank||order[a.condition]-order[b.condition]).forEach(run=>{
     const article=node('article','nav-card');article.dataset.run=run.id;
     const stream=node('div','context-stream context-stream-inline');stream.dataset.contextRun=run.id;stream.setAttribute('aria-live','off');article.append(stream);
     const native=node('div','native-result'),episode=node('span');episode.textContent=`Episode ${run.episode.split('_').at(-1)}`;native.append(episode,phrase('span',run.success?'completed':'incomplete','status'+(run.success?'':' incomplete')));article.append(native);
     const metrics=node('div','metrics'),stages=node('span'),actions=node('span');text(stages,`Stages ${run.stages}/${run.total}`,`阶段 ${run.stages}/${run.total}`);text(actions,`${run.actions} actions`,`${run.actions} 动作`);metrics.append(stages,actions);article.append(metrics);
     const details=node('details','run-details');details.append(phrase('summary','details'));const instruction=node('p');instruction.textContent=run.instruction;instruction.lang='en';details.append(instruction);const stop=node('p','stop-reason');stop.textContent=run.stop;const id=node('p','episode');id.textContent=run.episode;details.append(stop,id,phrase('p','navigationNote'));if(run.family==='lhpr')details.append(phrase('p','lhprNote'));const original=text(node('a','source-image'),ui.en.savedImage,ui.zh.savedImage);original.href=assetURL(run.image);original.target='_blank';original.rel='noopener';details.append(original);article.append(details);
     const workspace=window.createWorkspace(run);if(workspace)article.append(workspace);
-    document.getElementById(run.family==='lhpr'?'lhpr-grid':'supernav-grid').append(article);
+    const target=run.condition==='eval'?(run.family==='lhpr'?'lhpr-eval-grid':'supernav-eval-grid'):(run.family==='lhpr'?'lhpr-grid':'supernav-grid');
+    document.getElementById(target).append(article);
   });
 
   document.querySelectorAll('[data-i18n]').forEach(element=>{const key=element.dataset.i18n;if(ui.en[key]!=null&&ui.zh[key]!=null)bindings.push({element,en:ui.en[key],zh:ui.zh[key]});});
   function applyLanguage(next){
     lang=next;document.documentElement.lang=lang==='zh'?'zh-CN':'en';bindings.forEach(binding=>binding.element.textContent=binding[lang]);
-    const cited=document.querySelector('[data-i18n="changeEvalText"]');
-    const [before,after]=cited.textContent.split('[13]');
-    const reference=node('a');reference.href='https://wentao.live/blog/astra-and-beyond/';reference.textContent='[13]';reference.target='_blank';reference.rel='noopener';reference.title='Wentao Zhu. GPT-6 Astra: 3D, Embodied AI, and Beyond (2026).';
-    cited.replaceChildren(document.createTextNode(before),reference,document.createTextNode(after));
+    document.querySelectorAll('[data-i18n]').forEach(element=>{
+      const value=element.textContent,matches=[...value.matchAll(/\[(\d+(?:,\s*\d+)*)\]/g)];if(!matches.length)return;
+      const parts=[];let start=0;
+      matches.forEach(match=>{
+        parts.push(document.createTextNode(value.slice(start,match.index)));
+        const reference=node('a');reference.href=match[1]==='13'?'https://wentao.live/blog/astra-and-beyond/':'assets/documents/thea-paper-current.pdf#page=3';reference.textContent=match[0];reference.target='_blank';reference.rel='noopener';reference.title=lang==='zh'?'论文参考文献':'Paper references';parts.push(reference);start=match.index+match[0].length;
+      });
+      parts.push(document.createTextNode(value.slice(start)));element.replaceChildren(...parts);
+    });
     document.querySelectorAll('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===lang)));document.dispatchEvent(new Event('languagechange'));
   }
   document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.lang)));

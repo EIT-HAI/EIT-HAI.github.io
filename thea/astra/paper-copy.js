@@ -1,0 +1,60 @@
+'use strict';
+
+// Paper-aligned prose. Figure-number references are omitted on the web page.
+// Completion is expressed as a rate, as requested, with the paired setup retained.
+window.PAPER_COPY = {
+  en: {
+    abstract: "Thea carried the harness paradigm of coding agents into the physical world, adding the two things the physical world does not supply for free: a persistent readable world state and a verifiable judgment of each action (Section 1). With GPT-6 Astra, a model can be handed a robot SDK inside an ordinary coding-agent environment. We revisit at what granularity it now controls the body (Section 2), who supplies each harness component, the model, the coding harness, or something still to be built (Section 3), and what changes and what remains (Section 4).",
+    theaTitle: "Thea: A Harness for the Physical World",
+    theaIntro: "Coding agents write, run, read the error, fix, and run again [1, 2]. What made them work is not a better model but a better harness: the infrastructure that grounds the model in its environment, mediates actions through tools, and closes the loop through evaluation and recovery [3, 4, 5]. Thea [6] carries this blueprint to robots: an agentic loop, every robot capability as a callable tool, context engineering, skills, memory, an Embodiment Profile, and hooks.",
+    theaMechanism: "The physical world withholds two things software grants for free. A codebase is readable and persistent. A room is seen as a momentary slice, and the world keeps no record. A command returns an exit code. A closed gripper returns no verdict on whether the cup is in it. Scene Graph as Context turns local observations into persistent symbols briefed before every decision. Evaluation as Exit Codes runs an independent evaluator after each manipulation that judges success against the tool's post-condition and returns a failure reason for recovery. Its accuracy caps what retries can recover.",
+    theaConclusion: "Deployed on three robots with GPT-5.5 as the decision model, Thea outperformed end-to-end policies [7, 8, 9] and orchestration baselines [10, 11] built on the same tools. Every component sat on the harness side of the model–harness boundary. This abstract asks where that boundary sits two months later.",
+    robotIntro: "In Thea the model chose among skill-level tools, pick, place, navigate_to, each a learned policy or stack [12]. GPT-6 Astra changes the premise: a frontier model can now be handed the robot itself [13]. In October 2026 we gave it, running in a coding-agent environment (Codex), the Astribot S1 Python SDK and its documentation, with no Thea component present, and asked for four tasks with the left parallel gripper: tabletop cleanup, cleanup after a base approach, drawer retrieval and closure, and bowl transport (with a cube inside).",
+    robotMethod: "We observe the agent working below the pick-and-place interface: it registered head-camera RGB-D into the base frame, solved inverse kinematics numerically against the SDK's forward kinematics, screened joint samples for self-collision, sent one motion segment at a time, and drove the base with velocity pulses gated by lidar clearance.",
+    robotObservation: "Its first errors were geometric and self-corrected, and all four tasks reached their final states. Within this scope, learned manipulation policies were not needed: the model wrote the control stack Thea had put behind a tool.",
+    harnessIntro: "The capability on display is not the model's alone: Codex supplied the loop, tool execution, files and the write-run-read-fix cycle. What it does not supply is anything specific to the physical world. We therefore read the runs through the components Thea had built, asking which the model already has and which it still lacks.",
+    worldStateIntro: "Three paired five-target SuperNav tasks, with one run per condition, a 500-action cap and a 1m arrival threshold.",
+    worldStateMethod: "In LHPR-VLN [14] and SuperNav [15] without a scene graph, targets were re-localized from images and earlier sightings kept in conversation. With instructed graph memory, stored room and route records were reused.",
+    worldStateObservation: "Across the three paired SuperNav tasks, success rate rose from 66.7% without the graph to 100% with instructed graph memory, and mean SPL from 0.485 to 0.690 (+42.3%). SPL weights task success by the shortest-to-actual path length ratio, with failures scored zero.",
+    outcomeTitle: "Evaluation",
+    outcomeIntro: "We examine whether the model's own judgment of outcomes is enough (evaluator).",
+    outcomeMethod: "In the Revo2 cup-grasping trials, SDK motion completion did not imply a successful grasp: the wrist rose while the cup stayed on its support. The agent checked post-action images, rejected unsuccessful lifts and adjusted its grasp. These were task-specific checks of unmeasured accuracy, not an independent evaluator.",
+    bodyTitle: "Body limits",
+    bodyIntro: "We examine whether the model adapts to a new body and its constraints (embodiment profile).",
+    bodyMethod: "The agent found that the installed collision model still described a parallel gripper rather than the Revo2 hand. Human-prompted geometry checks gave local per-finger landmark RMS errors of 1.35–2.20 mm with a fixed hand shape, versus 5.26 mm overall after slight finger closure. Calibration for one hand shape did not guarantee accuracy after closure.",
+    skillsTitle: "Skills",
+    skillsIntro: "We examine whether experience becomes reusable skills (skills and memory).",
+    skillsMethod: "Modules written for the first task (capture, localization, IK, screening) were reused in the other three, accumulating as files in the workspace.",
+    supplementaryTitle: "Supplementary",
+    supplementaryIntro: "Additional navigation and Revo2 trials complement the paper's primary examples.",
+    navigationSupplementTitle: "Navigation evaluation condition",
+    revoTitle: "Additional Revo2 trials"
+  },
+  zh: {
+    abstract: "Thea 将编程智能体的 harness 范式带入物理世界，补上物理世界无法直接提供的两件事：持久、可读的世界状态，以及对每次动作结果的可验证判定（第 1 节）。有了 GPT-6 Astra，可以将机器人 SDK 交给普通编程智能体环境中的模型。我们重新考察它如今以何种粒度控制身体（第 2 节），每个 harness 组件究竟由模型、编程 harness 提供，还是仍有待构建（第 3 节），以及哪些发生改变、哪些保持不变（第 4 节）。",
+    theaTitle: "Thea：面向物理世界的 Harness",
+    theaIntro: "编程智能体编写、运行、读取错误、修正，然后再次运行[1, 2]。使其奏效的不是更强的模型，而是更好的 harness：它使模型立足于环境，通过工具调度动作，并借助评估与恢复闭合循环[3, 4, 5]。Thea[6] 将这一蓝图用于机器人：智能体循环、将机器人每项能力作为可调用工具、上下文工程、技能、记忆、本体档案和 hooks。",
+    theaMechanism: "物理世界缺少软件世界直接提供的两样东西。代码库可读且持久。房间只能以瞬时切片的形式被看见，世界自身并不保留记录。命令会返回退出码，闭合的夹爪却不会告诉我们杯子是否在其中。Scene Graph as Context 将局部观测转化为持久符号，在每次决策前提供给模型。Evaluation as Exit Codes 在每次操作后运行独立评估器，根据工具的后置条件判定成功，并返回用于恢复的失败原因。其准确率限制了重试所能挽回的失败。",
+    theaConclusion: "在三个机器人上部署、由 GPT-5.5 负责决策时，Thea 优于端到端策略[7, 8, 9]，也优于基于相同工具构建的编排基线[10, 11]。当时，每个组件都位于模型与 harness 边界的 harness 一侧。本扩展摘要追问两个月之后这条边界位于何处。",
+    robotIntro: "在 Thea 中，模型选择的是技能级工具 pick、place、navigate_to，每个工具背后都是一个学习式策略或系统栈[12]。GPT-6 Astra 改变了这一前提：前沿模型如今可以直接接手机器人本体[13]。2026 年 10 月，我们让它在编程智能体环境 Codex 中运行，向其提供 Astribot S1 Python SDK 及文档，不保留任何 Thea 组件，并要求它使用左侧平行夹爪完成四项任务：桌面收纳、底盘靠近后的收纳、抽屉取物与关闭，以及碗搬运（碗内装有方块）。",
+    robotMethod: "我们观察到，智能体工作在抓取与放置接口之下：它将头部相机的 RGB-D 数据配准到基座坐标系，基于 SDK 的正运动学数值求解逆运动学，采样检查关节轨迹的自碰撞，逐段发送运动命令，并根据激光雷达测得的净空发送底盘速度脉冲。",
+    robotObservation: "最初的错误是几何方面的，并由其自行纠正，四项任务均达到最终状态。在这一范围内，不需要学习式操作策略：模型编写出了原本由 Thea 封装在工具背后的控制栈。",
+    harnessIntro: "展示的能力并非由模型独自提供：Codex 提供了循环、工具执行、文件，以及编写、运行、读取和修正的循环。它没有提供的是物理世界专属的机制。因此，我们用 Thea 已构建的组件来审视这些运行，追问哪些能力模型已经具备，哪些仍然缺失。",
+    worldStateIntro: "三项配对的 SuperNav 五目标任务，每种条件各运行一次，动作上限为 500，到达阈值为 1m。",
+    worldStateMethod: "在不使用场景图的 LHPR-VLN[14] 和 SuperNav[15] 中，目标需要从图像重新定位，先前的目击信息则保留在对话中。在按要求维护图记忆时，已保存的房间和路线记录被再次使用。",
+    worldStateObservation: "在三项配对的 SuperNav 任务中，成功率从不使用场景图时的 66.7% 增至使用受指导图记忆时的 100%，平均 SPL 从 0.485 增至 0.690（相对提高 42.3%）。SPL 按最短路径与实际路径的长度之比对任务成功加权，失败计为 0。",
+    outcomeTitle: "评估",
+    outcomeIntro: "我们考察模型自身对结果的判断是否足够（评估器）。",
+    outcomeMethod: "在 Revo2 抓杯试验中，SDK 报告运动完成并不意味着抓取成功：手腕上升，杯子却仍留在支撑面上。智能体检查动作后的图像，识别出未成功的试抬，并调整抓握。这些是准确率尚未测量的任务专用检查，并非独立评估器。",
+    bodyTitle: "身体限制",
+    bodyIntro: "我们考察模型能否适应新的身体及其约束（本体档案）。",
+    bodyMethod: "智能体发现，已安装的碰撞模型仍描述平行夹爪，而不是 Revo2 手。在人工推动的几何核查中，固定手型下各指表面参考点的局部位置误差为 1.35–2.20 mm RMS，小幅闭指后整体 RMS 增至 5.26 mm。固定手型下标定准确，并不意味着闭合手指后的位置预测仍然准确。",
+    skillsTitle: "技能",
+    skillsIntro: "我们考察经验是否转化为可复用技能（技能和记忆）。",
+    skillsMethod: "为第一项任务编写的模块，包括采集、定位、逆运动学和筛查，被后续三项任务复用，并以文件的形式在工作目录中积累。",
+    supplementaryTitle: "补充材料",
+    supplementaryIntro: "补充导航与 Revo2 试验，为论文主要案例提供更多实验记录。",
+    navigationSupplementTitle: "导航评估条件",
+    revoTitle: "其他 Revo2 实验"
+  }
+};

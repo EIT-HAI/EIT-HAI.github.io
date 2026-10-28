@@ -8,79 +8,112 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=ed1df2471a12">
+  <link rel="stylesheet" href="style.css?v=d3dfb86cd2c9">
   <link rel="stylesheet" href="video-player.css?v=0926c864d03f">
+  <link rel="stylesheet" href="paper-navigation.css?v=e0a51896f5cb">
   <script src="data.js?v=88c2d6be1963" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=eb9971330bc5" defer></script>
+  <script src="paper-copy.js?v=ecf0d69a7ccf" defer></script>
+  <script src="metric-copy.js?v=e13e0bf9030b" defer></script>
+  <script src="app.js?v=71c926c02d95" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js?v=4a38c5584921" defer></script>
   <script src="video-player.js?v=f9e3a792f810" defer></script>
+  <script src="paper-navigation.js?v=02883d2d9ed4" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#experiments">Skip to experiments</a>
+  <details class="paper-toc-panel" open>
+    <summary data-i18n="contentsTitle">Contents</summary>
+    <nav class="paper-toc" id="paper-toc" aria-label="Contents">
+      <a href="#thea"><span>1</span> <span data-i18n="theaTitle">Thea: A Harness for the Physical World</span></a>
+      <a href="#tools"><span>2</span> <span data-i18n="toolsTitle">Revisiting the Tools</span></a>
+      <a href="#harness"><span>3</span> <span data-i18n="harnessTitle">Revisiting the Harness</span></a>
+      <a class="toc-sub" href="#world-state"><span>3.1</span> <span data-i18n="worldStateTitle">World state and spatial memory</span></a>
+      <a class="toc-sub" href="#outcome-checking"><span>3.2</span> <span data-i18n="outcomeTitle">Evaluation</span></a>
+      <a class="toc-sub" href="#body-limits"><span>3.3</span> <span data-i18n="bodyTitle">Body limits</span></a>
+      <a class="toc-sub" href="#skills"><span>3.4</span> <span data-i18n="skillsTitle">Skills</span></a>
+      <a href="#remains"><span>4</span> <span data-i18n="remainsTitle">What Changes and What Remains</span></a>
+      <a href="#supplementary" data-i18n="supplementaryTitle">Supplementary</a>
+      <a class="toc-sub" href="#navigation-evaluation" data-i18n="navigationSupplementTitle">Navigation evaluation condition</a>
+      <a class="toc-sub" href="#revo" data-i18n="revoTitle">Additional Revo2 trials</a>
+    </nav>
+  </details>
   <div class="topline wrap"><a class="thea-return" href="https://eit-hai.github.io/thea/" aria-label="Thea main site"><span class="sc">Thea</span></a><div class="language" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="zh" aria-pressed="false">中文</button></div></div>
   <header class="masthead wrap">
     <h1 data-i18n="title">Thea: Towards the Harness of Embodied Agents</h1>
     <p class="subtitle" data-i18n="subtitle">Revisited after GPT-6 Astra</p>
-    <nav class="paper-nav" aria-label="Paper sections">
-      <a href="#tools"><span class="nav-index" aria-hidden="true">01</span><span data-i18n="shortTools">Tools</span></a>
-      <a href="#harness"><span class="nav-index" aria-hidden="true">02</span><span data-i18n="shortHarness">Harness</span></a>
-      <a href="#remains"><span class="nav-index" aria-hidden="true">03</span><span data-i18n="shortRemains">What remains</span></a>
-    </nav>
-    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea carried the harness paradigm of coding agents into the physical world, adding a persistent readable world state (Scene Graph as Context) and verifiable action-outcome judgments (Evaluation as Exit Codes). With GPT-6 Astra given a robot SDK inside Codex, we revisit tool granularity, which components come from the model or coding harness, and which still need to be built for the physical world.</span></p>
+    <p class="paper-download"><a href="assets/documents/thea-paper-current.pdf" target="_blank" rel="noopener" data-i18n="paperPdf">Paper PDF</a></p>
+    <p class="abstract"><strong data-i18n="abstractLabel">Abstract.</strong> <span data-i18n="abstract">Thea carried the harness paradigm of coding agents into the physical world, adding the two things the physical world does not supply for free: a persistent readable world state and a verifiable judgment of each action (Section 1). With GPT-6 Astra, a model can be handed a robot SDK inside an ordinary coding-agent environment. We revisit at what granularity it now controls the body (Section 2), who supplies each harness component, the model, the coding harness, or something still to be built (Section 3), and what changes and what remains (Section 4).</span></p>
   </header>
   <main class="wrap" id="experiments">
+    <section class="experiment-group paper-section" id="thea" aria-labelledby="thea-title">
+      <div class="section-heading"><div><p class="section-number">1</p><h2 id="thea-title" data-i18n="theaTitle">Thea: A Harness for the Physical World</h2></div></div>
+      <figure class="paper-figure paper-overview">
+        <img src="assets/images/thea-paper-overview.png" width="1920" height="784" alt="Thea harness with model, tools, body, scene graph and evaluator" loading="lazy">
+        <figcaption data-i18n="theaFigureCaption">The Thea harness: tools, a persistent scene graph, and an independent evaluator [6].</figcaption>
+      </figure>
+      <p class="experiment-copy" data-i18n="theaIntro">Coding agents write, run, read the error, fix, and run again [1, 2]. What made them work is not a better model but a better harness: the infrastructure that grounds the model in its environment, mediates actions through tools, and closes the loop through evaluation and recovery [3, 4, 5]. Thea [6] carries this blueprint to robots: an agentic loop, every robot capability as a callable tool, context engineering, skills, memory, an Embodiment Profile, and hooks.</p>
+      <p class="experiment-copy" data-i18n="theaMechanism">The physical world withholds two things software grants for free. A codebase is readable and persistent. A room is seen as a momentary slice, and the world keeps no record. A command returns an exit code. A closed gripper returns no verdict on whether the cup is in it. Scene Graph as Context turns local observations into persistent symbols briefed before every decision. Evaluation as Exit Codes runs an independent evaluator after each manipulation that judges success against the tool's post-condition and returns a failure reason for recovery. Its accuracy caps what retries can recover.</p>
+      <p class="experiment-copy section-observation" data-i18n="theaConclusion">Deployed on three robots with GPT-5.5 as the decision model, Thea outperformed end-to-end policies [7, 8, 9] and orchestration baselines [10, 11] built on the same tools. Every component sat on the harness side of the model–harness boundary. This abstract asks where that boundary sits two months later.</p>
+    </section>
     <section class="experiment-group paper-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-heading"><div><p class="section-number">01</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div></div>
-      <p class="experiment-copy" data-i18n="robotIntro">Thea originally exposed skill-level tools such as pick, place and navigate_to. Here we gave GPT-6 Astra, running in Codex, the Astribot S1 Python SDK and its documentation, with no Thea component present, and asked for the four left parallel-gripper tasks below.</p>
-      <p class="experiment-copy" data-i18n="robotObservation">The agent corrected early geometric errors and all four tasks reached the displayed final states: objects in the plate, a retrieved cube and closed drawer, and a loaded bowl delivered to the destination table. For these tasks, the model constructed control code rather than invoking a learned manipulation policy. The drawer video combines two sessions.</p>
-      <p class="experiment-copy" data-i18n="robotMethod">The agent registered head-camera RGB-D observations in the base frame, solved inverse kinematics numerically against the SDK’s forward kinematics, screened joint samples for self-collision, and sent one motion segment at a time. Base movement used velocity pulses gated by lidar clearance.</p>
+      <div class="section-heading"><div><p class="section-number">2</p><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div></div>
+      <p class="experiment-copy" data-i18n="robotIntro">In Thea the model chose among skill-level tools, pick, place, navigate_to, each a learned policy or stack [12]. GPT-6 Astra changes the premise: a frontier model can now be handed the robot itself [13]. In October 2026 we gave it, running in a coding-agent environment (Codex), the Astribot S1 Python SDK and its documentation, with no Thea component present, and asked for four tasks with the left parallel gripper: tabletop cleanup, cleanup after a base approach, drawer retrieval and closure, and bowl transport (with a cube inside).</p>
       <div class="experiment-grid" id="robot-grid"></div>
+      <div class="section-observation">
+        <p class="experiment-copy" data-i18n="robotMethod">We observe the agent working below the pick-and-place interface: it registered head-camera RGB-D into the base frame, solved inverse kinematics numerically against the SDK's forward kinematics, screened joint samples for self-collision, sent one motion segment at a time, and drove the base with velocity pulses gated by lidar clearance.</p>
+        <p class="experiment-copy" data-i18n="robotObservation">Its first errors were geometric and self-corrected, and all four tasks reached their final states. Within this scope, learned manipulation policies were not needed: the model wrote the control stack Thea had put behind a tool.</p>
+      </div>
     </section>
 
     <section class="experiment-group paper-section" id="harness" aria-labelledby="harness-title">
-      <div class="section-heading"><div><p class="section-number">02</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div><p class="setup" data-i18n="harnessSetup">Model · coding harness · what remains</p></div>
-      <p class="section-lede wide" data-i18n="harnessIntro">Codex supplied the agentic loop, tool execution, files and the write-run-read-fix cycle. The runs revisit who supplies Thea’s physical-world components: world state and spatial memory, evaluation, body limits, and skills.</p>
+      <div class="section-heading"><div><p class="section-number">3</p><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div></div>
+      <p class="section-lede wide" data-i18n="harnessIntro">The capability on display is not the model's alone: Codex supplied the loop, tool execution, files and the write-run-read-fix cycle. What it does not supply is anything specific to the physical world. We therefore read the runs through the components Thea had built, asking which the model already has and which it still lacks.</p>
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and spatial memory</h3><p data-i18n="worldStateIntro">The paper compares three paired five-target tasks from HabitatGS-Benchmark, released with SuperNav: Astra without prescribed scene-graph memory versus Astra instructed to maintain it. Each task has one run per condition, a 500-action cap and a 1m arrival threshold.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title"><span class="subsection-number">3.1</span> <span data-i18n="worldStateTitle">World state and spatial memory</span></h3><p data-i18n="worldStateIntro">Three paired five-target SuperNav tasks, with one run per condition, a 500-action cap and a 1m arrival threshold.</p></div></div>
+        <figure class="paper-figure paper-world-state">
+          <img src="assets/images/paper-world-state.png" width="660" height="400" alt="Recorded route and scene graph with target, region, relation and object legend" loading="lazy">
+          <figcaption data-i18n="worldStateFigureCaption">Recorded route and instructed scene graph over a scene map, with model-estimated node positions.</figcaption>
+        </figure>
+        <div class="navigation-family"><h4>HabitatGS-Benchmark <span class="muted">(SuperNav tasks)</span></h4><div class="navigation-grid" id="supernav-grid"></div></div>
+        <div class="navigation-family"><h4>LHPR-VLN</h4><div class="navigation-grid" id="lhpr-grid"></div></div>
         <!-- memory-comparison:start -->
         <figure class="memory-compare" id="memory-comparison" aria-labelledby="memory-comparison-title">
           <h4 class="memory-comparison-title" id="memory-comparison-title" data-i18n="memoryDiagramTitle">Scene-graph memory: paired results</h4>
           <div class="memory-chart-legend"><span class="memory-legend-baseline"><span data-i18n="memoryBaselineTitle">Astra</span></span><span class="memory-legend-graph"><span data-i18n="memoryGraphTitle">Astra + SG</span></span></div>
           <p class="memory-condition-note" data-i18n="memoryConditions">Astra: no prescribed graph memory. Astra + SG: instructed scene-graph memory.</p>
           <div class="memory-compare-grid">
-            <section class="memory-chart-panel" data-metric="completed">
-              <h4 class="memory-chart-title" data-i18n="memoryCompleted">Completed tasks</h4>
-              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-completed-title memory-completed-desc" data-metric="completed" data-max="3" data-baseline="280" data-plot-top="40">
-                <title id="memory-completed-title" data-i18n="memoryCompleted">Completed tasks</title>
-                <desc id="memory-completed-desc" data-i18n="memoryCompletedDesc">Astra completed two of three tasks; Astra with instructed scene-graph memory completed all three, at the 1 m threshold.</desc>
+            <section class="memory-chart-panel" data-metric="success-rate">
+              <h4 class="memory-chart-title" data-i18n="memoryCompleted">Success rate</h4>
+              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-completed-title memory-completed-desc" data-metric="success-rate" data-max="100" data-baseline="280" data-plot-top="40">
+                <title id="memory-completed-title" data-i18n="memoryCompleted">Success rate</title>
+                <desc id="memory-completed-desc" data-i18n="memoryCompletedDesc">Task success rate is 66.7% for Astra and 100% for Astra with instructed scene-graph memory, across the same three tasks per condition. Success requires all five ordered arrivals at the 1m threshold followed by final STOP.</desc>
                 <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
-                <text class="memory-chart-tick" x="64" y="288">0</text>
-                <line class="memory-chart-gridline" x1="80" y1="200" x2="416" y2="200"/>
-                <text class="memory-chart-tick" x="64" y="208">1</text>
-                <line class="memory-chart-gridline" x1="80" y1="120" x2="416" y2="120"/>
-                <text class="memory-chart-tick" x="64" y="128">2</text>
+                <text class="memory-chart-tick" x="64" y="288">0%</text>
+                <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/><text class="memory-chart-tick" x="64" y="228">25%</text>
+                <line class="memory-chart-gridline" x1="80" y1="160" x2="416" y2="160"/><text class="memory-chart-tick" x="64" y="168">50%</text>
+                <line class="memory-chart-gridline" x1="80" y1="100" x2="416" y2="100"/><text class="memory-chart-tick" x="64" y="108">75%</text>
                 <line class="memory-chart-gridline" x1="80" y1="40" x2="416" y2="40"/>
-                <text class="memory-chart-tick" x="64" y="48">3</text>
+                <text class="memory-chart-tick" x="64" y="48">100%</text>
                 <line class="memory-chart-axis" x1="80" y1="40" x2="80" y2="280"/>
                 <line class="memory-chart-axis" x1="80" y1="280" x2="416" y2="280"/>
-                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="2" x="112" y="120.000000" width="104" height="160.000000"/>
-                <text class="memory-chart-value" x="164" y="104.000000">2/3</text>
-                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="3" x="280" y="40.000000" width="104" height="240.000000"/>
-                <text class="memory-chart-value memory-chart-value-graph" x="332" y="24.000000">3/3</text>
+                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="66.66666666666667" data-count="2" data-denominator="3" x="112" y="120.000000" width="104" height="160.000000"/>
+                <text class="memory-chart-value" x="164" y="104.000000">66.7%</text>
+                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="100" data-count="3" data-denominator="3" x="280" y="40.000000" width="104" height="240.000000"/>
+                <text class="memory-chart-value memory-chart-value-graph" x="332" y="24.000000">100%</text>
                 <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
                 <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
               </svg>
-              <p class="memory-chart-note" data-i18n="memoryCompletedNote">Ordered arrivals followed by final STOP.</p>
+              <p class="memory-chart-note" data-i18n="memoryCompletedNote">66.7% → 100%; three tasks per condition.</p>
             </section>
             <section class="memory-chart-panel" data-metric="spl">
               <h4 class="memory-chart-title" data-i18n="memoryMeanSPL">Mean SPL</h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-spl-title memory-spl-desc" data-metric="spl" data-max="1" data-baseline="280" data-plot-top="40">
                 <title id="memory-spl-title" data-i18n="memoryMeanSPL">Mean SPL</title>
-                <desc id="memory-spl-desc" data-i18n="memorySplDesc">Mean success-weighted SPL was 0.485 for Astra and 0.690 with instructed scene-graph memory, a 42.3% relative increase.</desc>
+                <desc id="memory-spl-desc" data-i18n="memorySplDesc">Mean success-weighted path length score is 0.485 for Astra and 0.690 with instructed scene-graph memory. It averages all three runs, including zero for failures.</desc>
                 <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
                 <text class="memory-chart-tick" x="64" y="288">0</text>
                 <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
@@ -106,7 +139,7 @@
               <h4 class="memory-chart-title" data-i18n="memoryTurnsTitle">Turns</h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-turns-title memory-turns-desc" data-metric="turns" data-max="400" data-baseline="280" data-plot-top="40">
                 <title id="memory-turns-title" data-i18n="memoryTurnsTitle">Turns</title>
-                <desc id="memory-turns-desc" data-i18n="memoryTurnsDesc">Across all three tasks, Astra used 358 turns and Astra with instructed scene-graph memory used 308 turns.</desc>
+                <desc id="memory-turns-desc" data-i18n="memoryTurnsDesc">Total 30° left and right turn actions across three tasks: 358 for Astra and 308 with instructed scene-graph memory.</desc>
                 <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
                 <text class="memory-chart-tick" x="64" y="288">0</text>
                 <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
@@ -132,7 +165,7 @@
               <h4 class="memory-chart-title" data-i18n="memoryLowTitle">Low-displacement forward rate</h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-low-forward-rate-title memory-low-forward-rate-desc" data-metric="low-forward-rate" data-max="10" data-baseline="280" data-plot-top="40">
                 <title id="memory-low-forward-rate-title" data-i18n="memoryLowTitle">Low-displacement forward rate</title>
-                <desc id="memory-low-forward-rate-desc" data-i18n="memoryLowDesc">Forward movements under 1 cm accounted for 64 of 872 forward actions for Astra and 27 of 936 for Astra with instructed scene-graph memory: 7.34% and 2.88%.</desc>
+                <desc id="memory-low-forward-rate-desc" data-i18n="memoryLowDesc">Pooled forward actions with XYZ displacement below 1cm: 64 of 872 for Astra, or 7.34%; 27 of 936 with instructed scene-graph memory, or 2.88%.</desc>
                 <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
                 <text class="memory-chart-tick" x="64" y="288">0%</text>
                 <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
@@ -152,19 +185,15 @@
                 <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
                 <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
               </svg>
-              <p class="memory-chart-note" data-i18n="memoryLowNote">Displacement <1 cm: 64/872 → 27/936 forward actions (−60.7% relative rate).</p>
+              <p class="memory-chart-note" data-i18n="memoryLowNote">Displacement &lt;1 cm: 64/872 → 27/936 forward actions (−60.7% relative rate).</p>
             </section>
-          </div>
-          <div class="memory-result-analysis">
-            <p class="experiment-copy" data-i18n="worldStateObservation">Completed tasks counts runs that reached all five targets in order and issued STOP (2/3 → 3/3). Mean SPL weights task success by shortest-to-actual path efficiency, with failed runs scored zero (0.485 → 0.690). Turns totals 30° left/right actions across the three runs (358 → 308). Low-displacement forward rate is the fraction of forward actions moving less than 1cm (7.34% → 2.88%).</p>
-            <p class="experiment-copy" data-i18n="worldStateMethod">Without prescribed graph memory, targets were re-localized from images and earlier sightings retained in conversation. With instructed graph memory, room and route records were stored and later reused. The videos, context streams and Workspaces show how these model-estimated records informed route choices and revisits.</p>
           </div>
           <details class="memory-details">
             <summary data-i18n="memoryTableSummary">Full three-task results</summary>
             <div class="memory-table-wrap" tabindex="0">
               <table class="memory-data-table">
-                <caption data-i18n="memoryTableCaption">All six paired runs at 1 m. Forward <1 cm counts low-displacement forward actions.</caption>
-                <thead><tr><th scope="col" data-i18n="memoryTask">Task</th><th scope="col" data-i18n="memoryCondition">Condition</th><th scope="col" data-i18n="memoryTaskComplete">Completed</th><th scope="col" data-i18n="memorySPL">SPL</th><th scope="col" data-i18n="memoryActions">Actions</th><th scope="col" data-i18n="memoryTurnsTitle">Turns</th><th scope="col" data-i18n="memoryPath">Path (m)</th><th scope="col" data-i18n="memoryNearZero">Forward <1 cm</th></tr></thead>
+                <caption data-i18n="memoryTableCaption">All six paired runs at 1 m. Forward &lt;1 cm counts low-displacement forward actions.</caption>
+                <thead><tr><th scope="col" data-i18n="memoryTask">Task</th><th scope="col" data-i18n="memoryCondition">Condition</th><th scope="col" data-i18n="memoryTaskComplete">Completed</th><th scope="col" data-i18n="memorySPL">SPL</th><th scope="col" data-i18n="memoryActions">Actions</th><th scope="col" data-i18n="memoryTurnsTitle">Turns</th><th scope="col" data-i18n="memoryPath">Path (m)</th><th scope="col" data-i18n="memoryNearZero">Forward &lt;1 cm</th></tr></thead>
                 <tbody>
                   <tr data-run="stop-supernav-1"><th scope="row">107</th><td><span data-i18n="memoryBaselineTitle">Astra</span></td><td><span data-i18n="memoryNo">No</span></td><td>0.000</td><td>498</td><td>166</td><td>69.89</td><td>41</td></tr>
                   <tr data-run="sg2-supernav-1"><th scope="row">107</th><td><span data-i18n="memoryGraphTitle">Astra + SG</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.724</td><td>470</td><td>124</td><td>82.89</td><td>0</td></tr>
@@ -178,44 +207,96 @@
           </details>
         </figure>
         <!-- memory-comparison:end -->
-        <p class="experiment-copy" data-i18n="worldStateCoverage">All 18 navigation records are included. The evaluation condition completed 0/3 HabitatGS tasks: mismatched review targets and repeated viewpoint checks led to detours, and all three runs exhausted 500 actions without a final STOP. All nine LHPR runs were incomplete: six exhausted the action budget; three submitted their stage STOPs but did not reach all accepted goal positions. Uncertain target identity and arrival estimates were recurring problems.</p>
-      <div class="navigation-family"><h3>LHPR-VLN</h3><div class="navigation-grid" id="lhpr-grid"></div></div>
-      <div class="navigation-family"><h3>HabitatGS-Benchmark <span class="muted">(SuperNav tasks)</span></h3><div class="navigation-grid" id="supernav-grid"></div></div>
+        <section class="metric-guide" id="metric-guide" aria-labelledby="metric-guide-title">
+          <h4 id="metric-guide-title" data-i18n="metricGuideTitle">What the four metrics mean</h4>
+          <p data-i18n="metricGuideIntro">The same three five-target tasks are compared, with one run per task and condition. Values below are Astra → Astra + SG.</p>
+          <dl class="metric-definitions">
+            <div class="metric-definition">
+              <dt data-i18n="memoryCompleted">Success rate</dt>
+              <dd>
+                <p data-i18n="metricSuccessMeaning">How often the full task succeeds. A run must reach all five goals in order, each at a distance of less than 1m from an approved viewpoint, then issue STOP within the 500-action budget.</p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSuccessFormula">Success rate (%) = 100 × successful runs / 3.</span></p>
+                <p class="metric-result" data-i18n="metricSuccessResult">66.7% → 100%.</p>
+              </dd>
+            </div>
+            <div class="metric-definition">
+              <dt data-i18n="memoryMeanSPL">Mean SPL</dt>
+              <dd>
+                <p data-i18n="metricSplMeaning">Success weighted by Path Length combines completion and path efficiency. For run i, Sᵢ is 1 for success and 0 otherwise; Lᵢ* is the benchmark's shortest reference route through all ordered goals, and Pᵢ is actual travelled distance, summed from consecutive XYZ positions.</p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSplFormula">Mean SPL = (1/3) × Σᵢ₌₁³ [Sᵢ × Lᵢ* / max(Lᵢ*, Pᵢ)].</span></p>
+                <p class="metric-result" data-i18n="metricSplResult">0.485 → 0.690. All three runs have equal weight; a failed run contributes zero.</p>
+              </dd>
+            </div>
+            <div class="metric-definition">
+              <dt data-i18n="memoryTurnsTitle">Turns</dt>
+              <dd>
+                <p data-i18n="metricTurnsMeaning">The total number of left and right turn actions across the three runs. Each action rotates the agent by 30°; the chart counts actions, not degrees or a per-run average.</p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricTurnsFormula">Turns = Σᵢ₌₁³ [left turnsᵢ + right turnsᵢ].</span></p>
+                <p class="metric-result" data-i18n="metricTurnsResult">358 → 308 turns.</p>
+              </dd>
+            </div>
+            <div class="metric-definition">
+              <dt data-i18n="memoryLowTitle">Low-displacement forward rate</dt>
+              <dd>
+                <p data-i18n="metricLowMeaning">The share of forward actions whose actual XYZ displacement is less than 1cm. Counts are pooled across the three runs, rather than averaging three run-level percentages. This measures translation, not a native collision flag.</p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricLowFormula">Rate (%) = 100 × forward actions with Δ &lt; 0.01m / all forward actions; Δ = ‖position after − position before‖₂.</span></p>
+                <p class="metric-result" data-i18n="metricLowResult">100 × 64/872 = 7.34% → 100 × 27/936 = 2.88%.</p>
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <div class="section-observation">
+          <p class="experiment-copy" data-i18n="worldStateMethod">In LHPR-VLN [14] and SuperNav [15] without a scene graph, targets were re-localized from images and earlier sightings kept in conversation. With instructed graph memory, stored room and route records were reused.</p>
+          <p class="experiment-copy" data-i18n="worldStateObservation">Across the three paired SuperNav tasks, success rate rose from 66.7% without the graph to 100% with instructed graph memory, and mean SPL from 0.485 to 0.690 (+42.3%). SPL weights task success by the shortest-to-actual path length ratio, with failures scored zero.</p>
+        </div>
       </section>
 
       <section class="mechanism" id="outcome-checking" aria-labelledby="outcome-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Evaluation</h3><p data-i18n="outcomeIntro">In the Revo2 cup-grasping trials, the wrist reached its motion target while the cup stayed on its support. Post-action images exposed the difference between command completion and the object’s actual state.</p></div></div>
-        <p class="experiment-copy" data-i18n="outcomeMethod">In two cup-rim attempts, the wrist rose about 7.58 mm while the cup remained on the plate. The task agent used post-action image checks to reject the unsuccessful lifts and adjust its grasp.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title"><span class="subsection-number">3.2</span> <span data-i18n="outcomeTitle">Evaluation</span></h3><p data-i18n="outcomeIntro">We examine whether the model's own judgment of outcomes is enough (evaluator).</p></div></div>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-outcome-grid"></div>
+        <p class="experiment-copy section-observation" data-i18n="outcomeMethod">In the Revo2 cup-grasping trials, SDK motion completion did not imply a successful grasp: the wrist rose while the cup stayed on its support. The agent checked post-action images, rejected unsuccessful lifts and adjusted its grasp. These were task-specific checks of unmeasured accuracy, not an independent evaluator.</p>
       </section>
 
       <section class="mechanism" id="body-limits" aria-labelledby="body-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits</h3><p data-i18n="bodyIntro">After Revo2 was installed, the collision model still described a parallel gripper. The agent identified this mismatch, and human-prompted landmark checks compared the current hand with calibrated model projections.</p></div></div>
-        <p class="experiment-copy" data-i18n="bodyMethod">At a fixed hand shape, human-prompted geometry checks measured local per-finger landmark RMS errors of 1.35–2.20 mm. After slight finger closure, overall RMS was 5.26 mm, with a 9.57 mm maximum. The geometric error changed with the hand configuration.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="body-title"><span class="subsection-number">3.3</span> <span data-i18n="bodyTitle">Body limits</span></h3><p data-i18n="bodyIntro">We examine whether the model adapts to a new body and its constraints (embodiment profile).</p></div></div>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-body-grid"></div>
+        <p class="experiment-copy section-observation" data-i18n="bodyMethod">The agent found that the installed collision model still described a parallel gripper rather than the Revo2 hand. Human-prompted geometry checks gave local per-finger landmark RMS errors of 1.35–2.20 mm with a fixed hand shape, versus 5.26 mm overall after slight finger closure. Calibration for one hand shape did not guarantee accuracy after closure.</p>
       </section>
 
       <section class="mechanism skills-block" id="skills" aria-labelledby="skills-title">
-        <div class="mechanism-heading"><span>Workspace</span><div><h3 id="skills-title" data-i18n="skillsTitle">Skills and memory</h3><p data-i18n="skillsIntro">Modules written for the first S1 left-gripper task, including capture, localization, inverse kinematics and collision screening, were reused in the other three and accumulated as files in the workspace.</p></div></div>
-        <p class="experiment-copy" data-i18n="skillsMethod">The navigation Workspaces provide a separate record of helpers, scripts and model-written world state. The provided, modified and new labels distinguish the starting interface from files produced or changed during the run.</p>
+        <div class="mechanism-heading plain-heading"><div><h3 id="skills-title"><span class="subsection-number">3.4</span> <span data-i18n="skillsTitle">Skills</span></h3><p data-i18n="skillsIntro">We examine whether experience becomes reusable skills (skills and memory).</p></div></div>
+        <figure class="skills-evidence"><div id="skills-evidence"></div><figcaption data-i18n="skillsEvidenceCaption">The four left-gripper tasks: modules written for the first task were reused in the other three.</figcaption></figure>
+        <p class="experiment-copy section-observation" data-i18n="skillsMethod">Modules written for the first task (capture, localization, IK, screening) were reused in the other three, accumulating as files in the workspace.</p>
       </section>
 
-      <section class="mechanism supplementary" id="revo" aria-labelledby="revo-title">
-        <div class="mechanism-heading"><span data-i18n="supplementaryLabel">Supplementary</span><div><h3 id="revo-title" data-i18n="revoTitle">Additional Revo2 trials</h3><p data-i18n="revoIntro">The later trials show the same empty plastic cup progressing from unsuccessful lifts and a tilted grasp to an upright hold and a completed transfer. In the transfer, the cup stood upright after release and hand withdrawal, with no in-trial manual reset. The full recording retains 13 cuts across unrecorded intervals.</p></div></div>
-        <p class="setup revo-setup" data-i18n="revoSetup">Astribot S1 · Revo2 right hand · Same empty plastic cup</p>
-        <div class="experiment-grid revo-grid" id="revo-supp-grid"></div>
-      </section>
+
     </section>
 
     <section class="experiment-group paper-section" id="remains" aria-labelledby="remains-title">
-      <div class="section-heading"><div><p class="section-number">03</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
+      <div class="section-heading"><div><p class="section-number">4</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
       <p class="section-lede wide" data-i18n="remainsIntro">After Astra, we re-examine the harness for what has changed and what has not. The two gaps have not: the runs still had to re-sense the world and judge their own outcomes. What changes is the responsibility the harness carries around them.</p>
       <div class="conclusion-grid">
-        <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward.</h3><p data-i18n="changeToolText">Thea's tools were policies. Here the model wrote motion segments against the SDK, so the harness must expose the body at several levels.</p></article>
-        <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work.</h3><p data-i18n="changeProfileText">When the model emits poses directly, kinematic limits, workspace and calibration are no longer hidden inside a policy, and the profile becomes the layer on which zero-shot cross-embodiment rests.</p></article>
-        <article><span>03</span><h3 data-i18n="changeSafetyTitle">Safety moves into the harness.</h3><p data-i18n="changeSafetyText">A verified grasp policy carries part of its own safety. A raw pose command carries none, so permissions and sandboxes become workspace bounds, collision checks and force limits, and the lower the abstraction, the heavier this layer.</p></article>
-        <article><span>04</span><h3 data-i18n="changeEvalTitle">The evaluator is the precondition for self-improvement in the physical world.</h3><p data-i18n="changeEvalText">Digital self-improvement ran first because exit codes and unit tests existed <a href="https://wentao.live/blog/astra-and-beyond/" target="_blank" rel="noopener" title="Wentao Zhu. GPT-6 Astra: 3D, Embodied AI, and Beyond (2026).">[13]</a>. The physical world has none, so Evaluation as Exit Codes must come first.</p></article>
+        <article><h3 data-i18n="changeToolTitle">Tool granularity blurs downward.</h3><p data-i18n="changeToolText">Thea's tools were policies. Here the model wrote motion segments against the SDK, so the harness must expose the body at several levels.</p></article>
+        <article><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work.</h3><p data-i18n="changeProfileText">When the model emits poses directly, kinematic limits, workspace and calibration are no longer hidden inside a policy, and the profile becomes the layer on which zero-shot cross-embodiment rests.</p></article>
+        <article><h3 data-i18n="changeSafetyTitle">Safety moves into the harness.</h3><p data-i18n="changeSafetyText">A verified grasp policy carries part of its own safety. A raw pose command carries none, so permissions and sandboxes become workspace bounds, collision checks and force limits, and the lower the abstraction, the heavier this layer.</p></article>
+        <article><h3 data-i18n="changeEvalTitle">The evaluator is the precondition for self-improvement in the physical world.</h3><p data-i18n="changeEvalText">Digital self-improvement ran first because exit codes and unit tests existed [13]. The physical world has none, so Evaluation as Exit Codes must come first.</p></article>
       </div>
+    </section>
+    <section class="experiment-group paper-section" id="supplementary" aria-labelledby="supplementary-title">
+      <div class="section-heading"><div><h2 id="supplementary-title" data-i18n="supplementaryTitle">Supplementary</h2></div></div>
+      <p class="section-lede wide" data-i18n="supplementaryIntro">Additional navigation and Revo2 trials complement the paper's primary examples.</p>
+      <section class="mechanism" id="navigation-evaluation" aria-labelledby="navigation-evaluation-title">
+        <div class="mechanism-heading plain-heading"><div><h3 id="navigation-evaluation-title" data-i18n="navigationSupplementTitle">Navigation evaluation condition</h3></div></div>
+        <div class="navigation-family"><h4 data-i18n="navigationEvaluationSupernav">HabitatGS · navigation-evaluation condition</h4><div class="navigation-grid" id="supernav-eval-grid"></div></div>
+        <div class="navigation-family"><h4 data-i18n="navigationEvaluationLHPR">LHPR-VLN · navigation-evaluation condition</h4><div class="navigation-grid" id="lhpr-eval-grid"></div></div>
+        <p class="experiment-copy section-observation" data-i18n="worldStateCoverage">The navigation-evaluation condition completed no HabitatGS tasks (0% across three runs): mismatched review targets and repeated viewpoint checks led to detours, and all three exhausted 500 actions without a final STOP. Across all nine LHPR runs shown on this page, six exhausted the action budget; three submitted stage STOPs but did not reach all accepted goal positions. Uncertain target identity and arrival estimates were recurring problems.</p>
+      </section>
+      <section class="mechanism supplementary" id="revo" aria-labelledby="revo-title">
+        <div class="mechanism-heading"><div><h3 id="revo-title" data-i18n="revoTitle">Additional Revo2 trials</h3></div></div>
+        <p class="setup revo-setup" data-i18n="revoSetup">Astribot S1 · Revo2 right hand · Same empty plastic cup</p>
+        <div class="experiment-grid revo-grid" id="revo-supp-grid"></div>
+        <p class="experiment-copy section-observation" data-i18n="revoIntro">The later trials show the same empty plastic cup progressing from unsuccessful lifts and a tilted grasp to an upright hold and a completed transfer. In the transfer, the cup stood upright after release and hand withdrawal, with no in-trial manual reset. The full recording retains 13 cuts across unrecorded intervals.</p>
+      </section>
     </section>
   </main>
   <footer class="wrap"><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>

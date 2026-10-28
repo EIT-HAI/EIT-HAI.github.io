@@ -218,3 +218,33 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 @media(max-width:400px){.memory-compare svg text{font-size:28px}}
 /* memory-comparison:end */
 footer.wrap{justify-content:flex-end;border-top:0}
+
+/* Paper-first hierarchy, with observations following their evidence. */
+.paper-download{margin:1.2rem 0 0;font-size:var(--type-body)}
+.paper-download a,.metric-guide a{text-decoration:underline;text-underline-offset:3px}
+.paper-overview{max-width:43rem;margin:0 auto 1.8rem}
+.paper-overview img{height:auto}
+.paper-world-state{max-width:32rem;margin:1rem auto 1.8rem}
+.section-observation{margin-top:1.8rem}
+.section-observation .experiment-copy:first-child{margin-top:0}
+.subsection-number{margin-right:.4rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.experiment-head h4,.navigation-family>h4{margin:0;font-size:var(--type-body);line-height:1.4;font-weight:700}
+.navigation-family>h4{margin-bottom:1rem}
+.conclusion-grid h3{margin-top:0}
+.metric-guide{max-width:43rem;margin:2rem auto}
+.metric-guide h4{margin:0 0 .6rem;font-size:var(--type-body);line-height:1.5}
+.metric-guide>p{font-size:var(--type-note);color:var(--muted)}
+.metric-definitions{margin:1.1rem 0 0}
+.metric-definition{padding:1.1rem 0;border-top:1px solid var(--line)}
+.metric-definition dt{font-size:var(--type-body);font-weight:700;line-height:1.5}
+.metric-definition dd{margin:.4rem 0 0}
+.metric-definition p{font-size:var(--type-body);line-height:1.65;margin:.45rem 0 0}
+.metric-formula{overflow-wrap:anywhere}
+.metric-result{color:var(--blue)}
+.skills-evidence{margin:1rem 0 1.5rem}
+#skills-evidence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.skill-task{display:block;font-size:var(--type-note);line-height:1.5}
+.skill-task img{width:100%;aspect-ratio:16/9;object-fit:cover;margin-bottom:.5rem;border:1px solid var(--line)}
+.skills-evidence figcaption{max-width:43rem;margin:.8rem auto 0;color:var(--muted);font-size:var(--type-note)}
+@media(min-width:1280px) and (max-width:1450px){.memory-compare svg text{font-size:36px}}
+@media(max-width:640px){#skills-evidence{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-definition p{font-size:18px}}
