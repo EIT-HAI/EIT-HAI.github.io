@@ -30,15 +30,15 @@
       "revoIntro": "The later trials show the same empty plastic cup progressing from unsuccessful lifts and a tilted grasp to an upright hold and a completed transfer. In the transfer, the cup stood upright after release and hand withdrawal, with no in-trial manual reset. The full recording retains 13 cuts across unrecorded intervals.",
       "revoSetup": "Astribot S1 · Revo2 right hand · Same empty plastic cup",
       "remainsTitle": "What Changes and What Remains",
-      "remainsIntro": "The runs still had to re-sense the world and judge their outcomes. After Astra, the model can write more of the control stack, while the harness takes on more explicit responsibility for body constraints, safety and outcome evaluation.",
-      "changeToolTitle": "Tool granularity blurs downward",
-      "changeToolText": "Thea exposed skill-level tools backed by policies or stacks. Here the model wrote motion segments against the SDK, so the harness needs to expose the body at several control levels.",
-      "changeProfileTitle": "The Embodiment Profile does more work",
-      "changeProfileText": "When the model emits poses directly, kinematic limits, workspace bounds and calibration can no longer stay hidden inside a policy. The Embodiment Profile must make them explicit to support cross-embodiment use.",
-      "changeSafetyTitle": "Safety moves into the harness",
-      "changeSafetyText": "At SDK-level control, permissions and sandboxes must become physical workspace bounds, collision checks and force limits. The lower the control abstraction, the heavier this safety layer must be.",
-      "changeEvalTitle": "The evaluator is a precondition for physical-world self-improvement",
-      "changeEvalText": "Digital self-improvement could rely on exit codes and unit tests. The physical world does not provide equivalent task-outcome judgments for free, so Evaluation as Exit Codes must come first.",
+      "remainsIntro": "After Astra, we re-examine the harness for what has changed and what has not. The two gaps have not: the runs still had to re-sense the world and judge their own outcomes. What changes is the responsibility the harness carries around them.",
+      "changeToolTitle": "Tool granularity blurs downward.",
+      "changeToolText": "Thea's tools were policies. Here the model wrote motion segments against the SDK, so the harness must expose the body at several levels.",
+      "changeProfileTitle": "The Embodiment Profile does more work.",
+      "changeProfileText": "When the model emits poses directly, kinematic limits, workspace and calibration are no longer hidden inside a policy, and the profile becomes the layer on which zero-shot cross-embodiment rests.",
+      "changeSafetyTitle": "Safety moves into the harness.",
+      "changeSafetyText": "A verified grasp policy carries part of its own safety. A raw pose command carries none, so permissions and sandboxes become workspace bounds, collision checks and force limits, and the lower the abstraction, the heavier this layer.",
+      "changeEvalTitle": "The evaluator is the precondition for self-improvement in the physical world.",
+      "changeEvalText": "Digital self-improvement ran first because exit codes and unit tests existed [13]. The physical world has none, so Evaluation as Exit Codes must come first.",
       "completed": "Completed",
       "incomplete": "Not completed",
       "details": "Task & result",
@@ -121,15 +121,15 @@
       "revoIntro": "后续试验展示同一个空塑料杯从未成功试抬、包握后倾斜，到直立保持和一次完整搬运。最终搬运没有轮内人工复位，释放并退手后杯子独立直立。完整录像在 13 处缺录区间跳切。",
       "revoSetup": "Astribot S1 · Revo2 右手 · 同一空塑料杯",
       "remainsTitle": "什么改变，什么保留",
-      "remainsIntro": "运行中仍需重新感知世界、判断动作结果。Astra 之后，模型可以编写更多控制代码，而 harness 需要更显式地承担身体约束、安全和结果核验的责任。",
-      "changeToolTitle": "工具粒度向下模糊",
-      "changeToolText": "原 Thea 将策略或控制栈封装为技能级工具；这里，模型依据 SDK 编写运动片段，因此 harness 需要在多个控制层级暴露身体接口。",
-      "changeProfileTitle": "Embodiment Profile 承担更多",
-      "changeProfileText": "当模型直接输出位姿时，运动学限制、工作空间边界与标定不能再隐藏在策略内部。Embodiment Profile 需要显式提供这些约束，作为跨身体使用的基础。",
-      "changeSafetyTitle": "安全移入 Harness",
-      "changeSafetyText": "在 SDK 层控制中，权限与沙箱需要落实为物理工作空间边界、碰撞检查和力限。控制抽象越底层，这层安全约束承担的责任就越重。",
-      "changeEvalTitle": "Evaluator 是物理世界自我改进的前提",
-      "changeEvalText": "数字环境的自我改进可以依赖已有的 exit code 与单元测试。物理世界不会自动提供对应的任务结果判据，因此需要先建立 Evaluation as Exit Codes。",
+      "remainsIntro": "Astra 到来后，我们重新审视 harness 中哪些发生了改变，哪些没有。两个缺口没有改变：这些运行仍须重新感知世界，并自行判断动作结果。变化的是 harness 围绕它们承担的职责。",
+      "changeToolTitle": "工具粒度的边界向下变得模糊。",
+      "changeToolText": "Thea 的工具是策略，而这里的模型直接面向 SDK 编写运动片段，因此 harness 必须在多个层级暴露身体。",
+      "changeProfileTitle": "本体档案承担更多职责。",
+      "changeProfileText": "当模型直接输出位姿时，运动学限制、工作空间和标定不再隐藏在策略内部，本体档案因而成为零样本跨本体能力所依赖的一层。",
+      "changeSafetyTitle": "安全职责转入 harness。",
+      "changeSafetyText": "经过验证的抓取策略自带一部分安全保障。原始位姿命令本身不携带这些保障，因此权限和沙箱转化为工作空间边界、碰撞检查和力限制，抽象层级越低，这一层的职责越重。",
+      "changeEvalTitle": "评估器是物理世界自我改进的前提。",
+      "changeEvalText": "数字世界的自我改进率先开展，是因为退出码和单元测试已经存在[13]。物理世界并不具备这些设施，因此必须先构建 Evaluation as Exit Codes。",
       "completed": "已完成",
       "incomplete": "未完成",
       "details": "任务与结果",
@@ -237,6 +237,10 @@
   document.querySelectorAll('[data-i18n]').forEach(element=>{const key=element.dataset.i18n;if(ui.en[key]!=null&&ui.zh[key]!=null)bindings.push({element,en:ui.en[key],zh:ui.zh[key]});});
   function applyLanguage(next){
     lang=next;document.documentElement.lang=lang==='zh'?'zh-CN':'en';bindings.forEach(binding=>binding.element.textContent=binding[lang]);
+    const cited=document.querySelector('[data-i18n="changeEvalText"]');
+    const [before,after]=cited.textContent.split('[13]');
+    const reference=node('a');reference.href='https://wentao.live/blog/astra-and-beyond/';reference.textContent='[13]';reference.target='_blank';reference.rel='noopener';reference.title='Wentao Zhu. GPT-6 Astra: 3D, Embodied AI, and Beyond (2026).';
+    cited.replaceChildren(document.createTextNode(before),reference,document.createTextNode(after));
     document.querySelectorAll('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===lang)));document.dispatchEvent(new Event('languagechange'));
   }
   document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.lang)));

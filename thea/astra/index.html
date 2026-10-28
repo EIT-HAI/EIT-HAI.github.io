@@ -13,7 +13,7 @@
   <script src="data.js?v=88c2d6be1963" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=f4853a308113" defer></script>
+  <script src="app.js?v=eb9971330bc5" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js?v=4a38c5584921" defer></script>
   <script src="video-player.js?v=f9e3a792f810" defer></script>
@@ -209,12 +209,12 @@
 
     <section class="experiment-group paper-section" id="remains" aria-labelledby="remains-title">
       <div class="section-heading"><div><p class="section-number">03</p><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
-      <p class="section-lede wide" data-i18n="remainsIntro">The runs still had to re-sense the world and judge their outcomes. After Astra, the model can write more of the control stack, while the harness takes on more explicit responsibility for body constraints, safety and outcome evaluation.</p>
+      <p class="section-lede wide" data-i18n="remainsIntro">After Astra, we re-examine the harness for what has changed and what has not. The two gaps have not: the runs still had to re-sense the world and judge their own outcomes. What changes is the responsibility the harness carries around them.</p>
       <div class="conclusion-grid">
-        <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward</h3><p data-i18n="changeToolText">Thea exposed skill-level tools backed by policies or stacks. Here the model wrote motion segments against the SDK, so the harness needs to expose the body at several control levels.</p></article>
-        <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work</h3><p data-i18n="changeProfileText">When the model emits poses directly, kinematic limits, workspace bounds and calibration can no longer stay hidden inside a policy. The Embodiment Profile must make them explicit to support cross-embodiment use.</p></article>
-        <article><span>03</span><h3 data-i18n="changeSafetyTitle">Safety moves into the harness</h3><p data-i18n="changeSafetyText">At SDK-level control, permissions and sandboxes must become physical workspace bounds, collision checks and force limits. The lower the control abstraction, the heavier this safety layer must be.</p></article>
-        <article><span>04</span><h3 data-i18n="changeEvalTitle">The evaluator is a precondition for physical-world self-improvement</h3><p data-i18n="changeEvalText">Digital self-improvement could rely on exit codes and unit tests. The physical world does not provide equivalent task-outcome judgments for free, so Evaluation as Exit Codes must come first.</p></article>
+        <article><span>01</span><h3 data-i18n="changeToolTitle">Tool granularity blurs downward.</h3><p data-i18n="changeToolText">Thea's tools were policies. Here the model wrote motion segments against the SDK, so the harness must expose the body at several levels.</p></article>
+        <article><span>02</span><h3 data-i18n="changeProfileTitle">The Embodiment Profile does more work.</h3><p data-i18n="changeProfileText">When the model emits poses directly, kinematic limits, workspace and calibration are no longer hidden inside a policy, and the profile becomes the layer on which zero-shot cross-embodiment rests.</p></article>
+        <article><span>03</span><h3 data-i18n="changeSafetyTitle">Safety moves into the harness.</h3><p data-i18n="changeSafetyText">A verified grasp policy carries part of its own safety. A raw pose command carries none, so permissions and sandboxes become workspace bounds, collision checks and force limits, and the lower the abstraction, the heavier this layer.</p></article>
+        <article><span>04</span><h3 data-i18n="changeEvalTitle">The evaluator is the precondition for self-improvement in the physical world.</h3><p data-i18n="changeEvalText">Digital self-improvement ran first because exit codes and unit tests existed <a href="https://wentao.live/blog/astra-and-beyond/" target="_blank" rel="noopener" title="Wentao Zhu. GPT-6 Astra: 3D, Embodied AI, and Beyond (2026).">[13]</a>. The physical world has none, so Evaluation as Exit Codes must come first.</p></article>
       </div>
     </section>
   </main>
