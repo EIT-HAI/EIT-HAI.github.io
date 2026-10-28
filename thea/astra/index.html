@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=e153f306e287">
+  <link rel="stylesheet" href="style.css?v=fa956f495e41">
   <link rel="stylesheet" href="video-player.css?v=0926c864d03f">
   <link rel="stylesheet" href="paper-navigation.css?v=e0a51896f5cb">
   <script src="data.js?v=88c2d6be1963" defer></script>
@@ -27,13 +27,13 @@
   <details class="paper-toc-panel" open>
     <summary data-i18n="contentsTitle">Contents</summary>
     <nav class="paper-toc" id="paper-toc" aria-label="Contents">
-      <a href="#tools" data-i18n="toolsTitle">Revisiting the Tools</a>
-      <a href="#harness" data-i18n="harnessTitle">Revisiting the Harness</a>
-      <a class="toc-sub" href="#world-state" data-i18n="worldStateTitle">World state and spatial memory</a>
-      <a class="toc-sub" href="#outcome-checking" data-i18n="outcomeTitle">Evaluation</a>
-      <a class="toc-sub" href="#body-limits" data-i18n="bodyTitle">Body limits</a>
-      <a class="toc-sub" href="#skills" data-i18n="skillsTitle">Skills</a>
-      <a href="#remains" data-i18n="remainsTitle">What Changes and What Remains</a>
+      <a href="#tools"><span>1</span> <span data-i18n="toolsTitle">Revisiting the Tools</span></a>
+      <a href="#harness"><span>2</span> <span data-i18n="harnessTitle">Revisiting the Harness</span></a>
+      <a class="toc-sub" href="#world-state"><span>2.1</span> <span data-i18n="worldStateTitle">World state and spatial memory</span></a>
+      <a class="toc-sub" href="#outcome-checking"><span>2.2</span> <span data-i18n="outcomeTitle">Evaluation</span></a>
+      <a class="toc-sub" href="#body-limits"><span>2.3</span> <span data-i18n="bodyTitle">Body limits</span></a>
+      <a class="toc-sub" href="#skills"><span>2.4</span> <span data-i18n="skillsTitle">Skills</span></a>
+      <a href="#remains"><span>3</span> <span data-i18n="remainsTitle">What Changes and What Remains</span></a>
       <a href="#references" data-i18n="referencesTitle">References</a>
       <a href="#supplementary" data-i18n="supplementaryTitle">Supplementary</a>
       <a class="toc-sub" href="#navigation-evaluation" data-i18n="navigationSupplementTitle">Navigation evaluation condition</a>
@@ -48,7 +48,7 @@
   </header>
   <main class="wrap" id="experiments">
     <section class="experiment-group paper-section" id="tools" aria-labelledby="tools-title">
-      <div class="section-heading"><div><h2 id="tools-title" data-i18n="toolsTitle">Revisiting the Tools</h2></div></div>
+      <div class="section-heading"><div><h2 id="tools-title"><span class="heading-number">1</span> <span data-i18n="toolsTitle">Revisiting the Tools</span></h2></div></div>
       <p class="experiment-copy" data-i18n="robotIntro">In Thea the model chose among skill-level tools, pick, place, navigate_to, each a learned policy or stack [12]. GPT-6 Astra changes the premise: a frontier model can now be handed the robot itself [13]. In October 2026 we gave it, running in a coding-agent environment (Codex), the Astribot S1 Python SDK and its documentation, with no Thea component present, and asked for four tasks with the left parallel gripper: tabletop cleanup, cleanup after a base approach, drawer retrieval and closure, and bowl transport (with a cube inside).</p>
       <div class="experiment-grid" id="robot-grid"></div>
       <div class="section-observation">
@@ -58,11 +58,11 @@
     </section>
 
     <section class="experiment-group paper-section" id="harness" aria-labelledby="harness-title">
-      <div class="section-heading"><div><h2 id="harness-title" data-i18n="harnessTitle">Revisiting the Harness</h2></div></div>
+      <div class="section-heading"><div><h2 id="harness-title"><span class="heading-number">2</span> <span data-i18n="harnessTitle">Revisiting the Harness</span></h2></div></div>
       <p class="section-lede wide" data-i18n="harnessIntro">The capability on display is not the model's alone: Codex supplied the loop, tool execution, files and the write-run-read-fix cycle. What it does not supply is anything specific to the physical world. We therefore read the runs through the components Thea had built, asking which the model already has and which it still lacks.</p>
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and spatial memory</h3><p data-i18n="worldStateIntro">Three paired five-target SuperNav tasks, with one run per condition, a 500-action cap and a 1m arrival threshold.</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title"><span class="heading-number">2.1</span> <span data-i18n="worldStateTitle">World state and spatial memory</span></h3><p data-i18n="worldStateIntro">Three paired five-target SuperNav tasks, with one run per condition, a 500-action cap and a 1m arrival threshold.</p></div></div>
         <figure class="paper-figure paper-world-state">
           <img src="assets/images/paper-world-state.png" width="660" height="400" alt="Recorded route and scene graph with target, region, relation and object legend" loading="lazy">
           <figcaption data-i18n="worldStateFigureCaption">Recorded route and instructed scene graph over a scene map, with model-estimated node positions.</figcaption>
@@ -241,19 +241,19 @@
       </section>
 
       <section class="mechanism" id="outcome-checking" aria-labelledby="outcome-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title" data-i18n="outcomeTitle">Evaluation</h3><p data-i18n="outcomeIntro">We examine whether the model's own judgment of outcomes is enough (evaluator).</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="outcome-title"><span class="heading-number">2.2</span> <span data-i18n="outcomeTitle">Evaluation</span></h3><p data-i18n="outcomeIntro">We examine whether the model's own judgment of outcomes is enough (evaluator).</p></div></div>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-outcome-grid"></div>
         <p class="experiment-copy section-observation" data-i18n="outcomeMethod">In the Revo2 cup-grasping trials, SDK motion completion did not imply a successful grasp: the wrist rose while the cup stayed on its support. The agent checked post-action images, rejected unsuccessful lifts and adjusted its grasp. These were task-specific checks of unmeasured accuracy, not an independent evaluator.</p>
       </section>
 
       <section class="mechanism" id="body-limits" aria-labelledby="body-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="body-title" data-i18n="bodyTitle">Body limits</h3><p data-i18n="bodyIntro">We examine whether the model adapts to a new body and its constraints (embodiment profile).</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="body-title"><span class="heading-number">2.3</span> <span data-i18n="bodyTitle">Body limits</span></h3><p data-i18n="bodyIntro">We examine whether the model adapts to a new body and its constraints (embodiment profile).</p></div></div>
         <div class="experiment-grid revo-grid direct-evidence-grid" id="revo-body-grid"></div>
         <p class="experiment-copy section-observation" data-i18n="bodyMethod">The agent found that the installed collision model still described a parallel gripper rather than the Revo2 hand. Human-prompted geometry checks gave local per-finger landmark RMS errors of 1.35–2.20 mm with a fixed hand shape, versus 5.26 mm overall after slight finger closure. Calibration for one hand shape did not guarantee accuracy after closure.</p>
       </section>
 
       <section class="mechanism skills-block" id="skills" aria-labelledby="skills-title">
-        <div class="mechanism-heading plain-heading"><div><h3 id="skills-title" data-i18n="skillsTitle">Skills</h3><p data-i18n="skillsIntro">We examine whether experience becomes reusable skills (skills and memory).</p></div></div>
+        <div class="mechanism-heading plain-heading"><div><h3 id="skills-title"><span class="heading-number">2.4</span> <span data-i18n="skillsTitle">Skills</span></h3><p data-i18n="skillsIntro">We examine whether experience becomes reusable skills (skills and memory).</p></div></div>
         <figure class="skills-evidence"><div id="skills-evidence"></div><figcaption data-i18n="skillsEvidenceCaption">The four left-gripper tasks: modules written for the first task were reused in the other three.</figcaption></figure>
         <p class="experiment-copy section-observation" data-i18n="skillsMethod">Modules written for the first task (capture, localization, IK, screening) were reused in the other three, accumulating as files in the workspace.</p>
       </section>
@@ -262,7 +262,7 @@
     </section>
 
     <section class="experiment-group paper-section" id="remains" aria-labelledby="remains-title">
-      <div class="section-heading"><div><h2 id="remains-title" data-i18n="remainsTitle">What Changes and What Remains</h2></div></div>
+      <div class="section-heading"><div><h2 id="remains-title"><span class="heading-number">3</span> <span data-i18n="remainsTitle">What Changes and What Remains</span></h2></div></div>
       <p class="section-lede wide" data-i18n="remainsIntro">After Astra, we re-examine the harness for what has changed and what has not. The two gaps have not: the runs still had to re-sense the world and judge their own outcomes. What changes is the responsibility the harness carries around them.</p>
       <div class="conclusion-grid">
         <article><h3 data-i18n="changeToolTitle">Tool granularity blurs downward.</h3><p data-i18n="changeToolText">Thea's tools were policies. Here the model wrote motion segments against the SDK, so the harness must expose the body at several levels.</p></article>

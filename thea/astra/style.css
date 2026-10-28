@@ -227,6 +227,7 @@ footer.wrap{justify-content:flex-end;border-top:0}
 .section-observation{margin-top:1.8rem}
 .section-observation .experiment-copy:first-child{margin-top:0}
 .subsection-number{margin-right:.4rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.heading-number{margin-right:.4rem;font-variant-numeric:tabular-nums}
 .experiment-head h4,.navigation-family>h4{margin:0;font-size:var(--type-body);line-height:1.4;font-weight:700}
 .navigation-family>h4{margin-bottom:1rem}
 .conclusion-grid h3{margin-top:0}
