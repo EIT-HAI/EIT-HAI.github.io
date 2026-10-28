@@ -4,7 +4,7 @@
 // Completion is expressed as a rate, as requested, with the paired setup retained.
 window.PAPER_COPY = {
   en: {
-    abstract: "Thea carried the harness paradigm of coding agents into the physical world, adding the two things the physical world does not supply for free: a persistent readable world state and a verifiable judgment of each action (Section 1). With GPT-6 Astra, a model can be handed a robot SDK inside an ordinary coding-agent environment. We revisit at what granularity it now controls the body (Section 2), who supplies each harness component, the model, the coding harness, or something still to be built (Section 3), and what changes and what remains (Section 4).",
+    abstract: "Thea carried the harness paradigm of coding agents into the physical world, adding the two things the physical world does not supply for free: a persistent readable world state and a verifiable judgment of each action. With GPT-6 Astra, a model can be handed a robot SDK inside an ordinary coding-agent environment. We revisit at what granularity it now controls the body, who supplies each harness component, the model, the coding harness, or something still to be built, and what changes and what remains.",
     theaTitle: "Thea: A Harness for the Physical World",
     theaIntro: "Coding agents write, run, read the error, fix, and run again [1, 2]. What made them work is not a better model but a better harness: the infrastructure that grounds the model in its environment, mediates actions through tools, and closes the loop through evaluation and recovery [3, 4, 5]. Thea [6] carries this blueprint to robots: an agentic loop, every robot capability as a callable tool, context engineering, skills, memory, an Embodiment Profile, and hooks.",
     theaMechanism: "The physical world withholds two things software grants for free. A codebase is readable and persistent. A room is seen as a momentary slice, and the world keeps no record. A command returns an exit code. A closed gripper returns no verdict on whether the cup is in it. Scene Graph as Context turns local observations into persistent symbols briefed before every decision. Evaluation as Exit Codes runs an independent evaluator after each manipulation that judges success against the tool's post-condition and returns a failure reason for recovery. Its accuracy caps what retries can recover.",
@@ -31,7 +31,7 @@ window.PAPER_COPY = {
     revoTitle: "Additional Revo2 trials"
   },
   zh: {
-    abstract: "Thea 将编程智能体的 harness 范式带入物理世界，补上物理世界无法直接提供的两件事：持久、可读的世界状态，以及对每次动作结果的可验证判定（第 1 节）。有了 GPT-6 Astra，可以将机器人 SDK 交给普通编程智能体环境中的模型。我们重新考察它如今以何种粒度控制身体（第 2 节），每个 harness 组件究竟由模型、编程 harness 提供，还是仍有待构建（第 3 节），以及哪些发生改变、哪些保持不变（第 4 节）。",
+    abstract: "Thea 将编程智能体的 harness 范式带入物理世界，补上物理世界无法直接提供的两件事：持久、可读的世界状态，以及对每次动作结果的可验证判定。有了 GPT-6 Astra，可以将机器人 SDK 交给普通编程智能体环境中的模型。我们重新考察它如今以何种粒度控制身体，每个 harness 组件究竟由模型、编程 harness 提供，还是仍有待构建，以及哪些发生改变、哪些保持不变。",
     theaTitle: "Thea：面向物理世界的 Harness",
     theaIntro: "编程智能体编写、运行、读取错误、修正，然后再次运行[1, 2]。使其奏效的不是更强的模型，而是更好的 harness：它使模型立足于环境，通过工具调度动作，并借助评估与恢复闭合循环[3, 4, 5]。Thea[6] 将这一蓝图用于机器人：智能体循环、将机器人每项能力作为可调用工具、上下文工程、技能、记忆、本体档案和 hooks。",
     theaMechanism: "物理世界缺少软件世界直接提供的两样东西。代码库可读且持久。房间只能以瞬时切片的形式被看见，世界自身并不保留记录。命令会返回退出码，闭合的夹爪却不会告诉我们杯子是否在其中。Scene Graph as Context 将局部观测转化为持久符号，在每次决策前提供给模型。Evaluation as Exit Codes 在每次操作后运行独立评估器，根据工具的后置条件判定成功，并返回用于恢复的失败原因。其准确率限制了重试所能挽回的失败。",

@@ -220,8 +220,7 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 footer.wrap{justify-content:flex-end;border-top:0}
 
 /* Paper-first hierarchy, with observations following their evidence. */
-.paper-download{margin:1.2rem 0 0;font-size:var(--type-body)}
-.paper-download a,.metric-guide a{text-decoration:underline;text-underline-offset:3px}
+.paper-citation,.metric-guide a{text-decoration:underline;text-underline-offset:3px}
 .paper-overview{max-width:43rem;margin:0 auto 1.8rem}
 .paper-overview img{height:auto}
 .paper-world-state{max-width:32rem;margin:1rem auto 1.8rem}
@@ -248,3 +247,10 @@ footer.wrap{justify-content:flex-end;border-top:0}
 .skills-evidence figcaption{max-width:43rem;margin:.8rem auto 0;color:var(--muted);font-size:var(--type-note)}
 @media(min-width:1280px) and (max-width:1450px){.memory-compare svg text{font-size:36px}}
 @media(max-width:640px){#skills-evidence{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-definition p{font-size:18px}}
+
+/* The paper bibliography is readable inline, with stable citation targets. */
+.reference-list{list-style:none;max-width:43rem;margin:0 auto;padding:0;font-size:var(--type-body);line-height:1.65}
+.reference-list li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.35rem;margin:0 0 1.2rem;scroll-margin-top:5rem;overflow-wrap:anywhere}
+.reference-number{color:var(--muted);font-variant-numeric:tabular-nums}
+.reference-list a{text-decoration:underline;text-underline-offset:3px}
+.reference-list li:target{background:rgba(74,100,128,.065);outline:6px solid rgba(74,100,128,.065)}

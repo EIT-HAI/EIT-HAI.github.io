@@ -250,7 +250,12 @@
       const parts=[];let start=0;
       matches.forEach(match=>{
         parts.push(document.createTextNode(value.slice(start,match.index)));
-        const reference=node('a');reference.href=match[1]==='13'?'https://wentao.live/blog/astra-and-beyond/':'assets/documents/thea-paper-current.pdf#page=3';reference.textContent=match[0];reference.target='_blank';reference.rel='noopener';reference.title=lang==='zh'?'论文参考文献':'Paper references';parts.push(reference);start=match.index+match[0].length;
+        parts.push(document.createTextNode('['));
+        match[1].split(/(,\s*)/).forEach(part=>{
+          if(!/^\d+$/.test(part)){parts.push(document.createTextNode(part));return;}
+          const reference=node('a','paper-citation');reference.href='#ref-'+part;reference.textContent=part;reference.title=lang==='zh'?'参考文献 '+part:'Reference '+part;parts.push(reference);
+        });
+        parts.push(document.createTextNode(']'));start=match.index+match[0].length;
       });
       parts.push(document.createTextNode(value.slice(start)));element.replaceChildren(...parts);
     });
