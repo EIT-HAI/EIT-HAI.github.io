@@ -180,18 +180,18 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .paper-nav .nav-index{color:var(--muted);font-variant-numeric:tabular-nums}
 
 /* memory-comparison:start — project-local Lato skin and paired, zero-origin bars. */
-.memory-compare{max-width:43rem;margin:1.6rem auto 1.7rem}
+.memory-compare{position:relative;left:50%;transform:translateX(-50%);width:min(1200px,calc(100vw - 48px));max-width:none;margin:1.6rem 0 1.7rem}
 .memory-compare .memory-comparison-title{margin:0 0 .7rem;font-size:18px;line-height:1.5;font-weight:700}
 .memory-chart-legend{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-size:16px;line-height:1.5}
 .memory-chart-legend>span{display:inline-flex;align-items:center;gap:.5rem}
 .memory-chart-legend>span::before{content:"";width:16px;height:16px;background:#858680;border:1px solid #6e6f69}
 .memory-chart-legend>.memory-legend-graph::before{background:#4a6480;border-color:#4a6480}
 .memory-condition-note{margin:.45rem 0 1.2rem;color:var(--muted);font-size:16px;line-height:1.5}
-.memory-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.memory-compare-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
 .memory-chart-panel{min-width:0;border-top:1px solid var(--line);padding-top:.7rem}
 .memory-chart-panel .memory-chart-title{min-height:54px;margin:0;font-size:18px;line-height:1.5;font-weight:700}
 .memory-compare svg{display:block;width:100%;height:auto;overflow:visible}
-.memory-compare svg text{font-family:inherit;font-size:24px;text-anchor:middle;fill:var(--ink);font-variant-numeric:tabular-nums}
+.memory-compare svg text{font-family:inherit;font-size:32px;text-anchor:middle;fill:var(--ink);font-variant-numeric:tabular-nums}
 .memory-chart-gridline{stroke:rgba(27,28,27,.08);stroke-width:1}
 .memory-chart-axis{stroke:#a4a59f;stroke-width:1.2}
 .memory-compare svg .memory-chart-tick{fill:var(--muted);text-anchor:end}
@@ -212,6 +212,7 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .memory-data-table th{font-weight:700}
 .memory-data-table th:first-child,.memory-data-table td:nth-child(2),.memory-data-table th:nth-child(2){text-align:left}
 .memory-data-table tbody tr:nth-child(even){background:rgba(74,100,128,.035)}
-@media(max-width:720px){.memory-compare-grid{grid-template-columns:minmax(0,1fr);gap:1.4rem}.memory-chart-panel .memory-chart-title{min-height:0}.memory-compare svg{max-width:440px;margin-inline:auto}.memory-chart-note{min-height:0}}
+@media(min-width:721px) and (max-width:1080px){.memory-compare svg text{font-size:44px}.memory-chart-category{display:none}.memory-chart-panel .memory-chart-title{min-height:81px}}
+@media(max-width:720px){.memory-compare-grid{grid-template-columns:minmax(0,1fr);gap:1.4rem}.memory-chart-panel .memory-chart-title{min-height:0}.memory-compare svg{max-width:440px;margin-inline:auto}.memory-compare svg text{font-size:24px}.memory-chart-note{min-height:0}}
 @media(max-width:400px){.memory-compare svg text{font-size:28px}}
 /* memory-comparison:end */
