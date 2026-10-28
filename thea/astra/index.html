@@ -8,12 +8,12 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=ddfe33fbbb33">
+  <link rel="stylesheet" href="style.css?v=26abcc20d8e1">
   <link rel="stylesheet" href="video-player.css?v=0926c864d03f">
   <script src="data.js?v=88c2d6be1963" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
-  <script src="app.js?v=6f9f45a72993" defer></script>
+  <script src="app.js?v=c76a9da073da" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js?v=985d1595ff0b" defer></script>
   <script src="video-player.js?v=bcaddaae3870" defer></script>
@@ -47,8 +47,139 @@
 
       <section class="mechanism" id="world-state" aria-labelledby="world-state-title">
         <div class="mechanism-heading plain-heading"><div><h3 id="world-state-title" data-i18n="worldStateTitle">World state and spatial memory</h3><p data-i18n="worldStateIntro">The paper compares three paired five-target tasks from HabitatGS-Benchmark, released with SuperNav: Astra without prescribed scene-graph memory versus Astra instructed to maintain it. Each task has one run per condition, a 500-action cap and a 1m arrival threshold.</p></div></div>
-        <p class="experiment-copy" data-i18n="worldStateObservation">With instructed graph memory, completion rose from 2/3 to 3/3, and mean SPL from 0.485 to 0.690 (+42.3%). SPL weights task success by the shortest-to-actual path-length ratio, with failures scored zero.</p>
-        <p class="experiment-copy" data-i18n="worldStateMethod">Without prescribed graph memory, targets were re-localized from images and earlier sightings retained in conversation. With instructed graph memory, room and route records were stored and later reused. The videos, context streams and Workspaces show how these model-estimated records informed route choices and revisits.</p>
+        <!-- memory-comparison:start -->
+        <figure class="memory-compare" id="memory-comparison" aria-labelledby="memory-comparison-title">
+          <h4 class="memory-comparison-title" id="memory-comparison-title" data-i18n="memoryDiagramTitle">Scene-graph memory: paired results</h4>
+          <div class="memory-chart-legend"><span class="memory-legend-baseline"><span data-i18n="memoryBaselineTitle">Astra</span></span><span class="memory-legend-graph"><span data-i18n="memoryGraphTitle">Astra + SG</span></span></div>
+          <p class="memory-condition-note" data-i18n="memoryConditions">Astra: no prescribed graph memory. Astra + SG: instructed scene-graph memory.</p>
+          <div class="memory-compare-grid">
+            <section class="memory-chart-panel" data-metric="completed">
+              <h4 class="memory-chart-title" data-i18n="memoryCompleted">Completed tasks</h4>
+              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-completed-title memory-completed-desc" data-metric="completed" data-max="3" data-baseline="280" data-plot-top="40">
+                <title id="memory-completed-title" data-i18n="memoryCompleted">Completed tasks</title>
+                <desc id="memory-completed-desc" data-i18n="memoryCompletedDesc">Astra completed two of three tasks; Astra with instructed scene-graph memory completed all three, at the 1 m threshold.</desc>
+                <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
+                <text class="memory-chart-tick" x="64" y="288">0</text>
+                <line class="memory-chart-gridline" x1="80" y1="200" x2="416" y2="200"/>
+                <text class="memory-chart-tick" x="64" y="208">1</text>
+                <line class="memory-chart-gridline" x1="80" y1="120" x2="416" y2="120"/>
+                <text class="memory-chart-tick" x="64" y="128">2</text>
+                <line class="memory-chart-gridline" x1="80" y1="40" x2="416" y2="40"/>
+                <text class="memory-chart-tick" x="64" y="48">3</text>
+                <line class="memory-chart-axis" x1="80" y1="40" x2="80" y2="280"/>
+                <line class="memory-chart-axis" x1="80" y1="280" x2="416" y2="280"/>
+                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="2" x="112" y="120.000000" width="104" height="160.000000"/>
+                <text class="memory-chart-value" x="164" y="104.000000">2/3</text>
+                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="3" x="280" y="40.000000" width="104" height="240.000000"/>
+                <text class="memory-chart-value memory-chart-value-graph" x="332" y="24.000000">3/3</text>
+                <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
+                <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
+              </svg>
+              <p class="memory-chart-note" data-i18n="memoryCompletedNote">Ordered arrivals followed by final STOP.</p>
+            </section>
+            <section class="memory-chart-panel" data-metric="spl">
+              <h4 class="memory-chart-title" data-i18n="memoryMeanSPL">Mean SPL</h4>
+              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-spl-title memory-spl-desc" data-metric="spl" data-max="1" data-baseline="280" data-plot-top="40">
+                <title id="memory-spl-title" data-i18n="memoryMeanSPL">Mean SPL</title>
+                <desc id="memory-spl-desc" data-i18n="memorySplDesc">Mean success-weighted SPL was 0.485 for Astra and 0.690 with instructed scene-graph memory, a 42.3% relative increase.</desc>
+                <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
+                <text class="memory-chart-tick" x="64" y="288">0</text>
+                <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
+                <text class="memory-chart-tick" x="64" y="228">0.25</text>
+                <line class="memory-chart-gridline" x1="80" y1="160" x2="416" y2="160"/>
+                <text class="memory-chart-tick" x="64" y="168">0.5</text>
+                <line class="memory-chart-gridline" x1="80" y1="100" x2="416" y2="100"/>
+                <text class="memory-chart-tick" x="64" y="108">0.75</text>
+                <line class="memory-chart-gridline" x1="80" y1="40" x2="416" y2="40"/>
+                <text class="memory-chart-tick" x="64" y="48">1</text>
+                <line class="memory-chart-axis" x1="80" y1="40" x2="80" y2="280"/>
+                <line class="memory-chart-axis" x1="80" y1="280" x2="416" y2="280"/>
+                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="0.4848945216140468" x="112" y="163.625315" width="104" height="116.374685"/>
+                <text class="memory-chart-value" x="164" y="147.625315">0.485</text>
+                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="0.6902161824936841" x="280" y="114.348116" width="104" height="165.651884"/>
+                <text class="memory-chart-value memory-chart-value-graph" x="332" y="98.348116">0.690</text>
+                <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
+                <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
+              </svg>
+              <p class="memory-chart-note" data-i18n="memorySplNote">+42.3% relative mean SPL.</p>
+            </section>
+            <section class="memory-chart-panel" data-metric="turns">
+              <h4 class="memory-chart-title" data-i18n="memoryTurnsTitle">Turns</h4>
+              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-turns-title memory-turns-desc" data-metric="turns" data-max="400" data-baseline="280" data-plot-top="40">
+                <title id="memory-turns-title" data-i18n="memoryTurnsTitle">Turns</title>
+                <desc id="memory-turns-desc" data-i18n="memoryTurnsDesc">Across all three tasks, Astra used 358 turns and Astra with instructed scene-graph memory used 308 turns.</desc>
+                <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
+                <text class="memory-chart-tick" x="64" y="288">0</text>
+                <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
+                <text class="memory-chart-tick" x="64" y="228">100</text>
+                <line class="memory-chart-gridline" x1="80" y1="160" x2="416" y2="160"/>
+                <text class="memory-chart-tick" x="64" y="168">200</text>
+                <line class="memory-chart-gridline" x1="80" y1="100" x2="416" y2="100"/>
+                <text class="memory-chart-tick" x="64" y="108">300</text>
+                <line class="memory-chart-gridline" x1="80" y1="40" x2="416" y2="40"/>
+                <text class="memory-chart-tick" x="64" y="48">400</text>
+                <line class="memory-chart-axis" x1="80" y1="40" x2="80" y2="280"/>
+                <line class="memory-chart-axis" x1="80" y1="280" x2="416" y2="280"/>
+                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="358" x="112" y="65.200000" width="104" height="214.800000"/>
+                <text class="memory-chart-value" x="164" y="49.200000">358</text>
+                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="308" x="280" y="95.200000" width="104" height="184.800000"/>
+                <text class="memory-chart-value memory-chart-value-graph" x="332" y="79.200000">308</text>
+                <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
+                <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
+              </svg>
+              <p class="memory-chart-note" data-i18n="memoryTurnsNote">−14.0% total turns across three tasks.</p>
+            </section>
+            <section class="memory-chart-panel" data-metric="low-forward-rate">
+              <h4 class="memory-chart-title" data-i18n="memoryLowTitle">Low-displacement forward rate</h4>
+              <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-low-forward-rate-title memory-low-forward-rate-desc" data-metric="low-forward-rate" data-max="10" data-baseline="280" data-plot-top="40">
+                <title id="memory-low-forward-rate-title" data-i18n="memoryLowTitle">Low-displacement forward rate</title>
+                <desc id="memory-low-forward-rate-desc" data-i18n="memoryLowDesc">Forward movements under 1 cm accounted for 64 of 872 forward actions for Astra and 27 of 936 for Astra with instructed scene-graph memory: 7.34% and 2.88%.</desc>
+                <line class="memory-chart-gridline" x1="80" y1="280" x2="416" y2="280"/>
+                <text class="memory-chart-tick" x="64" y="288">0%</text>
+                <line class="memory-chart-gridline" x1="80" y1="220" x2="416" y2="220"/>
+                <text class="memory-chart-tick" x="64" y="228">2.5%</text>
+                <line class="memory-chart-gridline" x1="80" y1="160" x2="416" y2="160"/>
+                <text class="memory-chart-tick" x="64" y="168">5%</text>
+                <line class="memory-chart-gridline" x1="80" y1="100" x2="416" y2="100"/>
+                <text class="memory-chart-tick" x="64" y="108">7.5%</text>
+                <line class="memory-chart-gridline" x1="80" y1="40" x2="416" y2="40"/>
+                <text class="memory-chart-tick" x="64" y="48">10%</text>
+                <line class="memory-chart-axis" x1="80" y1="40" x2="80" y2="280"/>
+                <line class="memory-chart-axis" x1="80" y1="280" x2="416" y2="280"/>
+                <rect class="memory-bar memory-bar-baseline" data-series="astra" data-value="7.339449541284404" data-count="64" data-denominator="872" x="112" y="103.853211" width="104" height="176.146789"/>
+                <text class="memory-chart-value" x="164" y="87.853211">7.34%</text>
+                <rect class="memory-bar memory-bar-graph" data-series="graph" data-value="2.8846153846153846" data-count="27" data-denominator="936" x="280" y="210.769231" width="104" height="69.230769"/>
+                <text class="memory-chart-value memory-chart-value-graph" x="332" y="194.769231">2.88%</text>
+                <text x="164" y="324" class="memory-chart-category" data-i18n="memoryBaselineTitle">Astra</text>
+                <text x="332" y="324" class="memory-chart-category" data-i18n="memoryGraphTitle">Astra + SG</text>
+              </svg>
+              <p class="memory-chart-note" data-i18n="memoryLowNote">Displacement <1 cm: 64/872 → 27/936 forward actions (−60.7% relative rate).</p>
+            </section>
+          </div>
+          <figcaption>
+            <p data-i18n="memoryDiagramCaption">Three selected, paired SuperNav tasks · one run per condition · 500-action cap · derived 1 m primary scoring. Ordered target hits: 14/15 → 15/15.</p>
+            <p data-i18n="memoryCostNote">Mean costs, Astra → Astra + SG: 411 → 415.67 actions; 65.55 → 74.28 m path; 726.53 → 1003.83 s policy wall time.</p>
+            <p data-i18n="memorySensitivityNote">At the release’s 0.1 m threshold: completed 2/3 → 2/3; mean SPL 0.485 → 0.493; ordered target hits 14/15 → 10/15.</p>
+          </figcaption>
+          <details class="memory-details">
+            <summary data-i18n="memoryTableSummary">Full three-task results</summary>
+            <div class="memory-table-wrap" tabindex="0">
+              <table class="memory-data-table">
+                <caption data-i18n="memoryTableCaption">All six paired runs at 1 m. Forward <1 cm counts low-displacement forward actions.</caption>
+                <thead><tr><th scope="col" data-i18n="memoryTask">Task</th><th scope="col" data-i18n="memoryCondition">Condition</th><th scope="col" data-i18n="memoryTaskComplete">Completed</th><th scope="col" data-i18n="memorySPL">SPL</th><th scope="col" data-i18n="memoryActions">Actions</th><th scope="col" data-i18n="memoryTurnsTitle">Turns</th><th scope="col" data-i18n="memoryPath">Path (m)</th><th scope="col" data-i18n="memoryNearZero">Forward <1 cm</th></tr></thead>
+                <tbody>
+                  <tr data-run="stop-supernav-1"><th scope="row">107</th><td><span data-i18n="memoryBaselineTitle">Astra</span></td><td><span data-i18n="memoryNo">No</span></td><td>0.000</td><td>498</td><td>166</td><td>69.89</td><td>41</td></tr>
+                  <tr data-run="sg2-supernav-1"><th scope="row">107</th><td><span data-i18n="memoryGraphTitle">Astra + SG</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.724</td><td>470</td><td>124</td><td>82.89</td><td>0</td></tr>
+                  <tr data-run="stop-supernav-2"><th scope="row">186</th><td><span data-i18n="memoryBaselineTitle">Astra</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.705</td><td>436</td><td>123</td><td>70.29</td><td>23</td></tr>
+                  <tr data-run="sg2-supernav-2"><th scope="row">186</th><td><span data-i18n="memoryGraphTitle">Astra + SG</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.590</td><td>500</td><td>133</td><td>84.01</td><td>26</td></tr>
+                  <tr data-run="stop-supernav-3"><th scope="row">050</th><td><span data-i18n="memoryBaselineTitle">Astra</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.749</td><td>299</td><td>69</td><td>56.46</td><td>0</td></tr>
+                  <tr data-run="sg2-supernav-3"><th scope="row">050</th><td><span data-i18n="memoryGraphTitle">Astra + SG</span></td><td><span data-i18n="memoryYes">Yes</span></td><td>0.756</td><td>277</td><td>51</td><td>55.94</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </figure>
+        <!-- memory-comparison:end -->
         <p class="experiment-copy" data-i18n="worldStateCoverage">The page also includes the navigation-evaluation condition and LHPR-VLN, for 18 records in total. The evaluation condition completed 0/3 HabitatGS tasks; all nine LHPR runs were incomplete. Completion labels follow each run’s native STOP rule.</p>
       <div class="navigation-family"><h3>LHPR-VLN</h3><div class="navigation-grid" id="lhpr-grid"></div></div>
       <div class="navigation-family"><h3>HabitatGS-Benchmark <span class="muted">(SuperNav tasks)</span></h3><div class="navigation-grid" id="supernav-grid"></div></div>
