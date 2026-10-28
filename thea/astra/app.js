@@ -209,12 +209,14 @@
   }
   function experiment(item,family){
     const article=node('article','experiment');article.dataset.experiment=`${family}-${item.id}`;article.id=`${family}-${item.id}`;
-    const head=node('div','experiment-head');head.append(text(node('h4'),item.title.en,item.title.zh));article.append(head);
-    if(item.task)article.append(text(node('p','task'),item.task.en,item.task.zh));
+    const summary=node('div','experiment-summary');
+    const head=node('div','experiment-head');head.append(text(node('h4'),item.title.en,item.title.zh));summary.append(head);
+    if(item.task)summary.append(text(node('p','task'),item.task.en,item.task.zh));
     const set=node('div','media-set'+(item.media.length>1?' multiple':''));item.media.forEach(entry=>set.append(media(entry)));article.append(set);
-    const result=node('p','result');result.append(text(node('span'),item.result.en,item.result.zh));article.append(result);
-    if(item.id==='5B'||item.id==='06'){const notes=node('details','run-details');notes.append(phrase('summary','recordingDetails'),phrase('p','revoNote'));article.append(notes);}
-    if(family==='robot'){const link=text(node('a','final-image'),ui.en.finalImage,ui.zh.finalImage);link.href=assetURL(item.media[0].poster);link.target='_blank';link.rel='noopener';article.append(link);}
+    const result=node('p','result');result.append(text(node('span'),item.result.en,item.result.zh));summary.append(result);
+    if(item.id==='5B'||item.id==='06'){const notes=node('details','run-details');notes.append(phrase('summary','recordingDetails'),phrase('p','revoNote'));summary.append(notes);}
+    if(family==='robot'){const link=text(node('a','final-image'),ui.en.finalImage,ui.zh.finalImage);link.href=assetURL(item.media[0].poster);link.target='_blank';link.rel='noopener';summary.append(link);}
+    article.append(summary);
     return article;
   }
 
@@ -242,6 +244,32 @@
     document.getElementById(target).append(article);
   });
 
+  const metricGuide=document.getElementById('metric-guide');
+  const metricNotes=metricGuide?Array.from(metricGuide.querySelectorAll('details.metric-definition')):[];
+  const metricHelp=Array.from(document.querySelectorAll('button[data-metric-note]'));
+  function syncMetricHelp(){
+    metricHelp.forEach(button=>{
+      const note=document.getElementById(button.dataset.metricNote);
+      if(!note||!metricGuide)return;
+      button.setAttribute('aria-expanded',String(metricGuide.open&&note.open));
+      const label=note.querySelector('summary').textContent+': '+ui[lang].metricHelpLabel;
+      button.setAttribute('aria-label',label);button.title=label;
+    });
+  }
+  function showMetricNote(note){
+    if(!metricGuide||!note)return;
+    metricGuide.open=true;metricNotes.forEach(item=>{item.open=item===note;});syncMetricHelp();
+    note.querySelector('summary').focus({preventScroll:true});
+    note.scrollIntoView({block:'center',behavior:'auto'});
+  }
+  metricHelp.forEach(button=>button.addEventListener('click',()=>showMetricNote(document.getElementById(button.dataset.metricNote))));
+  metricNotes.forEach(note=>note.addEventListener('toggle',syncMetricHelp));
+  if(metricGuide)metricGuide.addEventListener('toggle',syncMetricHelp);
+  function followMetricHash(){
+    const note=metricNotes.find(item=>'#'+item.id===window.location.hash);if(note)showMetricNote(note);
+  }
+  window.addEventListener('hashchange',followMetricHash);
+  document.addEventListener('languagechange',syncMetricHelp);
   document.querySelectorAll('[data-i18n]').forEach(element=>{const key=element.dataset.i18n;if(ui.en[key]!=null&&ui.zh[key]!=null)bindings.push({element,en:ui.en[key],zh:ui.zh[key]});});
   function applyLanguage(next){
     lang=next;document.documentElement.lang=lang==='zh'?'zh-CN':'en';bindings.forEach(binding=>binding.element.textContent=binding[lang]);
@@ -264,4 +292,5 @@
   document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>applyLanguage(button.dataset.lang)));
   const dialog=document.getElementById('image-viewer');document.getElementById('close-image').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
   applyLanguage(lang);
+  followMetricHash();
 })();

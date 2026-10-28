@@ -8,15 +8,15 @@
   <link rel="canonical" href="https://eit-hai.github.io/thea/astra/">
   <title>Thea · Towards the Harness of Embodied Agents</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="style.css?v=fa956f495e41">
+  <link rel="stylesheet" href="style.css?v=e4ec627f937b">
   <link rel="stylesheet" href="video-player.css?v=0926c864d03f">
   <link rel="stylesheet" href="paper-navigation.css?v=e0a51896f5cb">
   <script src="data.js?v=88c2d6be1963" defer></script>
   <script src="workspaces.js" defer></script>
   <script src="workspace.js" defer></script>
   <script src="paper-copy.js?v=e119efb58adf" defer></script>
-  <script src="metric-copy.js?v=41436a7b1a6e" defer></script>
-  <script src="app.js?v=e6314db1ada8" defer></script>
+  <script src="metric-copy.js?v=ecfe6773511c" defer></script>
+  <script src="app.js?v=4232ccd58201" defer></script>
   <script src="context-traces.js" defer></script>
   <script src="context-stream.js?v=4a38c5584921" defer></script>
   <script src="video-player.js?v=f9e3a792f810" defer></script>
@@ -71,12 +71,12 @@
         <div class="navigation-family"><h4>LHPR-VLN</h4><div class="navigation-grid" id="lhpr-grid"></div></div>
         <!-- memory-comparison:start -->
         <figure class="memory-compare" id="memory-comparison" aria-labelledby="memory-comparison-title">
-          <h4 class="memory-comparison-title" id="memory-comparison-title" data-i18n="memoryDiagramTitle">Scene-graph memory: paired results</h4>
+          <h4 class="memory-comparison-title" id="memory-comparison-title" data-i18n="memoryDiagramTitle">SuperNav: paired scene-graph results</h4>
           <div class="memory-chart-legend"><span class="memory-legend-baseline"><span data-i18n="memoryBaselineTitle">Astra</span></span><span class="memory-legend-graph"><span data-i18n="memoryGraphTitle">Astra + SG</span></span></div>
           <p class="memory-condition-note" data-i18n="memoryConditions">Astra: no prescribed graph memory. Astra + SG: instructed scene-graph memory.</p>
           <div class="memory-compare-grid">
             <section class="memory-chart-panel" data-metric="success-rate">
-              <h4 class="memory-chart-title" data-i18n="memoryCompleted">Success rate</h4>
+              <h4 class="memory-chart-title"><span data-i18n="memoryCompleted">Success rate</span> <button type="button" class="metric-help" data-metric-note="metric-success" aria-controls="metric-success" aria-expanded="false" aria-label="Success rate: definition and calculation">?</button></h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-completed-title memory-completed-desc" data-metric="success-rate" data-max="100" data-baseline="280" data-plot-top="40">
                 <title id="memory-completed-title" data-i18n="memoryCompleted">Success rate</title>
                 <desc id="memory-completed-desc" data-i18n="memoryCompletedDesc">Task success rate is 66.7% for Astra and 100% for Astra with instructed scene-graph memory, across the same three tasks per condition. Success requires all five ordered arrivals at the 1m threshold followed by final STOP.</desc>
@@ -99,7 +99,7 @@
               <p class="memory-chart-note" data-i18n="memoryCompletedNote">66.7% → 100%; three tasks per condition.</p>
             </section>
             <section class="memory-chart-panel" data-metric="spl">
-              <h4 class="memory-chart-title" data-i18n="memoryMeanSPL">Mean SPL</h4>
+              <h4 class="memory-chart-title"><span data-i18n="memoryMeanSPL">Mean SPL</span> <button type="button" class="metric-help" data-metric-note="metric-spl" aria-controls="metric-spl" aria-expanded="false" aria-label="Mean SPL: definition and calculation">?</button></h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-spl-title memory-spl-desc" data-metric="spl" data-max="1" data-baseline="280" data-plot-top="40">
                 <title id="memory-spl-title" data-i18n="memoryMeanSPL">Mean SPL</title>
                 <desc id="memory-spl-desc" data-i18n="memorySplDesc">Mean success-weighted path length score is 0.485 for Astra and 0.690 with instructed scene-graph memory. It averages all three runs, including zero for failures.</desc>
@@ -125,7 +125,7 @@
               <p class="memory-chart-note" data-i18n="memorySplNote">+42.3% relative mean SPL.</p>
             </section>
             <section class="memory-chart-panel" data-metric="turns">
-              <h4 class="memory-chart-title" data-i18n="memoryTurnsTitle">Turns</h4>
+              <h4 class="memory-chart-title"><span data-i18n="memoryTurnsTitle">Turns</span> <button type="button" class="metric-help" data-metric-note="metric-turns" aria-controls="metric-turns" aria-expanded="false" aria-label="Turns: definition and calculation">?</button></h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-turns-title memory-turns-desc" data-metric="turns" data-max="400" data-baseline="280" data-plot-top="40">
                 <title id="memory-turns-title" data-i18n="memoryTurnsTitle">Turns</title>
                 <desc id="memory-turns-desc" data-i18n="memoryTurnsDesc">Total 30° left and right turn actions across three tasks: 358 for Astra and 308 with instructed scene-graph memory.</desc>
@@ -151,7 +151,7 @@
               <p class="memory-chart-note" data-i18n="memoryTurnsNote">−14.0% total turns across three tasks.</p>
             </section>
             <section class="memory-chart-panel" data-metric="low-forward-rate">
-              <h4 class="memory-chart-title" data-i18n="memoryLowTitle">Low-displacement forward rate</h4>
+              <h4 class="memory-chart-title"><span data-i18n="memoryLowTitle">Low-displacement forward rate</span> <button type="button" class="metric-help" data-metric-note="metric-low" aria-controls="metric-low" aria-expanded="false" aria-label="Low-displacement forward rate: definition and calculation">?</button></h4>
               <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="memory-low-forward-rate-title memory-low-forward-rate-desc" data-metric="low-forward-rate" data-max="10" data-baseline="280" data-plot-top="40">
                 <title id="memory-low-forward-rate-title" data-i18n="memoryLowTitle">Low-displacement forward rate</title>
                 <desc id="memory-low-forward-rate-desc" data-i18n="memoryLowDesc">Pooled forward actions with XYZ displacement below 1cm: 64 of 872 for Astra, or 7.34%; 27 of 936 with instructed scene-graph memory, or 2.88%.</desc>
@@ -196,44 +196,46 @@
           </details>
         </figure>
         <!-- memory-comparison:end -->
-        <section class="metric-guide" id="metric-guide" aria-labelledby="metric-guide-title">
-          <h4 id="metric-guide-title" data-i18n="metricGuideTitle">What the four metrics mean</h4>
-          <p data-i18n="metricGuideIntro">The same three five-target tasks are compared, with one run per task and condition. Values below are Astra → Astra + SG.</p>
-          <dl class="metric-definitions">
-            <div class="metric-definition">
-              <dt data-i18n="memoryCompleted">Success rate</dt>
-              <dd>
+        <details class="metric-guide" id="metric-guide">
+          <summary id="metric-guide-title" data-i18n="metricGuideTitle">Metric definitions and calculations</summary>
+          <div class="metric-guide-content">
+          <p data-i18n="metricGuideIntro">The chart compares the same three five-target SuperNav tasks, with one evaluated run per task and condition (N = 3 per condition). Values below are Astra → Astra + SG.</p>
+          <div class="metric-definitions">
+            <details class="metric-definition" id="metric-success">
+              <summary data-i18n="memoryCompleted">Success rate</summary>
+              <div class="metric-definition-body">
                 <p data-i18n="metricSuccessMeaning">How often the full task succeeds. A run must reach all five goals in order, each at a distance of less than 1m from an approved viewpoint, then issue STOP within the 500-action budget.</p>
-                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSuccessFormula">Success rate (%) = 100 × successful runs / 3.</span></p>
-                <p class="metric-result" data-i18n="metricSuccessResult">66.7% → 100%.</p>
-              </dd>
-            </div>
-            <div class="metric-definition">
-              <dt data-i18n="memoryMeanSPL">Mean SPL</dt>
-              <dd>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSuccessFormula">Success rate (%) = 100 × successful runs / evaluated runs.</span></p>
+                <p class="metric-result" data-i18n="metricSuccessResult">66.7% → 100% (N = 3 evaluated runs per condition).</p>
+              </div>
+            </details>
+            <details class="metric-definition" id="metric-spl">
+              <summary data-i18n="memoryMeanSPL">Mean SPL</summary>
+              <div class="metric-definition-body">
                 <p data-i18n="metricSplMeaning">Success weighted by Path Length combines completion and path efficiency. For run i, Sᵢ is 1 for success and 0 otherwise; Lᵢ* is the benchmark's shortest reference route through all ordered goals, and Pᵢ is actual travelled distance, summed from consecutive XYZ positions.</p>
-                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSplFormula">Mean SPL = (1/3) × Σᵢ₌₁³ [Sᵢ × Lᵢ* / max(Lᵢ*, Pᵢ)].</span></p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricSplFormula">Mean SPL = (1/N) × Σᵢ₌₁ᴺ [Sᵢ × Lᵢ* / max(Lᵢ*, Pᵢ)], where N is the number of evaluated runs per condition.</span></p>
                 <p class="metric-result" data-i18n="metricSplResult">0.485 → 0.690. All three runs have equal weight; a failed run contributes zero.</p>
-              </dd>
-            </div>
-            <div class="metric-definition">
-              <dt data-i18n="memoryTurnsTitle">Turns</dt>
-              <dd>
+              </div>
+            </details>
+            <details class="metric-definition" id="metric-turns">
+              <summary data-i18n="memoryTurnsTitle">Turns</summary>
+              <div class="metric-definition-body">
                 <p data-i18n="metricTurnsMeaning">The total number of left and right turn actions across the three runs. Each action rotates the agent by 30°; the chart counts actions, not degrees or a per-run average.</p>
-                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricTurnsFormula">Turns = Σᵢ₌₁³ [left turnsᵢ + right turnsᵢ].</span></p>
+                <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricTurnsFormula">Turns = Σᵢ₌₁ᴺ [left turnsᵢ + right turnsᵢ], over all evaluated runs in the condition.</span></p>
                 <p class="metric-result" data-i18n="metricTurnsResult">358 → 308 turns.</p>
-              </dd>
-            </div>
-            <div class="metric-definition">
-              <dt data-i18n="memoryLowTitle">Low-displacement forward rate</dt>
-              <dd>
+              </div>
+            </details>
+            <details class="metric-definition" id="metric-low">
+              <summary data-i18n="memoryLowTitle">Low-displacement forward rate</summary>
+              <div class="metric-definition-body">
                 <p data-i18n="metricLowMeaning">The share of forward actions whose actual XYZ displacement is less than 1cm. Counts are pooled across the three runs, rather than averaging three run-level percentages. This measures translation, not a native collision flag.</p>
                 <p class="metric-formula"><span data-i18n="metricCalculationLabel">Calculation:</span> <span data-i18n="metricLowFormula">Rate (%) = 100 × forward actions with Δ &lt; 0.01m / all forward actions; Δ = ‖position after − position before‖₂.</span></p>
                 <p class="metric-result" data-i18n="metricLowResult">100 × 64/872 = 7.34% → 100 × 27/936 = 2.88%.</p>
-              </dd>
-            </div>
-          </dl>
-        </section>
+              </div>
+            </details>
+          </div>
+          </div>
+        </details>
         <div class="section-observation">
           <p class="experiment-copy" data-i18n="worldStateMethod">In LHPR-VLN [14] and SuperNav [15] without a scene graph, targets were re-localized from images and earlier sightings kept in conversation. With instructed graph memory, stored room and route records were reused.</p>
           <p class="experiment-copy" data-i18n="worldStateObservation">Across the three paired SuperNav tasks, success rate rose from 66.7% without the graph to 100% with instructed graph memory, and mean SPL from 0.485 to 0.690 (+42.3%). SPL weights task success by the shortest-to-actual path length ratio, with failures scored zero.</p>
@@ -254,7 +256,7 @@
 
       <section class="mechanism skills-block" id="skills" aria-labelledby="skills-title">
         <div class="mechanism-heading plain-heading"><div><h3 id="skills-title"><span class="heading-number">2.4</span> <span data-i18n="skillsTitle">Skills</span></h3><p data-i18n="skillsIntro">We examine whether experience becomes reusable skills (skills and memory).</p></div></div>
-        <figure class="skills-evidence"><div id="skills-evidence"></div><figcaption data-i18n="skillsEvidenceCaption">The four left-gripper tasks: modules written for the first task were reused in the other three.</figcaption></figure>
+        <figure class="skills-evidence"><div id="skills-evidence"></div><figcaption data-i18n="skillsEvidenceCaption">The four left-gripper tasks.</figcaption></figure>
         <p class="experiment-copy section-observation" data-i18n="skillsMethod">Modules written for the first task (capture, localization, IK, screening) were reused in the other three, accumulating as files in the workspace.</p>
       </section>
 

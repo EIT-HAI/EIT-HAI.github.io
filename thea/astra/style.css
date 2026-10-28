@@ -60,9 +60,7 @@
 .mechanism{padding-top:2.35rem;margin-top:2.35rem;border-top:1px solid var(--line);scroll-margin-top:1.5rem}
 .mechanism:first-of-type{margin-top:0}
 .direct-evidence-grid{grid-template-columns:minmax(0,1fr)}
-.direct-evidence-grid .experiment{display:grid;grid-template-columns:minmax(12rem,.72fr) minmax(16rem,1.28fr);gap:0 1.35rem;align-items:start}
-.direct-evidence-grid .experiment-head,.direct-evidence-grid .result,.direct-evidence-grid .run-details{grid-column:2}
-.direct-evidence-grid .media-set{grid-column:1;grid-row:1 / span 4}
+.direct-evidence-grid .experiment{display:block}
 .direct-evidence-grid .media-set:not(.multiple){max-width:none}
 .skills-block{padding-bottom:.25rem}
 .supplementary .revo-setup{margin:-.6rem 0 1.45rem 6.4rem;text-align:left}
@@ -71,13 +69,6 @@
 .conclusion-grid article>span{font:400 .58rem/1.4 'Lato','Helvetica Neue',Helvetica,Arial,'PingFang SC','Microsoft YaHei',sans-serif;color:var(--blue)}
 .conclusion-grid h3{margin-top:.45rem;font-size:1.02rem;line-height:1.38}
 .conclusion-grid p{margin-top:.42rem;color:var(--muted);font-size:.72rem;line-height:1.62}
-@supports(grid-template-rows:subgrid){
-  @media(min-width:641px){
-    #robot-grid{row-gap:0}
-    #robot-grid>.experiment{display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:0;margin-bottom:2.3rem}
-    #robot-grid>.experiment>.task,#robot-grid>.experiment>.media-set{align-self:start}
-  }
-}
 @media(max-width:900px){.section-heading{align-items:flex-start}.setup{max-width:16rem}.navigation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.experiment-grid{gap:1.8rem 1rem}.thea-bridge{grid-template-columns:1fr}.paper-figure{max-width:42rem}.direct-evidence-grid .experiment{grid-template-columns:minmax(11rem,.85fr) minmax(14rem,1.15fr)}}
 @media(max-width:640px){html{font-size:16px}.topline{padding-top:1rem}.masthead{padding:1.6rem 0 1.9rem}h1{font-size:1.75rem}.subtitle{font-size:1.05rem}.abstract{font-size:.88rem}.section-heading{display:block;margin-bottom:1.3rem}.section-heading h2{font-size:1.5rem}.setup{text-align:left;margin-top:.55rem;max-width:none}.experiment-grid,.navigation-grid{grid-template-columns:minmax(0,1fr)}.experiment-grid{gap:2rem}.revo-grid .media-set.multiple,.media-set.multiple{grid-template-columns:minmax(0,1fr)}.revo-grid .media-set:not(.multiple){max-width:none}.experiment h3{font-size:1.2rem}.navigation-grid{gap:1.9rem}.nav-head{font-size:.8rem}.native-result{font-size:.82rem}.metrics{font-size:.76rem}.episode{font-size:.65rem}.result{font-size:.9rem}.evidence-heading,.mechanism-heading{grid-template-columns:1fr;gap:.25rem}.direct-evidence-grid .experiment{display:block}.direct-evidence-grid .media-set{margin-bottom:.8rem}.supplementary .revo-setup{margin:.1rem 0 1.3rem}.conclusion-grid{grid-template-columns:1fr}footer{display:block}footer a{display:block;margin-top:.5rem}}
 
@@ -190,6 +181,8 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .memory-compare-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
 .memory-chart-panel{min-width:0;border-top:1px solid var(--line);padding-top:.7rem}
 .memory-chart-panel .memory-chart-title{min-height:54px;margin:0;font-size:18px;line-height:1.5;font-weight:700}
+.metric-help{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:24px;height:24px;margin-left:.2rem;padding:0;border:1px solid #bfc3c4;border-radius:50%;background:transparent;color:var(--muted);font-size:16px;font-weight:400;line-height:1}
+.metric-help:hover,.metric-help[aria-expanded=true]{color:var(--blue);border-color:var(--blue);background:rgba(74,100,128,.065)}
 .memory-compare svg{display:block;width:100%;height:auto;overflow:visible}
 .memory-compare svg text{font-family:inherit;font-size:32px;text-anchor:middle;fill:var(--ink);font-variant-numeric:tabular-nums}
 .memory-chart-gridline{stroke:rgba(27,28,27,.08);stroke-width:1}
@@ -231,13 +224,14 @@ footer.wrap{justify-content:flex-end;border-top:0}
 .experiment-head h4,.navigation-family>h4{margin:0;font-size:var(--type-body);line-height:1.4;font-weight:700}
 .navigation-family>h4{margin-bottom:1rem}
 .conclusion-grid h3{margin-top:0}
-.metric-guide{max-width:43rem;margin:2rem auto}
-.metric-guide h4{margin:0 0 .6rem;font-size:var(--type-body);line-height:1.5}
-.metric-guide>p{font-size:var(--type-note);color:var(--muted)}
+.metric-guide{max-width:43rem;margin:1.4rem auto 2rem;padding:.8rem 0;border-block:1px solid var(--line)}
+.metric-guide>summary{font-size:var(--type-body);font-weight:700;cursor:pointer}
+.metric-guide-content{padding:.8rem 0 .2rem}
+.metric-guide-content>p{font-size:var(--type-note);color:var(--muted)}
 .metric-definitions{margin:1.1rem 0 0}
-.metric-definition{padding:1.1rem 0;border-top:1px solid var(--line)}
-.metric-definition dt{font-size:var(--type-body);font-weight:700;line-height:1.5}
-.metric-definition dd{margin:.4rem 0 0}
+.metric-definition{padding:.85rem 0;border-top:1px solid var(--line);scroll-margin-top:6rem}
+.metric-definition>summary{font-size:var(--type-body);font-weight:700;line-height:1.5;cursor:pointer}
+.metric-definition-body{margin:.6rem 0 0}
 .metric-definition p{font-size:var(--type-body);line-height:1.65;margin:.45rem 0 0}
 .metric-formula{overflow-wrap:anywhere}
 .metric-result{color:var(--blue)}
@@ -255,3 +249,16 @@ footer.wrap{justify-content:flex-end;border-top:0}
 .reference-number{color:var(--muted);font-variant-numeric:tabular-nums}
 .reference-list a{text-decoration:underline;text-underline-offset:3px}
 .reference-list li:target{background:rgba(74,100,128,.065);outline:6px solid rgba(74,100,128,.065)}
+
+/* One evidence-first rhythm: full media, then a readable text block. */
+.experiment-summary{margin-top:1.15rem}
+.experiment-summary .experiment-head{margin:0 0 .5rem}
+.experiment-summary .task{margin:0 0 .6rem}
+.experiment-summary .result{margin-top:.55rem}
+.revo-grid>.experiment{width:100%;max-width:43rem;margin-inline:auto}
+.revo-grid .media-set:not(.multiple){max-width:none}
+.direct-evidence-grid .media-set{margin-bottom:0}
+.conclusion-grid{display:block;max-width:43rem;margin-inline:auto;background:transparent;border:0}
+.conclusion-grid article{padding:0;margin:0 0 1.6rem;background:transparent}
+.conclusion-grid article:last-child{margin-bottom:0}
+.conclusion-grid p{margin-top:.5rem}
