@@ -200,8 +200,11 @@ body,h3,.experiment h3,.navigation-family>h3,.gap-list h3,.evidence-heading h3,.
 .memory-compare svg .memory-chart-value{font-weight:700}
 .memory-compare svg .memory-chart-value-graph{fill:#4a6480}
 .memory-chart-note{margin:.35rem 0 0;min-height:48px;color:var(--muted);font-size:16px;line-height:1.5}
-.memory-compare figcaption{margin:1rem 0 0;color:var(--muted);font-size:16px;line-height:1.5}
-.memory-compare figcaption p+p{margin-top:.65rem}
+.memory-result-analysis{width:min(100%,calc(100vw - 2 * var(--page-gutter)));max-width:43rem;margin:1.35rem auto 0}
+.memory-result-analysis .experiment-copy{margin:0 0 1rem;font-size:18px;line-height:1.65}
+.memory-result-analysis .experiment-copy:last-child{margin-bottom:0}
+.memory-detail-notes{margin:1rem 0 0;color:var(--muted);font-size:16px;line-height:1.5}
+.memory-detail-notes p+p{margin-top:.65rem}
 .memory-details{margin-top:1rem;color:var(--ink);font-size:16px;line-height:1.5}
 .memory-details>summary{cursor:pointer;width:fit-content}
 .memory-table-wrap{max-width:100%;margin-top:.7rem;overflow:auto}
